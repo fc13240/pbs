@@ -17,5 +17,6 @@
 			<typeAlias alias="Patent" type="zhuanli.domain.Patent"/>
 			<typeAlias alias="PatentSearchCondition" type="zhuanli.domain.PatentSearchCondition"/>
 			<typeAlias alias="Notice" type="zhuanli.domain.Notice"/>
+			<typeAlias alias="BrandCategory" type="zhuanli.domain.BrandCategory"/>
 		</typeAliases>
 </configuration>
