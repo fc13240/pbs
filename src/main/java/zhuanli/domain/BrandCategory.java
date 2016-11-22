@@ -1,7 +1,7 @@
 package zhuanli.domain;
 
 public class BrandCategory {
-	private int category_id;
+	private int categoryId;
 	private String categoryName;
 	public int getCategory_id() {
 		return category_id;
