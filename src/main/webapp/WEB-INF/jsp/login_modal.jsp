@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
 <link rel="stylesheet" href="<s:url value='/css/index.css'/>" />
 <link rel="stylesheet" href="<s:url value='/temp/css/bootstrap.min.css'/>" />
-<script src="<s:url value='/plugins/kindeditor/bootstrap.min.js'/>" type="text/javascript"></script>
+<script src="<s:url value='/static/js/bootstrap.min.js'/>" type="text/javascript"></script>
 </head>
 <body>
 <style type="text/css">
