@@ -22,14 +22,9 @@ import com.qq.connect.javabeans.qzone.UserInfoBean;
 import com.qq.connect.oauth.Oauth;
 
 import zhuanli.dao.DatabaseAuthProvider;
-import zhuanli.domain.Article;
 import zhuanli.domain.FirstColumn;
-import zhuanli.domain.News;
 import zhuanli.domain.Patent;
 import zhuanli.domain.User;
-import zhuanli.service.ArticleService;
-import zhuanli.service.NewsService;
-import zhuanli.service.PatentSearchService;
 import zhuanli.service.PatentService;
 import zhuanli.service.UserService;
 import zhuanli.util.WeixinMessageDigest;
@@ -39,19 +34,12 @@ import zhuanli.util.WeixinMessageDigest;
 @Controller
 public class IndexController {
 	private PatentService patentService;
-	private NewsService newsService;
-	private ArticleService articleService;
-	private PatentSearchService patentSearchService;
 	private UserService userService;
 	private DatabaseAuthProvider databaseAuthDao;
 	
 	@Autowired
-	public IndexController(PatentService patentService,NewsService newsService,PatentSearchService patentSearchService,
-						   ArticleService articleService,UserService userService,DatabaseAuthProvider databaseAuthDao) {
+	public IndexController(PatentService patentService,UserService userService,DatabaseAuthProvider databaseAuthDao) {
 		this.patentService = patentService;
-		this.newsService=newsService;
-		this.articleService=articleService;
-		this.patentSearchService=patentSearchService;
 		this.userService=userService;
 		this.databaseAuthDao=databaseAuthDao;
 	}
@@ -60,24 +48,23 @@ public class IndexController {
 
 		List<FirstColumn>  AllColumns=patentService.selectAllColumns();
 		List<Patent> patent_list=patentService.getPatents();
-		List<News> news=newsService.getNewsShow();
-		List<News> newShows=newsService.newsShow();
+		//List<News> news=newsService.getNewsShow();
+		//List<News> newShows=newsService.newsShow();
 		//List<Article> article=articleService.getArticleShow();
-		List<Article> articleShows=articleService.articleShow();		
-		List<Patent> InventionPatentGrant=patentSearchService.searchByInventionPatentGrant();
-		List<Patent> abstractsPatent=patentSearchService.searchByAbstractsPatent();
-		List<Patent> utilityModelPatent=patentSearchService.searchByUtilityModelPatent();
-		List<Patent> appearanceDesignPatent=patentSearchService.searchByAppearanceDesignPatent();
+		//List<Article> articleShows=articleService.articleShow();		
+		//List<Patent> InventionPatentGrant=patentSearchService.searchByInventionPatentGrant();
+		//List<Patent> abstractsPatent=patentSearchService.searchByAbstractsPatent();
+		//List<Patent> utilityModelPatent=patentSearchService.searchByUtilityModelPatent();
+		//List<Patent> appearanceDesignPatent=patentSearchService.searchByAppearanceDesignPatent();
 		model.addAttribute("patent_list", patent_list);
 		model.addAttribute("AllColumns", AllColumns);
-		model.addAttribute("news", news);
-		model.addAttribute("newShows", newShows);
-		//model.addAttribute("article", article);
-		model.addAttribute("articleShows", articleShows);		
-		model.addAttribute("IPG", InventionPatentGrant);
-		model.addAttribute("AP", abstractsPatent);
-		model.addAttribute("UMP", utilityModelPatent);
-		model.addAttribute("ADP", appearanceDesignPatent);
+		//model.addAttribute("news", news);
+		//model.addAttribute("newShows", newShows);
+		//model.addAttribute("articleShows", articleShows);		
+		//model.addAttribute("IPG", InventionPatentGrant);
+		//model.addAttribute("AP", abstractsPatent);
+		//model.addAttribute("UMP", utilityModelPatent);
+		//model.addAttribute("ADP", appearanceDesignPatent);
 		return "index";
 	}
 	
@@ -145,12 +132,7 @@ public class IndexController {
 	                UserInfoBean userInfoBean = qzoneUserInfo.getUserInfo();
 	                if (userInfoBean.getRet() == 0) {
 	                	
-	                	User qqUser = new User();
-	                	System.out.println(userInfoBean.getNickname());
-	                	System.out.println("<image src=" + userInfoBean.getAvatar().getAvatarURL30());
-	                	System.out.println("<image src=" + userInfoBean.getAvatar().getAvatarURL50());
-	                	System.out.println("<image src=" + userInfoBean.getAvatar().getAvatarURL100());
-	                	
+	                	User qqUser = new User();	                	
 	                	qqUser.setUsername(openID);
 	                	qqUser.setName(userInfoBean.getNickname());
 	                	qqUser.setPassword(openID);

@@ -43,33 +43,11 @@
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-		
-	
-	<bean id="newsMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="zhuanli.dao.mapper.NewsMapper"/>
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
-	</bean>
-	
-	<bean name="newsDao" class="zhuanli.dao.mybatis.NewsMybatisDao">
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
-		<property name="newsMapper" ref="newsMapper" />
-	</bean>	
 	
 	<bean name="databaseAuthDao" class="zhuanli.dao.DatabaseAuthProvider">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
-	
-	<bean id="articleMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="zhuanli.dao.mapper.ArticleMapper"/>
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
-	</bean>
-	
-	<bean name="articleDao" class="zhuanli.dao.mybatis.ArticleMybatisDao">
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
-		<property name="articleMapper" ref="articleMapper" />
-	</bean>
-	
+
 	<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="mapperInterface" value="zhuanli.dao.mapper.UserMapper"/>
 		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
@@ -78,35 +56,5 @@
 	<bean name="userDao" class="zhuanli.dao.mybatis.UserMybatisDao">
 		<property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
 		<property name="userMapper" ref="userMapper" />
-	</bean>
-	
-	<bean id="patentMobileMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="zhuanli.dao.mapper.PatentMobileMapper"/>
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
-	</bean>
-	
-	<bean name="patentMobileDao" class="zhuanli.dao.mybatis.PatentMobileMybatisDao">
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
-		<property name="patentMobileMapper" ref="patentMobileMapper" />
-	</bean>
-	
-	<bean id="articleMobileMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="zhuanli.dao.mapper.ArticleMobileMapper"/>
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
-	</bean>
-	
-	<bean name="articleMobileDao" class="zhuanli.dao.mybatis.ArticleMobileMybatisDao">
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
-		<property name="articleMobileMapper" ref="articleMobileMapper" />
-	</bean>
-	
-	<bean id="newsMobileMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="zhuanli.dao.mapper.NewsMobileMapper"/>
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
-	</bean>
-	
-	<bean name="newsMobileDao" class="zhuanli.dao.mybatis.NewsMobileMybatisDao">
-		<property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
-		<property name="newsMobileMapper" ref="newsMobileMapper" />
 	</bean>
 </beans>							
