@@ -15,4 +15,8 @@
 	<bean id="userService" class="zhuanli.service.impl.UserServiceImpl">
 		<constructor-arg ref="userDao"/>
 	</bean>
+	
+	<bean id="brandService" class="zhuanli.service.impl.BrandServiceImpl">
+		<constructor-arg ref="brandDao"/>
+	</bean>
 </beans>

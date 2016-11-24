@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zhuanli.dao.mapper.BrandMapper">
+	<resultMap type="Brand" id="brandMap">
+		<id property="id" column="id"/>
+		<result property="address" column="address"/>
+		<result property="checkStatus" column="check_status"/>
+		<result property="sellStatus" column="sell_status"/>
+		<result property="isRecommend" column="is_recommend"/>
+		<result property="brandNo" column="brand_no"/>
+		<result property="name" column="name"/>
+		<result property="combinationType" column="combination_type"/>
+		<result property="similarNo" column="similar_no"/>
+		<result property="scope" column="scope"/>
+		<result property="transactionMode" column="transaction_mode"/>
+		<result property="price" column="price"/>
+		<result property="appPerson" column="app_person"/>
+		<result property="appDate" column="app_date"/>
+		<result property="publishDate" column="publish_date"/>
+		<result property="startDate" column="start_date"/>
+		<result property="endDate" column="end_date"/>
+		<result property="caseStatus" column="case_status"/>
+		<result property="originality" column="originality"/>
+		<association property="brandCategory"  javaType="BrandCategory">
+			<id property="categoryId" column="category_id"/>
+			<result property="categoryName" column="category_name"/>
+		</association>
+		<association property="user"  javaType="User">
+			<id property="userId" column="user_id"/>
+			<result property="username" column="username"/>
+		</association>
+	</resultMap>
+	
+	<resultMap type="BrandCategory" id="brandCategoryMap">
+		<id property="categoryId" column="category_id"/>
+		<result property="categoryName" column="category_name"/>
+	</resultMap>
+
+
+	<select id="getBrandsCountByCategory" parameterType="int" resultType="int">
+		SELECT count(*) FROM brands b
+		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
+		WHERE check_status=1 AND sell_status=1 AND b.category_id=#{categoryId}
+	</select>
+	
+	<select id="getBrandsByCategory" resultMap="brandMap">
+		SELECT id, NAME, price ,b.category_id,bc.category_name FROM brands b
+		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
+		WHERE check_status=1 AND sell_status=1 AND b.category_id=#{categoryId}
+		LIMIT #{page.startIndex},#{page.pageSize}
+	</select>
+
+	<select id="getbrandDetail" parameterType="int" resultMap="brandMap">
+		SELECT id,address,b.category_id,bc.category_name,brand_no,name,combination_type,similar_no,
+			scope,transaction_mode,price,start_date,end_date 
+ 		from brands b
+		left join brand_category bc on b.category_id = bc.category_id
+		WHERE id=#{brandId}
+	</select>
+	
+	<select id="getBrandCategoryById" parameterType="int" resultMap="brandCategoryMap">
+		SELECT category_id,category_name FROM brand_category WHERE category_id=#{categoryId}
+	</select>
+
+
+
+
+
+
+
+
+
+
+</mapper>

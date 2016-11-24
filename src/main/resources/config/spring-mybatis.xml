@@ -57,4 +57,14 @@
 		<property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
 		<property name="userMapper" ref="userMapper" />
 	</bean>
+	
+	<bean id="brandMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="zhuanli.dao.mapper.BrandMapper"/>
+		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
+	</bean>
+	
+	<bean name="brandDao" class="zhuanli.dao.mybatis.BrandMybatisDao">
+		<property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
+		<property name="brandMapper" ref="brandMapper" />
+	</bean>
 </beans>							
