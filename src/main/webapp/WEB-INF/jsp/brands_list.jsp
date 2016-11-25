@@ -6,8 +6,8 @@
 <html>
 <head>
 <title>商标列表</title>
-<meta name="keywords" content="专利交易" />
-<meta name="description" content="专利交易" />
+<meta name="keywords" content="专利  商标 交易" />
+<meta name="description" content="专利  商标 交易" />
 <meta itemprop="name" content="" />
 <meta http-equiv="cache-control" content="no-transform">
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
@@ -34,6 +34,11 @@ padding: 0 13px;
 .s-hover {
 background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 }
+
+
+#beforea a:active  {color:black;}
+#beforea a: {text-decoration:none;}
+
 </style>
 <script type="text/javascript">(function(){var screenWidth=window.screen.width;if(screenWidth>=1280){document.body.className=document.body.className+" root_body";;window.LOAD=true;}else{window.LOAD=false;}})()</script>
 
@@ -52,22 +57,18 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 	</div>
 </div>
 
-
+<iframe id="brandExcelFileFrame" style="display:none"></iframe>
      
 <link rel="stylesheet" href="http://r.lotut.com/public/css/details.css" />
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">
   <div class="current-location" style="margin-top:0;"> <a href="<s:url value='/'/>">首页</a>
-   > 第${brandCategory.categoryId}类-${brandCategory.categoryName}
+   > 第${brandCategory.categoryId}类 - ${brandCategory.categoryName}
   <div style="float:right; margin-left:850px;margin-right:65px;">
-      <form action="/index.php/produce_excle.html" name="site_search" target="_blank" method="get">
-
-      <input name="id" value="24" type="hidden">
-     
-      <input value="导出清单" style="display:inline;background:#FF0000;color:white;border:2px solid #FF0000;height:35px;line-height:35px;font-weight:700;font-size:14px;width:80px;cursor:pointer;" type="submit">
+      <input value="导出清单" style="display:inline;background:#FF0000;color:white;border:2px solid #FF0000;height:35px;line-height:35px;font-weight:700;font-size:14px;width:80px;cursor:pointer;" 
+      		type="button" onclick="exportList(${brandCategory.categoryId})">
        
-      </form>
     </div>
   
   
@@ -82,11 +83,15 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			
 			<li class="col-md-3 col-sm-6">
 	          <div class="syPub_list">
-	              <div>
-		          <a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" >
-		          	<img src="/products_img/shangbiao/24/14999306.jpg" width="200" height="200"/>
-		          </a>
-		          </div>
+	              <div id="beforea">
+	              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+					<div style="background: url(<s:url value='/images/brands_img/testimg.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+		          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+						 
+		            </div>
+	 			  </a>
+	 			  </div>
+	 			  <div>
 		          <h3>
 		          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
 		          </h3>
@@ -111,8 +116,8 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 	<div id="page"> 
 	<c:if test="${page.totalPages > 1}"> 
 		<div class="col-lg-12"> 
-			<a>共 ${page.totalPages}页 </a>
-			<a>第${page.currentPage}页 </a>
+			<a>共 ${page.totalPages} 页 </a>
+			<a>第 ${page.currentPage} 页 </a>
 			<a href="?categoryId=${brandCategory.categoryId}&currentPage=1">首页</a>
 		  <c:choose>
 	        <c:when test="${page.currentPage - 1 > 0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage - 1}">上一页</a> </c:when>
@@ -224,8 +229,13 @@ function gotoPageForEnter(event) {
 	}
 }
 
-function getbrandDetail(id) {
-	window.location.href="<s:url value='/brand/getbrandDetail.html'/>?brandId=" + id;
+function getbrandDetail(brandId) {
+	window.location.href="<s:url value='/brand/getbrandDetail.html'/>?brandId=" + brandId;
+}
+
+function exportList(categoryId) {
+	var iframe = document.getElementById('brandExcelFileFrame');
+	iframe.src = "<s:url value='/brand/exportList.html'/>?categoryId=" + categoryId;
 }
 </script>
   

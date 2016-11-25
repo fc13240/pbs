@@ -64,9 +64,21 @@
 		SELECT category_id,category_name FROM brand_category WHERE category_id=#{categoryId}
 	</select>
 
+	<select id="getAllBrandsByCategory" parameterType="int" resultMap="brandMap">
+		SELECT b.address,b.case_status,bc.category_id,bc.category_name,b.brand_no,b.name,b.combination_type,b.similar_no,
+			b.scope,b.transaction_mode,b.price,b.app_person,b.app_date,b.publish_date,b.start_date,b.end_date,b.originality
+		FROM brands b
+		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
+		WHERE check_status=1 AND sell_status=1 AND b.category_id=#{categoryId}
+	</select>
 
-
-
+	<select id="getRecommendBrands" parameterType="int" resultMap="brandMap">
+		SELECT id, NAME, price ,b.category_id,bc.category_name FROM brands b
+		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
+		WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND id != #{brandId}
+		order by rand() limit 3
+		
+	</select>
 
 
 

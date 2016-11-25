@@ -54,7 +54,11 @@
       <div class="picBtnLeft">
         <div class="bd">
           <ul>
-            <li><a href="#"><img src="<s:url value='/images/patent_type_0${patent.patent_first_column_id}.jpg'/>" alt="" title=""></a></li>
+            <li>
+				<div style="background: url(<s:url value='/images/brands_img/testimg.jpg'/>) no-repeat;background-size:283px 283px;width:283px;height:283px;">    
+	          		<div style="font-family:Microsoft YaHei;font-size:33px;padding-top: 80px;text-align: center;">${brand.name}</div>
+	            </div>
+            </li>
           </ul>
         </div>
 
@@ -98,7 +102,7 @@
         <td></td>
       </tr>
       <tr style="border-top:1px dashed #ececec">
-        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">${brand.price }</span>
+        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">￥${brand.price }</span>
         <td>交易方式：			
 			<c:if test="${brand.transactionMode == 1 }">
 			出售
@@ -243,24 +247,30 @@
   </div>
   <div class="right-sec">
 
-         <h2>精品推荐</h2>
+    <h2>精品推荐</h2>
     <ul class="good-list-item">
+    
       <li>
+      <c:forEach items="${recommendBrands}" var="recommendBrand">
         <dl>
-          <dd class="pic"> <a href="/index.php/goods/9o3n6vvldn.html" target="_blank"><img src="/products_img/shangbiao/20/18597453.jpg" class="lazy" alt="" title=""></a> </dd>
-          <dt class="name"> <div style="width:110px;float:left;"><a href="/index.php/goods/9o3n6vvldn.html" target="_blank" title="恋云宫">恋云宫</a></div> <div class="num" style="float:left;">￥7000.00</div></dt>
+          <dd class="pic"> 
+          	<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendBrand.id}'/>" target="_blank">
+          		<div style="background: url(<s:url value='/images/brands_img/testimg.jpg'/>) no-repeat;background-size:192px 154px;width:192px;height:154px;">    
+	       			<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 40px;text-align: center;">${recommendBrand.name}</div>
+	   			</div>
+          	</a> 
+          </dd>
+          <dt class="name"> 
+          	<div style="width:110px;float:left;">
+          		<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendBrand.id}'/>" target="_blank" title="${recommendBrand.name}">${recommendBrand.name}</a>
+          	</div> 
+          	<div class="num" style="float:left;">￥${recommendBrand.price}</div>
+          </dt>
         </dl>
-      </li><li>
-        <dl>
-          <dd class="pic"> <a href="/index.php/goods/ze937173pk.html" target="_blank"><img src="/products_img/shangbiao/14/14802886.jpg" class="lazy" alt="" title=""></a> </dd>
-          <dt class="name"> <div style="width:110px;float:left;"><a href="/index.php/goods/ze937173pk.html" target="_blank" title="指尖的爱">指尖的爱</a></div> <div class="num" style="float:left;">￥50000.00</div></dt>
-        </dl>
-      </li><li>
-        <dl>
-          <dd class="pic"> <a href="/index.php/goods/ok836r43me.html" target="_blank"><img src="/products_img/shangbiao/11/14999825.jpg" class="lazy" alt="" title=""></a> </dd>
-          <dt class="name"> <div style="width:110px;float:left;"><a href="/index.php/goods/ok836r43me.html" target="_blank" title="追梦马">追梦马</a></div> <div class="num" style="float:left;">￥6000.00</div></dt>
-        </dl>
-      </li>    </ul> 
+        </c:forEach>
+      </li>
+    
+    </ul> 
   </div>
 </div>
 

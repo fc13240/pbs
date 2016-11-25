@@ -18,5 +18,9 @@ public interface BrandMapper {
 
 	BrandCategory getBrandCategoryById(int categoryId);
 
+	List<Brand> getAllBrandsByCategory(int categoryId);
+
+	List<Brand> getRecommendBrands(int brandId);
+
 
 }

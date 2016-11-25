@@ -1,12 +1,13 @@
 package zhuanli.controller;
 
-
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import zhuanli.domain.Page;
 import zhuanli.domain.Brand;
@@ -14,6 +15,13 @@ import zhuanli.domain.BrandCategory;
 import zhuanli.service.BrandService;
 import zhuanli.util.WebUtils;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.List;
 
 
@@ -47,8 +55,39 @@ public class BrandController {
 	@RequestMapping(path="/getbrandDetail")
 	public String getbrandDetail(int brandId, Model model) {
 		Brand brand = brandService.getbrandDetail(brandId); 
+		List<Brand> recommendBrands = brandService.getRecommendBrands(brandId);
 		model.addAttribute("brand", brand);
+		model.addAttribute("recommendBrands", recommendBrands);
 		return "brand_detail";
 	}
+	
+	@RequestMapping(path="/exportList",method=RequestMethod.GET)
+	public void exportList(int categoryId, HttpServletResponse response, Model model) throws IOException {
+		BrandCategory brandCategory = brandService.getBrandCategoryById(categoryId);
+		String exportExcelName = "第" + categoryId + "类-" + brandCategory.getCategoryName() + "-" + System.currentTimeMillis() + ".xls";
+		exportExcelName=URLEncoder.encode(exportExcelName,"GB2312");
+		exportExcelName=URLDecoder.decode(exportExcelName, "ISO8859_1"); 
+		exportBrandsExcelFile(categoryId, response, exportExcelName);
+	}
+		
+	private void exportBrandsExcelFile(int categoryId, HttpServletResponse response, String exportExcelName) throws IOException {
+		response.setContentType("application/vnd.ms-excel;charset=UTF-8");
+		String exportExcelPath = brandService.generateBrandsExportExcel(categoryId, exportExcelName);
+		
+		File excelFile = new File(exportExcelPath);
+		response.setContentLength((int)excelFile.length());
+		response.setHeader("Content-Disposition", "attachment;filename=" + exportExcelName);
+		response.setHeader("X-FRAME-OPTIONS", "SAMEORIGIN");
 
+		int BUFFER_SIZE = 8192;
+		byte[] buffer = new byte[BUFFER_SIZE];
+		try (OutputStream out = response.getOutputStream(); 
+				BufferedInputStream bis = new BufferedInputStream(new FileInputStream(excelFile))) {
+			int bytesRead = -1;
+			while ((bytesRead = bis.read(buffer)) != -1) {
+				out.write(buffer, 0, bytesRead);
+			}
+			out.flush();
+		}
+	}
 }
