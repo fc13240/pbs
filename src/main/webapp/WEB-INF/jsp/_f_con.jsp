@@ -204,14 +204,166 @@ margin: 0 auto;
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
-		        <h2>商标推荐</h2>
+		        <h2>第03类-日化用品</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
 		<div  style="width:1188px;height:2600px;margin-left:10px; overflow:hidden;position:relative;">
+		<%-- <c:forEach items="${brands[(1).intValue()]}" var="brand">
+			
+			<li class="col-md-3 col-sm-6">
+	          <div class="syPub_list">
+	              <div id="beforea">
+	              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+					<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+		          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+		            </div>
+	 			  </a>
+	 			  </div>
+	 			  <div>
+		          <h3>
+		          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+		          </h3>
+		        
+		          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+		          <div class="btn_box">
+			          <div class="left price">￥${brand.price}</div>
+			          <div class="right">
+			          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+			          </div>
+		          </div>
+	          </div>
+	      	</li>
+			
+		</c:forEach> --%>
+		
 		<iframe width="1180" height="3300" frameborder="0" style="position:relative; top:-740px; float:left; left:-10px;" scrolling="no" src="http://r.lotut.com">
 		
 		</iframe>
+		</div>
+	</div>	
+</div>
+
+<div class="floor_1F" style="height:2700px;">
+	<div class="floor_top clearfix">
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <h2>第05类-医用药品</h2>
+		        <div style="clear:both;"></div>
+		</div>
+
+		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
+		
+		
+		
+		
+		</div>
+	</div>	
+</div>
+
+<div class="floor_1F" style="height:2700px;">
+	<div class="floor_top clearfix">
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <h2>第09类-科学仪器</h2>
+		        <div style="clear:both;"></div>
+		</div>
+
+		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
+		
+		
+		
+		</div>
+	</div>	
+</div>
+
+<div class="floor_1F" style="height:2700px;">
+	<div class="floor_top clearfix">
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <h2>第12类-运输工具</h2>
+		        <div style="clear:both;"></div>
+		</div>
+
+		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
+		
+		
+		
+		</div>
+	</div>	
+</div>
+
+<div class="floor_1F" style="height:2700px;">
+	<div class="floor_top clearfix">
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <h2>第20类-家具用品</h2>
+		        <div style="clear:both;"></div>
+		</div>
+
+		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
+		
+		
+		</div>
+	</div>	
+</div>
+
+<div class="floor_1F" style="height:2700px;">
+	<div class="floor_top clearfix">
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <h2>第21类-厨房洁具</h2>
+		        <div style="clear:both;"></div>
+		</div>
+
+		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
+		
+		
+		</div>
+	</div>	
+</div>
+
+<div class="floor_1F" style="height:2700px;">
+	<div class="floor_top clearfix">
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <h2>第25类-服装鞋帽</h2>
+		        <div style="clear:both;"></div>
+		</div>
+
+		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
+		
+		
+		</div>
+	</div>	
+</div>
+
+<div class="floor_1F" style="height:2700px;">
+	<div class="floor_top clearfix">
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <h2>第33类-酒精饮料</h2>
+		        <div style="clear:both;"></div>
+		</div>
+
+		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
+		
+		
+		</div>
+	</div>	
+</div>
+
+<div class="floor_1F" style="height:2700px;">
+	<div class="floor_top clearfix">
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <h2>第43类-餐饮住宿</h2>
+		        <div style="clear:both;"></div>
+		</div>
+
+		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
+		
+		
 		</div>
 	</div>	
 </div>

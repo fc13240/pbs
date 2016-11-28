@@ -91,10 +91,15 @@
 		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
 		WHERE check_status=1 AND sell_status=1 
 		ORDER BY b.category_id
-		LIMIT #{page.startIndex},#{page.pageSize}
-		
+		LIMIT #{startIndex},#{pageSize}
 	</select>
-
+	
+	<select id="getIndexRecommendBrands" resultMap="brandMap">
+		SELECT id, NAME, price ,b.category_id,bc.category_name FROM brands b
+		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
+		WHERE check_status=1 AND sell_status=1 and is_recommend=2
+		LIMIT 5
+	</select>
 
 
 

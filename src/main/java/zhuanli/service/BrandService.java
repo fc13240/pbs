@@ -5,6 +5,8 @@ import zhuanli.domain.BrandCategory;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
+
 import zhuanli.domain.Page;
 
 public interface BrandService {
@@ -24,5 +26,7 @@ public interface BrandService {
 	int getAllBrandsCount();
 
 	List<Brand> getAllBrandsList(Page page);
+
+	Map<String, List<Brand>> getIndexRecommendBrands();
 
 }

@@ -1,6 +1,7 @@
 package zhuanli.dao.mapper;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 
@@ -25,6 +26,8 @@ public interface BrandMapper {
 	int getAllBrandsCount();
 
 	List<Brand> getAllBrandsList(Page page);
+
+	Map<String, List<Brand>> getIndexRecommendBrands();
 
 
 }

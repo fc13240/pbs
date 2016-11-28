@@ -1,6 +1,7 @@
 package zhuanli.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import zhuanli.domain.Brand;
 import zhuanli.domain.BrandCategory;
@@ -23,5 +24,7 @@ public interface BrandDao {
 	int getAllBrandsCount();
 
 	List<Brand> getAllBrandsList(Page page);
+
+	Map<String, List<Brand>> getIndexRecommendBrands();
 
 }

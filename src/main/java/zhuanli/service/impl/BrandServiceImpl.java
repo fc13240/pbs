@@ -3,6 +3,7 @@ package zhuanli.service.impl;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import zhuanli.service.constants.Settings;
 import zhuanli.dao.BrandDao;
@@ -60,6 +61,11 @@ public class BrandServiceImpl implements BrandService {
 	@Override
 	public List<Brand> getAllBrandsList(Page page) {
 		return brandDao.getAllBrandsList(page);
+	}
+
+	@Override
+	public Map<String, List<Brand>> getIndexRecommendBrands() {
+		return brandDao.getIndexRecommendBrands();
 	}
 
 	

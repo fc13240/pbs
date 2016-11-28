@@ -97,7 +97,7 @@ public class BrandController {
 		}
 		int totalCount=(int)brandService.getAllBrandsCount();
 		page.setTotalRecords(totalCount);
-		List<Brand> brands = brandService.getAllBrandsList(page); 
+		List<Brand> brands = brandService.getAllBrandsList(page);
 		model.addAttribute("page", page);
 		model.addAttribute("brands", brands);
 		return "all_brands_list";

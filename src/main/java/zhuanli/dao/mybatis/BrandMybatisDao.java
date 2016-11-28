@@ -1,6 +1,7 @@
 package zhuanli.dao.mybatis;
 
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import zhuanli.dao.BrandDao;
@@ -55,5 +56,10 @@ public class BrandMybatisDao extends SqlSessionDaoSupport implements BrandDao {
 	@Override
 	public List<Brand> getAllBrandsList(Page page) {
 		return brandMapper.getAllBrandsList(page);
+	}
+
+	@Override
+	public Map<String, List<Brand>> getIndexRecommendBrands() {
+		return brandMapper.getIndexRecommendBrands();
 	}
 }
