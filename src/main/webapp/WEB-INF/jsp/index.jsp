@@ -40,14 +40,14 @@
 	<%@ include file="_page-header.jsp"%>
 	</div>
 	
-	<div class="mll-navigator navigator-index">
+	<div class="mod-main container clear"> 
 	<%@ include file="_top_nav.jsp"%>
 	</div>
 </div>
 
-<%@ include file="_flash.jsp"%>
+<%-- <%@ include file="_flash.jsp"%> --%>
 
- <%@ include file="_f_con.jsp"%>
+<%@ include file="_f_con.jsp"%>
 
 
 
