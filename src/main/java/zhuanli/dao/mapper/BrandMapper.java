@@ -22,5 +22,9 @@ public interface BrandMapper {
 
 	List<Brand> getRecommendBrands(int brandId);
 
+	int getAllBrandsCount();
+
+	List<Brand> getAllBrandsList(Page page);
+
 
 }

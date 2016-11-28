@@ -52,5 +52,15 @@ public class BrandServiceImpl implements BrandService {
 		return brandDao.getRecommendBrands(brandId);
 	}
 
+	@Override
+	public int getAllBrandsCount() {
+		return brandDao.getAllBrandsCount();
+	}
+
+	@Override
+	public List<Brand> getAllBrandsList(Page page) {
+		return brandDao.getAllBrandsList(page);
+	}
+
 	
 }

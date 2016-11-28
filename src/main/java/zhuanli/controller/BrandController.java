@@ -1,7 +1,6 @@
 package zhuanli.controller;
 
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +12,6 @@ import zhuanli.domain.Page;
 import zhuanli.domain.Brand;
 import zhuanli.domain.BrandCategory;
 import zhuanli.service.BrandService;
-import zhuanli.util.WebUtils;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -37,8 +35,8 @@ public class BrandController {
 	}
 	
 	@RequestMapping(path="/showBrandsList")
-	public String showBrandsList(int categoryId, Page page, Model model, HttpSession session) {
-		page.setPageSize(WebUtils.getPageSize(session));
+	public String showBrandsList(int categoryId, Page page, Model model) {
+		page.setPageSize(15);
 		if(page.getCurrentPage()<1){
 			page.setCurrentPage(1);
 		}
@@ -89,5 +87,19 @@ public class BrandController {
 			}
 			out.flush();
 		}
+	}
+	
+	@RequestMapping(path="/getAllBrandsList")
+	public String getAllBrandsList(Page page, Model model) {
+		page.setPageSize(20);
+		if(page.getCurrentPage()<1){
+			page.setCurrentPage(1);
+		}
+		int totalCount=(int)brandService.getAllBrandsCount();
+		page.setTotalRecords(totalCount);
+		List<Brand> brands = brandService.getAllBrandsList(page); 
+		model.addAttribute("page", page);
+		model.addAttribute("brands", brands);
+		return "all_brands_list";
 	}
 }

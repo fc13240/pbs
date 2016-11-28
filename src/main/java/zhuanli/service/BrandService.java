@@ -21,4 +21,8 @@ public interface BrandService {
 
 	List<Brand> getRecommendBrands(int brandId);
 
+	int getAllBrandsCount();
+
+	List<Brand> getAllBrandsList(Page page);
+
 }

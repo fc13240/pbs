@@ -27,7 +27,7 @@
 	<%@ include file="_site-nav.jsp"%>
 	</div>
 	
-	<div class="page-header">
+	<div class="header">
 	<%@ include file="_page-header.jsp"%>
 	</div>
 	
@@ -36,7 +36,7 @@
 	</div>
 </div>
 
- <%@ include file="_flash.jsp"%>
+<%@ include file="_flash.jsp"%>
 
  <%@ include file="_f_con.jsp"%>
 
