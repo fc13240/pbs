@@ -23,13 +23,13 @@
 	<%@ include file="_site-nav.jsp"%>
 	</div>
 	
-	<div class="page-header">
+	<div class="header">
 	<%@ include file="_page-header.jsp"%>
 	</div>
 	
-	<div class="mll-navigator navigator-other">
+	<%-- <div class="mll-navigator navigator-other">
  	<%@ include file="_top_nav_list.jsp"%>
-	</div>
+	</div> --%>
 </div>
 
 
@@ -38,7 +38,7 @@
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">                                                       
-  <div class="current-location"> <a href="/">首页</a> > <a href="<s:url value='/business/patent_article.html?shopType=${patent.patent_first_column_id}'/>" >${patent.patent_first_column_name}</a></div>
+  <div class="current-location" style="margin-top:0px;"> <a href="<s:url value='/'/>">首页</a> > <a href="<s:url value='/business/patent_article.html?shopType=${patent.patent_first_column_id}'/>" >${patent.patent_first_column_name}</a></div>
 </div>
 <!--当前位置 end--> 
 
@@ -101,7 +101,7 @@
         <td></td>
       </tr>
       <tr style="">
-		<td>
+		<td colspan="2">
 			<div style="float:left;">客&nbsp;&nbsp;服：</div>
 			        <div style="float:left;margin-left:15px;">  马环静：</div>
 			<div style="float:left;">

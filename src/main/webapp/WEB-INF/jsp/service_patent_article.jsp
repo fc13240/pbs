@@ -43,13 +43,13 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 	<%@ include file="_site-nav.jsp"%>
 	</div>
 	
-	<div class="page-header">
+	<div class="header">
 	<%@ include file="_page-header.jsp"%>
 	</div>
 	
-	<div class="mll-navigator navigator-other">
+	<%-- <div class="mll-navigator navigator-other">
  	<%@ include file="_top_nav_list.jsp"%>
-	</div>
+	</div> --%>
 </div>
 
 
@@ -58,7 +58,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">
-  <div class="current-location"> <a href="/">首页</a> > 专利交易</div>
+  <div class="current-location" style="margin-top:0px;"> <a href="<s:url value='/'/>">首页</a> > 专利交易</div>
 </div>
 <!--当前位置 end--> 
 
