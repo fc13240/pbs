@@ -38,7 +38,7 @@ public class MobileBrandController {
 	}
 	
 	@RequestMapping(path="/index")
-	public String index(int categoryId, Page page, Model model) {
+	public String index(Model model) {
 
 		List<Brand> brands = brandService.getAllBrands(); 
 		model.addAttribute("brands", brands);
