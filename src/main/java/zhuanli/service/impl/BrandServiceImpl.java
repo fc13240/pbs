@@ -2,6 +2,8 @@ package zhuanli.service.impl;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -66,6 +68,8 @@ public class BrandServiceImpl implements BrandService {
 
 	@Override
 	public Map<Integer, List<Brand>> getIndexRecommendBrands() {
+		//List<Integer> categoryIds = new ArrayList<Integer>();
+		List<Integer> categoryIds = Arrays.asList(3,5,9,12,20,2);
 		return brandDao.getIndexRecommendBrands();
 	}
 	
