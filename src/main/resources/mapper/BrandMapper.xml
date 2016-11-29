@@ -136,5 +136,13 @@
 		</if>
 
 	</select>
+	
+	<select id="getIndexSlideBrands"  resultMap="brandMap">
+		SELECT id, NAME, price ,b.category_id,bc.category_name FROM brands b
+		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
+		WHERE check_status=1 AND sell_status=1 AND is_recommend=2
+		order by rand() limit 9
+		
+	</select>
 
 </mapper>

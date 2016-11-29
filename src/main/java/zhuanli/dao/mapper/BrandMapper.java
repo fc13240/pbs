@@ -36,6 +36,8 @@ public interface BrandMapper {
 	
 	int getSearchBrandsCount(BrandSearchCondition brandSearchCondition);
 
+	List<Brand> getIndexSlideBrands();
+
 
 
 }

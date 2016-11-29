@@ -7,7 +7,14 @@
 <script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery.js" ></script>
 <script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery.DB_tabMotionBanner.min.js" ></script>
 <script type="text/javascript" src="http://piwik.wtoip.com/piwik.js" ></script>
-
+<!-- <script type="text/javascript" src="http://r.lotut.com/public/javascript/ntkfstat.js" ></script>
+<script type="text/javascript" src="http://r.lotut.com/public/javascript/o_code.js" ></script>
+<script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery.scrollLoading-min.js" ></script>
+<script type="text/javascript" src="http://r.lotut.com/public/javascript/common.js" ></script>
+<script type="text/javascript" src="http://hm.baidu.com/hm.js" ></script>
+<script type="text/javascript" src="chrome://cmimprove/content/gesture/dragdrop.js" ></script>
+<script type="text/javascript" src="http://lxbjs.baidu.com/lxb.js?sid=3595226" ></script>
+ -->
 </head>
 <body>
 <div class="w clearfix">
@@ -305,7 +312,7 @@
   			<li class="clone" style="float: left; width: 170px;"> 
   				<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" target="_blank" title="${brand.name}"> 
   					<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:170px 136px;width:170px;height:136px;">    
-		          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+		          		<div style="font-family:Microsoft YaHei;font-size:18px;padding-top: 40px;text-align: center;">${brand.name}</div>
 						 
 		            </div> 
         			<span class="f-fr cut-price">${brand.name}</span> 

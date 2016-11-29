@@ -34,5 +34,7 @@ public interface BrandService {
 	
 	int getSearchBrandsCount(BrandSearchCondition brandSearchCondition);
 
+	List<Brand> getIndexSlideBrands();
+
 
 }

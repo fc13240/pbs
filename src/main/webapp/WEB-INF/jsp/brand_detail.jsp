@@ -251,7 +251,7 @@
           <dd class="pic"> 
           	<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendBrand.id}'/>" target="_blank">
           		<div style="background: url(<s:url value='/images/brands_img/${recommendBrand.brandCategory.categoryId }_imagemagick_small.jpg'/>) no-repeat;background-size:192px 154px;width:192px;height:154px;">    
-	       			<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 40px;text-align: center;">${recommendBrand.name}</div>
+	       			<div style="font-family:Microsoft YaHei;font-size:20px;padding-top: 40px;text-align: center;">${recommendBrand.name}</div>
 	   			</div>
           	</a> 
           </dd>

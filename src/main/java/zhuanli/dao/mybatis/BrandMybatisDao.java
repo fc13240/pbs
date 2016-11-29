@@ -73,4 +73,9 @@ public class BrandMybatisDao extends SqlSessionDaoSupport implements BrandDao {
 	public int getSearchBrandsCount(BrandSearchCondition brandSearchCondition) {
 		return brandMapper.getSearchBrandsCount(brandSearchCondition);
 	}
+
+	@Override
+	public List<Brand> getIndexSlideBrands() {
+		return brandMapper.getIndexSlideBrands();
+	}
 }

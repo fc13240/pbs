@@ -32,4 +32,6 @@ public interface BrandDao {
 	
 	int getSearchBrandsCount(BrandSearchCondition brandSearchCondition);
 
+	List<Brand> getIndexSlideBrands();
+
 }

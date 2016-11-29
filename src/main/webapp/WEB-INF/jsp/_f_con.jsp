@@ -212,7 +212,7 @@ margin: 0 auto;
 		</div>
 
 		<div  style="width:1188px;height:2600px;margin-left:10px; overflow:hidden;position:relative;">
-		<%-- <c:forEach items="${recommendBrands[(1).intValue()]}" var="brand">
+		<c:forEach items="${recommendBrands[(1).intValue()]}" var="brand">
 			
 			<li class="col-md-3 col-sm-6">
 	          <div class="syPub_list">
@@ -238,11 +238,11 @@ margin: 0 auto;
 	          </div>
 	      	</li>
 			
-		</c:forEach> --%>
+		</c:forEach>
 		
-		<iframe width="1180" height="3300" frameborder="0" style="position:relative; top:-740px; float:left; left:-10px;" scrolling="no" src="http://r.lotut.com">
+		<!-- <iframe width="1180" height="3300" frameborder="0" style="position:relative; top:-740px; float:left; left:-10px;" scrolling="no" src="http://r.lotut.com">
 		
-		</iframe>
+		</iframe> -->
 		</div>
 	</div>	
 </div>
