@@ -11,10 +11,10 @@
 		
 		<div class="phc-search Left" style="margin-left:200px;">
 			<!-- <form id="JS_search_form" class="search-form" action="<s:url value='/patent/search.html'/>" method="get" onsubmit="return MLL_header_search_submit();"> -->
-			<form id="JS_search_form" class="search-form" action="http://so.lotut.com/patent/search/basicSearch.html" method="get" target="_black">	
-				 <input type="hidden" name="page.currentPage=1" > 
-				<input type="submit" class="submit-btn Right" value="专利搜索">
-				<input id="JS_MLL_search_header_input" name="q" value="" autocomplete="off" type="text" maxlength="255" class="search-input" >
+			<form id="JS_search_form" class="search-form" action="<s:url value='/brand/searchBrands.html'/>" method="get" target="_black">	
+				 <input type="hidden" name="page.currentPage" value="1" > 
+				<input type="submit" class="submit-btn Right" value="搜索">
+				<input id="JS_MLL_search_header_input" name="keyword"  autocomplete="off" type="text" maxlength="255" class="search-input" >
 			</form>
 			<div id="JS_search_suggest" class="suggest">
 			</div>
