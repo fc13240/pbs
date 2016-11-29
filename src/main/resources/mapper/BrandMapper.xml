@@ -94,7 +94,7 @@
 		LIMIT #{startIndex},#{pageSize}
 	</select>
 	
-	<select id="getIndexRecommendBrands" resultMap="brandMap">
+	<select id="getIndexRecommendBrands" resultType="map">
 		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 3 LIMIT 5) AS c3
 		UNION 
 		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 5 LIMIT 5) AS c5

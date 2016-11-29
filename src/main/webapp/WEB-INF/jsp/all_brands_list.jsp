@@ -30,7 +30,7 @@
 	<%@ include file="_site-nav.jsp"%>
 	</div>
 	
-	<div class="header">
+	<div class="page-header">
   		<%-- <%@ include file="_page-header.jsp"%> --%>
 	  		<div class="container head-cont"> 
 	    <!--logo-->

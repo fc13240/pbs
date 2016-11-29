@@ -26,15 +26,12 @@ li{
 </style>
 
 <link rel="stylesheet" href="<s:url value='/css/owl.carousel.css'/>" />
-<%-- <link rel="stylesheet" href="<s:url value='/css/news.css'/>" /> --%>
+<link rel="stylesheet" href="<s:url value='/css/news.css'/>" />
 <script type="text/javascript" src="<s:url value='/js/jquery-1.8.3.min.js'/>"></script>
  <script type="text/javascript">
  var $180 = $;
  </script>
 <script type="text/javascript" src="<s:url value='/js/owl.carousel.js'/>"></script>
-<link rel="stylesheet" href="http://r.lotut.com/Themes/Home/default/Public/css/top_footer.css">
-<script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery-1.8.3.min.js"></script> 
-
 <script type="text/javascript">
 $(function(){
 	$180('#owl-demo').owlCarousel({
@@ -52,8 +49,8 @@ $(function(){
 </script>
 
 <!-- 1Fend -->
-<div class="floor_1F" style="width:1190px;margin:0 auto;">
-	<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
+<div class="floor_1F">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
 	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">2F</div>
 	        <h2>专利推荐</h2>                            
 	</div>
@@ -212,7 +209,7 @@ margin: 0 auto;
 		</div>
 
 		<div  style="width:1188px;height:2600px;margin-left:10px; overflow:hidden;position:relative;">
-		<c:forEach items="${recommendBrands[(1).intValue()]}" var="brand">
+		<%-- <c:forEach items="${recommendBrands[1]}" var="brand">
 			
 			<li class="col-md-3 col-sm-6">
 	          <div class="syPub_list">
@@ -238,11 +235,11 @@ margin: 0 auto;
 	          </div>
 	      	</li>
 			
-		</c:forEach>
+		</c:forEach> --%>
 		
-		<!-- <iframe width="1180" height="3300" frameborder="0" style="position:relative; top:-740px; float:left; left:-10px;" scrolling="no" src="http://r.lotut.com">
+		<iframe width="1180" height="3300" frameborder="0" style="position:relative; top:-740px; float:left; left:-10px;" scrolling="no" src="http://r.lotut.com">
 		
-		</iframe> -->
+		</iframe>
 		</div>
 	</div>	
 </div>

@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
 <link href="<s:url value='/css/category.min.css?2016322'/>" rel="stylesheet" type="text/css"/> 
 <link rel="stylesheet" href="http://r.lotut.com/Themes/Home/default/Public/css/top_footer.css">
-<script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery-1.8.3.min.js"></script> 
+<link rel="stylesheet" href="http://r.lotut.com/public/css/details.css" />
 </head>
 <body>
 <style type="text/css">
@@ -30,15 +30,18 @@
 	<%@ include file="_site-nav.jsp"%>
 	</div>
 	
-	<div class="header">
-  		<%@ include file="_page-header.jsp"%>
-    </div>
-
+	<div class="page-header">
+	<%@ include file="_page-header.jsp"%>
+	</div>
+	
+	<div class="mll-navigator navigator-other">
+ 	<%@ include file="_top_nav_list.jsp"%>
+	</div>
+	
 </div>
 
 <iframe id="brandExcelFileFrame" style="display:none"></iframe>
-     
-<link rel="stylesheet" href="http://r.lotut.com/public/css/details.css" />
+    
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">

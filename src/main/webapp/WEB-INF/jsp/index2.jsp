@@ -27,16 +27,16 @@
 	<%@ include file="_site-nav.jsp"%>
 	</div>
 	
-	<div class="header">
+	<div class="page-header">
 	<%@ include file="_page-header.jsp"%>
 	</div>
 	
-	<div class="mod-main container clear">
+	<div class="mll-navigator navigator-index">
 	<%@ include file="_top_nav.jsp"%>
 	</div>
 </div>
 
-<%-- <%@ include file="_flash.jsp"%> --%>
+<%@ include file="_flash.jsp"%>
 
 <%@ include file="_f_con.jsp"%>
 

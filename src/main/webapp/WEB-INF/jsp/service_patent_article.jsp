@@ -43,13 +43,13 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 	<%@ include file="_site-nav.jsp"%>
 	</div>
 	
-	<div class="header">
+	<div class="page-header">
 	<%@ include file="_page-header.jsp"%>
 	</div>
 	
-	<%-- <div class="mll-navigator navigator-other">
+	<div class="mll-navigator navigator-other">
  	<%@ include file="_top_nav_list.jsp"%>
-	</div> --%>
+	</div>
 </div>
 
 
