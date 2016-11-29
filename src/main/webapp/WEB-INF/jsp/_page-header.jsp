@@ -18,13 +18,12 @@
         <div class="search_box">    
            
             <div style="margin-left:auto; margin-right:auto;">
-                <form class="form-4" action="/index.php/search.html" name="site_search" target="_blank" method="get" id="site_search">
+                <!-- <form class="form-4" action="/index.php/search.html" name="site_search" target="_blank" method="get" id="site_search"> -->
                 <div class="mc-field-group">
-                <input onfocus="this.value='';" onblur="if(this.value=='') this.value='输入名称或者申请号查询';" value="输入名称和申请号查询" name="keyword" class="text" id="mce-EMAIL" type="text" style="padding-left:5px;">
-                
-                <input value="搜索" id="mc-embedded-subscribe" class="button" type="submit"><span style="margin-left:10px;"></span>
+                <input placeholder="输入名称和申请号查询" name="keyword" class="text" id="mce-EMAIL" type="text" style="padding-left:5px;">
+                <input value="搜索" id="mc-embedded-subscribe" class="button" type="button" onclick="searchBrands($('#mce-EMAIL').val())"><span style="margin-left:10px;"></span>
                 </div>            
-                </form>  
+                <!-- </form>   -->
                 <div class="check_box" style="margin-top:10px;">
       
                 </div>                   
@@ -68,4 +67,10 @@
     </div>
   </div>
   <!-- 主菜单 nav end / --> 
+  <script type="text/javascript">
+  	function searchBrands(keyword){
+  		window.open("<s:url value='/brand/searchBrands.html'/>?page.currentPage=1&keyword="+keyword);
+  	}
+  
+  </script>
 </body>

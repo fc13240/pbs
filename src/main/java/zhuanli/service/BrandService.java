@@ -2,6 +2,7 @@ package zhuanli.service;
 
 import zhuanli.domain.Brand;
 import zhuanli.domain.BrandCategory;
+import zhuanli.domain.BrandSearchCondition;
 
 import java.io.IOException;
 import java.util.List;
@@ -28,5 +29,10 @@ public interface BrandService {
 	List<Brand> getAllBrandsList(Page page);
 
 	Map<Integer, List<Brand>> getIndexRecommendBrands();
+	
+	List<Brand> getSearchBrandsList(BrandSearchCondition brandSearchCondition);
+	
+	int getSearchBrandsCount(BrandSearchCondition brandSearchCondition);
+
 
 }

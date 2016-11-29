@@ -8,6 +8,7 @@ import zhuanli.dao.BrandDao;
 import zhuanli.dao.mapper.BrandMapper;
 import zhuanli.domain.Brand;
 import zhuanli.domain.BrandCategory;
+import zhuanli.domain.BrandSearchCondition;
 import zhuanli.domain.Page;
 
 
@@ -61,5 +62,15 @@ public class BrandMybatisDao extends SqlSessionDaoSupport implements BrandDao {
 	@Override
 	public Map<Integer, List<Brand>> getIndexRecommendBrands() {
 		return brandMapper.getIndexRecommendBrands();
+	}
+
+	@Override
+	public List<Brand> getSearchBrandsList(BrandSearchCondition brandSearchCondition) {
+		return brandMapper.getSearchBrandsList(brandSearchCondition);
+	}
+	
+	@Override
+	public int getSearchBrandsCount(BrandSearchCondition brandSearchCondition) {
+		return brandMapper.getSearchBrandsCount(brandSearchCondition);
 	}
 }
