@@ -28,7 +28,7 @@
 	</header>
 	<div class="p_list">
 			<c:forEach items="${brands}" var="brands">
-					${brands.title}
+					
 			  <ul class="list list_name">
 			
 			   <li class="img "><a href=""><img src="" /></a></li>
