@@ -32,6 +32,9 @@ li{
  var $180 = $;
  </script>
 <script type="text/javascript" src="<s:url value='/js/owl.carousel.js'/>"></script>
+<link rel="stylesheet" href="http://r.lotut.com/Themes/Home/default/Public/css/top_footer.css">
+<script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery-1.8.3.min.js"></script> 
+
 <script type="text/javascript">
 $(function(){
 	$180('#owl-demo').owlCarousel({
@@ -209,7 +212,7 @@ margin: 0 auto;
 		</div>
 
 		<div  style="width:1188px;height:2600px;margin-left:10px; overflow:hidden;position:relative;">
-		<%-- <c:forEach items="${brands[(1).intValue()]}" var="brand">
+		<%-- <c:forEach items="${recommendBrands[(1).intValue()]}" var="brand">
 			
 			<li class="col-md-3 col-sm-6">
 	          <div class="syPub_list">

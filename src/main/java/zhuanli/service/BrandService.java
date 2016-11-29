@@ -28,10 +28,11 @@ public interface BrandService {
 
 	List<Brand> getAllBrandsList(Page page);
 
-	Map<String, List<Brand>> getIndexRecommendBrands();
+	Map<Integer, List<Brand>> getIndexRecommendBrands();
 	
 	List<Brand> getSearchBrandsList(BrandSearchCondition brandSearchCondition);
 	
 	int getSearchBrandsCount(BrandSearchCondition brandSearchCondition);
+
 
 }

@@ -95,10 +95,24 @@
 	</select>
 	
 	<select id="getIndexRecommendBrands" resultMap="brandMap">
-		SELECT id, NAME, price ,b.category_id,bc.category_name FROM brands b
-		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
-		WHERE check_status=1 AND sell_status=1 and is_recommend=2
-		LIMIT 5
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 3 LIMIT 5) AS c3
+		UNION 
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 5 LIMIT 5) AS c5
+		UNION 
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 9 LIMIT 5) AS c9
+		UNION 
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 12 LIMIT 5) AS c12
+		UNION 
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 20 LIMIT 5) AS c20
+		UNION 
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 21 LIMIT 5) AS c21
+		UNION 
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 25 LIMIT 5) AS c25
+		UNION 
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 33 LIMIT 5) AS c33
+		UNION 
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 43 LIMIT 5) AS c43
+
 	</select>
 	<select id="getSearchBrandsList" parameterType="BrandSearchCondition" resultMap="brandMap">
 		<bind name="keyword_pattern" value="'%' + keyword + '%'"/>

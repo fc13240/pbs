@@ -65,7 +65,7 @@ public class BrandServiceImpl implements BrandService {
 	}
 
 	@Override
-	public Map<String, List<Brand>> getIndexRecommendBrands() {
+	public Map<Integer, List<Brand>> getIndexRecommendBrands() {
 		return brandDao.getIndexRecommendBrands();
 	}
 	
