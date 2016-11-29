@@ -31,7 +31,7 @@
 					${brands.title}
 			  <ul class="list list_name">
 			
-			   <li class="img "><a href=""><img src="{$vo.image}" /></a></li>
+			   <li class="img "><a href=""><img src="" /></a></li>
 			   <li class="p_list_one" style="margin-top:20px;">
 			    <p class="p_title"><a href="">${brands.name}</a></p>
 			
