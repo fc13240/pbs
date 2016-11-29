@@ -47,7 +47,7 @@
 	                
 		                <div class="mc-field-group">
 		                <input  name="page.currentPage" type="hidden" value="1">
-		                <input placeholder="输入名称和申请号查询" name="keyword" value="${searchCondition.keyword }" class="text" id="mce-EMAIL" type="text" style="padding-left:5px;">
+		                <input placeholder="输入名称和申请号查询" name="keyword" class="text" id="mce-EMAIL" type="text" style="padding-left:5px;">
 		                <input value="搜索" id="mc-embedded-subscribe" class="button" type="submit"><span style="margin-left:10px;"></span>
 		                </div>            
 	                </form>
@@ -114,6 +114,7 @@
 <!--商标列表-->
 <div class="container box-red-line">
     <ul class="sy_buy_list_box">
+    	<div class="current-location"> 搜索 <span style="color:red;">${searchCondition.keyword }</span> 结果</div>
     	<c:forEach items="${brands}" var="brand">
 			
 			<li class="col-md-3 col-sm-6">
@@ -133,7 +134,7 @@
 		        
 		          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 		          <div class="btn_box">
-			          <div class="left price">￥${brand.price}</div>
+			          <div class="left price" style="">￥${brand.price}</div>
 			          <div class="right">
 			          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 			          </div>
