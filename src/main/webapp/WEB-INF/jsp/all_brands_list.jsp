@@ -104,9 +104,8 @@
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">
-  <div class="current-location" style="margin-top:0;"> <a href="<s:url value='/'/>">首页</a>
-   > 
- 
+  <div class="current-location" style="margin-top:0;">
+	<div class="current-location" style="font-family: Microsoft YaHei"> 搜索 <span style="color:red;">${searchCondition.keyword }</span> 结果</div>
   </div>
 </div>
 <!--当前位置 end--> 
@@ -114,7 +113,6 @@
 <!--商标列表-->
 <div class="container box-red-line">
     <ul class="sy_buy_list_box">
-    	<div class="current-location"> 搜索 <span style="color:red;">${searchCondition.keyword }</span> 结果</div>
     	<c:forEach items="${brands}" var="brand">
 			
 			<li class="col-md-3 col-sm-6">
