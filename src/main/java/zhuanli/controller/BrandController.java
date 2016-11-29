@@ -5,12 +5,15 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import zhuanli.domain.Page;
 import zhuanli.domain.Brand;
 import zhuanli.domain.BrandCategory;
+import zhuanli.domain.BrandSearchCondition;
 import zhuanli.service.BrandService;
 
 import java.io.BufferedInputStream;
@@ -100,6 +103,26 @@ public class BrandController {
 		List<Brand> brands = brandService.getAllBrandsList(page);
 		model.addAttribute("page", page);
 		model.addAttribute("brands", brands);
+		return "all_brands_list";
+	}
+	
+	
+	@RequestMapping(path="/searchBrands")
+	public String searchBrands(BrandSearchCondition brandSearchCondition ,Model model){
+		
+		Page page= brandSearchCondition.getPage();
+		page.setPageSize(20);
+		if(page.getCurrentPage()<1){
+			page.setCurrentPage(1);
+		}
+		int totalCount= brandService.getSearchBrandsCount(brandSearchCondition);
+		page.setTotalRecords(totalCount);
+		
+		List<Brand> brands = brandService.getSearchBrandsList(brandSearchCondition);
+		
+		model.addAttribute("page", page);
+		model.addAttribute("brands", brands);
+		model.addAttribute("searchCondition", brandSearchCondition);
 		return "all_brands_list";
 	}
 }

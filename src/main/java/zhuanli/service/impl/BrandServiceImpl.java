@@ -9,6 +9,7 @@ import zhuanli.service.constants.Settings;
 import zhuanli.dao.BrandDao;
 import zhuanli.domain.Brand;
 import zhuanli.domain.BrandCategory;
+import zhuanli.domain.BrandSearchCondition;
 import zhuanli.domain.Page;
 import zhuanli.service.BrandService;
 import zhuanli.service.utils.BrandsExcelGenerator;
@@ -66,6 +67,16 @@ public class BrandServiceImpl implements BrandService {
 	@Override
 	public Map<String, List<Brand>> getIndexRecommendBrands() {
 		return brandDao.getIndexRecommendBrands();
+	}
+	
+	@Override
+	public List<Brand> getSearchBrandsList(BrandSearchCondition brandSearchCondition) {
+		return brandDao.getSearchBrandsList(brandSearchCondition);
+	}
+	
+	@Override
+	public int getSearchBrandsCount(BrandSearchCondition brandSearchCondition) {
+		return brandDao.getSearchBrandsCount(brandSearchCondition);
 	}
 
 	

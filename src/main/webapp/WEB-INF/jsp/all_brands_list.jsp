@@ -31,7 +31,69 @@
 	</div>
 	
 	<div class="header">
-  		<%@ include file="_page-header.jsp"%>
+  		<%-- <%@ include file="_page-header.jsp"%> --%>
+	  		<div class="container head-cont"> 
+	    <!--logo-->
+	    <div class="head-mod more-item-box">
+	      <div class="logo f-fl">
+	        <h1><a href=""><img src="<s:url value='/images/logo.png'/>" alt="" width="210"></a></h1>
+	      </div>
+	      <!--logo end /-->
+	      <div class="search-mod f-fl mt20">
+	        <div class="search_box">    
+	           
+	            <div style="margin-left:auto; margin-right:auto;">
+	                <form class="form-4" action="<s:url value='/brand/searchBrands.html'/>" name="site_search" method="get" id="site_search">
+	                
+		                <div class="mc-field-group">
+		                <input  name="page.currentPage" type="hidden" value="1">
+		                <input placeholder="输入名称和申请号查询" name="keyword" value="${searchCondition.keyword }" class="text" id="mce-EMAIL" type="text" style="padding-left:5px;">
+		                <input value="搜索" id="mc-embedded-subscribe" class="button" type="submit"><span style="margin-left:10px;"></span>
+		                </div>            
+	                </form>
+	                <div class="check_box" style="margin-top:10px;">
+	      
+	                </div>                   
+	            </div>
+	        </div>    
+	        </div>
+	      <div class="header_tel f-fl">
+	        <i class="icon_tel f-ib"></i>
+	        <div class="right topTwo_b">
+	          <div class="tel">
+	          <p class="on">0551-65771310</p>
+	            </div>
+	        </div>
+	
+	
+	      </div>
+	      <!--wx-code--> 
+	      
+	      <!--/wx-code-->
+	  </div>
+	  </div>
+	  <!-- 主菜单 nav -->
+	  <div class="nav clear">
+	    <div class="container"> 
+	      <!-- 主菜单-特色服务 all-category -->
+	      <div class="all-category">
+	        <div class="mod">
+	          <div class="hd"><a href="<s:url value='/'/>"><strong>全部商品分类</strong></a></div>
+	          <div class="bd"></div>
+	        </div>
+	      </div>
+	      <!-- 主菜单-特色服务 all-category end / --> 
+	      <!-- 主菜单-列表 menu  -->
+	      <ul class="menu">
+	        <li><a href="<s:url value='/'/>" class="active">首页</a></li>
+	        <li><a href="<s:url value='/brand/getAllBrandsList.html?currentPage=1'/>" target="_blank" style="width:95px;">商标市场</a></li>
+	        <li><a href="http://a.lotut.com" target="_blank" style="width:115px;">代账会计188/月</a></li>
+	        <li><a href="http://so.lotut.com" target="_blank" style="width:95px;">专利搜索</a></li>
+	        <li><a href="http://g.lotut.com" target="_blank" style="width:115px;">专利管理系统</a></li>
+	      </ul>
+	      <!-- 主菜单-列表 menu end / --> 
+	    </div>
+	  </div>
     </div>
 
 </div>
@@ -88,27 +150,53 @@
 <div style="margin-left:200px;height:60px;">
 	<div id="page"> 
 	<c:if test="${page.totalPages > 1}"> 
-		<div class="col-lg-12"> 
-			<a>共 ${page.totalPages} 页 </a>
-			<a>第 ${page.currentPage} 页 </a>
-			<a href="?currentPage=1">首页</a>
-		  <c:choose>
-	        <c:when test="${page.currentPage - 1 > 0}"> <a href="?currentPage=${page.currentPage - 1}">上一页</a> </c:when>
-	        <c:when test="${page.currentPage - 1 <= 0}"> <a href="?currentPage=1">上一页</a> </c:when>
-	      </c:choose>
-	      <c:choose>
-	        <c:when test="${page.totalPages==0}"> <a href="?currentPage=${page.currentPage}">下一页</a> </c:when>
-	        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?currentPage=${page.currentPage+1}">下一页</a> </c:when>
-	        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?currentPage=${page.totalPages}">下一页</a> </c:when>
-	      </c:choose>
-	      <c:choose>
-	        <c:when test="${page.totalPages==0}"> <a href="?currentPage=${page.currentPage}">尾页</a> </c:when>
-	        <c:otherwise> <a href="?currentPage=${page.totalPages}">尾页</a> </c:otherwise>
-	      </c:choose>
-	     
-	      <a><input type="text" id="page.pageNo" style="width:30px;height:14px" name="currentPage" onKeyDown="gotoPageForEnter(event)"/></a>
-	      <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
-       </div>
+		<c:if test="${searchCondition==null }">
+			<div class="col-lg-12"> 
+				<a>共 ${page.totalPages} 页 </a>
+				<a>第 ${page.currentPage} 页 </a>
+				<a href="?currentPage=1">首页</a>
+			  <c:choose>
+		        <c:when test="${page.currentPage - 1 > 0}"> <a href="?currentPage=${page.currentPage - 1}">上一页</a> </c:when>
+		        <c:when test="${page.currentPage - 1 <= 0}"> <a href="?currentPage=1">上一页</a> </c:when>
+		      </c:choose>
+		      <c:choose>
+		        <c:when test="${page.totalPages==0}"> <a href="?currentPage=${page.currentPage}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?currentPage=${page.currentPage+1}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?currentPage=${page.totalPages}">下一页</a> </c:when>
+		      </c:choose>
+		      <c:choose>
+		        <c:when test="${page.totalPages==0}"> <a href="?currentPage=${page.currentPage}">尾页</a> </c:when>
+		        <c:otherwise> <a href="?currentPage=${page.totalPages}">尾页</a> </c:otherwise>
+		      </c:choose>
+		     
+		      <a><input type="text" id="page.pageNo" style="width:30px;height:14px" name="currentPage" onKeyDown="gotoPageForEnter(event)"/></a>
+		      <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
+	       </div>
+		
+		</c:if>
+		<c:if test="${searchCondition!=null }">
+			<div class="col-lg-12"> 
+				<a>共 ${page.totalPages} 页 </a>
+				<a>第 ${page.currentPage} 页 </a>
+				<a href="?page.currentPage=1&${searchCondition}">首页</a>
+			  <c:choose>
+		        <c:when test="${page.currentPage - 1 > 0}"> <a href="?page.currentPage=${page.currentPage - 1}&${searchCondition}">上一页</a> </c:when>
+		        <c:when test="${page.currentPage - 1 <= 0}"> <a href="?page.currentPage=1">上一页</a> </c:when>
+		      </c:choose>
+		      <c:choose>
+		        <c:when test="${page.totalPages==0}"> <a href="?page.currentPage=${page.currentPage}&${searchCondition}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?page.currentPage=${page.currentPage+1}&${searchCondition}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?page.currentPage=${page.totalPages}&${searchCondition}">下一页</a> </c:when>
+		      </c:choose>
+		      <c:choose>
+		        <c:when test="${page.totalPages==0}"> <a href="?page.currentPage=${page.currentPage}&${searchCondition}">尾页</a> </c:when>
+		        <c:otherwise> <a href="?page.currentPage=${page.totalPages}&${searchCondition}">尾页</a> </c:otherwise>
+		      </c:choose>
+		     
+		      <a><input type="text" id="page.pageNo" style="width:30px;height:14px" name="page.currentPage" onKeyDown="gotoPageForEnter(event)"/></a>
+		      <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
+	       </div>
+       </c:if>
     </c:if>
 	</div>
 	<!-- 分页功能 End -->
@@ -125,7 +213,6 @@
 
 function gotoPage() {
 	var pageNo = document.getElementById("page.pageNo").value;
-	
 	if (isNaN(pageNo)) {
 		alert("请输入数值");
 		return;
@@ -145,7 +232,12 @@ function gotoPage() {
 	
 	var url = "<s:url value='/brand/getAllBrandsList.html'/>?currentPage=" + pageNo;
 	
+	<c:if test="${searchCondition!=null}">
 	
+		url="<s:url value='/brand/searchBrands.html'/>?page.currentPage=" + pageNo+"&${searchCondition}";
+	</c:if>
+	
+		
 	location.href = url
 	
 }
