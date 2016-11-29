@@ -56,7 +56,7 @@ public class IndexController {
 		//Map<String, List<Brand>> brands = brandService.getIndexRecommendBrands();
 		model.addAttribute("patent_list", patent_list);
 		model.addAttribute("AllColumns", AllColumns);
-		//model.addAttribute("brands", brands);
+		//model.addAttribute("brands", brands);slideBrands
 		return "index";
 	}
 	

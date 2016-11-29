@@ -26,7 +26,7 @@ li{
 </style>
 
 <link rel="stylesheet" href="<s:url value='/css/owl.carousel.css'/>" />
-<link rel="stylesheet" href="<s:url value='/css/news.css'/>" />
+<%-- <link rel="stylesheet" href="<s:url value='/css/news.css'/>" /> --%>
 <script type="text/javascript" src="<s:url value='/js/jquery-1.8.3.min.js'/>"></script>
  <script type="text/javascript">
  var $180 = $;
@@ -49,8 +49,8 @@ $(function(){
 </script>
 
 <!-- 1Fend -->
-<div class="floor_1F">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
+<div class="floor_1F" style="width:1190px;margin:0 auto;">
+	<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
 	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">2F</div>
 	        <h2>专利推荐</h2>                            
 	</div>
@@ -200,9 +200,9 @@ margin: 0 auto;
     </style>  
 
 
-<div class="floor_1F" style="height:2700px;">
+<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第03类-日化用品</h2>
 		        <div style="clear:both;"></div>
@@ -244,9 +244,9 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;">
+<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第05类-医用药品</h2>
 		        <div style="clear:both;"></div>
@@ -261,9 +261,9 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;">
+<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第09类-科学仪器</h2>
 		        <div style="clear:both;"></div>
@@ -277,9 +277,9 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;">
+<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第12类-运输工具</h2>
 		        <div style="clear:both;"></div>
@@ -293,9 +293,9 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;">
+<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第20类-家具用品</h2>
 		        <div style="clear:both;"></div>
@@ -308,9 +308,9 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;">
+<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第21类-厨房洁具</h2>
 		        <div style="clear:both;"></div>
@@ -323,9 +323,9 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;">
+<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第25类-服装鞋帽</h2>
 		        <div style="clear:both;"></div>
@@ -338,9 +338,9 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;">
+<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第33类-酒精饮料</h2>
 		        <div style="clear:both;"></div>
@@ -353,9 +353,9 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;">
+<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #488bad;">
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第43类-餐饮住宿</h2>
 		        <div style="clear:both;"></div>
