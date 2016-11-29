@@ -84,5 +84,10 @@ public class BrandServiceImpl implements BrandService {
 		return brandDao.getIndexSlideBrands();
 	}
 
+	@Override
+	public List<Brand> getAllBrands() {
+		return brandDao.getAllBrands();
+	}
+
 	
 }
