@@ -93,8 +93,8 @@
 	<c:if test="${page.totalPages > 1}"> 
 		<c:if test="${searchCondition==null }">
 			<div class="col-lg-12"> 
-				<a>共 ${page.totalPages} 页 </a>
-				<a>第 ${page.currentPage} 页 </a>
+				<span>共 ${page.totalPages} 页 </span>
+				<span>第 ${page.currentPage} 页 </span>
 				<a href="?currentPage=1">首页</a>
 			  <c:choose>
 		        <c:when test="${page.currentPage - 1 > 0}"> <a href="?currentPage=${page.currentPage - 1}">上一页</a> </c:when>

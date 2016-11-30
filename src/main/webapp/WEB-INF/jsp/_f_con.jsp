@@ -20,9 +20,9 @@
 {  
    color:#fff;  
 }
-li{
+/* li{
 　　display:block;overflow:hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;
-　　}  
+　　} */  
 </style>
 
 <link rel="stylesheet" href="<s:url value='/css/owl.carousel.css'/>" />

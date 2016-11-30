@@ -19,8 +19,9 @@
 <body>
 <style type="text/css">
 
-#beforea a:active  {color:black;}
 #beforea a: {text-decoration:none;}
+#beforea a:active  {color:black;}
+
 
 </style>
 <script type="text/javascript">(function(){var screenWidth=window.screen.width;if(screenWidth>=1280){document.body.className=document.body.className+" root_body";;window.LOAD=true;}else{window.LOAD=false;}})()</script>
@@ -67,7 +68,7 @@
 			<li class="col-md-3 col-sm-6">
 	          <div class="syPub_list">
 	              <div id="beforea">
-	              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+	              <a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 					<div style="background: url(<s:url value='/images/brands_img/${brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 		          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 						 
@@ -99,8 +100,8 @@
 	<div id="page"> 
 	<c:if test="${page.totalPages > 1}"> 
 		<div class="col-lg-12"> 
-			<a>共 ${page.totalPages} 页 </a>
-			<a>第 ${page.currentPage} 页 </a>
+			<span>共 ${page.totalPages} 页 </span>
+			<span>第 ${page.currentPage} 页 </span>
 			<a href="?categoryId=${brandCategory.categoryId}&currentPage=1">首页</a>
 		  <c:choose>
 	        <c:when test="${page.currentPage - 1 > 0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage - 1}">上一页</a> </c:when>
