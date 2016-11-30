@@ -34,6 +34,8 @@ public interface BrandMapper {
 
 	List<Brand> getIndexSlideBrands();
 
+	List<Brand> getAllBrands();
+
 
 
 }

@@ -33,4 +33,6 @@ public interface BrandDao {
 
 	List<Brand> getIndexSlideBrands();
 
+	List<Brand> getAllBrands();
+
 }

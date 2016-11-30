@@ -36,5 +36,7 @@ public interface BrandService {
 
 	List<Brand> getIndexSlideBrands();
 
+	List<Brand> getAllBrands();
+
 
 }
