@@ -11,8 +11,8 @@
 <meta http-equiv="cache-control" content="no-transform">
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
 <link href="<s:url value='/css/category.min.css?2016322'/>" rel="stylesheet" type="text/css"/> 
-<link rel="stylesheet" href="http://r.lotut.com/Themes/Home/default/Public/css/top_footer.css">
-<link rel="stylesheet" href="http://r.lotut.com/public/css/details.css" />
+<link rel="stylesheet" href="<s:url value='/css/top_footer.css'/>">
+<link rel="stylesheet" href="<s:url value='/css/details.css'/>" />
 </head>
 <body>
 
@@ -121,11 +121,11 @@
 			<div style="float:left;">客&nbsp;&nbsp;服：</div>
 			        <div style="float:left;margin-left:15px;">  马环静：</div>
 			<div style="float:left;">
-			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238686&amp;site=qq&amp;menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" style="" href="http://wpa.qq.com/pa?p=2:2851238686:51" alt="与客服小马进行交谈" title="与客服小马进行交谈"></a>
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238686&amp;site=qq&amp;menu=yes"><img src="<s:url value='/images/zx_qq.gif'/>" border="0" style="" href="http://wpa.qq.com/pa?p=2:2851238686:51" alt="与客服小马进行交谈" title="与客服小马进行交谈"></a>
 			</div> 
 			         <div style="float:left;margin-left:15px;">肖莹莹：</div>
 			<div style="float:left;">
-			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238688&amp;site=qq&amp;menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" href="http://wpa.qq.com/pa?p=2:2851238688:51" alt="与客服莹莹进行交谈" title="与客服莹莹进行交谈"></a>
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238688&amp;site=qq&amp;menu=yes"><img src="<s:url value='/images/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2851238688:51" alt="与客服莹莹进行交谈" title="与客服莹莹进行交谈"></a>
 			</div>
 		</td>
       </tr>
@@ -136,12 +136,12 @@
     <ul class="good-list-item1" style="padding:10px 40px;">
       <li>
         <dl>
-          <dd> <img title="龙图腾" class="lazy" alt="龙图腾" src="http://r.lotut.com/public/htmlimg/shangjia.jpg" width="160"> </dd>
+          <dd> <img title="龙图腾" class="lazy" alt="龙图腾" src="<s:url value='/images/shangjia.jpg'/>" width="160"> </dd>
           <dd style='height:8px;'></dd>
           <dd class="ifo">
          
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2850130083&site=qq&menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" href="http://wpa.qq.com/pa?p=2:2850130083:51" alt="与客服小林进行交谈" title="与客服小林进行交谈"/></a>
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2853237834&site=qq&menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" href="http://wpa.qq.com/pa?p=2:2853237834:51" alt="与客服代丽曼进行交谈" title="与客服代丽曼进行交谈"/></a>
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2850130083&site=qq&menu=yes"><img src="<s:url value='/images/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2850130083:51" alt="与客服小林进行交谈" title="与客服小林进行交谈"/></a>
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2853237834&site=qq&menu=yes"><img src="<s:url value='/images/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2853237834:51" alt="与客服代丽曼进行交谈" title="与客服代丽曼进行交谈"/></a>
 
           </dd>
           <dd class="ifo" style="height:35px;line-height:40px;font-size:12px;">联系电话：0551-65771310</dd>
@@ -282,7 +282,6 @@
 <div class="right-sidebar"> </div>
 </div>
 <script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery-1.8.3.min.js"></script> 
-<script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery.lazyload.js"></script> 
 
 <!-- End Piwik Code --> 
 

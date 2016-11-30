@@ -29,8 +29,8 @@ li{
 <link rel="stylesheet" href="<s:url value='/css/news.css'/>" />
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
 <link href="<s:url value='/css/category.min.css?2016322'/>" rel="stylesheet" type="text/css"/> 
-<link rel="stylesheet" href="http://r.lotut.com/Themes/Home/default/Public/css/top_footer.css">
-<link rel="stylesheet" href="http://r.lotut.com/public/css/details.css" />
+<link rel="stylesheet" href="<s:url value='/css/top_footer.css'/>">
+
  <script type="text/javascript">
  var $180 = $;
  </script>
@@ -204,7 +204,7 @@ margin: 0 auto;
 </style>  
 
 
-<div class="floor_1F" style="height:340px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">2F</div>
@@ -219,14 +219,14 @@ margin: 0 auto;
 				
 				<li class="col-md-3 col-sm-6">
 		          <div class="syPub_list">
-		              <div id="beforea">
+		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 							 
 			            </div>
 		 			  </a>
-		 			  </div>
+		 			 
 		 			  <div>
 			          <h3>
 			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
@@ -250,7 +250,7 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:340px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">3F</div>
@@ -265,14 +265,14 @@ margin: 0 auto;
 				
 				<li class="col-md-3 col-sm-6">
 		          <div class="syPub_list">
-		              <div id="beforea">
+		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 							 
 			            </div>
 		 			  </a>
-		 			  </div>
+		 			  
 		 			  <div>
 			          <h3>
 			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
@@ -297,7 +297,7 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:340px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">4F</div>
@@ -311,14 +311,14 @@ margin: 0 auto;
 				
 				<li class="col-md-3 col-sm-6">
 		          <div class="syPub_list">
-		              <div id="beforea">
+		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 							 
 			            </div>
 		 			  </a>
-		 			  </div>
+		 			  
 		 			  <div>
 			          <h3>
 			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
@@ -343,7 +343,7 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:340px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">5F</div>
@@ -357,14 +357,14 @@ margin: 0 auto;
 				
 				<li class="col-md-3 col-sm-6">
 		          <div class="syPub_list">
-		              <div id="beforea">
+		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 							 
 			            </div>
 		 			  </a>
-		 			  </div>
+		 			 
 		 			  <div>
 			          <h3>
 			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
@@ -389,7 +389,7 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:340px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">6F</div>
@@ -403,14 +403,14 @@ margin: 0 auto;
 				
 				<li class="col-md-3 col-sm-6">
 		          <div class="syPub_list">
-		              <div id="beforea">
+		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 							 
 			            </div>
 		 			  </a>
-		 			  </div>
+		 			 
 		 			  <div>
 			          <h3>
 			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
@@ -434,7 +434,7 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:340px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">7F</div>
@@ -448,14 +448,14 @@ margin: 0 auto;
 				
 				<li class="col-md-3 col-sm-6">
 		          <div class="syPub_list">
-		              <div id="beforea">
+		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 							 
 			            </div>
 		 			  </a>
-		 			  </div>
+		 			  
 		 			  <div>
 			          <h3>
 			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
@@ -479,7 +479,7 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:340px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">8F</div>
@@ -493,14 +493,14 @@ margin: 0 auto;
 				
 				<li class="col-md-3 col-sm-6">
 		          <div class="syPub_list">
-		              <div id="beforea">
+		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 							 
 			            </div>
 		 			  </a>
-		 			  </div>
+		 			  
 		 			  <div>
 			          <h3>
 			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
@@ -524,7 +524,7 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:340px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">9F</div>
@@ -537,15 +537,15 @@ margin: 0 auto;
 	    	<c:forEach items="${recommendBrands['33']}" var="brand">
 				
 				<li class="col-md-3 col-sm-6">
-		          <div class="syPub_list">
-		              <div id="beforea">
+		          <div class="syPub_list" >
+		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 							 
 			            </div>
 		 			  </a>
-		 			  </div>
+		 			  
 		 			  <div>
 			          <h3>
 			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
@@ -569,7 +569,7 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:340px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">10F</div>
@@ -583,14 +583,14 @@ margin: 0 auto;
 				
 				<li class="col-md-3 col-sm-6">
 		          <div class="syPub_list">
-		              <div id="beforea">
+		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 							 
 			            </div>
 		 			  </a>
-		 			  </div>
+		 			  
 		 			  <div>
 			          <h3>
 			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
