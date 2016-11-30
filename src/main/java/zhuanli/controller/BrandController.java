@@ -92,21 +92,6 @@ public class BrandController {
 		}
 	}
 	
-	@RequestMapping(path="/getAllBrandsList")
-	public String getAllBrandsList(Page page, Model model) {
-		page.setPageSize(20);
-		if(page.getCurrentPage()<1){
-			page.setCurrentPage(1);
-		}
-		int totalCount=(int)brandService.getAllBrandsCount();
-		page.setTotalRecords(totalCount);
-		List<Brand> brands = brandService.getAllBrandsList(page);
-		model.addAttribute("page", page);
-		model.addAttribute("brands", brands);
-		return "all_brands_list";
-	}
-	
-	
 	@RequestMapping(path="/searchBrands")
 	public String searchBrands(BrandSearchCondition brandSearchCondition ,Model model){
 		

@@ -134,6 +134,8 @@ font-size:16px;text-align:center;width:100px;color:#ffffff;}
     .sy_buy_list_box .sy_buy_list li{ width:200px; margin-right:20px; height:195px; margin-bottom:10px; float:left; display:block;}
     .syPub_list{ background-color:#f7f7f7;width:201px;margin-bottom:10px;}
     .syPub_list:hover{background-color:#fff;border:1px solid #ff6600;}
+    .syPub_list a:hover{text-decoration: none;}    
+    .syPub_list a:hover{color:#000;}
     .syPub_list .img{ position:relative; z-index:0}
     .syPub_list .img a{ display:block;}
     .syPub_list .img p{ position:absolute; bottom:0; left:0; background: rgba(0, 0, 0, 0.5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000); width:90%; padding:0 5%; height:26px; line-height:26px; font-size:14px; color:#fff;}
@@ -227,8 +229,6 @@ margin: 0;padding:3;max-width: 500px;min-width: 500px;width:500px;display: inlin
     position: relative;
     text-decoration: none;
 }
-#page span{
-    background-color: #6faed9;
-    border-color: #6faed9;
-    color: #fff;
+#page span:hover{
+    color:#000;
 }

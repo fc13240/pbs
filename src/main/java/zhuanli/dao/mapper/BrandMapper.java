@@ -1,9 +1,6 @@
 package zhuanli.dao.mapper;
 
 import java.util.List;
-import java.util.Map;
-
-import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Param;
 
 import zhuanli.domain.Brand;
@@ -29,8 +26,7 @@ public interface BrandMapper {
 
 	List<Brand> getAllBrandsList(Page page);
 
-	@MapKey("brandCategory.categoryId")
-	Map<Integer, List<Brand>> getIndexRecommendBrands();
+	List<Brand> getIndexRecommendBrands();
 	
 	List<Brand> getSearchBrandsList(BrandSearchCondition brandSearchCondition);
 	

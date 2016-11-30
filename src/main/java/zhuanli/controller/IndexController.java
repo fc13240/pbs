@@ -2,7 +2,6 @@ package zhuanli.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -54,12 +53,10 @@ public class IndexController {
 
 		List<FirstColumn>  AllColumns=patentService.selectAllColumns();
 		List<Patent> patent_list=patentService.getPatents();
-		Map<Integer, List<Brand>> recommendBrands = brandService.getIndexRecommendBrands();
-		List<Brand> slideBrands = brandService.getIndexSlideBrands();
+		Map<String, List<Brand>> recommendBrands = brandService.getIndexRecommendBrands();
 		model.addAttribute("patent_list", patent_list);
 		model.addAttribute("AllColumns", AllColumns);
 		model.addAttribute("recommendBrands", recommendBrands);
-		model.addAttribute("slideBrands", slideBrands);
 		return "index";
 	}
 	

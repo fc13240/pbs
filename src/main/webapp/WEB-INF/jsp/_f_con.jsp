@@ -20,14 +20,17 @@
 {  
    color:#fff;  
 }
-li{
+/* li{
 　　display:block;overflow:hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;
-　　}  
+　　} */  
 </style>
 
 <link rel="stylesheet" href="<s:url value='/css/owl.carousel.css'/>" />
 <link rel="stylesheet" href="<s:url value='/css/news.css'/>" />
-<script type="text/javascript" src="<s:url value='/js/jquery-1.8.3.min.js'/>"></script>
+<link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
+<link href="<s:url value='/css/category.min.css?2016322'/>" rel="stylesheet" type="text/css"/> 
+<link rel="stylesheet" href="<s:url value='/css/top_footer.css'/>">
+
  <script type="text/javascript">
  var $180 = $;
  </script>
@@ -51,7 +54,7 @@ $(function(){
 <!-- 1Fend -->
 <div class="floor_1F">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">2F</div>
+	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">1F</div>
 	        <h2>专利推荐</h2>                            
 	</div>
 	<div class="news-info-con" style="height: 340px;">
@@ -197,175 +200,422 @@ margin: 0 auto;
 -webkit-transition: opacity .15s ease-out;
 }
 .left-item{height:340px;border: 1px solid #f5f5f5; float:left;} 
-    </style>  
+
+</style>  
 
 
-<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">2F</div>
 		        <h2>第03类-日化用品</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
-		<div  style="width:1188px;height:2600px;margin-left:10px; overflow:hidden;position:relative;">
-		<%-- <c:forEach items="${recommendBrands[1]}" var="brand">
-			
-			<li class="col-md-3 col-sm-6">
-	          <div class="syPub_list">
-	              <div id="beforea">
-	              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-					<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
-		          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-		            </div>
-	 			  </a>
-	 			  </div>
-	 			  <div>
-		          <h3>
-		          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
-		          </h3>
-		        
-		          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
-		          <div class="btn_box">
-			          <div class="left price">￥${brand.price}</div>
-			          <div class="right">
-			          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+		<div  style="width:1188px;height:290px;overflow:hidden;position:relative;">
+		
+	    <ul class="sy_buy_list_box">
+	    	<c:forEach items="${recommendBrands['3']}" var="brand">
+				
+				<li class="col-md-3 col-sm-6">
+		          <div class="syPub_list">
+		              
+		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+							 
+			            </div>
+		 			  </a>
+		 			 
+		 			  <div>
+			          <h3>
+			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+			          </h3>
+			        
+			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+			          <div class="btn_box">
+				          <div class="left price">￥${brand.price}</div>
+				          <div class="right">
+				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          </div>
 			          </div>
 		          </div>
-	          </div>
-	      	</li>
-			
-		</c:forEach> --%>
+		      	</li>
+				
+			</c:forEach>
+	    
+	    </ul>  
 		
-		<iframe width="1180" height="3300" frameborder="0" style="position:relative; top:-740px; float:left; left:-10px;" scrolling="no" src="http://r.lotut.com">
-		
-		</iframe>
 		</div>
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">3F</div>
 		        <h2>第05类-医用药品</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
-		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
+		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
 		
-		
+		<ul class="sy_buy_list_box">
+	    	<c:forEach items="${recommendBrands['5']}" var="brand">
+				
+				<li class="col-md-3 col-sm-6">
+		          <div class="syPub_list">
+		              
+		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+							 
+			            </div>
+		 			  </a>
+		 			  
+		 			  <div>
+			          <h3>
+			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+			          </h3>
+			        
+			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+			          <div class="btn_box">
+				          <div class="left price">￥${brand.price}</div>
+				          <div class="right">
+				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          </div>
+			          </div>
+		          </div>
+		      	</li>
+				
+			</c:forEach>
+	    
+	    </ul>  
 		
 		
 		</div>
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">4F</div>
 		        <h2>第09类-科学仪器</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
-		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
-		
+		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
+		<ul class="sy_buy_list_box">
+	    	<c:forEach items="${recommendBrands['9']}" var="brand">
+				
+				<li class="col-md-3 col-sm-6">
+		          <div class="syPub_list">
+		              
+		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+							 
+			            </div>
+		 			  </a>
+		 			  
+		 			  <div>
+			          <h3>
+			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+			          </h3>
+			        
+			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+			          <div class="btn_box">
+				          <div class="left price">￥${brand.price}</div>
+				          <div class="right">
+				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          </div>
+			          </div>
+		          </div>
+		      	</li>
+				
+			</c:forEach>
+	    
+	    </ul>  
 		
 		
 		</div>
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">5F</div>
 		        <h2>第12类-运输工具</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
-		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
-		
+		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
+		<ul class="sy_buy_list_box">
+	    	<c:forEach items="${recommendBrands['12']}" var="brand">
+				
+				<li class="col-md-3 col-sm-6">
+		          <div class="syPub_list">
+		              
+		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+							 
+			            </div>
+		 			  </a>
+		 			 
+		 			  <div>
+			          <h3>
+			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+			          </h3>
+			        
+			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+			          <div class="btn_box">
+				          <div class="left price">￥${brand.price}</div>
+				          <div class="right">
+				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          </div>
+			          </div>
+		          </div>
+		      	</li>
+				
+			</c:forEach>
+	    
+	    </ul>  
 		
 		
 		</div>
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">6F</div>
 		        <h2>第20类-家具用品</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
-		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
-		
+		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
+		<ul class="sy_buy_list_box">
+	    	<c:forEach items="${recommendBrands['20']}" var="brand">
+				
+				<li class="col-md-3 col-sm-6">
+		          <div class="syPub_list">
+		              
+		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+							 
+			            </div>
+		 			  </a>
+		 			 
+		 			  <div>
+			          <h3>
+			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+			          </h3>
+			        
+			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+			          <div class="btn_box">
+				          <div class="left price">￥${brand.price}</div>
+				          <div class="right">
+				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          </div>
+			          </div>
+		          </div>
+		      	</li>
+				
+			</c:forEach>
+	    
+	    </ul>  
 		
 		</div>
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">7F</div>
 		        <h2>第21类-厨房洁具</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
-		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
-		
+		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
+		<ul class="sy_buy_list_box">
+	    	<c:forEach items="${recommendBrands['21']}" var="brand">
+				
+				<li class="col-md-3 col-sm-6">
+		          <div class="syPub_list">
+		              
+		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+							 
+			            </div>
+		 			  </a>
+		 			  
+		 			  <div>
+			          <h3>
+			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+			          </h3>
+			        
+			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+			          <div class="btn_box">
+				          <div class="left price">￥${brand.price}</div>
+				          <div class="right">
+				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          </div>
+			          </div>
+		          </div>
+		      	</li>
+				
+			</c:forEach>
+	    
+	    </ul>  
 		
 		</div>
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">8F</div>
 		        <h2>第25类-服装鞋帽</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
-		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
-		
+		<div  style="width:1188px;height:290px;overflow:hidden;position:relative;">
+		<ul class="sy_buy_list_box">
+	    	<c:forEach items="${recommendBrands['25']}" var="brand">
+				
+				<li class="col-md-3 col-sm-6">
+		          <div class="syPub_list">
+		              
+		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+							 
+			            </div>
+		 			  </a>
+		 			  
+		 			  <div>
+			          <h3>
+			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+			          </h3>
+			        
+			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+			          <div class="btn_box">
+				          <div class="left price">￥${brand.price}</div>
+				          <div class="right">
+				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          </div>
+			          </div>
+		          </div>
+		      	</li>
+				
+			</c:forEach>
+	    
+	    </ul>  
 		
 		</div>
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">9F</div>
 		        <h2>第33类-酒精饮料</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
-		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
-		
+		<div  style="width:1188px;height:290px;overflow:hidden;position:relative;">
+		<ul class="sy_buy_list_box">
+	    	<c:forEach items="${recommendBrands['33']}" var="brand">
+				
+				<li class="col-md-3 col-sm-6">
+		          <div class="syPub_list" >
+		              
+		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+							 
+			            </div>
+		 			  </a>
+		 			  
+		 			  <div>
+			          <h3>
+			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+			          </h3>
+			        
+			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+			          <div class="btn_box">
+				          <div class="left price">￥${brand.price}</div>
+				          <div class="right">
+				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          </div>
+			          </div>
+		          </div>
+		      	</li>
+				
+			</c:forEach>
+	    
+	    </ul>  
 		
 		</div>
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:2700px;width:1190px;margin:0 auto;">
+<div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">3F</div>
+		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">10F</div>
 		        <h2>第43类-餐饮住宿</h2>
 		        <div style="clear:both;"></div>
 		</div>
 
-		<div  style="width:1188px;height:200px;margin-left:10px; overflow:hidden;position:relative;">
-		
+		<div  style="width:1188px;height:290px;overflow:hidden;position:relative;">
+		<ul class="sy_buy_list_box">
+	    	<c:forEach items="${recommendBrands['43']}" var="brand">
+				
+				<li class="col-md-3 col-sm-6">
+		          <div class="syPub_list">
+		              
+		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
+							 
+			            </div>
+		 			  </a>
+		 			  
+		 			  <div>
+			          <h3>
+			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+			          </h3>
+			        
+			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+			          <div class="btn_box">
+				          <div class="left price">￥${brand.price}</div>
+				          <div class="right">
+				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          </div>
+			          </div>
+		          </div>
+		      	</li>
+				
+			</c:forEach>
+	    
+	    </ul>  
 		
 		</div>
 	</div>	
 </div>
 
-
+<script type="text/javascript">
+function getbrandDetail(brandId) {
+	window.location.href="<s:url value='/brand/getbrandDetail.html'/>?brandId=" + brandId;
+}
+</script>

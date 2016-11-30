@@ -60,7 +60,7 @@ public class BrandMybatisDao extends SqlSessionDaoSupport implements BrandDao {
 	}
 
 	@Override
-	public Map<Integer, List<Brand>> getIndexRecommendBrands() {
+	public List<Brand> getIndexRecommendBrands() {
 		return brandMapper.getIndexRecommendBrands();
 	}
 
