@@ -94,7 +94,7 @@
 		LIMIT #{startIndex},#{pageSize}
 	</select>
 	
-	<select id="getIndexRecommendBrands" resultType="map">
+	<select id="getIndexRecommendBrands" resultMap="brandMap">
 		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 3 LIMIT 5) AS c3
 		UNION 
 		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 5 LIMIT 5) AS c5
@@ -114,6 +114,7 @@
 		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 43 LIMIT 5) AS c43
 
 	</select>
+	
 	<select id="getSearchBrandsList" parameterType="BrandSearchCondition" resultMap="brandMap">
 		<bind name="keyword_pattern" value="'%' + keyword + '%'"/>
 		select b.id, b.name, b.price,b.category_id,bc.category_name from brands b
