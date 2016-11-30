@@ -2,7 +2,7 @@
 <style>
 #footer {
 width: 100%;
-height:50px;
+
 overflow: hidden;
 background: #e7e7e7;
 font-family: SimSun;

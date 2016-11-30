@@ -40,7 +40,10 @@
   <div class="current-location" style="margin-top:0;"> 
   	<a href="<s:url value='/'/>">首页</a>> 
   	<a href="<s:url value='/brand/showBrandsList.html?categoryId=${brand.brandCategory.categoryId}'/>"> 
-  		第${brand.brandCategory.categoryId}类-${brand.brandCategory.categoryName}
+  		第
+  		<c:if test="${brand.brandCategory.categoryId < 10}">0${brand.brandCategory.categoryId}</c:if>
+  		<c:if test="${brand.brandCategory.categoryId > 9}">${brand.brandCategory.categoryId}</c:if>
+  		类 - ${brand.brandCategory.categoryName}
   	</a>> ${brand.name}  
   </div>
 </div>
@@ -73,14 +76,23 @@
       </td>
       </tr>
       <tr>
-      	<td width="250px;">所属地区：<span>
-				${brand.address}
-			</span></td>
+      	<td width="250px;">所属地区：
+      	<span>
+      	<c:if test="${not empty brand.address}">${brand.address}</c:if>
+      	<c:if test="${empty brand.address}">中国</c:if>
+      	</span>
+				
+		</td>
         <td>注册号：<span>${brand.brandNo }</span>
       </tr>
       <tr>
       	<td>组合类型：${brand.combinationType }</td>
-        <td>类别：第${brand.brandCategory.categoryId}类-${brand.brandCategory.categoryName}</span>
+        <td>类别：第
+	  		<c:if test="${brand.brandCategory.categoryId < 10}">0${brand.brandCategory.categoryId}</c:if>
+	  		<c:if test="${brand.brandCategory.categoryId > 9}">${brand.brandCategory.categoryId}</c:if>
+	  		类 - ${brand.brandCategory.categoryName}
+        
+        </td>
         
       </tr>
       <tr>
@@ -104,10 +116,10 @@
         <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">￥${brand.price }</span>
         <td>交易方式：			
 			<c:if test="${brand.transactionMode == 1 }">
-			出售
+			转让
 			</c:if>
 			<c:if test="${brand.transactionMode == 2 }">
-			转让
+			授权
 			</c:if>
 			
         </td>
@@ -281,7 +293,7 @@
 </div>
 <div class="right-sidebar"> </div>
 </div>
-<script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery-1.8.3.min.js"></script> 
+<script type="text/javascript" src="<s:url value='/js/jquery-1.8.3.min.js'/>"></script> 
 
 <!-- End Piwik Code --> 
 
