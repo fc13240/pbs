@@ -26,6 +26,19 @@
 	<header id="header">
 	  <h1> 商标列表 </h1>
 	</header>
+	<div style="margin-top:5px;">
+		<div style="width:33%;float:left;">
+			
+			<span class="p_btn_cart"><a href="" style="font-size:18px;">商标01-15类</a></span>	
+		</div>
+		<div style="width:33%;float:left;" style="float:left;">
+		
+			<span class="p_btn_cart"><a href="" style="font-size:18px;">商标16-30类</a></span>
+		</div>
+		<div style="width:33%;float:left;" style="float:left;">
+			<span class="p_btn_cart"><a href="" style="font-size:18px;">商标31-45类</a></span>
+		</div>
+	</div>
 	<div class="p_list">
 			<c:forEach items="${brands}" var="brands">
 					
@@ -52,15 +65,15 @@
 		<div id="quick" class="clearfix">
 		 <nav class="quick-entry-nav clearfix">
 		<a class="quick-entry-link fz12 J_ping" report-eventid="MHome_Icons" report-eventparam="主页" page_name="index" href="http://www.lotut.com/pts/mobile/index.html?from=web">
-		    <img width="40" height="40" src="/mobile_skin/images/i_1-1.png"><span>主页</span></a>	 
+		    <img width="40" height="40" src="<s:url value='/mobile_skin/images/i_1-1.png'/>"><span>主页</span></a>	 
 			<a class="quick-entry-link fz12 J_ping" report-eventid="MHome_Icons" report-eventparam="专利列表" page_name="index" href="http://www.lotut.com/pts/mobilePatent/index.html">
-		    <img width="40" height="40" src="/mobile_skin/images/i_1.png"><span>专利列表</span></a>
+		    <img width="40" height="40" src="<s:url value='/mobile_skin/images/i_1.png'/>"><span>专利列表</span></a>
 			<a class="quick-entry-link fz12 J_ping" report-eventid="MHome_Icons" report-eventparam="知产新闻" page_name="index" href="http://www.lotut.com/pts/mobileNews/newsList.html">
-		    <img width="40" height="40" src="/mobile_skin/images/i_2.png"><span>知产新闻</span></a>
+		    <img width="40" height="40" src="<s:url value='/mobile_skin/images/i_2.png'/>"><span>知产新闻</span></a>
 			<a class="quick-entry-link fz12 J_ping" report-eventid="MHome_Icons" report-eventparam="专利培训" page_name="index" href="http://www.lotut.com/pts/mobileArticle/articleList.html">
-		    <img width="40" height="40" src="/mobile_skin/images/i_3.png"><span>专利培训</span></a>
+		    <img width="40" height="40" src="<s:url value='/mobile_skin/images/i_3.png'/>"><span>专利培训</span></a>
 			<a class="quick-entry-link fz12 J_ping" report-eventid="MHome_Icons" report-eventparam="商标列表" page_name="index" href="http://r.lotut.com/mobile/">
-		    <img width="40" height="40" src="/mobile_skin/images/i_4.png"><span>商标列表</span>
+		    <img width="40" height="40" src="<s:url value='/mobile_skin/images/i_4.png'/>"><span>商标列表</span>
 		    </a>
 		  </nav>
 		 </div>
@@ -73,6 +86,12 @@
     width: 100%;
     z-index: 29;
     max-width: 640px;
+}
+ .p_btn_cart a {
+    padding: 5px 5px;
+    background: #DE1456;
+    color: #ffffff;
+    /* box-shadow: inset 0px 0px 3px 1px #CCCCCC; */
 }
 </style>
 </body>
