@@ -37,6 +37,14 @@ public interface BrandService {
 	List<Brand> getIndexSlideBrands();
 
 	List<Brand> getAllBrands();
+	
+	List<Brand> getAlreadySaleBrands(Page page);
+	
+	int getAlreadyBrandsCount();
+
+	List<Brand> getSearchAlreadySaleBrands(BrandSearchCondition brandSearchCondition);
+	
+	int getSearchAlreadySaleBrandsCount(BrandSearchCondition brandSearchCondition);
 
 
 }

@@ -104,5 +104,25 @@ public class BrandServiceImpl implements BrandService {
 		return brandDao.getAllBrands();
 	}
 
+	@Override
+	public List<Brand> getAlreadySaleBrands(Page page) {
+		return brandDao.getAlreadySaleBrands(page);
+	}
+
+	@Override
+	public int getAlreadyBrandsCount() {
+		return brandDao.getAlreadyBrandsCount();
+	}
+
+	@Override
+	public List<Brand> getSearchAlreadySaleBrands(BrandSearchCondition brandSearchCondition) {
+		return brandDao.getSearchAlreadySaleBrands(brandSearchCondition);
+	}
+
+	@Override
+	public int getSearchAlreadySaleBrandsCount(BrandSearchCondition brandSearchCondition) {
+		return brandDao.getSearchAlreadySaleBrandsCount(brandSearchCondition);
+	}
+
 	
 }
