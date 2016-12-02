@@ -112,9 +112,9 @@ public class BrandsExcelGenerator {
 		scopeCell.setCellValue(brand.getScope());
 		
 		if(brand.getTransactionMode() == 2) {
-			transactionModeCell.setCellValue("转让");
+			transactionModeCell.setCellValue("授权");
 		} else {
-			transactionModeCell.setCellValue("出售");
+			transactionModeCell.setCellValue("转让");
 		}		
 		
 		priceCell.setCellValue(brand.getPrice());

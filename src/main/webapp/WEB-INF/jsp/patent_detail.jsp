@@ -83,7 +83,7 @@
         <td></td>
       </tr>
       <tr style="border-top:1px dashed #ececec">
-        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">${patent.price}</span>
+        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">￥${patent.price}</span>
         <td>交易方式：
 
 			

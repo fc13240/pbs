@@ -164,8 +164,8 @@ $('.s-new-01 a').bind('click', function(){
       <tr style="border-top:1px dashed #ececec">
         <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">
        
-        	<div class="box_1" >1200</div>
-        	<div class="box_2" style="display:none;">500</div>
+        	<div class="box_1" >￥1200</div>
+        	<div class="box_2" style="display:none;">￥500</div>
         	
         	<div class="box_3" style="display:none;">免费</div>
 

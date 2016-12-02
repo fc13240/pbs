@@ -104,8 +104,20 @@
       </tr>
       
       <tr>
-        <td colspan="2">有效期限：<span><fmt:formatDate value="${brand.startDate }" pattern="yyyy-MM-dd"/>
-        	 至 <fmt:formatDate value="${brand.endDate }" pattern="yyyy-MM-dd"/> </span></td>
+        <td colspan="2">有效期限：
+        <span>
+	        <c:choose>
+		   		<c:when test="${empty brand.startDate}">0000-00-00</c:when>
+		   		<c:otherwise><fmt:formatDate value="${brand.startDate }" pattern="yyyy-MM-dd"/></c:otherwise>
+			</c:choose>
+			至
+			<c:choose>
+		   		<c:when test="${empty brand.endDate}">0000-00-00</c:when>
+		   		<c:otherwise><fmt:formatDate value="${brand.endDate }" pattern="yyyy-MM-dd"/></c:otherwise>
+			</c:choose>
+	       
+        </span>
+        </td>
       </tr>
 
       <tr style="border-bottom:1px dashed #ececec">
