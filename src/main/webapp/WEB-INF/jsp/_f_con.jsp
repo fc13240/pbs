@@ -234,7 +234,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -280,7 +280,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -326,7 +326,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -372,7 +372,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -418,7 +418,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -463,7 +463,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -508,7 +508,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -553,7 +553,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -598,7 +598,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>

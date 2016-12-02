@@ -125,7 +125,7 @@
         <td></td>
       </tr>
       <tr style="border-top:1px dashed #ececec">
-        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">￥${brand.price }</span>
+        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">&yen;${brand.price }</span>
         <td>交易方式：			
 			<c:if test="${brand.transactionMode == 1 }">
 			转让
@@ -287,7 +287,7 @@
           	<div style="width:110px;float:left;">
           		<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendBrand.id}'/>" target="_blank" title="${recommendBrand.name}">${recommendBrand.name}</a>
           	</div> 
-          	<div class="num" style="float:left;">￥${recommendBrand.price}</div>
+          	<div class="num" style="float:left;">&yen;${recommendBrand.price}</div>
           </dt>
         </dl>
         </c:forEach>
