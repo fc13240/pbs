@@ -213,6 +213,59 @@ margin: 0 auto;
     float: left;
     width: 856px;
 }
+.sec_r li {
+    float: left;
+    width: 213px;
+    height: 259px;
+    border-left: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+}
+.white_mask {
+    position: absolute;
+    top: 259px;
+    width: 332px;
+    height: 83px;
+    background: #fff;
+    opacity: .5;
+    -moz-opacity: .5;
+    filter: alpha(opacity=50);
+    overflow: hidden;
+}
+.cgr_lists {
+    position: absolute;
+    top: 259px;
+    width: 332px;
+    height: 83px;
+}
+.cgr_lists a {
+    float: left;
+    margin: 14px 0 0 22px;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    color: #666;
+    border: 1px solid #666;
+    border-radius: 10px;
+    text-align: center;
+}
+.tag_box {
+    padding: 7px 0 0 17px;
+    height: 170px;
+    line-height: 22px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.tag_lists {
+    float: left;
+    clear: left;
+    width: 315px;
+    height: 44px;
+    overflow: hidden;
+}
+.tag_lists a {
+    float: left;
+    margin-right: 27px;
+    color: #666;
+}
 </style>  
 
 
@@ -231,12 +284,16 @@ margin: 0 auto;
                 	<img src="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" width="332" height="342" alt="仪器设备" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
 								<div class="white_mask"></div>
 					<div class="cgr_lists">
-					<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=258&amp;search_domainName=%E8%BD%BB%E5%B7%A5/%E7%BA%BA%E7%BB%87&amp;" target="_blank">轻工/纺织</a>
-							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=259&amp;search_domainName=%E5%86%9C/%E6%9E%97/%E7%89%A7&amp;" target="_blank">农/林/牧</a>
-							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=260&amp;search_domainName=%E7%9F%B3%E6%B2%B9/%E7%9F%B3%E5%8C%96&amp;" target="_blank">石油/石化</a>
-							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=261&amp;search_domainName=%E9%A3%9F%E5%93%81/%E7%83%9F%E8%8D%89&amp;" target="_blank">食品/烟草</a>
-							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=262&amp;search_domainName=%E5%9C%B0%E8%B4%A8/%E7%9F%BF%E4%BA%A7&amp;" target="_blank">地质/矿产</a>
-							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=263&amp;search_domainName=%E7%9F%BF%E4%B8%9A/%E5%86%B6%E9%87%91&amp;" target="_blank">矿业/冶金</a>
+					<a class="f-db" href="" target="_blank">服装/鞋帽</a>
+							<a class="f-db" href="" target="_blank">家具/家装</a>
+							<a class="f-db" href="" target="_blank">家电/照明</a>
+							<a class="f-db" href="" target="_blank">教学/学习</a>
+							<a class="f-db" href="" target="_blank">市政/环卫</a>
+							<a class="f-db" href="" target="_blank">体育/健身</a>
+							<a class="f-db" href="" target="_blank">行政/办公</a>
+							<a class="f-db" href="" target="_blank">娱乐/玩具</a>							<a class="f-db" href="" target="_blank">地质/矿产</a>
+							<a class="f-db" href="" target="_blank">艺术/乐器</a>							
+							<a class="f-db" href="" target="_blank">日常生活领域</a>	
 							</div>
 					
                     <div class="tag_box">
@@ -244,10 +301,6 @@ margin: 0 auto;
 							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=274&amp;search_featureName=%E7%94%B5%E5%AD%90%E6%B5%8B%E9%87%8F%E4%BB%AA%E5%99%A8&amp;" target="_blank">电子测量仪器</a>
 									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=275&amp;search_featureName=%E8%AE%A1%E9%87%8F%E4%BB%AA%E5%99%A8&amp;" target="_blank">计量仪器</a>
 									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=276&amp;search_featureName=%E5%B7%A5%E7%A8%8B%E8%AF%95%E9%AA%8C%E8%AE%BE%E5%A4%87&amp;" target="_blank">工程试验设备</a>
-									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=277&amp;search_featureName=%E5%88%86%E6%9E%90%E4%BB%AA%E5%99%A8&amp;" target="_blank">分析仪器</a>
-									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=278&amp;search_featureName=%E7%89%A9%E7%90%86%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95&amp;" target="_blank">物理性能测试</a>
-									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=279&amp;search_featureName=%E7%89%B9%E7%A7%8D%E6%A3%80%E6%B5%8B%E4%BB%AA&amp;" target="_blank">特种检测仪</a>
-									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=280&amp;search_featureName=%E5%85%B6%E4%BB%96%E4%BB%AA%E5%99%A8&amp;" target="_blank">其他仪器</a>
 									</div>
 						
 						<div class="tag_lists">
