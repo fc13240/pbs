@@ -71,7 +71,15 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
           <ul>
             <li><a href="#">
             
-            <img src="<s:url value='/images/patent_type_0${good.firstColumn.id}.jpg'/>" >
+            	<c:choose>
+					<c:when test="${not empty good.patentImageUrl }">
+						<img src="<s:url value='${good.patentImageUrl }'/>" >
+					</c:when>
+					<c:otherwise>
+						<img src="<s:url value='/images/patent_type_0${good.firstColumn.id}.jpg'/>" >
+					</c:otherwise>
+				</c:choose>
+            <%-- <img src="<s:url value='/images/patent_type_0${good.firstColumn.id}.jpg'/>" > --%>
             
             
             

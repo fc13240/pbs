@@ -86,7 +86,7 @@
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${good.patentName}" href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${good.patentId}'/>">
 						<c:choose>
 							<c:when test="${not empty good.patentImageUrl }">
-								<div style="background: url(<s:url value='${not empty good.patentImageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
+								<div style="background: url(<s:url value='${good.patentImageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
 							</c:when>
 							<c:otherwise>
 								<div style="background: url(<s:url value='/images/patent_type_0${good.firstColumn.id}.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
