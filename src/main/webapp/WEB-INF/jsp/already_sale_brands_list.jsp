@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>商标列表</title>
+<title>已出售商标列表</title>
 <meta name="keywords" content="专利  商标 交易" />
 <meta name="description" content="专利  商标 交易" />
 <meta itemprop="name" content="" />
@@ -13,15 +13,13 @@
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
 <link href="<s:url value='/css/category.min.css?2016322'/>" rel="stylesheet" type="text/css"/> 
 <link rel="stylesheet" href="<s:url value='/css/top_footer.css'/>">
-<link rel="stylesheet" href="<s:url value='/css/details.css'/>" />
 
 </head>
 <body>
 <style type="text/css">
 
-#beforea a: {text-decoration:none;}
 #beforea a:active  {color:black;}
-
+#beforea a: {text-decoration:none;}
 
 </style>
 <script type="text/javascript">(function(){var screenWidth=window.screen.width;if(screenWidth>=1280){document.body.className=document.body.className+" root_body";;window.LOAD=true;}else{window.LOAD=false;}})()</script>
@@ -33,7 +31,29 @@
 	</div>
 	
 	<div class="page-header">
-	<%@ include file="_page-header.jsp"%>
+		<div class="w ph-container clearfix">
+		<a id="JS_Header_Logo_link_home" href="/" class="phc-logo Left">
+			<img src="<s:url value='/images/logo.png'/>" alt="logo">
+		</a>
+		<div class="phc-search Left" style="margin-left:200px;">
+			<form id="JS_search_form" class="search-form" action="<s:url value='/brand/searchAlreadySalebrands.html'/>" method="get">	
+				 <input type="hidden" name="page.currentPage" value="1" > 
+				<input type="submit" class="submit-btn Right" value="搜索">
+				<input id="JS_MLL_search_header_input" name="keyword"  autocomplete="off" type="text" maxlength="255" class="search-input" >
+			</form>
+			<div id="JS_search_suggest" class="suggest">
+			</div>
+			<div class="search-hot" id="JS_search_hot_links">
+			
+			</div>
+
+		</div>
+		<div style="position:absolute;top:15px;left:1090px;">
+		<!-- WPA Button Begin -->
+		<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA1NTYyNF80Mzc1OTNfNDAwNjAxMTM1N18"></script>
+		<!-- WPA Button End --> 
+		</div>
+	</div>
 	</div>
 	
 	<div class="mll-navigator navigator-other">
@@ -42,37 +62,28 @@
 	
 </div>
 
+
 <iframe id="brandExcelFileFrame" style="display:none"></iframe>
-    
+     
+<link rel="stylesheet" href="<s:url value='/css/details.css'/>" />
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">
-  <div class="current-location" style="margin-top:0;"> <a href="<s:url value='/'/>">首页</a>
-  	> 第
-		<c:if test="${brandCategory.categoryId < 10}">0${brandCategory.categoryId}</c:if>
-		<c:if test="${brandCategory.categoryId > 9}">${brandCategory.categoryId}</c:if>
-		类 - ${brandCategory.categoryName}
-  <div style="float:right; margin-left:850px;margin-right:65px;">
-      <input value="导出清单" style="display:inline;background:#FF0000;color:white;border:2px solid #FF0000;height:35px;line-height:35px;font-weight:700;font-size:14px;width:80px;cursor:pointer;" 
-      		type="button" onclick="exportList(${brandCategory.categoryId})">
-       
-    </div>
-  
-  
-  </div>
+  <div class="current-location" style="font-family: Microsoft YaHei"> 搜索 <span style="color:red;">${searchCondition.keyword }</span> 结果</div>
 </div>
-<!--当前位置 end--> 
+<!--当前位置 end-->
 
 <!--商标列表-->
 <div class="container box-red-line">
+  
     <ul class="sy_buy_list_box">
     	<c:forEach items="${brands}" var="brand">
 			
 			<li class="col-md-3 col-sm-6">
 	          <div class="syPub_list">
 	              <div id="beforea">
-	              <a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-					<div style="background: url(<s:url value='/images/brands_img/${brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+	              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
+					<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
 		          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 						 
 		            </div>
@@ -85,7 +96,7 @@
 		        
 		          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 		          <div class="btn_box">
-			          <div class="left price">&yen;${brand.price}</div>
+			          <div class="left price" style="">&yen;${brand.price}</div>
 			          <div class="right">
 			          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 			          </div>
@@ -98,37 +109,64 @@
     </ul>  
 </div>
  
-<div id="page"> 
-	<div style="margin-left:200px;height:60px;">
-	 
+  
+<div style="margin-left:200px;height:60px;">
+	<div id="page"> 
 	<c:if test="${page.totalPages > 1}"> 
-		<div class="col-lg-12"> 
-			<span>共 ${page.totalPages} 页 </span>
-			<span>第 ${page.currentPage} 页 </span>
-			<a href="?categoryId=${brandCategory.categoryId}&currentPage=1">首页</a>
-		  <c:choose>
-	        <c:when test="${page.currentPage - 1 > 0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage - 1}">上一页</a> </c:when>
-	        <c:when test="${page.currentPage - 1 <= 0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=1">上一页</a> </c:when>
-	      </c:choose>
-	      <c:choose>
-	        <c:when test="${page.totalPages==0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage}">下一页</a> </c:when>
-	        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage+1}">下一页</a> </c:when>
-	        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.totalPages}">下一页</a> </c:when>
-	      </c:choose>
-	      <c:choose>
-	        <c:when test="${page.totalPages==0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage}">尾页</a> </c:when>
-	        <c:otherwise> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.totalPages}">尾页</a> </c:otherwise>
-	      </c:choose>
-	     
-	      <a><input type="text" id="page.pageNo" style="width:30px;height:14px" name="currentPage" onKeyDown="gotoPageForEnter(event)"/></a>
-	      <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
-       </div>
+		<c:if test="${searchCondition==null }">
+			<div class="col-lg-12"> 
+				<span>共 ${page.totalPages} 页 </span>
+				<span>第 ${page.currentPage} 页 </span>
+				<a href="?currentPage=1">首页</a>
+			  <c:choose>
+		        <c:when test="${page.currentPage - 1 > 0}"> <a href="?currentPage=${page.currentPage - 1}">上一页</a> </c:when>
+		        <c:when test="${page.currentPage - 1 <= 0}"> <a href="?currentPage=1">上一页</a> </c:when>
+		      </c:choose>
+		      <c:choose>
+		        <c:when test="${page.totalPages==0}"> <a href="?currentPage=${page.currentPage}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?currentPage=${page.currentPage+1}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?currentPage=${page.totalPages}">下一页</a> </c:when>
+		      </c:choose>
+		      <c:choose>
+		        <c:when test="${page.totalPages==0}"> <a href="?currentPage=${page.currentPage}">尾页</a> </c:when>
+		        <c:otherwise> <a href="?currentPage=${page.totalPages}">尾页</a> </c:otherwise>
+		      </c:choose>
+		     
+		      <a><input type="text" id="page.pageNo" style="width:30px;height:14px" name="currentPage" onKeyDown="gotoPageForEnter(event)"/></a>
+		      <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
+	       </div>
+		
+		</c:if>
+		<c:if test="${searchCondition!=null }">
+			<div class="col-lg-12"> 
+				<a>共 ${page.totalPages} 页 </a>
+				<a>第 ${page.currentPage} 页 </a>
+				<a href="?page.currentPage=1&${searchCondition}">首页</a>
+			  <c:choose>
+		        <c:when test="${page.currentPage - 1 > 0}"> <a href="?page.currentPage=${page.currentPage - 1}&${searchCondition}">上一页</a> </c:when>
+		        <c:when test="${page.currentPage - 1 <= 0}"> <a href="?page.currentPage=1">上一页</a> </c:when>
+		      </c:choose>
+		      <c:choose>
+		        <c:when test="${page.totalPages==0}"> <a href="?page.currentPage=${page.currentPage}&${searchCondition}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?page.currentPage=${page.currentPage+1}&${searchCondition}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?page.currentPage=${page.totalPages}&${searchCondition}">下一页</a> </c:when>
+		      </c:choose>
+		      <c:choose>
+		        <c:when test="${page.totalPages==0}"> <a href="?page.currentPage=${page.currentPage}&${searchCondition}">尾页</a> </c:when>
+		        <c:otherwise> <a href="?page.currentPage=${page.totalPages}&${searchCondition}">尾页</a> </c:otherwise>
+		      </c:choose>
+		     
+		      <a><input type="text" id="page.pageNo" style="width:30px;height:14px" name="page.currentPage" onKeyDown="gotoPageForEnter(event)"/></a>
+		      <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
+	       </div>
+       </c:if>
     </c:if>
 	</div>
 	<!-- 分页功能 End -->
 </div>
 
-<script type="text/javascript" src="<s:url value='/js/jquery-1.8.3.min.js'/>"></script> 
+
+<script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery-1.8.3.min.js"></script> 
 <script src="<s:url value='/js/mll/jq.js?0405'/>"></script> 
 
 
@@ -150,7 +188,6 @@
 
 function gotoPage() {
 	var pageNo = document.getElementById("page.pageNo").value;
-	
 	if (isNaN(pageNo)) {
 		alert("请输入数值");
 		return;
@@ -168,9 +205,14 @@ function gotoPage() {
 		return;
 	}
 	
-	var url = "<s:url value='/brand/showBrandsList.html'/>?currentPage=" + pageNo + "&categoryId=" + ${brandCategory.categoryId};
+	var url = "<s:url value='/brand/alreadySalebrands.html'/>?currentPage=" + pageNo;
 	
+	<c:if test="${searchCondition!=null}">
 	
+		url="<s:url value='/brand/searchAlreadySalebrands.html'/>?page.currentPage=" + pageNo+"&${searchCondition}";
+	</c:if>
+	
+		
 	location.href = url
 	
 }

@@ -153,5 +153,33 @@
 		order by rand() limit 9
 		
 	</select>
+	
+	<select id="getAlreadySaleBrands" parameterType="Page" resultMap="brandMap">
+		select b.id,b.name,b.price,b.category_id,bc.category_name from brands b left join brand_category 
+			   bc on b.category_id=bc.category_id  where b.sell_status=2 and b.check_status=1
+			   limit #{startIndex},#{pageSize}
+	</select>
+	
+	<select id="getAlreadyBrandsCount" resultType="int">
+		select count(*) from brands where sell_status=2 and check_status=1
+	</select>
+	
+	<select id="getSearchAlreadySaleBrands" parameterType="BrandSearchCondition" resultMap="brandMap">
+		<bind name="keyword_pattern" value="'%' + keyword +'%'"/>
+		select b.id,b.name,b.price,b.category_id,bc.category_name from brands b left join brand_category 
+			   bc on b.category_id=bc.category_id  where b.sell_status=2 and b.check_status=1
+			   <if test="keyword_pattern!=null">
+			   		and (b.name like #{keyword_pattern} or b.brand_no like #{keyword_pattern})
+			   </if>
+			  limit #{page.startIndex},#{page.pageSize}
+	</select>
+	
+	<select id="getSearchAlreadySaleBrandsCount" parameterType="BrandSearchCondition" resultType="int">
+		<bind name="keyword_pattern" value="'%' + keyword +'%'"/>
+		select count(*) from brands where sell_status=2 and check_status=1
+			   <if test="keyword_pattern!=null">
+			   		and (name like #{keyword_pattern} or brand_no like #{keyword_pattern})
+			   </if>
+	</select>
 
 </mapper>

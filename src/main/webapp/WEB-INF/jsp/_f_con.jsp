@@ -339,7 +339,7 @@ margin: 0 auto;
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">2F</div>
-		        <h2>第03类-日化用品</h2>
+		        <h2>第03类-日化用品</h2> <h2 style="float:left;"><a href="javascript:window.open('<s:url value='/brand/alreadySalebrands.html?page.currentPage=1'/>')">已售出商标</a></h2> 
 		        <div style="clear:both;"></div>
 		</div>
 
@@ -365,7 +365,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -411,7 +411,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -457,7 +457,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -503,7 +503,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -549,7 +549,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -594,7 +594,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -639,7 +639,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -684,7 +684,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
@@ -729,7 +729,7 @@ margin: 0 auto;
 			        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price">￥${brand.price}</div>
+				          <div class="left price">&yen;${brand.price}</div>
 				          <div class="right">
 				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
 				          </div>
