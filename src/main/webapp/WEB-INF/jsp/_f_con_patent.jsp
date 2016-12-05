@@ -220,16 +220,16 @@ margin: 0 auto;
                 	<img src="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" width="332" height="342" alt="仪器设备" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
 								<div class="white_mask"></div>
 					<div class="cgr_lists">
-					<a class="f-db" href="" target="_blank">服装/鞋帽</a>
-							<a class="f-db" href="" target="_blank">家具/家装</a>
-							<a class="f-db" href="" target="_blank">家电/照明</a>
-							<a class="f-db" href="" target="_blank">教学/学习</a>
-							<a class="f-db" href="" target="_blank">市政/环卫</a>
-							<a class="f-db" href="" target="_blank">体育/健身</a>
-							<a class="f-db" href="" target="_blank">行政/办公</a>
-							<a class="f-db" href="" target="_blank">娱乐/玩具</a>							<a class="f-db" href="" target="_blank">地质/矿产</a>
-							<a class="f-db" href="" target="_blank">艺术/乐器</a>							
-							<a class="f-db" href="" target="_blank">日常生活领域</a>	
+					<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">服装/鞋帽</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">家具/家装</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">家电/照明</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">教学/学习</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">市政/环卫</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">体育/健身</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">行政/办公</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">娱乐/玩具</a>							<a class="f-db" href="" target="_blank">地质/矿产</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">艺术/乐器</a>							
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">日常生活领域</a>	
 							</div>
 					
                     <div class="tag_box">

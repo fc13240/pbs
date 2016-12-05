@@ -62,34 +62,7 @@ $(function(){
  	<%@ include file="_top_nav_list.jsp"%>
 	</div>
 </div>
-<!-- 
-<div class="category-filter">
-  <div class="w">
-    <div id="JS_category_filter" class="filter">
-      <dl class="cat clearfix">
-        <dt><a href="<s:url value='/patent/list.html'/>?id=${AllColumns[first_column_id-1].id}" class="current">${AllColumns[first_column_id-1].name}</a></dt>
-        <dd>
-          <table>
-            <tbody>
-              <tr>
-                <td id="JS_filter_cats">
-                <span id="current_list" style="display:none;">${currentTypeName}</span>
-                	<c:forEach items="${AllColumns[first_column_id-1].secondColumns}" var="column" varStatus="status">
-	                <a href="<s:url value='/patent/sublist.html'/>?id=${column.id}"><span class="list_name">${column.name}</span>(${column.secondCount})</a>
-	             	</c:forEach>  
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </dd>
-      </dl>
-      <script type="text/javascript">var _brandNumber = [];</script>
-    </div>
-  </div>
-</div>
 
- -->
- 
 <div class="container">
   <div class="current-location"> <a href="/">首页</a> &gt; ${AllColumns[first_column_id-1].name}</div>
 </div>
