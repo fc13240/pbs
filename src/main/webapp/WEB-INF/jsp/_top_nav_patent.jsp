@@ -26,11 +26,38 @@
 
 	
 										
-			<li class="top-item">
-				<em class="flag flag1"></em>
-				<a title="农业/食品/医疗" target="_blank" class="txt" href="<s:url value='/business/patent_article.html?shopType=1&currentPage=1'/>">农业/食品/医疗</a>				
-	
-				<i class="arrow"></i>
+			<li class="top-item" style="height: 133px;">
+				<dl>
+                    <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
+                    <dd>
+     	 					<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
+               		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
+               		<a href="http://reslib.wtoip.com/imagestore/" target="_blank">家电/照明</a>
+               		<a href="http://reslib.wtoip.com/tax/list" target="_blank">教学/学习</a>
+               		<a href="http://mall.wtoip.com/industry/aftermarket/" target="_blank">市政/环卫</a>
+               		</dd>
+                </dl>
+				<div class="sub" style="width:450px">
+					<div class="title clearfix">
+						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">商标16-30类<span class="darrow">&gt;&gt;</span></a></h4>
+					</div>
+					<div class="list clearfix">
+
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>" class="sub-item" target="_blank">服装/鞋帽</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=17&currentPage=1'/>" class="sub-item" target="_blank">家具/家装</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=18&currentPage=1'/>" class="sub-item" target="_blank">家电/照明</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=19&currentPage=1'/>" class="sub-item" target="_blank">教学/学习</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=20&currentPage=1'/>" class="sub-item" target="_blank">市政/环卫</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>" class="sub-item" target="_blank">体育/健身</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=22&currentPage=1'/>" class="sub-item" target="_blank">行政/办公</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=23&currentPage=1'/>" class="sub-item" target="_blank">娱乐/玩具</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=24&currentPage=1'/>" class="sub-item" target="_blank">艺术/乐器</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=25&currentPage=1'/>" class="sub-item" target="_blank">日常生活领域</a> 
+         				
+					</div>
+
+				</div>                
+                <i class="arrow"></i>
 			</li>
 						
 			<li class="top-item">

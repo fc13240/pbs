@@ -41,6 +41,23 @@ public class PatentController {
 		this.patentService = patentService;
 	}
 
+	
+	@RequestMapping(path="/index",method=RequestMethod.GET)
+	public String getPatentsIndex(Page page, Model model) {
+		if (page.getCurrentPage() <= 0) {
+			page.setCurrentPage(1);
+		}
+		int patent_column_id= page.getId();
+		List<FirstColumn>  AllColumns=patentService.selectAllColumns();
+		List<Patent> patent_list=patentService.getSecoundColumnPage(page);
+		
+		model.addAttribute("AllColumns", AllColumns);
+		model.addAttribute("first_column_id", patent_column_id);
+		model.addAttribute("patents", patent_list);
+		model.addAttribute("page",page);
+		return "patent_index";
+	}	
+	
 	@RequestMapping(path="/list",method=RequestMethod.GET)
 	public String getPatents(Page page, Model model) {
 		if (page.getCurrentPage() <= 0) {
