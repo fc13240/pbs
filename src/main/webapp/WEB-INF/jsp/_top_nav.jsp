@@ -154,7 +154,7 @@
 
 	<ul class="navigator">
       <li><a href="<s:url value='/'/>" title="龙图腾专利商标交易">首页</a></li>
-      <li><a href="<s:url value='/business/patent_article.html?shopType=1'/>" title="农业/食品/医疗">农业/食品/医疗</a></li>
+      <li><a href="<s:url value='/patent/index.html'/>" title="专利">专利</a></li>
       <li><a  id="JS_mll_head_menu_expr" href="<s:url value='/business/patent_article.html?shopType=2'/>" title="化工/冶金/生物">化工/冶金/生物</a></li>
       <li><a href="<s:url value='/business/patent_article.html?shopType=3'/>" title="专利申请">交通/包装/建筑</a></li>
       <li><a  href="<s:url value='/business/patent_article.html?shopType=4'/>" title="工商财务">电力/环保/通讯</a></li>
