@@ -287,31 +287,7 @@ margin: 0 auto;
 									</ul>
                 </div>
             </div>
-			
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_01.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank" title="农业/食品/医疗" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">农业/食品/医疗</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=1'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	  
-	
-	
-		
+
 		
 		</div>
 	</div>
@@ -398,31 +374,7 @@ margin: 0 auto;
 									</ul>
                 </div>
             </div>
-			
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_01.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank" title="农业/食品/医疗" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">农业/食品/医疗</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=1'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	  
-	
-	
-		
+
 		
 		</div>
 	</div>
@@ -510,31 +462,7 @@ margin: 0 auto;
 									</ul>
                 </div>
             </div>
-			
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_01.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank" title="农业/食品/医疗" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">农业/食品/医疗</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=1'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	  
 	
-	
-		
 		
 		</div>
 	</div>
@@ -622,32 +550,7 @@ margin: 0 auto;
 									</ul>
                 </div>
             </div>
-			
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_01.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank" title="农业/食品/医疗" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">农业/食品/医疗</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=1'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	  
-	
-	
-		
-		
+
 		</div>
 	</div>
 	
@@ -735,27 +638,7 @@ margin: 0 auto;
                 </div>
             </div>
 			
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_01.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank" title="农业/食品/医疗" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">农业/食品/医疗</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=1'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	  
+  
 	
 	
 		
@@ -846,29 +729,7 @@ margin: 0 auto;
 									</ul>
                 </div>
             </div>
-			
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_01.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank" title="农业/食品/医疗" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">农业/食品/医疗</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=1'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	  
-	
+
 	
 		
 		
