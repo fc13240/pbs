@@ -1,5 +1,14 @@
 package zhuanli.controller;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.List;
+
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -9,20 +18,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import zhuanli.domain.Page;
 import zhuanli.domain.Brand;
 import zhuanli.domain.BrandCategory;
+import zhuanli.domain.BrandSearchCondition;
+import zhuanli.domain.Page;
 import zhuanli.service.BrandService;
-import zhuanli.util.WebUtils;
-
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.util.List;
 
 
 @Controller
@@ -37,8 +37,8 @@ public class BrandController {
 	}
 	
 	@RequestMapping(path="/showBrandsList")
-	public String showBrandsList(int categoryId, Page page, Model model, HttpSession session) {
-		page.setPageSize(WebUtils.getPageSize(session));
+	public String showBrandsList(int categoryId, Page page, Model model) {
+		page.setPageSize(15);
 		if(page.getCurrentPage()<1){
 			page.setCurrentPage(1);
 		}
@@ -89,5 +89,56 @@ public class BrandController {
 			}
 			out.flush();
 		}
+	}
+	
+	@RequestMapping(path="/searchBrands")
+	public String searchBrands(BrandSearchCondition brandSearchCondition ,Model model){
+		
+		Page page= brandSearchCondition.getPage();
+		page.setPageSize(20);
+		if(page.getCurrentPage()<1){
+			page.setCurrentPage(1);
+		}
+		int totalCount= brandService.getSearchBrandsCount(brandSearchCondition);
+		page.setTotalRecords(totalCount);
+		
+		List<Brand> brands = brandService.getSearchBrandsList(brandSearchCondition);
+		
+		model.addAttribute("page", page);
+		model.addAttribute("brands", brands);
+		model.addAttribute("searchCondition", brandSearchCondition);
+		return "all_brands_list";
+	}
+	
+	
+	@RequestMapping(path="/alreadySalebrands")
+	public String alreadySalebrands(HttpSession session,Page page,Model model){
+		page.setPageSize(20);
+		if(page.getCurrentPage()<1){
+			page.setCurrentPage(1);
+		}
+		List<Brand> alreadySaleBrands = brandService.getAlreadySaleBrands(page);
+		int totalRecords = brandService.getAlreadyBrandsCount();
+		page.setTotalRecords(totalRecords);
+		model.addAttribute("brands",alreadySaleBrands);
+		model.addAttribute("page",page);
+		return "already_sale_brands_list";
+	}
+	
+	
+	@RequestMapping(path="/searchAlreadySalebrands")
+	public String searchAlreadySalebrands(BrandSearchCondition brandSearchCondition,Model model){
+		Page page= brandSearchCondition.getPage();
+		page.setPageSize(20);
+		if(page.getCurrentPage()<1){
+			page.setCurrentPage(1);
+		}
+		List<Brand> alreadySaleBrands = brandService.getSearchAlreadySaleBrands(brandSearchCondition);
+		int totalRecords = brandService.getSearchAlreadySaleBrandsCount(brandSearchCondition);
+		page.setTotalRecords(totalRecords);
+		model.addAttribute("searchCondition",brandSearchCondition);
+		model.addAttribute("brands",alreadySaleBrands);
+		model.addAttribute("page",page);
+		return "already_sale_brands_list";
 	}
 }

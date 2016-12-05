@@ -36,9 +36,9 @@
 	</div>
 </div>
 
- <%@ include file="_flash.jsp"%>
+<%@ include file="_flash.jsp"%>
 
- <%@ include file="_f_con.jsp"%>
+<%@ include file="_f_con.jsp"%>
 
 
 

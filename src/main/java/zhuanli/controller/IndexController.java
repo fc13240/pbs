@@ -3,6 +3,7 @@ package zhuanli.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,9 +23,11 @@ import com.qq.connect.javabeans.qzone.UserInfoBean;
 import com.qq.connect.oauth.Oauth;
 
 import zhuanli.dao.DatabaseAuthProvider;
+import zhuanli.domain.Brand;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.Patent;
 import zhuanli.domain.User;
+import zhuanli.service.BrandService;
 import zhuanli.service.PatentService;
 import zhuanli.service.UserService;
 import zhuanli.util.WeixinMessageDigest;
@@ -36,35 +39,24 @@ public class IndexController {
 	private PatentService patentService;
 	private UserService userService;
 	private DatabaseAuthProvider databaseAuthDao;
+	private BrandService brandService;
 	
 	@Autowired
-	public IndexController(PatentService patentService,UserService userService,DatabaseAuthProvider databaseAuthDao) {
+	public IndexController(PatentService patentService,UserService userService,DatabaseAuthProvider databaseAuthDao, BrandService brandService) {
 		this.patentService = patentService;
-		this.userService=userService;
-		this.databaseAuthDao=databaseAuthDao;
+		this.userService = userService;
+		this.databaseAuthDao = databaseAuthDao;
+		this.brandService = brandService;
 	}
 	@RequestMapping(path="/index")
 	public String getPatents(HttpServletRequest req, HttpServletResponse resp,Model model) {
 
 		List<FirstColumn>  AllColumns=patentService.selectAllColumns();
 		List<Patent> patent_list=patentService.getPatents();
-		//List<News> news=newsService.getNewsShow();
-		//List<News> newShows=newsService.newsShow();
-		//List<Article> article=articleService.getArticleShow();
-		//List<Article> articleShows=articleService.articleShow();		
-		//List<Patent> InventionPatentGrant=patentSearchService.searchByInventionPatentGrant();
-		//List<Patent> abstractsPatent=patentSearchService.searchByAbstractsPatent();
-		//List<Patent> utilityModelPatent=patentSearchService.searchByUtilityModelPatent();
-		//List<Patent> appearanceDesignPatent=patentSearchService.searchByAppearanceDesignPatent();
+		Map<String, List<Brand>> recommendBrands = brandService.getIndexRecommendBrands();
 		model.addAttribute("patent_list", patent_list);
 		model.addAttribute("AllColumns", AllColumns);
-		//model.addAttribute("news", news);
-		//model.addAttribute("newShows", newShows);
-		//model.addAttribute("articleShows", articleShows);		
-		//model.addAttribute("IPG", InventionPatentGrant);
-		//model.addAttribute("AP", abstractsPatent);
-		//model.addAttribute("UMP", utilityModelPatent);
-		//model.addAttribute("ADP", appearanceDesignPatent);
+		model.addAttribute("recommendBrands", recommendBrands);
 		return "index";
 	}
 	

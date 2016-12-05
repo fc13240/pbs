@@ -41,7 +41,7 @@
 <div class="category-filter">
   <div class="w">
 	<div class="container">
-	  <div class="current-location"> <a href="/">首页</a> &gt; <a href="/category/9jd2r73zgp.html">第03类-日化用品</a> &gt; 长生诀</div>
+	  <div class="current-location" style="margin-top:0px;"> <a href="<s:url value='/'/>">首页</a> &gt; <a href="/category/9jd2r73zgp.html">第03类-日化用品</a> &gt; 长生诀</div>
 	</div>
   </div>
 </div>

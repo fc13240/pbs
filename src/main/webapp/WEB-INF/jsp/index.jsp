@@ -20,6 +20,7 @@
 <script src="<s:url value='/js/jquery.min.js'/>"></script>
 <script src="<s:url value='/js/jquery-ui.min.js'/>" type="text/javascript"></script>
 <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101359853" data-redirecturi="http://www.lotut.com" charset="utf-8" data-callback="true"></script>
+
 <style type="text/css">
 
 </style>
@@ -44,9 +45,9 @@
 	</div>
 </div>
 
- <%@ include file="_flash.jsp"%>
+<%@ include file="_flash.jsp"%>
 
- <%@ include file="_f_con.jsp"%>
+<%@ include file="_f_con.jsp"%>
 
 
 

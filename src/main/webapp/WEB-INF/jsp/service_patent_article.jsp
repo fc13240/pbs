@@ -58,7 +58,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">
-  <div class="current-location"> <a href="/">首页</a> > 专利交易</div>
+  <div class="current-location" style="margin-top:0px;"> <a href="<s:url value='/'/>">首页</a> > 专利交易</div>
 </div>
 <!--当前位置 end--> 
 
@@ -164,8 +164,8 @@ $('.s-new-01 a').bind('click', function(){
       <tr style="border-top:1px dashed #ececec">
         <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">
        
-        	<div class="box_1" >1200</div>
-        	<div class="box_2" style="display:none;">500</div>
+        	<div class="box_1" >&yen;1200</div>
+        	<div class="box_2" style="display:none;">&yen;500</div>
         	
         	<div class="box_3" style="display:none;">免费</div>
 
@@ -251,28 +251,30 @@ $('.s-new-01 a').bind('click', function(){
 		</c:forEach>
 		</ul>
 		<div class="i_m qs_clear"> 
-		            <li>
-			            <div class="col-lg-12"> 共 ${page.totalPages}页${page.totalRecords}条记录    第${page.currentPage} 页 <a href="?shopType=${shopType}&currentPage=1">首页</a>
-			              <c:choose>
-			                <c:when test="${page.currentPage - 1 > 0}"> <a href="?shopType=${shopType}&currentPage=${page.currentPage - 1}">上一页</a> </c:when>
-			                <c:when test="${page.currentPage - 1 <= 0}"> <a href="?shopType=${shopType}&currentPage=1">上一页</a> </c:when>
-			              </c:choose>
-			              <c:choose>
-			                <c:when test="${page.totalPages==0}"> <a href="?shopType=${shopType}&currentPage=${page.currentPage}">下一页</a> </c:when>
-			                <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?shopType=${shopType}&currentPage=${page.currentPage+1}">下一页</a> </c:when>
-			                <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?shopType=${shopType}&currentPage=${page.totalPages}">下一页</a> </c:when>
-			              </c:choose>
-			              <c:choose>
-			                <c:when test="${page.totalPages==0}"> <a href="?shopType=${shopType}&currentPage=${page.currentPage}">尾页</a> </c:when>
-			                <c:otherwise> <a href="?shopType=${shopType}&currentPage=${page.totalPages}">尾页</a> </c:otherwise>
-			              </c:choose>
-			              <!-- 分页功能 End -->
-			              <input type="text" id="page.pageNo" style="width:50px;height:18px" name="currentPage" onKeyDown="gotoPageForEnter(event)"/>
-			              <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
-			            </div>
-					</li>
-					<!-- 分页用原来的 -->	
-				</div> 
+		<c:if test="${page.totalPages > 0}">
+            <li>
+	            <div class="col-lg-12"> 共 ${page.totalPages}页${page.totalRecords}条记录    第${page.currentPage} 页 <a href="?shopType=${shopType}&currentPage=1">首页</a>
+	              <c:choose>
+	                <c:when test="${page.currentPage - 1 > 0}"> <a href="?shopType=${shopType}&currentPage=${page.currentPage - 1}">上一页</a> </c:when>
+	                <c:when test="${page.currentPage - 1 <= 0}"> <a href="?shopType=${shopType}&currentPage=1">上一页</a> </c:when>
+	              </c:choose>
+	              <c:choose>
+	                <c:when test="${page.totalPages==0}"> <a href="?shopType=${shopType}&currentPage=${page.currentPage}">下一页</a> </c:when>
+	                <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?shopType=${shopType}&currentPage=${page.currentPage+1}">下一页</a> </c:when>
+	                <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?shopType=${shopType}&currentPage=${page.totalPages}">下一页</a> </c:when>
+	              </c:choose>
+	              <c:choose>
+	                <c:when test="${page.totalPages==0}"> <a href="?shopType=${shopType}&currentPage=${page.currentPage}">尾页</a> </c:when>
+	                <c:otherwise> <a href="?shopType=${shopType}&currentPage=${page.totalPages}">尾页</a> </c:otherwise>
+	              </c:choose>
+	              <!-- 分页功能 End -->
+	              <input type="text" id="page.pageNo" style="width:50px;height:18px" name="currentPage" onKeyDown="gotoPageForEnter(event)"/>
+	              <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
+	            </div>
+			</li>
+			<!-- 分页用原来的 -->
+		</c:if>	
+		</div> 
     </div>
  <style type="text/css">
 .r_detail_about {

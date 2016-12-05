@@ -1,11 +1,11 @@
 package zhuanli.dao.mapper;
 
 import java.util.List;
-
 import org.apache.ibatis.annotations.Param;
 
 import zhuanli.domain.Brand;
 import zhuanli.domain.BrandCategory;
+import zhuanli.domain.BrandSearchCondition;
 import zhuanli.domain.Page;
 
 public interface BrandMapper {
@@ -22,5 +22,26 @@ public interface BrandMapper {
 
 	List<Brand> getRecommendBrands(int brandId);
 
+	int getAllBrandsCount();
+
+	List<Brand> getAllBrandsList(Page page);
+
+	List<Brand> getIndexRecommendBrands();
+	
+	List<Brand> getSearchBrandsList(BrandSearchCondition brandSearchCondition);
+	
+	int getSearchBrandsCount(BrandSearchCondition brandSearchCondition);
+
+	List<Brand> getIndexSlideBrands();
+
+	List<Brand> getAllBrands();
+	
+	List<Brand> getAlreadySaleBrands(Page page);
+	
+	int getAlreadyBrandsCount();
+
+	List<Brand> getSearchAlreadySaleBrands(BrandSearchCondition brandSearchCondition);
+	
+	int getSearchAlreadySaleBrandsCount(BrandSearchCondition brandSearchCondition);
 
 }

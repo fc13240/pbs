@@ -11,7 +11,8 @@
 <meta http-equiv="cache-control" content="no-transform">
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
 <link href="<s:url value='/css/category.min.css?2016322'/>" rel="stylesheet" type="text/css"/> 
-<link rel="stylesheet" href="http://r.lotut.com/Themes/Home/default/Public/css/top_footer.css">
+<link rel="stylesheet" href="<s:url value='/css/top_footer.css'/>">
+<link rel="stylesheet" href="<s:url value='/css/details.css'/>" />
 </head>
 <body>
 
@@ -30,18 +31,19 @@
 	<div class="mll-navigator navigator-other">
  	<%@ include file="_top_nav_list.jsp"%>
 	</div>
+	
 </div>
 
-
-     
-<link rel="stylesheet" href="http://r.lotut.com/public/css/details.css" />
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">
   <div class="current-location" style="margin-top:0;"> 
   	<a href="<s:url value='/'/>">首页</a>> 
   	<a href="<s:url value='/brand/showBrandsList.html?categoryId=${brand.brandCategory.categoryId}'/>"> 
-  		第${brand.brandCategory.categoryId}类-${brand.brandCategory.categoryName}
+  		第
+  		<c:if test="${brand.brandCategory.categoryId < 10}">0${brand.brandCategory.categoryId}</c:if>
+  		<c:if test="${brand.brandCategory.categoryId > 9}">${brand.brandCategory.categoryId}</c:if>
+  		类 - ${brand.brandCategory.categoryName}
   	</a>> ${brand.name}  
   </div>
 </div>
@@ -55,7 +57,7 @@
         <div class="bd">
           <ul>
             <li>
-				<div style="background: url(<s:url value='/images/brands_img/testimg.jpg'/>) no-repeat;background-size:283px 283px;width:283px;height:283px;">    
+				<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId }_imagemagick_small.jpg'/>) no-repeat;background-size:283px 283px;width:283px;height:283px;">    
 	          		<div style="font-family:Microsoft YaHei;font-size:33px;padding-top: 80px;text-align: center;">${brand.name}</div>
 	            </div>
             </li>
@@ -74,14 +76,23 @@
       </td>
       </tr>
       <tr>
-      	<td width="250px;">所属地区：<span>
-				${brand.address}
-			</span></td>
+      	<td width="250px;">所属地区：
+      	<span>
+      	<c:if test="${not empty brand.address}">${brand.address}</c:if>
+      	<c:if test="${empty brand.address}">中国</c:if>
+      	</span>
+				
+		</td>
         <td>注册号：<span>${brand.brandNo }</span>
       </tr>
       <tr>
       	<td>组合类型：${brand.combinationType }</td>
-        <td>类别：第${brand.brandCategory.categoryId}类-${brand.brandCategory.categoryName}</span>
+        <td>类别：第
+	  		<c:if test="${brand.brandCategory.categoryId < 10}">0${brand.brandCategory.categoryId}</c:if>
+	  		<c:if test="${brand.brandCategory.categoryId > 9}">${brand.brandCategory.categoryId}</c:if>
+	  		类 - ${brand.brandCategory.categoryName}
+        
+        </td>
         
       </tr>
       <tr>
@@ -93,8 +104,20 @@
       </tr>
       
       <tr>
-        <td colspan="2">有效期限：<span><fmt:formatDate value="${brand.startDate }" pattern="yyyy-MM-dd"/>
-        	 至 <fmt:formatDate value="${brand.endDate }" pattern="yyyy-MM-dd"/> </span></td>
+        <td colspan="2">有效期限：
+        <span>
+	        <c:choose>
+		   		<c:when test="${empty brand.startDate}">0000-00-00</c:when>
+		   		<c:otherwise><fmt:formatDate value="${brand.startDate }" pattern="yyyy-MM-dd"/></c:otherwise>
+			</c:choose>
+			至
+			<c:choose>
+		   		<c:when test="${empty brand.endDate}">0000-00-00</c:when>
+		   		<c:otherwise><fmt:formatDate value="${brand.endDate }" pattern="yyyy-MM-dd"/></c:otherwise>
+			</c:choose>
+	       
+        </span>
+        </td>
       </tr>
 
       <tr style="border-bottom:1px dashed #ececec">
@@ -102,13 +125,13 @@
         <td></td>
       </tr>
       <tr style="border-top:1px dashed #ececec">
-        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">￥${brand.price }</span>
+        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">&yen;${brand.price }</span>
         <td>交易方式：			
 			<c:if test="${brand.transactionMode == 1 }">
-			出售
+			转让
 			</c:if>
 			<c:if test="${brand.transactionMode == 2 }">
-			转让
+			授权
 			</c:if>
 			
         </td>
@@ -122,11 +145,11 @@
 			<div style="float:left;">客&nbsp;&nbsp;服：</div>
 			        <div style="float:left;margin-left:15px;">  马环静：</div>
 			<div style="float:left;">
-			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238686&amp;site=qq&amp;menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" style="" href="http://wpa.qq.com/pa?p=2:2851238686:51" alt="与客服小马进行交谈" title="与客服小马进行交谈"></a>
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238686&amp;site=qq&amp;menu=yes"><img src="<s:url value='/images/zx_qq.gif'/>" border="0" style="" href="http://wpa.qq.com/pa?p=2:2851238686:51" alt="与客服小马进行交谈" title="与客服小马进行交谈"></a>
 			</div> 
 			         <div style="float:left;margin-left:15px;">肖莹莹：</div>
 			<div style="float:left;">
-			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238688&amp;site=qq&amp;menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" href="http://wpa.qq.com/pa?p=2:2851238688:51" alt="与客服莹莹进行交谈" title="与客服莹莹进行交谈"></a>
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238688&amp;site=qq&amp;menu=yes"><img src="<s:url value='/images/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2851238688:51" alt="与客服莹莹进行交谈" title="与客服莹莹进行交谈"></a>
 			</div>
 		</td>
       </tr>
@@ -137,12 +160,12 @@
     <ul class="good-list-item1" style="padding:10px 40px;">
       <li>
         <dl>
-          <dd> <img title="龙图腾" class="lazy" alt="龙图腾" src="http://r.lotut.com/public/htmlimg/shangjia.jpg" width="160"> </dd>
+          <dd> <img title="龙图腾" class="lazy" alt="龙图腾" src="<s:url value='/images/shangjia.jpg'/>" width="160"> </dd>
           <dd style='height:8px;'></dd>
           <dd class="ifo">
          
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2850130083&site=qq&menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" href="http://wpa.qq.com/pa?p=2:2850130083:51" alt="与客服小林进行交谈" title="与客服小林进行交谈"/></a>
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2853237834&site=qq&menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" href="http://wpa.qq.com/pa?p=2:2853237834:51" alt="与客服代丽曼进行交谈" title="与客服代丽曼进行交谈"/></a>
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2850130083&site=qq&menu=yes"><img src="<s:url value='/images/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2850130083:51" alt="与客服小林进行交谈" title="与客服小林进行交谈"/></a>
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2853237834&site=qq&menu=yes"><img src="<s:url value='/images/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2853237834:51" alt="与客服代丽曼进行交谈" title="与客服代丽曼进行交谈"/></a>
 
           </dd>
           <dd class="ifo" style="height:35px;line-height:40px;font-size:12px;">联系电话：0551-65771310</dd>
@@ -255,8 +278,8 @@
         <dl>
           <dd class="pic"> 
           	<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendBrand.id}'/>" target="_blank">
-          		<div style="background: url(<s:url value='/images/brands_img/testimg.jpg'/>) no-repeat;background-size:192px 154px;width:192px;height:154px;">    
-	       			<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 40px;text-align: center;">${recommendBrand.name}</div>
+          		<div style="background: url(<s:url value='/images/brands_img/${recommendBrand.brandCategory.categoryId }_imagemagick_small.jpg'/>) no-repeat;background-size:192px 154px;width:192px;height:154px;">    
+	       			<div style="font-family:Microsoft YaHei;font-size:20px;padding-top: 40px;text-align: center;">${recommendBrand.name}</div>
 	   			</div>
           	</a> 
           </dd>
@@ -264,7 +287,7 @@
           	<div style="width:110px;float:left;">
           		<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendBrand.id}'/>" target="_blank" title="${recommendBrand.name}">${recommendBrand.name}</a>
           	</div> 
-          	<div class="num" style="float:left;">￥${recommendBrand.price}</div>
+          	<div class="num" style="float:left;">&yen;${recommendBrand.price}</div>
           </dt>
         </dl>
         </c:forEach>
@@ -282,8 +305,7 @@
 </div>
 <div class="right-sidebar"> </div>
 </div>
-<script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery-1.8.3.min.js"></script> 
-<script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery.lazyload.js"></script> 
+<script type="text/javascript" src="<s:url value='/js/jquery-1.8.3.min.js'/>"></script> 
 
 <!-- End Piwik Code --> 
 
