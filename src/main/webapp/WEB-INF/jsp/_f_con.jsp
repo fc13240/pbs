@@ -201,7 +201,138 @@ margin: 0 auto;
 }
 .left-item{height:340px;border: 1px solid #f5f5f5; float:left;} 
 
+
+.sec_l {
+    position: relative;
+    float: left;
+    width: 332px;
+    font-family: SimSun;
+    overflow: hidden;
+}
+.sec_r {
+    float: left;
+    width: 856px;
+}
 </style>  
+
+
+
+
+<div class="floor_1F">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
+	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">1F</div>
+	        <h2>日常生活领域</h2>                            
+	</div>
+	<div class="news-info-con" style="height: 340px;">
+		<div class="news-info-bd clear">
+			
+			<div class="sec">
+                <div class="sec_l">
+                	<img src="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" width="332" height="342" alt="仪器设备" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+								<div class="white_mask"></div>
+					<div class="cgr_lists">
+					<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=258&amp;search_domainName=%E8%BD%BB%E5%B7%A5/%E7%BA%BA%E7%BB%87&amp;" target="_blank">轻工/纺织</a>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=259&amp;search_domainName=%E5%86%9C/%E6%9E%97/%E7%89%A7&amp;" target="_blank">农/林/牧</a>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=260&amp;search_domainName=%E7%9F%B3%E6%B2%B9/%E7%9F%B3%E5%8C%96&amp;" target="_blank">石油/石化</a>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=261&amp;search_domainName=%E9%A3%9F%E5%93%81/%E7%83%9F%E8%8D%89&amp;" target="_blank">食品/烟草</a>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=262&amp;search_domainName=%E5%9C%B0%E8%B4%A8/%E7%9F%BF%E4%BA%A7&amp;" target="_blank">地质/矿产</a>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_domainId=263&amp;search_domainName=%E7%9F%BF%E4%B8%9A/%E5%86%B6%E9%87%91&amp;" target="_blank">矿业/冶金</a>
+							</div>
+					
+                    <div class="tag_box">
+						<div class="tag_lists">
+							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=274&amp;search_featureName=%E7%94%B5%E5%AD%90%E6%B5%8B%E9%87%8F%E4%BB%AA%E5%99%A8&amp;" target="_blank">电子测量仪器</a>
+									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=275&amp;search_featureName=%E8%AE%A1%E9%87%8F%E4%BB%AA%E5%99%A8&amp;" target="_blank">计量仪器</a>
+									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=276&amp;search_featureName=%E5%B7%A5%E7%A8%8B%E8%AF%95%E9%AA%8C%E8%AE%BE%E5%A4%87&amp;" target="_blank">工程试验设备</a>
+									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=277&amp;search_featureName=%E5%88%86%E6%9E%90%E4%BB%AA%E5%99%A8&amp;" target="_blank">分析仪器</a>
+									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=278&amp;search_featureName=%E7%89%A9%E7%90%86%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95&amp;" target="_blank">物理性能测试</a>
+									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=279&amp;search_featureName=%E7%89%B9%E7%A7%8D%E6%A3%80%E6%B5%8B%E4%BB%AA&amp;" target="_blank">特种检测仪</a>
+									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=280&amp;search_featureName=%E5%85%B6%E4%BB%96%E4%BB%AA%E5%99%A8&amp;" target="_blank">其他仪器</a>
+									</div>
+						
+						<div class="tag_lists">
+							</div>
+						
+						<div class="tag_lists">
+							</div>
+                    </div>
+                </div>
+				
+				<div class="sec_r">
+                    <ul>
+						<li>
+										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/84" target="_blank">
+											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" width="213" height="259" alt="差示扫描量热仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+										</a> 
+									</li>
+									<li>
+										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/85" target="_blank">
+											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_03dt6IIn.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_03dt6IIn.jpg" width="213" height="259" alt="电感耦合等离子体质谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+										</a> 
+									</li>
+									<li>
+										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/86" target="_blank">
+											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_51I15jWz.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_51I15jWz.jpg" width="213" height="259" alt="原子吸收光谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+										</a> 
+									</li>
+									<li>
+										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/87" target="_blank">
+											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_49_02EJGcCI.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_49_02EJGcCI.jpg" width="213" height="259" alt="600MHz 超导傅立叶变换核磁共振谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+										</a> 
+									</li>
+									<li>
+										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/88" target="_blank">
+											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_53_20zZ5D25.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_53_20zZ5D25.jpg" width="213" height="259" alt="火焰/石墨炉原子吸收分光光度计" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+										</a> 
+									</li>
+									<li>
+										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/89" target="_blank">
+											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_54_296XtlLD.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_54_296XtlLD.jpg" width="213" height="259" alt="蛋白质分离纯化系统" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+										</a> 
+									</li>
+									<li>
+										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/90" target="_blank">
+											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_55_32pHu1AU.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_55_32pHu1AU.jpg" width="213" height="259" alt="全自动比表面积分析仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+										</a> 
+									</li>
+									<li>
+										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/94" target="_blank">
+											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_18_20_37RybWxL.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_18_20_37RybWxL.jpg" width="213" height="259" alt="激光粒度分析仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+										</a> 
+									</li>
+									</ul>
+                </div>
+            </div>
+			
+			<div class="left-item">
+		      <div class="g-item">
+		        <div class="g-dtl"> 
+		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank"> 
+		          	<img class="d-img" src="<s:url value='/images/patent_type_01.jpg'/>"> 
+		          </a>
+		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank" title="农业/食品/医疗" class="d-name">
+		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">农业/食品/医疗</span>
+		          </a>
+	        
+				  <div>
+					  <div style="float:left;width:100px;">
+					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
+					  </div>
+					  <div style="float:right;width:100px;" class="box_buy">
+					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=1'/>" class="btn_buy">立即抢购</a>
+					  </div>
+				  </div>     
+		        </div>
+		      </div> 	
+			</div>	  
+	
+	
+		
+		
+		</div>
+	</div>
+	
+</div>
 
 
 <div class="floor_1F" style="height:340px;">
