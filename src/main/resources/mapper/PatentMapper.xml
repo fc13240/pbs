@@ -3,7 +3,28 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="zhuanli.dao.mapper.PatentMapper">
+	<resultMap id="SaleGoodResultMap" type="SaleGood">
+		<id property="patentId" column="patent_id"/>
+		<result property="patentName" column="patent_name"/>
+		<result property="price" column="price"/>
+		<result property="status" column="status"/>
+		<result property="transactionType" column="transaction_type"/>
+		<result property="addDate" column="add_date"/>
+		<result property="transactionDate" column="transaction_date"/>
+		<result property="recommendStatus" column="recommend_status"/>
+		<result property="transferor" column="transferor"/>
+		<result property="patentImageUrl" column="patent_image_url"/>
+		<association property="firstColumn" javaType="FirstColumn">
+			<id property="id" column="patent_first_column_id"/>
+			<result property="name" column="patent_first_column_name"/>
+		</association>
+		<association property="secondColumn" javaType="SecondColumn">
+			<id property="id" column="patent_second_column"/>
+			<result property="name" column="patent_second_column_name"/>
+		</association>
 	
+	
+	</resultMap>
 	<select id="getSecoundColumnPage"  resultType="Patent" parameterType="Page" >
 		select s.price ,s.transaction_type,p.patent_name,s.patent_id,ss.patent_first_column_id,pt.patent_type_desc as patent_type_name
 			from sell_patent_goods s join patents p on s.patent_id=p.patent_id
@@ -199,7 +220,55 @@
 		WHERE sf.patent_first_column_id=#{shopType} and s.status=1
 	</select>
 	
-				
+	<select id="getAlreadySalePatent" parameterType="Page" resultMap="SaleGoodResultMap">
+		select spg.patent_id,p.patent_name,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.status,spg.patent_image_url 
+		       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
+		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id where spg.status=2
+		       limit #{startIndex},#{pageSize}
+
+	</select>
+					
+	<select id="getAlreadySalePatentCount" resultType="int">
+		select count(*) from sell_patent_goods where status=2
+	</select>
 		
-		
+	<select id="getSearchAlreadySalePatent" parameterType="PatentSearchCondition" resultMap="SaleGoodResultMap">
+		<bind name="keyword_pattern" value="'%' +keyword + '%'"/>
+		select spg.patent_id,p.patent_name,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.status,spg.patent_image_url 
+		       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
+		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id where spg.status=2
+		       <if test="keyword_pattern!=null">
+		       	and p.patent_name like #{keyword_pattern}
+		       </if>
+		       limit #{page.startIndex},#{page.pageSize}
+
+	</select>
+	
+	<select id="getSearchAlreadySalePatentCount" parameterType="PatentSearchCondition" resultType="int">
+		<bind name="keyword_pattern" value="'%' +keyword + '%'"/>
+		select count(*) from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id where spg.status=2
+		   <if test="keyword_pattern!=null">
+	       	and p.patent_name like #{keyword_pattern}
+	       </if>
+	</select>
+	
+	
+	<select id="getAlreadSalePatentDetail" parameterType="long" resultMap="SaleGoodResultMap">
+		<!-- select p.patent_id, p.app_no,p.patent_name,pt.patent_type_desc as patent_type_name,s.price ,ss.patent_first_column_id,sf.patent_first_column_name,s.patent_second_column,ss.patent_second_column_name,s.transferor,s.patent_image_url
+			   from sell_patent_goods s join patents p on s.patent_id=p.patent_id
+		         left join patent_types pt on p.patent_type = pt.patent_type_id
+		         join sell_second_column ss on s.patent_second_column=ss.patent_second_column_id
+		         join sell_first_column sf on ss.patent_first_column_id=sf.patent_first_column_id
+		         where s.patent_id=#{patentId}
+		         
+		 select * from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id left join sell_second_column ssc on spg.patent_second_column=ssc.patent_second_column_id join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id where spg.patent_id -->        
+		 select spg.patent_id,p.patent_name,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.status,spg.patent_image_url 
+		       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
+		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id
+		       where spg.patent_id=#{patentId}     
+
+	</select>
 </mapper>

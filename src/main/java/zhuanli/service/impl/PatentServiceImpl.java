@@ -19,6 +19,7 @@ import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
 import zhuanli.domain.PatentSearchCondition;
+import zhuanli.domain.SaleGood;
 import zhuanli.service.PatentService;
 
 
@@ -147,6 +148,31 @@ public class PatentServiceImpl implements PatentService {
 	@Override
 	public int getPatentsByShopTypeCount(int shopType) {
 		return patentDao.getPatentsByShopTypeCount(shopType);
+	}
+
+	@Override
+	public List<SaleGood> getAlreadySalePatent(Page page) {
+		return patentDao.getAlreadySalePatent(page);
+	}
+
+	@Override
+	public int getAlreadySalePatentCount() {
+		return patentDao.getAlreadySalePatentCount();
+	}
+
+	@Override
+	public List<SaleGood> getSearchAlreadySalePatent(PatentSearchCondition patentSearchCondition) {
+		return patentDao.getSearchAlreadySalePatent(patentSearchCondition);
+	}
+
+	@Override
+	public int getSearchAlreadySalePatentCount(PatentSearchCondition patentSearchCondition) {
+		return patentDao.getSearchAlreadySalePatentCount(patentSearchCondition);
+	}
+
+	@Override
+	public SaleGood getAlreadSalePatentDetail(long patentId) {
+		return patentDao.getAlreadSalePatentDetail(patentId);
 	}
 	
 }

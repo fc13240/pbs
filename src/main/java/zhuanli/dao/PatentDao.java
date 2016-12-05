@@ -10,6 +10,7 @@ import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
 import zhuanli.domain.PatentSearchCondition;
+import zhuanli.domain.SaleGood;
 
 
 
@@ -44,7 +45,9 @@ public interface PatentDao {
 	int getFirstId(int patent_second_column_id);
 
 	String getCurrentTypeName(int patent_second_column_id);
+	
 	List<Patent> searchPatents(PatentSearchCondition patentSearchCondition);
+	
 	int searchPatentsCount(PatentSearchCondition patentSearchCondition);
 
 	List<Notice> getNoticeByPatentno(long patent_id);
@@ -58,4 +61,14 @@ public interface PatentDao {
 	List<Patent> getPatentsByShopType(int shopType,Page page);
 	
 	int getPatentsByShopTypeCount(int shopType);
+	
+	List<SaleGood> getAlreadySalePatent(Page page);
+	
+	int getAlreadySalePatentCount();
+	
+	List<SaleGood> getSearchAlreadySalePatent(PatentSearchCondition patentSearchCondition);
+	
+	int getSearchAlreadySalePatentCount(PatentSearchCondition patentSearchCondition);
+	
+	SaleGood getAlreadSalePatentDetail(long patentId);
 }
