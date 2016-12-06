@@ -72,7 +72,14 @@
 	          <div class="syPub_list">
 	              <div id="beforea">
 	              <a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-					<div style="background: url(<s:url value='/images/brands_img/${brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
+					<c:choose>
+						<c:when test="${not empty brand.imageUrl }">
+						<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
+						</c:when>
+						<c:otherwise>
+						<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
+						</c:otherwise>
+					</c:choose>	
 		          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
 						 
 		            </div>
