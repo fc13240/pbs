@@ -352,7 +352,7 @@ margin: 0 auto;
 					<ul>
 					<c:forEach items="${FirstColumn.patents}" begin="0" end= "7" var="patent">
 					<li>	
-					<c:if test="${not empty patent.price}">
+					<c:if test="${not empty patent.price && not empty patent.patent_name && not empty patent.app_no}">
 							<a href="" target="_blank" title="${patent.patent_name}" class="img">
 								<img onerror="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" src="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" class="lazy">
 			                	</a>
@@ -373,8 +373,8 @@ margin: 0 auto;
 							</div>
 					</c:if>
 					</li>
-						</c:forEach>
 					
+						</c:forEach>
 						</ul>
 				</div>
 			</div>
