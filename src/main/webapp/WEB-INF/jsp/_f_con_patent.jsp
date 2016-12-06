@@ -351,7 +351,6 @@ margin: 0 auto;
 				<div class="brand-list patent-list">
 					<ul>
 					<c:forEach items="${FirstColumn.patents}" begin="0" end= "7" var="patent">
-					
 					<li>	
 					<c:if test="${not empty patent.price && not empty patent.patent_name && not empty patent.app_no}">
 							<a href="" target="_blank" title="${patent.patent_name}" class="img">
@@ -376,7 +375,6 @@ margin: 0 auto;
 					</li>
 					
 						</c:forEach>
-					
 						</ul>
 				</div>
 			</div>
