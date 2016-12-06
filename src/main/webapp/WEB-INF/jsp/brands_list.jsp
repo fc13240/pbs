@@ -47,7 +47,7 @@
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">
-  <div class="current-location" style="margin-top:0;"> <a href="<s:url value='/'/>">首页</a>
+  <div class="current-location" style="margin-top:0;"> <a href="<s:url value='/brand/index.html'/>">商标</a>
   	> 第
 		<c:if test="${brandCategory.categoryId < 10}">0${brandCategory.categoryId}</c:if>
 		<c:if test="${brandCategory.categoryId > 9}">${brandCategory.categoryId}</c:if>
