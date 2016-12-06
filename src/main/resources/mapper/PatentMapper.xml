@@ -99,13 +99,22 @@
 			<result property="name" column="secondColumnName"/>
 			<result property="secondCount" column="secondCount"/>
 		</collection>
+		<collection property="patents" ofType="Patent">
+			<id property="patent_id" column="patent_id"/>
+			<result property="patent_name" column="patent_name"/>
+			<result property="patent_first_column_id" column="patent_first_column_id"/>
+			<result property="patent_second_column_id" column="patent_second_column_id"/>
+		</collection>
 	</resultMap>
 	
 	<select id="selectAllColumns" resultMap="AllColumnMap">
-		select f.patent_first_column_id firstColumnId, f.patent_first_column_name firstColumnName,sc.count firstCount, 
-			s.patent_second_column_id secondColumnId, s.patent_second_column_name secondColumnName,scs.count secoundCount
-		  from sell_first_column f join sell_second_column s on f.patent_first_column_id = s.patent_first_column_id 
-		  join sell_count sc on f.patent_first_column_id=sc.id 	join sell_count scs on s.patent_second_column_id = scs.id
+		SELECT f.patent_first_column_id firstColumnId, f.patent_first_column_name firstColumnName, 
+			s.patent_second_column_id secondColumnId, s.patent_second_column_name secondColumnName,
+			spg.patent_id patent_id,p.patent_name patent_name,f.patent_first_column_id patent_first_column_id,
+			s.patent_second_column_id patent_second_column_id
+		  FROM sell_first_column f JOIN sell_second_column s ON f.patent_first_column_id = s.patent_first_column_id 
+		  left JOIN sell_patent_goods spg ON spg.patent_second_column = s.patent_second_column_id 
+		   left JOIN patents p ON  p.patent_id = spg.patent_id
 	</select>
 	
 	<select id="getColumnCount"  resultType="ColumnCount" >
@@ -147,7 +156,7 @@
 				</if>
 	</select>	
 	
-	<resultMap type="Patent" id="TransactionPatent">
+<!-- 	<resultMap type="Patent" id="TransactionPatent">
 		<id property="patent_id" column="patent_id"/>
 		<result property="app_no" column="app_no"/>
 		<result property="patent_name" column="patent_name"/>
@@ -155,8 +164,23 @@
 		<result property="price" column="price"/>
 		<result property="patent_first_column_id" column="patent_first_column_id"/>
 		<result property="patent_first_column_name" column="patent_first_column_name"/>
-		
-	</resultMap>	
+	</resultMap>	 -->
+	
+	<resultMap type="GoodsDetail" id="TransactionPatent">
+		<id property="patentId" column="patent_id"/>
+		<result property="appNo" column="app_no"/>
+		<result property="patentName" column="patent_name"/>
+		<result property="addDate" column="add_date"/>
+		<result property="transactionDate" column="transaction_date"/>
+		<result property="price" column="price"/>
+		<result property="transactionType" column="transaction_type"/>
+		<result property="status" column="status"/>
+		<result property="owner" column="owner"/>
+		<result property="FirstColumn" column="patent_first_column_id"/>
+		<result property="SecondColumn" column="patent_second_column"/>	
+		<result property="recommendStatus" column="recommend_status"/>
+		<result property="transferor" column="transferor"/>	
+	</resultMap>
 	
 	
 		
@@ -199,7 +223,22 @@
 		WHERE sf.patent_first_column_id=#{shopType} and s.status=1
 	</select>
 	
-				
-		
+	<select id="getPatentByFirstColumn" parameterType="int" resultMap="TransactionPatent">
+		SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column
+		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
+		WHERE recommend_status=1  limit 0,7;
+	
+	</select>
+	
+	<select id="getFirstColumn"  resultType="GoodsFirstColumn">
+		select patent_first_column_id id,patent_first_column_name  name
+		  from sell_first_column
+	</select>	
+	
+	<select id="getSecondColumn" parameterType="int" resultType="GoodsSecondColumn">
+		select patent_second_column_id id,patent_second_column_name  name
+		  from sell_second_column where patent_first_column_id=#{firstColumnId}
+	</select>				
+	
 		
 </mapper>

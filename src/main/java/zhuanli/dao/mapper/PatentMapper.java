@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import zhuanli.domain.ColumnCount;
 import zhuanli.domain.FirstColumn;
+import zhuanli.domain.GoodsDetail;
 import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
@@ -57,4 +58,6 @@ public interface PatentMapper {
 	List<Patent> getPatentsByShopType(@Param("shopType")int shopType,@Param("page")Page page);
 	
 	int getPatentsByShopTypeCount(int shopType);
+	
+	List<GoodsDetail> getPatentByFirstColumn(int id);
 }

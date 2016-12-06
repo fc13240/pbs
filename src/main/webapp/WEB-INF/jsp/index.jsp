@@ -47,7 +47,7 @@
 
 <%@ include file="_flash.jsp"%>
 
-<%@ include file="_f_con.jsp"%>
+<%@ include file="_f_con_patent.jsp"%>
 
 
 

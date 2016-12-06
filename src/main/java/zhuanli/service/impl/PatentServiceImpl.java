@@ -15,6 +15,7 @@ import net.lingala.zip4j.core.ZipFile;
 import zhuanli.dao.PatentDao;
 import zhuanli.domain.ColumnCount;
 import zhuanli.domain.FirstColumn;
+import zhuanli.domain.GoodsDetail;
 import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
@@ -147,6 +148,11 @@ public class PatentServiceImpl implements PatentService {
 	@Override
 	public int getPatentsByShopTypeCount(int shopType) {
 		return patentDao.getPatentsByShopTypeCount(shopType);
+	}
+
+	@Override
+	public List<GoodsDetail> getPatentByFirstColumn(int id) {
+		return patentDao.getPatentByFirstColumn(id);
 	}
 	
 }

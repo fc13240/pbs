@@ -206,11 +206,11 @@ margin: 0 auto;
 
 
 
-
+<c:forEach items="${AllColumns}" var="FirstColumn" varStatus="status">
 <div class="floor_1F">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">1F</div>
-	        <h2>日常生活领域</h2>                            
+	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">${status.count+1}F</div>
+	        <h2>${FirstColumn.name}</h2>                            
 	</div>
 	<div class="news-info-con" style="height: 340px;">
 		<div class="news-info-bd clear">
@@ -220,17 +220,22 @@ margin: 0 auto;
                 	<img src="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" width="332" height="342" alt="仪器设备" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
 								<div class="white_mask"></div>
 					<div class="cgr_lists">
-					<a class="f-db" href="" target="_blank">服装/鞋帽</a>
+					  <c:forEach items="${FirstColumn.secondColumns}"  var="secondColumn" varStatus="status">
+					  	<a class="f-db" href="<s:url value='/getGoodListBySecond.html?id=${secondColumn.id}'/>" target="_blank">${secondColumn.name}</a>
+					  </c:forEach>
+							<!-- <a class="f-db" href="" target="_blank">服装/鞋帽</a>
 							<a class="f-db" href="" target="_blank">家具/家装</a>
 							<a class="f-db" href="" target="_blank">家电/照明</a>
 							<a class="f-db" href="" target="_blank">教学/学习</a>
 							<a class="f-db" href="" target="_blank">市政/环卫</a>
 							<a class="f-db" href="" target="_blank">体育/健身</a>
 							<a class="f-db" href="" target="_blank">行政/办公</a>
-							<a class="f-db" href="" target="_blank">娱乐/玩具</a>							<a class="f-db" href="" target="_blank">地质/矿产</a>
+							<a class="f-db" href="" target="_blank">娱乐/玩具</a>							
+							<a class="f-db" href="" target="_blank">地质/矿产</a>
 							<a class="f-db" href="" target="_blank">艺术/乐器</a>							
-							<a class="f-db" href="" target="_blank">日常生活领域</a>	
-							</div>
+							<a class="f-db" href="" target="_blank">日常生活领域</a>	 -->
+							
+					</div>
 					
                     <div class="tag_box">
 					
@@ -244,47 +249,56 @@ margin: 0 auto;
 				
 				<div class="sec_r">
                     <ul>
+           				<c:forEach items="${FirstColumn.patents}" begin="0" end= "7" var="patent">
+           				<li>
+           					<a class="f-db" href="http://reslib.wtoip.com/equip/detail/84" target="_blank">
+								<img src="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" 
+								class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" width="213" height="259" 
+								alt="${patent.patent_name}">
+							</a> 
+           				</li>
+           				</c:forEach>
+						<!-- <li>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/detail/84" target="_blank">
+								<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" width="213" height="259" alt="差示扫描量热仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+							</a> 
+						</li>
 						<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/84" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" width="213" height="259" alt="差示扫描量热仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/85" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_03dt6IIn.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_03dt6IIn.jpg" width="213" height="259" alt="电感耦合等离子体质谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/86" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_51I15jWz.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_51I15jWz.jpg" width="213" height="259" alt="原子吸收光谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/87" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_49_02EJGcCI.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_49_02EJGcCI.jpg" width="213" height="259" alt="600MHz 超导傅立叶变换核磁共振谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/88" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_53_20zZ5D25.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_53_20zZ5D25.jpg" width="213" height="259" alt="火焰/石墨炉原子吸收分光光度计" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/89" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_54_296XtlLD.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_54_296XtlLD.jpg" width="213" height="259" alt="蛋白质分离纯化系统" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/90" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_55_32pHu1AU.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_55_32pHu1AU.jpg" width="213" height="259" alt="全自动比表面积分析仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/94" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_18_20_37RybWxL.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_18_20_37RybWxL.jpg" width="213" height="259" alt="激光粒度分析仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									</ul>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/detail/85" target="_blank">
+								<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_03dt6IIn.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_03dt6IIn.jpg" width="213" height="259" alt="电感耦合等离子体质谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+							</a> 
+						</li>
+						<li>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/detail/86" target="_blank">
+								<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_51I15jWz.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_51I15jWz.jpg" width="213" height="259" alt="原子吸收光谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+							</a> 
+						</li>
+						<li>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/detail/87" target="_blank">
+								<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_49_02EJGcCI.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_49_02EJGcCI.jpg" width="213" height="259" alt="600MHz 超导傅立叶变换核磁共振谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+							</a> 
+						</li>
+						<li>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/detail/88" target="_blank">
+								<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_53_20zZ5D25.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_53_20zZ5D25.jpg" width="213" height="259" alt="火焰/石墨炉原子吸收分光光度计" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+							</a> 
+						</li>
+						<li>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/detail/89" target="_blank">
+								<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_54_296XtlLD.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_54_296XtlLD.jpg" width="213" height="259" alt="蛋白质分离纯化系统" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+							</a> 
+						</li>
+						<li>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/detail/90" target="_blank">
+								<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_55_32pHu1AU.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_55_32pHu1AU.jpg" width="213" height="259" alt="全自动比表面积分析仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+							</a> 
+						</li>
+						<li>
+							<a class="f-db" href="http://reslib.wtoip.com/equip/detail/94" target="_blank">
+								<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_18_20_37RybWxL.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_18_20_37RybWxL.jpg" width="213" height="259" alt="激光粒度分析仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
+							</a> 
+						</li> -->
+					</ul>
                 </div>
             </div>
 
@@ -293,6 +307,7 @@ margin: 0 auto;
 	</div>
 	
 </div>
+</c:forEach>
 
 <div class="floor_1F">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">

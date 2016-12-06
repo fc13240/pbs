@@ -25,6 +25,7 @@ import com.qq.connect.oauth.Oauth;
 import zhuanli.dao.DatabaseAuthProvider;
 import zhuanli.domain.Brand;
 import zhuanli.domain.FirstColumn;
+import zhuanli.domain.GoodsDetail;
 import zhuanli.domain.Patent;
 import zhuanli.domain.User;
 import zhuanli.service.BrandService;
@@ -58,6 +59,13 @@ public class IndexController {
 		model.addAttribute("AllColumns", AllColumns);
 		model.addAttribute("recommendBrands", recommendBrands);
 		return "index";
+	}
+	
+	@RequestMapping(path="/getGoodListBySecond")
+	public String getGoodListBySecond(int id,Model model) {
+		List<GoodsDetail> patents=patentService.getPatentByFirstColumn(id);
+		model.addAttribute("patents", patents);
+		return "patent_list";
 	}
 	
 	@RequestMapping(path="/token")

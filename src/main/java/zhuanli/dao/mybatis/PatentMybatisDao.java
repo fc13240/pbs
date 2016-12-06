@@ -8,6 +8,7 @@ import zhuanli.dao.PatentDao;
 import zhuanli.dao.mapper.PatentMapper;
 import zhuanli.domain.ColumnCount;
 import zhuanli.domain.FirstColumn;
+import zhuanli.domain.GoodsDetail;
 import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
@@ -124,6 +125,11 @@ public class PatentMybatisDao extends SqlSessionDaoSupport implements PatentDao 
 	@Override
 	public int getPatentsByShopTypeCount(int shopType) {
 		return patentMapper.getPatentsByShopTypeCount(shopType);
+	}
+
+	@Override
+	public List<GoodsDetail> getPatentByFirstColumn(int id) {
+		return patentMapper.getPatentByFirstColumn(id);
 	}
 	
 	

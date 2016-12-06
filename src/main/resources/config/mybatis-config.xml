@@ -20,5 +20,8 @@
 			<typeAlias alias="BrandCategory" type="zhuanli.domain.BrandCategory"/>
 			<typeAlias alias="Brand" type="zhuanli.domain.Brand"/>
 			<typeAlias alias="BrandSearchCondition" type="zhuanli.domain.BrandSearchCondition"/>
+			<typeAlias alias="GoodsDetail" type="zhuanli.domain.GoodsDetail"/>
+			<typeAlias alias="GoodsFirstColumn" type="zhuanli.domain.GoodsFirstColumn"/>
+			<typeAlias alias="GoodsSecondColumn" type="zhuanli.domain.GoodsSecondColumn"/>
 		</typeAliases>
 </configuration>

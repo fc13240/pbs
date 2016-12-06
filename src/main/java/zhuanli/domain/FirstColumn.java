@@ -6,7 +6,7 @@ public class FirstColumn {
 	private int id;
 	private String name;
 	private List<SecondColumn> secondColumns;
-	private List<Patent> Patents;
+	private List<Patent> patents;
 	private int firstCount;
 	public int getId() {
 		return id;
@@ -32,6 +32,13 @@ public class FirstColumn {
 	public void setSecondColumns(List<SecondColumn> secondColumns) {
 		this.secondColumns = secondColumns;
 	}
+	public List<Patent> getPatents() {
+		return patents;
+	}
+	public void setPatents(List<Patent> patents) {
+		this.patents = patents;
+	}
+	
 	
 
 }
