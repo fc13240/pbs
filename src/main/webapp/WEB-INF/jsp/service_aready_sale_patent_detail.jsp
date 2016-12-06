@@ -76,7 +76,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 						<img src="<s:url value='${good.patentImageUrl }'/>" >
 					</c:when>
 					<c:otherwise>
-						<img src="<s:url value='/images/patent_type_0${good.firstColumn.id}.jpg'/>" >
+						<img src="<s:url value='/images/goods/${good.secondColumn.id }.jpg'/>" >
 					</c:otherwise>
 				</c:choose>
             <%-- <img src="<s:url value='/images/patent_type_0${good.firstColumn.id}.jpg'/>" > --%>
@@ -105,7 +105,8 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
        <tr>
        <td>
        <span style="line-height: 44px;font-size:20px;collor:#000000;">
-       		${good.firstColumn.name }
+       		<%-- ${good.firstColumn.name } --%>
+       		[${good.patentType.typeDescription }]${good.patentName }
        
            <%-- <c:if test="${good.firstColumn.id==1}">
           	 农业/食品/医疗
@@ -138,15 +139,56 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
         </td>
       </tr>
       <tr style="border-bottom:1px dashed #ececec">
-        <td height="15"></span>
+        <td height="15">
       </tr>
       <tr>
+        <td width="250px;">专利号：${good.appNo }</td>
+        <td>第一申请人：<span>${good.appPerson }</span></td>
+      
+      </tr>
+      <tr>
+        <td width="250px;">申请日：<fmt:formatDate value="${good.appDate }" pattern="yyyy-MM-dd"/> </td>
+        <td>发布日期：<fmt:formatDate value="${good.publishDate }" pattern="yyyy-MM-dd"/></td>
+      
+      </tr>
+      <tr>
+        <td width="250px;">行业：<div class="s-new-01" id="s-new-01">
+		    		<a href="javascript:;"  data="1" class="s-class s-hover">
+		    			<span val="tr_reg_1" >
+		    				${good.firstColumn.name }
+		    			</span>
+		    		</a>
+				</div>
+				
+				
+			<script type="text/javascript">
+				//清空区域下面的class，然后给当前选项加上class   控制内容的显示
+				
+				$('.s-new-01 a').bind('click', function(){
+				    $(this).addClass('s-hover').siblings().removeClass('s-hover');
+				
+					var box_id="box_"+$(this).attr("data");
+					//alert(box_id);
+					$("."+box_id).show().siblings().hide();
+				
+				});
+			</script>	
+	     </td>
+        <td>转让方：
+      		<span style="color:red;font-size:20px;">
+      			${good.transferor }
+      		</span>
+      	</td>
+      
+      </tr>
+
+      <%-- <tr>
         <td width="250px;">
 				<div class="s-new-01" id="s-new-01">
 		    		<a href="javascript:;"  data="1" class="s-class s-hover">
 		    			<span val="tr_reg_1" >
 		    				${good.firstColumn.name }
-				          <%--  <c:if test="${good.firstColumn.id==1}">
+				           <c:if test="${good.firstColumn.id==1}">
 				          	 农业/食品/医疗
 				           </c:if> 
 				           <c:if test="${good.firstColumn.id==2}">
@@ -157,7 +199,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 				           </c:if> 
 				           <c:if test="${good.firstColumn.id==4}">
 				          	 电力/环保/通讯
-				           </c:if>  --%>
+				           </c:if> 
 		    			
 		    			</span>
 		    		</a>
@@ -176,7 +218,7 @@ $('.s-new-01 a').bind('click', function(){
 });
 </script>			
         </td>
-      </tr>      
+      </tr> --%>      
       <tr style="border-top:1px dashed #ececec">
         <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">
        
@@ -187,14 +229,14 @@ $('.s-new-01 a').bind('click', function(){
 
         </span>
       </tr>
-      <tr >
+      <%-- <tr >
       <td>
       	转让方：
       		<span style="color:red;font-size:20px;">
       			${good.transferor }
       		</span>
         </td>
-      </tr>
+      </tr> --%>
       <tr >
         <td height="15"></td>
       </tr>

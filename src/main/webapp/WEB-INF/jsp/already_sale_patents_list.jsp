@@ -89,7 +89,6 @@
 								<div style="background: url(<s:url value='${good.patentImageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
 							</c:when>
 							<c:otherwise>
-								<%-- <div style="background: url(<s:url value='/images/patent_type_0${good.firstColumn.id}.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;"> --%>   
 								<div style="background: url(<s:url value='/images/goods/${good.secondColumn.id }.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
 								
 							</c:otherwise>

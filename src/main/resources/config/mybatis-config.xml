@@ -24,5 +24,6 @@
 			<typeAlias alias="GoodsFirstColumn" type="zhuanli.domain.GoodsFirstColumn"/>
 			<typeAlias alias="GoodsSecondColumn" type="zhuanli.domain.GoodsSecondColumn"/>
 			<typeAlias alias="SaleGood" type="zhuanli.domain.SaleGood"/>
+			<typeAlias alias="PatentType" type="zhuanli.domain.PatentType"/>
 		</typeAliases>
 </configuration>
