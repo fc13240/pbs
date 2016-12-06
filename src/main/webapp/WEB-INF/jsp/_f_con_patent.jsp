@@ -326,6 +326,7 @@ margin: 0 auto;
 	</div>
 	
 <!--  -->
+<!--  -->
 	
 	<div class="cu-floor-bd">
 		<!-- 通信电子数码内容 -->
@@ -346,7 +347,6 @@ margin: 0 auto;
 					</div>
 			
 					</div>
-<<<<<<< HEAD
 				</div>
 				<div class="brand-list patent-list">
 					<ul>
@@ -354,25 +354,6 @@ margin: 0 auto;
 					<li>
 							<a href="" target="_blank" title="${patent.patent_name}" class="img">
 								<img onerror="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" src="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" class="lazy">
-=======
-					 --%>
-                    <div class="tag_box">
-					
-						<div class="tag_lists">
-							</div>
-						
-						<div class="tag_lists">
-							</div>
-                    </div>
-                </div>
-				
-				<div class="sec_r">
-                    <ul>
-           				<c:forEach items="${FirstColumn.patents}" begin="0" end= "7" var="patent">
-						<li>
-							<a href="" target="_blank" title="${patent.patent_name}" class="img">
-								<img onerror="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>'" src="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" class="lazy"  alt="${patent.patent_name}">
-
 			                	</a>
 							<div class="brand-info">
 								<div class="line1">
@@ -380,13 +361,13 @@ margin: 0 auto;
 										${patent.patent_name}</a></div>
 								<div class="line2">
 									<div class="content_type"><em class="content_type_left"><span>
-									  ${patent.patent_second_column_name}</span></em></div>
+									  二级分类</span></em></div>
+									
 								</div>
 								<div class="line3">
 									<a href="javascript:;" class="icon_feng"></a>
 									<i>¥</i>
-									<span>${patent.price}</span>
-
+										<span>3499</span>
 									</div>
 							</div>
 						</li>
@@ -399,9 +380,7 @@ margin: 0 auto;
 	</div>
 	
 <!--  -->	
-	
 
-	
 </div>
 </c:forEach>
 
