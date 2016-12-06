@@ -361,13 +361,13 @@ margin: 0 auto;
 										${patent.patent_name}</a></div>
 								<div class="line2">
 									<div class="content_type"><em class="content_type_left"><span>
-									  二级分类</span></em></div>
+									  ${patent.patent_second_column_name}</span></em></div>
 									
 								</div>
 								<div class="line3">
 									<a href="javascript:;" class="icon_feng"></a>
 									<i>¥</i>
-										<span>3499</span>
+										<span>${patent.price}</span>
 									</div>
 							</div>
 						</li>
