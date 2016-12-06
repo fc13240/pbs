@@ -122,25 +122,31 @@
 		</collection>
 		<collection property="patents" ofType="Patent">
 			<id property="patent_id" column="patent_id"/>
+			<result property="app_no" column="app_no"/>
+			<result property="price" column="price"/>
 			<result property="patent_name" column="patent_name"/>
 			<result property="patent_first_column_id" column="patent_first_column_id"/>
 			<result property="patent_second_column_id" column="patent_second_column_id"/>
+			<result property="patent_second_column_name" column="patent_second_column_name"/>
 		</collection>
 	</resultMap>
 	
 	<select id="selectAllColumns" resultMap="AllColumnMap">
 		SELECT f.patent_first_column_id firstColumnId, f.patent_first_column_name firstColumnName, 
 			s.patent_second_column_id secondColumnId, s.patent_second_column_name secondColumnName,
+			p.app_no app_no,spg.price price,
 			spg.patent_id patent_id,p.patent_name patent_name,f.patent_first_column_id patent_first_column_id,
+			s.patent_second_column_name patent_second_column_name,
 			s.patent_second_column_id patent_second_column_id
 		  FROM sell_first_column f JOIN sell_second_column s ON f.patent_first_column_id = s.patent_first_column_id 
-		  left JOIN sell_patent_goods spg ON spg.patent_second_column = s.patent_second_column_id 
+		   JOIN sell_patent_goods spg ON spg.patent_second_column = s.patent_second_column_id 
 		   left JOIN patents p ON  p.patent_id = spg.patent_id
 	</select>
 	
 	<select id="getColumnCount"  resultType="ColumnCount" >
 		select id,count from sell_count;
 	</select>		
+	
 	<select id="getCurrentTypeName" resultType="String" >
 		select patent_second_column_name from sell_second_column where  patent_second_column_id=#{patent_second_column_id};
 	</select>
@@ -247,7 +253,7 @@
 	<select id="getPatentByFirstColumn" parameterType="int" resultMap="TransactionPatent">
 		SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
-		WHERE recommend_status=1  limit 0,7;
+		WHERE sg.recommend_status=1 and sg.patent_second_column=#{id} limit 0,7;
 	
 	</select>
 	
