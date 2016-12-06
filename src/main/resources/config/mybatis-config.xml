@@ -23,5 +23,6 @@
 			<typeAlias alias="GoodsDetail" type="zhuanli.domain.GoodsDetail"/>
 			<typeAlias alias="GoodsFirstColumn" type="zhuanli.domain.GoodsFirstColumn"/>
 			<typeAlias alias="GoodsSecondColumn" type="zhuanli.domain.GoodsSecondColumn"/>
+			<typeAlias alias="SaleGood" type="zhuanli.domain.SaleGood"/>
 		</typeAliases>
 </configuration>

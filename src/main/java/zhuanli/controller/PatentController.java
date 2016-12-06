@@ -11,6 +11,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,7 +25,10 @@ import zhuanli.domain.FirstColumn;
 import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
+import zhuanli.domain.PatentSearchCondition;
+import zhuanli.domain.SaleGood;
 import zhuanli.service.PatentService;
+import zhuanli.util.WebUtils;
 
 
 @RequestMapping(path="/patent")
@@ -169,6 +173,57 @@ public class PatentController {
 		}
 	}	
 	
+	@RequestMapping(path="/getAlreadySalePatent")
+	public String getAlreadySalePatent(HttpSession session,Page page,Model model){
+		if (page.getCurrentPage() <= 0) {
+			page.setCurrentPage(1);
+		}
+		page.setPageSize(20);
+		int totalRecords = 0;
+		totalRecords = patentService.getAlreadySalePatentCount();
+		page.setTotalRecords(totalRecords);
+		List<SaleGood> goods = patentService.getAlreadySalePatent(page);
+		model.addAttribute("goods", goods);
+		model.addAttribute("page", page);
+		return "already_sale_patents_list";
+		
+	}
+	
+	@RequestMapping(path="/getSearchAlreadySalePatent")
+	public String getSearchAlreadySalePatent(PatentSearchCondition searchCondition,Model model){
+		Page page = searchCondition.getPage();
+		if (page.getCurrentPage() <= 0) {
+			page.setCurrentPage(1);
+		}
+		page.setPageSize(20);
+		int totalRecords = 0;
+		totalRecords = patentService.getSearchAlreadySalePatentCount(searchCondition);
+		page.setTotalRecords(totalRecords);
+		List<SaleGood> goods = patentService.getSearchAlreadySalePatent(searchCondition);
+		model.addAttribute("goods", goods);
+		model.addAttribute("searchCondition", searchCondition);
+		model.addAttribute("page", page);
+		return "already_sale_patents_list";
+		
+	}
 	
 	
+	@RequestMapping(path="getPatentDetail")
+	public String getPatentDetail(long patentId,HttpSession session,Page page, Model model){
+		SaleGood good = patentService.getAlreadSalePatentDetail(patentId);
+		int shopType =good.getFirstColumn().getId();
+		page.setPageSize(WebUtils.getPageSize(session));
+		if(page.getCurrentPage()<1){
+			page.setCurrentPage(1);
+		}
+		int totalCount=(int)patentService.getPatentsByShopTypeCount(shopType);
+		page.setTotalRecords(totalCount);
+		List<Patent> patents = patentService.getPatentsByShopType(shopType,page); 
+		
+		model.addAttribute("good",good);
+		model.addAttribute("patents", patents);
+		model.addAttribute("page", page);
+		model.addAttribute("shopType", shopType);
+		return "service_aready_sale_patent_detail";
+	}
 }

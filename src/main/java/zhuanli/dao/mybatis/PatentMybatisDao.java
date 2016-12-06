@@ -13,6 +13,7 @@ import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
 import zhuanli.domain.PatentSearchCondition;
+import zhuanli.domain.SaleGood;
 
 
 
@@ -113,7 +114,6 @@ public class PatentMybatisDao extends SqlSessionDaoSupport implements PatentDao 
 
 	@Override
 	public List<Patent> getPatents() {
-		// TODO Auto-generated method stub
 		return patentMapper.getPatents();
 	}
 
@@ -130,6 +130,29 @@ public class PatentMybatisDao extends SqlSessionDaoSupport implements PatentDao 
 	@Override
 	public List<GoodsDetail> getPatentByFirstColumn(int id) {
 		return patentMapper.getPatentByFirstColumn(id);
+	}
+	public List<SaleGood> getAlreadySalePatent(Page page) {
+		return patentMapper.getAlreadySalePatent(page);
+	}
+
+	@Override
+	public int getAlreadySalePatentCount() {
+		return patentMapper.getAlreadySalePatentCount();
+	}
+
+	@Override
+	public List<SaleGood> getSearchAlreadySalePatent(PatentSearchCondition patentSearchCondition) {
+		return patentMapper.getSearchAlreadySalePatent(patentSearchCondition);
+	}
+
+	@Override
+	public int getSearchAlreadySalePatentCount(PatentSearchCondition patentSearchCondition) {
+		return patentMapper.getSearchAlreadySalePatentCount(patentSearchCondition);
+	}
+
+	@Override
+	public SaleGood getAlreadSalePatentDetail(long patentId) {
+		return patentMapper.getAlreadSalePatentDetail(patentId);
 	}
 	
 	

@@ -237,6 +237,18 @@ margin: 0 auto;
 							
 					</div>
 					
+					<%-- <a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">服装/鞋帽</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">家具/家装</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">家电/照明</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">教学/学习</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">市政/环卫</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">体育/健身</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">行政/办公</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">娱乐/玩具</a>							<a class="f-db" href="" target="_blank">地质/矿产</a>
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">艺术/乐器</a>							
+							<a class="f-db" href="<s:url value='/patent/list.html'/>" target="_blank">日常生活领域</a>	
+					</div>
+					 --%>
                     <div class="tag_box">
 					
 						<div class="tag_lists">

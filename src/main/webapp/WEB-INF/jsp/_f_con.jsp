@@ -55,7 +55,8 @@ $(function(){
 <div class="floor_1F">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
 	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">1F</div>
-	        <h2>专利推荐</h2>                            
+	        <h2>专利推荐</h2>
+	        <h2 style="float:left;margin-left:300px;"><a href="<s:url value='/patent/getAlreadySalePatent.html?page.currentPage=1'/>" target="_blank">已售出专利</a></h2>                            
 	</div>
 	<div class="news-info-con" style="height: 340px;">
 		<div class="news-info-bd clear">
@@ -392,7 +393,7 @@ margin: 0 auto;
 	<div class="floor_top clearfix">
 		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
 		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">2F</div>
-		        <h2>第03类-日化用品</h2> <h2 style="float:left;"><a href="javascript:window.open('<s:url value='/brand/alreadySalebrands.html?page.currentPage=1'/>')">已售出商标</a></h2> 
+		        <h2>第03类-日化用品</h2> <h2 style="float:left;margin-left:300px;"><a href="<s:url value='/brand/alreadySalebrands.html?page.currentPage=1'/>" target="_blank">已售出商标</a></h2> 
 		        <div style="clear:both;"></div>
 		</div>
 
