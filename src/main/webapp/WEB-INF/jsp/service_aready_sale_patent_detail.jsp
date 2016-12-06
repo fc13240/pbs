@@ -107,20 +107,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
        <span style="line-height: 44px;font-size:20px;collor:#000000;">
        		<%-- ${good.firstColumn.name } --%>
        		[${good.patentType.typeDescription }]${good.patentName }
-       
-           <%-- <c:if test="${good.firstColumn.id==1}">
-          	 农业/食品/医疗
-           </c:if> 
-           <c:if test="${good.firstColumn.id==2}">
-          	 化工/冶金/生物
-           </c:if> 
-           <c:if test="${good.firstColumn.id==3}">
-          	 交通/包装/建筑
-           </c:if> 
-           <c:if test="${good.firstColumn.id==4}">
-          	 电力/环保/通讯
-           </c:if>  --%>
-       
+         
        </span> 
       <caption id="J_detail_title">
             <div id="J_activity_title"></div>
@@ -130,9 +117,9 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
       <tr>
         <td>
         	<div class="box_1" style="line-height:40px;" >简介：专利交易，各种专利任你选。
-        	<a href="#patent_list">
-        	<img alt="" style="width:150px;margin-left:80px;" src="<s:url value='/images/lijixuangou.png'/>">
-			</a>
+	        	<a href="#patent_list">
+	        	<img alt="" style="width:150px;margin-left:80px;" src="<s:url value='/images/lijixuangou.png'/>">
+				</a>
 			</div>
 
 			        	        	        	        	
