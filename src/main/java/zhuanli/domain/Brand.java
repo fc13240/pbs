@@ -30,6 +30,7 @@ public class Brand {
 	private Date endDate;
 	private String originality;
 	private String caseStatus;
+	private String imageUrl;
 	
 	public int getId() {
 		return id;
@@ -157,7 +158,12 @@ public class Brand {
 	public void setCaseStatus(String caseStatus) {
 		this.caseStatus = caseStatus;
 	}
-	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 	
 	
 	

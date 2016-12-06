@@ -8,6 +8,7 @@ import java.io.OutputStream;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -34,6 +35,15 @@ public class BrandController {
 	public BrandController(BrandService brandService) {
 		this.brandService = brandService;
 		
+	}
+	
+	@RequestMapping(path="/index")
+	public String getBrandIndex(Model model) {
+		List<Brand> slideBrands = brandService.getIndexSlideBrands();
+		Map<String, List<Brand>> recommendBrands = brandService.getIndexRecommendBrands();
+		model.addAttribute("slideBrands", slideBrands);
+		model.addAttribute("recommendBrands", recommendBrands);
+		return "brand_index";
 	}
 	
 	@RequestMapping(path="/showBrandsList")
