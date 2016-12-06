@@ -139,7 +139,7 @@
 			s.patent_second_column_name patent_second_column_name,
 			s.patent_second_column_id patent_second_column_id
 		  FROM sell_first_column f JOIN sell_second_column s ON f.patent_first_column_id = s.patent_first_column_id 
-		   JOIN sell_patent_goods spg ON spg.patent_second_column = s.patent_second_column_id 
+		   LEFT JOIN sell_patent_goods spg ON spg.patent_second_column = s.patent_second_column_id 
 		   left JOIN patents p ON  p.patent_id = spg.patent_id
 	</select>
 	
