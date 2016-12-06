@@ -262,15 +262,41 @@ margin: 0 auto;
 				<div class="sec_r">
                     <ul>
            				<c:forEach items="${FirstColumn.patents}" begin="0" end= "7" var="patent">
+						<li>
+							<a href="http://www.wtoip.com/item0191471602.html" target="_blank" title="${patent.patent_name}" class="img">
+								<img onerror="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>'" src="" class="lazy"  alt="${patent.patent_name}">
+			                	</a>
+							<div class="brand-info">
+								<div class="line1">
+									<a href="http://www.wtoip.com/item0191471602.html" title="${patent.patent_name}" target="_blank">
+										${patent.patent_name}</a></div>
+								<div class="line2">
+									<div class="content_type"><em class="content_type_left"><span>
+									 实用新型专利 </span></em></div>
+									<span class="patent_type">
+										通信/电子/数码</span>
+								</div>
+								<div class="line3">
+									<a href="javascript:;" class="icon_feng"></a>
+									<i>¥</i>
+										<span>3400</span>
+									</div>
+							</div>
+						</li>           				
+           				
+
+           				</c:forEach>
+						<!-- 
            				<li>
+           				
+           				
            					<a class="f-db" href="http://reslib.wtoip.com/equip/detail/84" target="_blank">
 								<img src="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" 
-								class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" width="213" height="259" 
+								class="lazy f-db"  width="213" height="259" 
 								alt="${patent.patent_name}">
 							</a> 
-           				</li>
-           				</c:forEach>
-						<!-- <li>
+           				</li>						
+						<li>
 							<a class="f-db" href="http://reslib.wtoip.com/equip/detail/84" target="_blank">
 								<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" width="213" height="259" alt="差示扫描量热仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
 							</a> 
