@@ -354,7 +354,14 @@ margin: 0 auto;
 					<li>	
 					<c:if test="${not empty patent.price && not empty patent.patent_name && not empty patent.app_no}">
 							<a href="" target="_blank" title="${patent.patent_name}" class="img">
-								<img onerror="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" src="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" class="lazy">
+								<c:choose>
+									<c:when test="${not empty patent.patent_image_url }">
+										<img onerror="<s:url value='${patent.patent_image_url }'/>" src="<s:url value='${patent.patent_image_url }'/>" class="lazy">
+									</c:when>
+									<c:otherwise>
+										<img onerror="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" src="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" class="lazy">
+									</c:otherwise>
+								</c:choose>
 			                	</a>
 							<div class="brand-info">
 								<div class="line1">

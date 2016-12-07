@@ -136,6 +136,7 @@
 			<result property="patent_first_column_id" column="patent_first_column_id"/>
 			<result property="patent_second_column_id" column="patent_second_column_id"/>
 			<result property="patent_second_column_name" column="patent_second_column_name"/>
+			<result property="patent_image_url" column="patent_image_url"/>
 		</collection>
 	</resultMap>
 	
@@ -145,7 +146,7 @@
 			p.app_no app_no,spg.price price,
 			spg.patent_id patent_id,p.patent_name patent_name,f.patent_first_column_id patent_first_column_id,
 			s.patent_second_column_name patent_second_column_name,
-			s.patent_second_column_id patent_second_column_id
+			s.patent_second_column_id patent_second_column_id,spg.patent_image_url
 		  FROM sell_first_column f JOIN sell_second_column s ON f.patent_first_column_id = s.patent_first_column_id 
 		   LEFT JOIN sell_patent_goods spg ON spg.patent_second_column = s.patent_second_column_id 
 		   left JOIN patents p ON  p.patent_id = spg.patent_id
