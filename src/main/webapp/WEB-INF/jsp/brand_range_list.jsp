@@ -48,15 +48,13 @@
 <!--当前位置-->
 <div class="container">
   <div class="current-location" style="margin-top:0;"> <a href="<s:url value='/brand/index.html'/>">商标</a>
-  	> 第
-		<c:if test="${brandCategory.categoryId < 10}">0${brandCategory.categoryId}</c:if>
-		<c:if test="${brandCategory.categoryId > 9}">${brandCategory.categoryId}</c:if>
-		类 - ${brandCategory.categoryName}
-  <div style="float:right; margin-left:850px;margin-right:65px;">
-      <input value="导出清单" style="display:inline;background:#FF0000;color:white;border:2px solid #FF0000;height:35px;line-height:35px;font-weight:700;font-size:14px;width:80px;cursor:pointer;" 
-      		type="button" onclick="exportList(${brandCategory.categoryId})">
-       
-    </div>
+  	> 商标
+		<c:if test="${startIndex < 10}">0${startIndex}</c:if>
+		<c:if test="${startIndex > 9}">${startIndex}</c:if>
+		 - 
+		<c:if test="${startIndex+4 < 10}">0${startIndex+4}</c:if>
+		<c:if test="${startIndex+4 > 9}">${startIndex+4}</c:if>
+  		类
   
   
   </div>
@@ -112,19 +110,19 @@
 		<div class="col-lg-12"> 
 			<span>共 ${page.totalPages} 页 </span>
 			<span>第 ${page.currentPage} 页 </span>
-			<a href="?categoryId=${brandCategory.categoryId}&currentPage=1">首页</a>
+			<a href="?startIndex=${startIndex}&currentPage=1">首页</a>
 		  <c:choose>
-	        <c:when test="${page.currentPage - 1 > 0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage - 1}">上一页</a> </c:when>
-	        <c:when test="${page.currentPage - 1 <= 0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=1">上一页</a> </c:when>
+	        <c:when test="${page.currentPage - 1 > 0}"> <a href="?startIndex=${startIndex}&currentPage=${page.currentPage - 1}">上一页</a> </c:when>
+	        <c:when test="${page.currentPage - 1 <= 0}"> <a href="?startIndex=${startIndex}&currentPage=1">上一页</a> </c:when>
 	      </c:choose>
 	      <c:choose>
-	        <c:when test="${page.totalPages==0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage}">下一页</a> </c:when>
-	        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage+1}">下一页</a> </c:when>
-	        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.totalPages}">下一页</a> </c:when>
+	        <c:when test="${page.totalPages==0}"> <a href="?startIndex=${startIndex}&currentPage=${page.currentPage}">下一页</a> </c:when>
+	        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?startIndex=${startIndex}&currentPage=${page.currentPage+1}">下一页</a> </c:when>
+	        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?startIndex=${startIndex}&currentPage=${page.totalPages}">下一页</a> </c:when>
 	      </c:choose>
 	      <c:choose>
-	        <c:when test="${page.totalPages==0}"> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.currentPage}">尾页</a> </c:when>
-	        <c:otherwise> <a href="?categoryId=${brandCategory.categoryId}&currentPage=${page.totalPages}">尾页</a> </c:otherwise>
+	        <c:when test="${page.totalPages==0}"> <a href="?startIndex=${startIndex}&currentPage=${page.currentPage}">尾页</a> </c:when>
+	        <c:otherwise> <a href="?startIndex=${startIndex}&currentPage=${page.totalPages}">尾页</a> </c:otherwise>
 	      </c:choose>
 	     
 	      <a><input type="text" id="page.pageNo" style="width:30px;height:14px" name="currentPage" onKeyDown="gotoPageForEnter(event)"/></a>
@@ -175,7 +173,7 @@ function gotoPage() {
 		return;
 	}
 	
-	var url = "<s:url value='/brand/showBrandsList.html'/>?currentPage=" + pageNo + "&categoryId=" + ${brandCategory.categoryId};
+	var url = "<s:url value='/brand/showBrandsList.html'/>?currentPage=" + pageNo + "&startIndex=" + ${startIndex};
 	
 	
 	location.href = url
@@ -194,10 +192,6 @@ function getbrandDetail(brandId) {
 	window.location.href="<s:url value='/brand/getbrandDetail.html'/>?brandId=" + brandId;
 }
 
-function exportList(categoryId) {
-	var iframe = document.getElementById('brandExcelFileFrame');
-	iframe.src = "<s:url value='/brand/exportList.html'/>?categoryId=" + categoryId;
-}
 </script>
   
 

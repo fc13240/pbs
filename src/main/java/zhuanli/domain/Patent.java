@@ -24,10 +24,25 @@ public class Patent {
 	private int patent_second_column_id;
 	private int patent_first_column_id;
 	private int transaction_type;
+	private String patent_image_url;
 	
 	
 	
 	
+	
+	
+	public String getPatent_image_url() {
+		return patent_image_url;
+	}
+
+
+
+	public void setPatent_image_url(String patent_image_url) {
+		this.patent_image_url = patent_image_url;
+	}
+
+
+
 	public long getId() {
 		return id;
 	}

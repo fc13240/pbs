@@ -2,6 +2,9 @@ package zhuanli.domain;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 public class SaleGood {
 	private long patentId;
 	private String patentName;
@@ -16,6 +19,46 @@ public class SaleGood {
 	private int recommendStatus;
 	private String transferor;
 	private String patentImageUrl;
+	
+	
+	private String appNo;
+	private String appPerson;
+	@DateTimeFormat(iso=ISO.DATE_TIME,pattern="yyyy-MM-dd")
+	private Date appDate;
+	private PatentType patentType;
+	@DateTimeFormat(iso=ISO.DATE_TIME,pattern="yyyy-MM-dd")
+	private Date publishDate;
+	
+	public String getAppNo() {
+		return appNo;
+	}
+	public void setAppNo(String appNo) {
+		this.appNo = appNo;
+	}
+	public String getAppPerson() {
+		return appPerson;
+	}
+	public void setAppPerson(String appPerson) {
+		this.appPerson = appPerson;
+	}
+	public Date getAppDate() {
+		return appDate;
+	}
+	public void setAppDate(Date appDate) {
+		this.appDate = appDate;
+	}
+	public PatentType getPatentType() {
+		return patentType;
+	}
+	public void setPatentType(PatentType patentType) {
+		this.patentType = patentType;
+	}
+	public Date getPublishDate() {
+		return publishDate;
+	}
+	public void setPublishDate(Date publishDate) {
+		this.publishDate = publishDate;
+	}
 	public long getPatentId() {
 		return patentId;
 	}

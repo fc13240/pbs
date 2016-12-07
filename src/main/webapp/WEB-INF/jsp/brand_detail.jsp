@@ -38,7 +38,7 @@
 <!--当前位置-->
 <div class="container">
   <div class="current-location" style="margin-top:0;"> 
-  	<a href="<s:url value='/'/>">首页</a>> 
+  	<a href="<s:url value='/brand/index.html'/>">商标</a>> 
   	<a href="<s:url value='/brand/showBrandsList.html?categoryId=${brand.brandCategory.categoryId}'/>"> 
   		第
   		<c:if test="${brand.brandCategory.categoryId < 10}">0${brand.brandCategory.categoryId}</c:if>

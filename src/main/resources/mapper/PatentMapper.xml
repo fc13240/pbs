@@ -14,6 +14,14 @@
 		<result property="recommendStatus" column="recommend_status"/>
 		<result property="transferor" column="transferor"/>
 		<result property="patentImageUrl" column="patent_image_url"/>
+		<result property="appNo" column="app_no"/>
+		<result property="appPerson" column="app_person"/>
+		<result property="appDate" column="app_date"/>
+		<result property="publishDate" column="publish_date"/>
+		<association property="patentType" javaType="PatentType">
+			<id property="patentTypeId" column="patent_type_id"/>
+			<result property="typeDescription" column="patent_type_desc"/>
+		</association>
 		<association property="firstColumn" javaType="FirstColumn">
 			<id property="id" column="patent_first_column_id"/>
 			<result property="name" column="patent_first_column_name"/>
@@ -128,6 +136,7 @@
 			<result property="patent_first_column_id" column="patent_first_column_id"/>
 			<result property="patent_second_column_id" column="patent_second_column_id"/>
 			<result property="patent_second_column_name" column="patent_second_column_name"/>
+			<result property="patent_image_url" column="patent_image_url"/>
 		</collection>
 	</resultMap>
 	
@@ -137,7 +146,7 @@
 			p.app_no app_no,spg.price price,
 			spg.patent_id patent_id,p.patent_name patent_name,f.patent_first_column_id patent_first_column_id,
 			s.patent_second_column_name patent_second_column_name,
-			s.patent_second_column_id patent_second_column_id
+			s.patent_second_column_id patent_second_column_id,spg.patent_image_url
 		  FROM sell_first_column f JOIN sell_second_column s ON f.patent_first_column_id = s.patent_first_column_id 
 		   LEFT JOIN sell_patent_goods spg ON spg.patent_second_column = s.patent_second_column_id 
 		   left JOIN patents p ON  p.patent_id = spg.patent_id
@@ -303,16 +312,9 @@
 	
 	
 	<select id="getAlreadSalePatentDetail" parameterType="long" resultMap="SaleGoodResultMap">
-		<!-- select p.patent_id, p.app_no,p.patent_name,pt.patent_type_desc as patent_type_name,s.price ,ss.patent_first_column_id,sf.patent_first_column_name,s.patent_second_column,ss.patent_second_column_name,s.transferor,s.patent_image_url
-			   from sell_patent_goods s join patents p on s.patent_id=p.patent_id
-		         left join patent_types pt on p.patent_type = pt.patent_type_id
-		         join sell_second_column ss on s.patent_second_column=ss.patent_second_column_id
-		         join sell_first_column sf on ss.patent_first_column_id=sf.patent_first_column_id
-		         where s.patent_id=#{patentId}
-		         
-		 select * from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id left join sell_second_column ssc on spg.patent_second_column=ssc.patent_second_column_id join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id where spg.patent_id -->        
-		 select spg.patent_id,p.patent_name,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.transferor,spg.status,spg.patent_image_url 
+		 select spg.patent_id,p.patent_name,p.app_no,p.app_date,p.app_person,p.publish_date,pt.patent_type_id,pt.patent_type_desc,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.transferor,spg.status,spg.patent_image_url 
 		       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+		       left join patent_types pt on p.patent_type=pt.patent_type_id
 		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
 		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id
 		       where spg.patent_id=#{patentId}     

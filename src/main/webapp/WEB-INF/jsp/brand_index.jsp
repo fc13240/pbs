@@ -41,7 +41,7 @@
 	</div>
 	
 	<div class="mll-navigator navigator-index">
-	<%@ include file="_top_nav.jsp"%>
+	<%@ include file="_top_nav_brand.jsp"%>
 	</div>
 </div>
 
@@ -79,29 +79,8 @@
 				<em class="name">商标<br>推荐</em>
 				<i class="stairs_line"></i>
 			</a>
-			<!-- 
-			<a href="javascript:;" class="stairs_nav floor4">
-				<span class="icon"></span>
-				<em class="name">纺织<br>造纸</em>
-				<i class="stairs_line"></i>
-			</a>
-			<a href="javascript:;" class="stairs_nav floor5">
-				<span class="icon"></span>
-				<em class="name">建材<br>照明</em>
-				<i class="stairs_line"></i>
-			</a>
-			<a href="javascript:;" class="stairs_nav floor6">
-				<span class="icon"></span>
-				<em class="name">机械<br>加工</em>
-				<i class="stairs_line"></i>
-			</a>
-						<a id="JS_floor_expr" href="javascript:;" class="stairs_nav floor_expr">
-				<span class="icon"></span>
-				<em class="name">体验馆</em>
-				<i class="stairs_line"></i>
-			</a>
-			 -->
-						<div class="stairs-cover"></div>
+			
+			<div class="stairs-cover"></div>
 		</div>
 	</div>
 </div>
