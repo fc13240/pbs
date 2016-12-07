@@ -103,4 +103,14 @@ public class BrandMybatisDao extends SqlSessionDaoSupport implements BrandDao {
 	public int getSearchAlreadySaleBrandsCount(BrandSearchCondition brandSearchCondition) {
 		return brandMapper.getSearchAlreadySaleBrandsCount(brandSearchCondition);
 	}
+
+	@Override
+	public int getBrandsCountBetweenRange(int startIndex) {
+		return brandMapper.getBrandsCountBetweenRange(startIndex);
+	}
+
+	@Override
+	public List<Brand> getBrandsBetweenRange(int startIndex, Page page) {
+		return brandMapper.getBrandsBetweenRange(startIndex, page);
+	}
 }

@@ -32,10 +32,10 @@
 
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1"></em>
-				<a title="商标01-05类" class="txt" style="height:40px;font-size:13px;" href="<s:url value='/brand/index.html'/>">商标01-05类</a>				
+				<a title="商标01-05类" class="txt" target="_blank" style="height:40px;font-size:13px;" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=1&currentPage=1'/>">商标01-05类</a>				
                 <div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/index.html'/>" class="red">商标01-05类<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=1&currentPage=1'/>" class="red">商标01-05类<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					
@@ -46,20 +46,17 @@
 	                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=5&currentPage=1'/>" class="sub-item" target="_blank">第05类-医用药品</a>
 	                 					
 					</div>
-					<div class="title clearfix">
-						<h4 class="Left"><span class="red">热门推荐<span class="darrow">&gt;&gt;</span></span></h4>
-					</div>
-					<div class="list clearfix"></div>
+					
 				</div>
 				<i class="arrow"></i>
 			</li>
 			
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1"></em>
-				<a title="商标06-10类" class="txt" style="height:40px;font-size:13px;" href="<s:url value='/brand/index.html'/>">商标06-10类</a>				
+				<a title="商标06-10类" class="txt" target="_blank" style="height:40px;font-size:13px;" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=6&currentPage=1'/>">商标06-10类</a>				
                 <div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/index.html'/>" class="red">商标06-10类<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=6&currentPage=1'/>" class="red">商标06-10类<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					  <a href="<s:url value='/brand/showBrandsList.html?categoryId=6&currentPage=1'/>" class="sub-item" target="_blank">第06类-金属材料</a> 
@@ -75,10 +72,10 @@
 			
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1"></em>
-				<a title="商标11-15类" class="txt" style="height:40px;font-size:13px;" href="<s:url value='/brand/index.html'/>">商标11-15类</a>				
+				<a title="商标11-15类" class="txt" target="_blank" style="height:40px;font-size:13px;" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=11&currentPage=1'/>">商标11-15类</a>				
                 <div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/index.html'/>" class="red">商标11-15类<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=11&currentPage=1'/>" class="red">商标11-15类<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					
@@ -96,10 +93,10 @@
 			
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1"></em>
-				<a title="商标16-20类" class="txt" style="height:40px;font-size:13px;" href="<s:url value='/brand/index.html'/>">商标16-20类</a>				
+				<a title="商标16-20类" class="txt" target="_blank" style="height:40px;font-size:13px;" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=16&currentPage=1'/>">商标16-20类</a>				
                 <div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/index.html'/>" class="red">商标16-20类<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=16&currentPage=1'/>" class="red">商标16-20类<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					
@@ -117,10 +114,10 @@
 			
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1"></em>
-				<a title="商标21-25类" class="txt" style="height:40px;font-size:13px;" href="<s:url value='/brand/index.html'/>">商标21-25类</a>				
+				<a title="商标21-25类" class="txt" target="_blank" style="height:40px;font-size:13px;" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=21&currentPage=1'/>">商标21-25类</a>				
                 <div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/index.html'/>" class="red">商标21-25类<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=21&currentPage=1'/>" class="red">商标21-25类<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					
@@ -138,10 +135,10 @@
 			
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1"></em>
-				<a title="商标26-30类" class="txt" style="height:40px;font-size:13px;" href="<s:url value='/brand/index.html'/>">商标26-30类</a>				
+				<a title="商标26-30类" class="txt" target="_blank" style="height:40px;font-size:13px;" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=26&currentPage=1'/>">商标26-30类</a>				
                 <div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/index.html'/>" class="red">商标26-30类<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=26&currentPage=1'/>" class="red">商标26-30类<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					
@@ -159,10 +156,10 @@
 			
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1"></em>
-				<a title="商标31-35类" class="txt" style="height:40px;font-size:13px;" href="<s:url value='/brand/index.html'/>">商标31-35类</a>				
+				<a title="商标31-35类" class="txt" target="_blank" style="height:40px;font-size:13px;" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=31&currentPage=1'/>">商标31-35类</a>				
                 <div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/index.html'/>" class="red">商标31-35类<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=31&currentPage=1'/>" class="red">商标31-35类<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					
@@ -180,10 +177,10 @@
 			
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1"></em>
-				<a title="商标36-40类" class="txt" style="height:40px;font-size:13px;" href="<s:url value='/brand/index.html'/>">商标36-40类</a>				
+				<a title="商标36-40类" class="txt" target="_blank" style="height:40px;font-size:13px;" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=36&currentPage=1'/>">商标36-40类</a>				
                 <div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/index.html'/>" class="red">商标36-40类<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=36&currentPage=1'/>" class="red">商标36-40类<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					
@@ -201,10 +198,10 @@
 			
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1"></em>
-				<a title="商标41-45类" class="txt" style="height:40px;font-size:13px;" href="<s:url value='/brand/index.html'/>">商标41-45类</a>				
+				<a title="商标41-45类" class="txt" target="_blank" style="height:40px;font-size:13px;" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=41&currentPage=1'/>">商标41-45类</a>				
                 <div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/index.html'/>" class="red">商标41-45类<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a target="_blank" href="<s:url value='/brand/getBrandsBetweenRange.html?startIndex=41&currentPage=1'/>" class="red">商标41-45类<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					
@@ -229,9 +226,9 @@
       <li><a href="<s:url value='/'/>" title="龙图腾专利商标交易">首页</a></li>
       <li><a href="<s:url value='/patent/index.html'/>" title="专利">专利</a></li>
       <li><a href="<s:url value='/brand/index.html'/>" title="商标">商标</a></li>
-      <li><a  id="JS_mll_head_menu_expr" href="<s:url value='/business/patent_article.html?shopType=2'/>" title="化工/冶金/生物">化工/冶金/生物</a></li>
+      <li><a id="JS_mll_head_menu_expr" href="<s:url value='/business/patent_article.html?shopType=2'/>" title="化工/冶金/生物">化工/冶金/生物</a></li>
       <li><a href="<s:url value='/business/patent_article.html?shopType=3'/>" title="专利申请">交通/包装/建筑</a></li>
-      <li><a  href="<s:url value='/business/patent_article.html?shopType=4'/>" title="工商财务">电力/环保/通讯</a></li>
+      <li><a href="<s:url value='/business/patent_article.html?shopType=4'/>" title="工商财务">电力/环保/通讯</a></li>
       <li><a target="_blank" href="http://g.lotut.com" title="专利管家">专利管家</a></li>   	   
 	</ul>
 </div>  

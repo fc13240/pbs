@@ -151,4 +151,19 @@ public class BrandController {
 		model.addAttribute("page",page);
 		return "already_sale_brands_list";
 	}
+	
+	@RequestMapping(path="/getBrandsBetweenRange")
+	public String getBrandsBetweenRange(int startIndex, Page page, Model model) {
+		page.setPageSize(15);
+		if(page.getCurrentPage()<1){
+			page.setCurrentPage(1);
+		}
+		int totalCount=(int)brandService.getBrandsCountBetweenRange(startIndex);
+		page.setTotalRecords(totalCount);
+		List<Brand> brands = brandService.getBrandsBetweenRange(startIndex,page); 
+		model.addAttribute("page", page);
+		model.addAttribute("brands", brands);
+		model.addAttribute("startIndex", startIndex);
+		return "brand_range_list";
+	}
 }

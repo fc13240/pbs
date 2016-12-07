@@ -44,4 +44,8 @@ public interface BrandMapper {
 	
 	int getSearchAlreadySaleBrandsCount(BrandSearchCondition brandSearchCondition);
 
+	int getBrandsCountBetweenRange(int startIndex);
+
+	List<Brand> getBrandsBetweenRange(@Param("startIndex")int startIndex,@Param("page") Page page);
+
 }

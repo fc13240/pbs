@@ -46,5 +46,9 @@ public interface BrandService {
 	
 	int getSearchAlreadySaleBrandsCount(BrandSearchCondition brandSearchCondition);
 
+	int getBrandsCountBetweenRange(int startIndex);
+
+	List<Brand> getBrandsBetweenRange(int startIndex, Page page);
+
 
 }

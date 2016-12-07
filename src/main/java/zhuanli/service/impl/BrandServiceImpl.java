@@ -124,5 +124,15 @@ public class BrandServiceImpl implements BrandService {
 		return brandDao.getSearchAlreadySaleBrandsCount(brandSearchCondition);
 	}
 
+	@Override
+	public int getBrandsCountBetweenRange(int startIndex) {
+		return brandDao.getBrandsCountBetweenRange(startIndex);
+	}
+
+	@Override
+	public List<Brand> getBrandsBetweenRange(int startIndex, Page page) {
+		return brandDao.getBrandsBetweenRange(startIndex, page);
+	}
+
 	
 }

@@ -182,5 +182,17 @@
 			   		and (name like #{keyword_pattern} or brand_no like #{keyword_pattern})
 			   </if>
 	</select>
+	
+	<select id="getBrandsCountBetweenRange" parameterType="int" resultType="int">
+		SELECT count(*) FROM brands b
+		WHERE check_status=1 AND sell_status=1 AND (category_id between #{startIndex} and #{startIndex}+4)
+	</select>
+	
+	<select id="getBrandsBetweenRange" resultMap="brandMap">
+		SELECT id, NAME, price ,category_id,image_url FROM brands 
+		WHERE check_status=1 AND sell_status=1 AND (category_id between #{startIndex} and #{startIndex}+4)
+		order by category_id
+		LIMIT #{page.startIndex},#{page.pageSize}
+	</select>
 
 </mapper>
