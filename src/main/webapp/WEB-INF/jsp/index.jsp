@@ -41,7 +41,7 @@
 	</div>
 	
 	<div class="mll-navigator navigator-index">
-	<%@ include file="_top_nav.jsp"%>
+	<%@ include file="_top_nav_patent.jsp"%>
 	</div>
 </div>
 
