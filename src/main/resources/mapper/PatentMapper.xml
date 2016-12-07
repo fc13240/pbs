@@ -149,7 +149,7 @@
 			s.patent_second_column_id patent_second_column_id,spg.patent_image_url
 		  FROM sell_first_column f JOIN sell_second_column s ON f.patent_first_column_id = s.patent_first_column_id 
 		   LEFT JOIN sell_patent_goods spg ON spg.patent_second_column = s.patent_second_column_id 
-		   left JOIN patents p ON  p.patent_id = spg.patent_id
+		   left JOIN patents p ON  p.patent_id = spg.patent_id WHERE spg.recommend_status=1
 	</select>
 	
 	<select id="getColumnCount"  resultType="ColumnCount" >
