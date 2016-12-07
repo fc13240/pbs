@@ -104,23 +104,23 @@
 	</select>
 	
 	<select id="getIndexRecommendBrands" resultMap="brandMap">
-		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 3 LIMIT 5) AS c3
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND category_id = 3 ORDER BY is_recommend DESC LIMIT 5) AS c3
 		UNION 
-		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 5 LIMIT 5) AS c5
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND category_id = 5 ORDER BY is_recommend DESC LIMIT 5) AS c5
 		UNION 
-		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 9 LIMIT 5) AS c9
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND category_id = 9 ORDER BY is_recommend DESC LIMIT 5) AS c9
 		UNION 
-		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 12 LIMIT 5) AS c12
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND category_id = 12 ORDER BY is_recommend DESC LIMIT 5) AS c12
 		UNION 
-		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 20 LIMIT 5) AS c20
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND category_id = 20 ORDER BY is_recommend DESC LIMIT 5) AS c20
 		UNION 
-		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 21 LIMIT 5) AS c21
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND category_id = 21 ORDER BY is_recommend DESC LIMIT 5) AS c21
 		UNION 
-		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 25 LIMIT 5) AS c25
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND category_id = 25 ORDER BY is_recommend DESC LIMIT 5) AS c25
 		UNION 
-		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 33 LIMIT 5) AS c33
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND category_id = 33 ORDER BY is_recommend DESC LIMIT 5) AS c33
 		UNION 
-		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND category_id = 43 LIMIT 5) AS c43
+		SELECT * FROM (SELECT * FROM brands WHERE check_status=1 AND sell_status=1 AND category_id = 43 ORDER BY is_recommend DESC LIMIT 5) AS c43
 
 	</select>
 	
