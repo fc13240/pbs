@@ -57,15 +57,9 @@
         <div class="bd">
           <ul>
             <li>
-				<c:choose>
-					<c:when test="${not empty brand.imageUrl }">
-					<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:283px 283px;width:283px;height:283px;">
-					</c:when>
-					<c:otherwise>
-					<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:283px 283px;width:283px;height:283px;">   
-					</c:otherwise>
-				</c:choose>	
-	          		<div style="font-family:Microsoft YaHei;font-size:33px;padding-top: 80px;text-align: center;">${brand.name}</div>
+	            <div style="position: relative;width:283px;height:283px;">   
+					<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+					<span style="position: absolute;font-family:Microsoft YaHei;font-size:33px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
 	            </div>
             </li>
           </ul>
@@ -285,18 +279,10 @@
         <dl>
           <dd class="pic"> 
           	<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendBrand.id}'/>" target="_blank">
-	       		<c:choose>
-					<c:when test="${not empty recommendBrand.imageUrl }">
-					<div style="background: url(<s:url value='${recommendBrand.imageUrl }'/>) no-repeat;background-size:192px 154px;width:192px;height:154px;">
-					</c:when>
-					<c:otherwise>
-					<div style="background: url(<s:url value='/images/brands_img/${recommendBrand.brandCategory.categoryId }_imagemagick_small.jpg'/>) no-repeat;background-size:192px 154px;width:192px;height:154px;">    
-	       			</c:otherwise>
-				</c:choose>	
-	       			
-	       			
-	       			<div style="font-family:Microsoft YaHei;font-size:20px;padding-top: 40px;text-align: center;">${recommendBrand.name}</div>
-	   			</div>
+	   			<div style="position: relative;width:192px;height:154px;">   
+					<img src="<s:url value='${recommendBrand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendBrand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+					<span style="position: absolute;font-family:Microsoft YaHei;font-size:20px;top: 40px;width:100%;text-align: center;">${recommendBrand.name}</span>
+	            </div>
           	</a> 
           </dd>
           <dt class="name"> 

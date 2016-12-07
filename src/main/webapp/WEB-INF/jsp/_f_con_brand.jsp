@@ -70,18 +70,10 @@ $(function(){
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 						
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>							
-						
-			          			<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			 
 		 			  <div>
@@ -242,32 +234,25 @@ margin: 0 auto;
 		          <div class="syPub_list">
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>		
-			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			 
 		 			  <div>
-			          <h3>
-			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
-			          </h3>
-			        
-			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
-			          <div class="btn_box">
-				          <div class="left price">&yen;${brand.price}</div>
-				          <div class="right">
-				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+				          <h3>
+				          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
+				          </h3>
+				        
+				          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
+				          <div class="btn_box">
+					          <div class="left price">&yen;${brand.price}</div>
+					          <div class="right">
+					          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
+					          </div>
 				          </div>
-			          </div>
-		          </div>
+		          	</div>
 		      	</li>
 				
 			</c:forEach>
@@ -295,17 +280,10 @@ margin: 0 auto;
 		          <div class="syPub_list">
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>		
-			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			  
 		 			  <div>
@@ -348,17 +326,10 @@ margin: 0 auto;
 		          <div class="syPub_list">
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>		
-			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			  
 		 			  <div>
@@ -401,17 +372,10 @@ margin: 0 auto;
 		          <div class="syPub_list">
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>		
-			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			 
 		 			  <div>
@@ -454,17 +418,10 @@ margin: 0 auto;
 		          <div class="syPub_list">
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>		
-			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			 
 		 			  <div>
@@ -506,17 +463,10 @@ margin: 0 auto;
 		          <div class="syPub_list">
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>		
-			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			  
 		 			  <div>
@@ -558,17 +508,10 @@ margin: 0 auto;
 		          <div class="syPub_list">
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>		
-			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			  
 		 			  <div>
@@ -610,17 +553,10 @@ margin: 0 auto;
 		          <div class="syPub_list" >
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>		
-			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			  
 		 			  <div>
@@ -662,17 +598,10 @@ margin: 0 auto;
 		          <div class="syPub_list">
 		              
 		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<c:choose>
-							<c:when test="${not empty brand.imageUrl }">
-							<div style="background: url(<s:url value='${brand.imageUrl }'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">
-							</c:when>
-							<c:otherwise>
-							<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">   
-							</c:otherwise>
-						</c:choose>		
-			          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-							 
-			            </div>
+						<div style="position: relative;width:200px;height:200px;">   
+							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            		</div>
 		 			  </a>
 		 			  
 		 			  <div>

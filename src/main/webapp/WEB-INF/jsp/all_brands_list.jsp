@@ -61,10 +61,10 @@
 	          <div class="syPub_list">
 	              <div id="beforea">
 	              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-					<div style="background: url(<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>) no-repeat;background-size:200px 200px;width:200px;height:200px;">    
-		          		<div style="font-family:Microsoft YaHei;font-size:25px;padding-top: 80px;text-align: center;">${brand.name}</div>
-						 
-		            </div>
+					<div style="position: relative;width:200px;height:200px;">   
+						<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+						<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+	            	</div>
 	 			  </a>
 	 			  </div>
 	 			  <div>
