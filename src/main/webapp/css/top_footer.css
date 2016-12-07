@@ -137,6 +137,7 @@ font-size:16px;text-align:center;width:100px;color:#ffffff;}
     .syPub_list a:hover{text-decoration: none;}    
     .syPub_list a:hover{color:#000;}
     .syPub_list .img{ position:relative; z-index:0}
+    .syPub_list img{ width:200px;height:200px;}
     .syPub_list .img a{ display:block;}
     .syPub_list .img p{ position:absolute; bottom:0; left:0; background: rgba(0, 0, 0, 0.5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000); width:90%; padding:0 5%; height:26px; line-height:26px; font-size:14px; color:#fff;}
     .syPub_list:hover img{opacity:0.9; filter:alpha(opacity=90);}
