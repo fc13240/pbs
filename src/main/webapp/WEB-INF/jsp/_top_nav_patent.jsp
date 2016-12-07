@@ -1,4 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>
+.top-item dl a{
+color:#ffffff;
+}
+.top-item dl a:hover{
+color:red;
+}
+</style>
 <div class="w clearfix">
 	<div id="JS_mll_header_menu_panel" class="menu-panel forbid">
 		<h2 style="margin-top: 0px;"><span>全部商品分类</span></h2>
@@ -21,14 +29,14 @@
 										<li><a title="健身娱乐" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=28&currentPage=1'/>">健身娱乐</a></li>
 										<li><a title="珠宝钟表" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=14&currentPage=1'/>">珠宝钟表</a></li>
 				</ul>
-				<i class="arrow"></i>
+				
 			</li>
 
 	
 										
 			<li class="top-item" style="height: 59px;">
 				<dl>
-                    <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
+                    <dt class="f-s16" ><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
      	 			<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
                		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
@@ -56,7 +64,7 @@
 					</div>
 
 				</div>                
-                <i class="arrow"></i>
+                
 			</li>
 			<li class="top-item" style="height: 59px;">
 				<dl>
@@ -87,101 +95,7 @@
 					</div>
 
 				</div>                
-                <i class="arrow"></i>
-			</li>
-			<li class="top-item" style="height: 59px;">
-				<dl>
-                    <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
-                    <dd>
-     	 			<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
-               		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
-               		<a href="http://reslib.wtoip.com/imagestore/" target="_blank">家电/照明</a>
-
-               		</dd>
-                </dl>
-				<div class="sub" style="width:450px">
-					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">日常生活领域<span class="darrow">&gt;&gt;</span></a></h4>
-					</div>
-					<div class="list clearfix">
-
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>" class="sub-item" target="_blank">服装/鞋帽</a> 
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=17&currentPage=1'/>" class="sub-item" target="_blank">家具/家装</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=18&currentPage=1'/>" class="sub-item" target="_blank">家电/照明</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=19&currentPage=1'/>" class="sub-item" target="_blank">教学/学习</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=20&currentPage=1'/>" class="sub-item" target="_blank">市政/环卫</a> 
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>" class="sub-item" target="_blank">体育/健身</a> 
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=22&currentPage=1'/>" class="sub-item" target="_blank">行政/办公</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=23&currentPage=1'/>" class="sub-item" target="_blank">娱乐/玩具</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=24&currentPage=1'/>" class="sub-item" target="_blank">艺术/乐器</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=25&currentPage=1'/>" class="sub-item" target="_blank">日常生活领域</a> 
-         				
-					</div>
-
-				</div>                
-                <i class="arrow"></i>
-			</li>
-			<li class="top-item" style="height: 59px;">
-				<dl>
-                    <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
-                    <dd>
-     	 			<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
-               		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
-               		<a href="http://reslib.wtoip.com/imagestore/" target="_blank">家电/照明</a>
-               		</dd>
-                </dl>
-				<div class="sub" style="width:450px">
-					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">日常生活领域<span class="darrow">&gt;&gt;</span></a></h4>
-					</div>
-					<div class="list clearfix">
-
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>" class="sub-item" target="_blank">服装/鞋帽</a> 
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=17&currentPage=1'/>" class="sub-item" target="_blank">家具/家装</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=18&currentPage=1'/>" class="sub-item" target="_blank">家电/照明</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=19&currentPage=1'/>" class="sub-item" target="_blank">教学/学习</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=20&currentPage=1'/>" class="sub-item" target="_blank">市政/环卫</a> 
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>" class="sub-item" target="_blank">体育/健身</a> 
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=22&currentPage=1'/>" class="sub-item" target="_blank">行政/办公</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=23&currentPage=1'/>" class="sub-item" target="_blank">娱乐/玩具</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=24&currentPage=1'/>" class="sub-item" target="_blank">艺术/乐器</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=25&currentPage=1'/>" class="sub-item" target="_blank">日常生活领域</a> 
-         				
-					</div>
-
-				</div>                
-                <i class="arrow"></i>
-			</li>
-			<li class="top-item" style="height: 59px;">
-				<dl>
-                    <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
-                    <dd>
-     	 			<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
-               		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
-               		<a href="http://reslib.wtoip.com/imagestore/" target="_blank">家电/照明</a>
-               		</dd>
-                </dl>
-				<div class="sub" style="width:450px">
-					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">日常生活领域<span class="darrow">&gt;&gt;</span></a></h4>
-					</div>
-					<div class="list clearfix">
-
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>" class="sub-item" target="_blank">服装/鞋帽</a> 
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=17&currentPage=1'/>" class="sub-item" target="_blank">家具/家装</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=18&currentPage=1'/>" class="sub-item" target="_blank">家电/照明</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=19&currentPage=1'/>" class="sub-item" target="_blank">教学/学习</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=20&currentPage=1'/>" class="sub-item" target="_blank">市政/环卫</a> 
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>" class="sub-item" target="_blank">体育/健身</a> 
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=22&currentPage=1'/>" class="sub-item" target="_blank">行政/办公</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=23&currentPage=1'/>" class="sub-item" target="_blank">娱乐/玩具</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=24&currentPage=1'/>" class="sub-item" target="_blank">艺术/乐器</a>
-                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=25&currentPage=1'/>" class="sub-item" target="_blank">日常生活领域</a> 
-         				
-					</div>
-
-				</div>                
-                <i class="arrow"></i>
+               
 			</li>
 			<li class="top-item" style="height: 59px;">
 				<dl>
@@ -213,7 +127,101 @@
 					</div>
 
 				</div>                
-                <i class="arrow"></i>
+               
+			</li>
+			<li class="top-item" style="height: 59px;">
+				<dl>
+                    <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
+                    <dd>
+     	 			<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
+               		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
+               		<a href="http://reslib.wtoip.com/imagestore/" target="_blank">家电/照明</a>
+               		</dd>
+                </dl>
+				<div class="sub" style="width:450px">
+					<div class="title clearfix">
+						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">日常生活领域<span class="darrow">&gt;&gt;</span></a></h4>
+					</div>
+					<div class="list clearfix">
+
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>" class="sub-item" target="_blank">服装/鞋帽</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=17&currentPage=1'/>" class="sub-item" target="_blank">家具/家装</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=18&currentPage=1'/>" class="sub-item" target="_blank">家电/照明</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=19&currentPage=1'/>" class="sub-item" target="_blank">教学/学习</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=20&currentPage=1'/>" class="sub-item" target="_blank">市政/环卫</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>" class="sub-item" target="_blank">体育/健身</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=22&currentPage=1'/>" class="sub-item" target="_blank">行政/办公</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=23&currentPage=1'/>" class="sub-item" target="_blank">娱乐/玩具</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=24&currentPage=1'/>" class="sub-item" target="_blank">艺术/乐器</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=25&currentPage=1'/>" class="sub-item" target="_blank">日常生活领域</a> 
+         				
+					</div>
+
+				</div>                
+               
+			</li>
+			<li class="top-item" style="height: 59px;">
+				<dl>
+                    <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
+                    <dd>
+     	 			<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
+               		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
+               		<a href="http://reslib.wtoip.com/imagestore/" target="_blank">家电/照明</a>
+               		</dd>
+                </dl>
+				<div class="sub" style="width:450px">
+					<div class="title clearfix">
+						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">日常生活领域<span class="darrow">&gt;&gt;</span></a></h4>
+					</div>
+					<div class="list clearfix">
+
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>" class="sub-item" target="_blank">服装/鞋帽</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=17&currentPage=1'/>" class="sub-item" target="_blank">家具/家装</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=18&currentPage=1'/>" class="sub-item" target="_blank">家电/照明</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=19&currentPage=1'/>" class="sub-item" target="_blank">教学/学习</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=20&currentPage=1'/>" class="sub-item" target="_blank">市政/环卫</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>" class="sub-item" target="_blank">体育/健身</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=22&currentPage=1'/>" class="sub-item" target="_blank">行政/办公</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=23&currentPage=1'/>" class="sub-item" target="_blank">娱乐/玩具</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=24&currentPage=1'/>" class="sub-item" target="_blank">艺术/乐器</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=25&currentPage=1'/>" class="sub-item" target="_blank">日常生活领域</a> 
+         				
+					</div>
+
+				</div>                
+              
+			</li>
+			<li class="top-item" style="height: 59px;">
+				<dl>
+                    <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
+                    <dd>
+     	 			<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
+               		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
+               		<a href="http://reslib.wtoip.com/imagestore/" target="_blank">家电/照明</a>
+
+               		</dd>
+                </dl>
+				<div class="sub" style="width:450px">
+					<div class="title clearfix">
+						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">日常生活领域<span class="darrow">&gt;&gt;</span></a></h4>
+					</div>
+					<div class="list clearfix">
+
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>" class="sub-item" target="_blank">服装/鞋帽</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=17&currentPage=1'/>" class="sub-item" target="_blank">家具/家装</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=18&currentPage=1'/>" class="sub-item" target="_blank">家电/照明</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=19&currentPage=1'/>" class="sub-item" target="_blank">教学/学习</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=20&currentPage=1'/>" class="sub-item" target="_blank">市政/环卫</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>" class="sub-item" target="_blank">体育/健身</a> 
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=22&currentPage=1'/>" class="sub-item" target="_blank">行政/办公</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=23&currentPage=1'/>" class="sub-item" target="_blank">娱乐/玩具</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=24&currentPage=1'/>" class="sub-item" target="_blank">艺术/乐器</a>
+                  <a href="<s:url value='/brand/showBrandsList.html?categoryId=25&currentPage=1'/>" class="sub-item" target="_blank">日常生活领域</a> 
+         				
+					</div>
+
+				</div>                
+               
 			</li>															
 						
 																	
