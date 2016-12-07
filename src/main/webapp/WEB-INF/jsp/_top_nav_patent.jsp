@@ -1,10 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>
 .top-item dl a{
-color:#ffffff;
+color:#ffffff !important;
+margin-right:5px;
 }
-.top-item dl a:hover{
-color:red;
+.top-item{
+padding-left:10px;
+}
+.top-item:hover dl a{
+color:#c9033b !important;
 }
 </style>
 <div class="w clearfix">
@@ -13,7 +17,7 @@ color:red;
 		<ul id="JS_mll_menu_map" class="top" >
 			
 			<li class="top-item recommend">
-				<em class="flag flag0"></em>
+				
 				<span class="txt">精选推荐</span>
 				<ul id="JS_sub_recommend" data-show="show" style="width: 120px;">
 										<li><a title="发明专利" target="_blank" href="<s:url value='/business/patent_registration.html?type=1'/>">发明专利</a></li>
@@ -34,7 +38,7 @@ color:red;
 
 	
 										
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 61px;">
 				<dl>
                     <dt class="f-s16" ><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -66,7 +70,7 @@ color:red;
 				</div>                
                 
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 61px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -97,7 +101,7 @@ color:red;
 				</div>                
                
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 61px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -129,7 +133,7 @@ color:red;
 				</div>                
                
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 61px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -160,7 +164,7 @@ color:red;
 				</div>                
                
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 61px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -191,7 +195,7 @@ color:red;
 				</div>                
               
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 61px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
