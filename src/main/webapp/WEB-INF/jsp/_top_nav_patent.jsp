@@ -25,19 +25,15 @@
 			</li>
 
 	
-			<c:forEach items="${AllColumns}" var="FirstColumn" varStatus="status">							
 			<li class="top-item" style="height: 133px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">${FirstColumn.name}</a></dt>
                     <dd>
-                    <c:forEach items="${FirstColumn.secondColumns}"  var="secondColumn" varStatus="status">
-                    	<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">${secondColumn.name}</a>
-                    </c:forEach>
-     	 			<!-- <a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
+     	 			<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
                		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
                		<a href="http://reslib.wtoip.com/imagestore/" target="_blank">家电/照明</a>
                		<a href="http://reslib.wtoip.com/tax/list" target="_blank">教学/学习</a>
-               		<a href="http://mall.wtoip.com/industry/aftermarket/" target="_blank">市政/环卫</a> -->
+               		<a href="http://mall.wtoip.com/industry/aftermarket/" target="_blank">市政/环卫</a>
                		</dd>
                 </dl>
 				<div class="sub" style="width:450px">
@@ -62,7 +58,6 @@
 				</div>                
                 <i class="arrow"></i>
 			</li>
-			</c:forEach>			
 			
 			<li class="top-item">
 				<em class="flag flag1"></em>
