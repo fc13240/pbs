@@ -103,23 +103,17 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
     </div>
     <table class="goods-tb pos-rlt" width="580" border="0" cellspacing="0" cellpadding="0">
        <tr>
-       <td>
+       <td  colspan="2">
        <span style="line-height: 44px;font-size:20px;collor:#000000;">
-       		<%-- ${good.firstColumn.name } --%>
        		[${good.patentType.typeDescription }]${good.patentName }
          
        </span> 
-      <caption id="J_detail_title">
-            <div id="J_activity_title"></div>
-      </caption>
       </td>
       </tr>
       <tr>
-        <td>
+        <td  colspan="2">
         	<div class="box_1" style="line-height:40px;" >简介：专利交易，各种专利任你选。
-	        	<a href="#patent_list">
-	        	<img alt="" style="width:150px;margin-left:80px;" src="<s:url value='/images/lijixuangou.png'/>">
-				</a>
+
 			</div>
 
 			        	        	        	        	
@@ -139,27 +133,13 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
       
       </tr>
       <tr>
-        <td width="250px;">行业：<div class="s-new-01" id="s-new-01">
+        <td width="250px;">
 		    		<a href="javascript:;"  data="1" class="s-class s-hover">
 		    			<span val="tr_reg_1" >
 		    				${good.firstColumn.name }
 		    			</span>
 		    		</a>
-				</div>
 				
-				
-			<script type="text/javascript">
-				//清空区域下面的class，然后给当前选项加上class   控制内容的显示
-				
-				$('.s-new-01 a').bind('click', function(){
-				    $(this).addClass('s-hover').siblings().removeClass('s-hover');
-				
-					var box_id="box_"+$(this).attr("data");
-					//alert(box_id);
-					$("."+box_id).show().siblings().hide();
-				
-				});
-			</script>	
 	     </td>
         <td>转让方：
       		<span style="color:red;font-size:20px;">
@@ -169,74 +149,35 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
       
       </tr>
 
-      <%-- <tr>
-        <td width="250px;">
-				<div class="s-new-01" id="s-new-01">
-		    		<a href="javascript:;"  data="1" class="s-class s-hover">
-		    			<span val="tr_reg_1" >
-		    				${good.firstColumn.name }
-				           <c:if test="${good.firstColumn.id==1}">
-				          	 农业/食品/医疗
-				           </c:if> 
-				           <c:if test="${good.firstColumn.id==2}">
-				          	 化工/冶金/生物
-				           </c:if> 
-				           <c:if test="${good.firstColumn.id==3}">
-				          	 交通/包装/建筑
-				           </c:if> 
-				           <c:if test="${good.firstColumn.id==4}">
-				          	 电力/环保/通讯
-				           </c:if> 
-		    			
-		    			</span>
-		    		</a>
-															
-				</div>
-<script language="javascript">
-//清空区域下面的class，然后给当前选项加上class   控制内容的显示
-
-$('.s-new-01 a').bind('click', function(){
-    $(this).addClass('s-hover').siblings().removeClass('s-hover');
-
-	var box_id="box_"+$(this).attr("data");
-	//alert(box_id);
-	$("."+box_id).show().siblings().hide();
-
-});
-</script>			
-        </td>
-      </tr> --%>      
+         
       <tr style="border-top:1px dashed #ececec">
-        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">
-       
-        	<div class="box_1" >&yen;${good.price }</div>
-        	<div class="box_2" style="display:none;">&yen;${good.price }</div>
-        	
-        	<div class="box_3" style="display:none;">免费</div>
-
+        <td>价&nbsp;&nbsp;格：
+        <span style="color:red;font-size:20px;">
+			${good.price }
         </span>
-      </tr>
-      <%-- <tr >
-      <td>
-      	转让方：
-      		<span style="color:red;font-size:20px;">
-      			${good.transferor }
-      		</span>
         </td>
-      </tr> --%>
+		<td>
+	       	<a href="#patent_list">
+	       	<img alt="" style="width:150px;margin-left:80px;" src="<s:url value='/images/lijixuangou.png'/>">
+			</a>        
+        </td>
+      </tr>
+     
       <tr >
-        <td height="15"></td>
+        <td height="15" colspan="2"></td>
       </tr>
       <tr style="">
-        <td><div style="float:left;">客&nbsp;&nbsp;服：</div>
-        <div style="float:left;margin-left:15px;">  马环静：</div>
-<div style="float:left;">
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851238686&site=qq&menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" style="" href="http://wpa.qq.com/pa?p=2:2851238686:51" alt="与客服小马进行交谈" title="与客服小马进行交谈"/></a>
-</div> 
-         <div style="float:left;margin-left:15px;">肖莹莹：</div>
-<div style="float:left;">
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851238688&site=qq&menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" href="http://wpa.qq.com/pa?p=2:2851238688:51" alt="与客服莹莹进行交谈" title="与客服莹莹进行交谈"/></a>
-</div>
+        <td colspan="2">
+        	<div style="float:left;">客&nbsp;&nbsp;服：</div>
+        	<div style="float:left;margin-left:15px;">  马环静：</div>
+			<div style="float:left;">
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851238686&site=qq&menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" style="" href="http://wpa.qq.com/pa?p=2:2851238686:51" alt="与客服小马进行交谈" title="与客服小马进行交谈"/></a>
+			</div> 
+         	<div style="float:left;margin-left:15px;">肖莹莹：</div>
+			<div style="float:left;">
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851238688&site=qq&menu=yes"><img src="http://r.lotut.com/Themes/Home/default/Public/image/zx_qq.gif" border="0" href="http://wpa.qq.com/pa?p=2:2851238688:51" alt="与客服莹莹进行交谈" title="与客服莹莹进行交谈"/></a>
+			</div>
+		</td>
       </tr>
     </table>
   </div>
