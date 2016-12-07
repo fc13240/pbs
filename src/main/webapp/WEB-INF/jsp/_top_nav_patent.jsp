@@ -1,11 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>
+.top-item dl a{
+color:#ffffff !important;
+margin-right:5px;
+}
+.top-item{
+padding-left:10px;
+}
+.top-item:hover dl a{
+color:#c9033b !important;
+}
+</style>
 <div class="w clearfix">
 	<div id="JS_mll_header_menu_panel" class="menu-panel forbid">
 		<h2 style="margin-top: 0px;"><span>全部商品分类</span></h2>
 		<ul id="JS_mll_menu_map" class="top" >
 			
 			<li class="top-item recommend">
-				<em class="flag flag0"></em>
+				
 				<span class="txt">精选推荐</span>
 				<ul id="JS_sub_recommend" data-show="show" style="width: 120px;">
 										<li><a title="发明专利" target="_blank" href="<s:url value='/business/patent_registration.html?type=1'/>">发明专利</a></li>
@@ -21,14 +33,14 @@
 										<li><a title="健身娱乐" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=28&currentPage=1'/>">健身娱乐</a></li>
 										<li><a title="珠宝钟表" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=14&currentPage=1'/>">珠宝钟表</a></li>
 				</ul>
-				<i class="arrow"></i>
+				
 			</li>
 
 	
 										
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 61px;">
 				<dl>
-                    <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
+                    <dt class="f-s16" ><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
      	 			<a href="http://reslib.wtoip.com/expert/findByPage/" target="_blank">服装/鞋帽</a>
                		<a href="http://reslib.wtoip.com/equip/findByPage/" target="_blank">家具/家装</a>
@@ -56,9 +68,9 @@
 					</div>
 
 				</div>                
-                <i class="arrow"></i>
+                
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 61px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -87,9 +99,9 @@
 					</div>
 
 				</div>                
-                <i class="arrow"></i>
+               
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 61px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -119,9 +131,9 @@
 					</div>
 
 				</div>                
-                <i class="arrow"></i>
+               
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 60px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -150,9 +162,9 @@
 					</div>
 
 				</div>                
-                <i class="arrow"></i>
+               
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 60px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -181,9 +193,9 @@
 					</div>
 
 				</div>                
-                <i class="arrow"></i>
+              
 			</li>
-			<li class="top-item" style="height: 59px;">
+			<li class="top-item" style="height: 60px;">
 				<dl>
                     <dt class="f-s16"><a href="####" target="_blank">日常生活领域</a></dt>
                     <dd>
@@ -213,7 +225,7 @@
 					</div>
 
 				</div>                
-                <i class="arrow"></i>
+               
 			</li>															
 						
 																	
