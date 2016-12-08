@@ -323,27 +323,32 @@ margin: 0 auto;
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
-		<c:if test="${status.count==1}">
+	
+	<c:if test="${status.count==1}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
-				<c:if test="${status.count==2}">
+	
+	<c:if test="${status.count==2}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
-				<c:if test="${status.count==3}">
+	
+	<c:if test="${status.count==3}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
-				<c:if test="${status.count==4}">
+	
+	<c:if test="${status.count==4}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
-				<c:if test="${status.count==5}">
+	
+	<c:if test="${status.count==5}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
@@ -376,39 +381,40 @@ margin: 0 auto;
 					<ul>
 						<%--  <c:forEach items="${recommendPatents['2']}"  var="patent"> --%>
 					<%-- <c:forEach items="${recommendPatents['${status.count}+1']}" var="patent"> --%>
-					<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
-						<c:forEach items="${patents.value}" var="patent">
-					<li>	
-							<a href="" target="_blank" title="${patent.patentName}" class="img">
-								<c:choose>
-									<c:when test="${not empty patent.patentImageUrl }">
-										<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" class="lazy">
-									</c:when>
-									<c:otherwise>
-										<img onerror="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" class="lazy">
-									</c:otherwise>
-								</c:choose>
-			                	</a>
-							<div class="brand-info">
-								<div class="line1">
-									<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" title="${patent.patentName}" target="_blank">
-										${patent.patentName}</a></div>
-								<div class="line2">
-									<div class="content_type"><em class="content_type_left"><span>
-									  ${patent.secondColumn}</span></em></div>
-									
-								</div>
-								<div class="line3">
-									<a href="javascript:;" class="icon_feng"></a>
-									<i>¥</i>
-										<span>${patent.price}</span>
+						<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
+							<c:forEach items="${patents.value}" var="patent">
+						<li>	
+								<a href="" target="_blank" title="${patent.patentName}" class="img">
+									<c:choose>
+										<c:when test="${not empty patent.patentImageUrl }">
+											<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" class="lazy">
+										</c:when>
+										<c:otherwise>
+											<img onerror="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" class="lazy">
+										</c:otherwise>
+									</c:choose>
+				                	</a>
+								<div class="brand-info">
+									<div class="line1">
+										<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" title="${patent.patentName}" target="_blank">
+											${patent.patentName}</a></div>
+									<div class="line2">
+										<div class="content_type"><em class="content_type_left"><span>
+										  ${patent.secondColumn}</span></em></div>
+										
 									</div>
-							</div>
-					</li>
+									<div class="line3">
+										<a href="javascript:;" class="icon_feng"></a>
+										<i>¥</i>
+											<span>${patent.price}</span>
+										</div>
+								</div>
+						</li>
+							</c:forEach>
 						</c:forEach>
-					</c:forEach>
-						</ul>
+					</ul>
 				</div>
+				<div style="clear:both;"></div>
 			</div>
 		</div>
 	</div>
