@@ -342,6 +342,7 @@ margin: 0 auto;
 	</div>
 	</c:if>
 	
+		
 	<c:if test="${status.count==4}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
@@ -349,6 +350,12 @@ margin: 0 auto;
 	</c:if>
 	
 	<c:if test="${status.count==5}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
+	</div>
+	</c:if>
+	
+	<c:if test="${status.count==6}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
