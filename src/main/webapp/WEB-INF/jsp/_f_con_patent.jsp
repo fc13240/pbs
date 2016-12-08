@@ -318,50 +318,44 @@ margin: 0 auto;
 <!--2f -->
 <c:forEach items="${AllColumns}"  var="FirstColumn" varStatus="status">
 <div class="floor_1F">
-	<c:if test="${status.count==0}">
+	<c:if test="${status.count==1}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
 	
-	<c:if test="${status.count==1}">
+	<c:if test="${status.count==2}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
 	
-	<c:if test="${status.count==2}">
+	<c:if test="${status.count==3}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #eab35b;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
 	
-	<c:if test="${status.count==3}">
+	<c:if test="${status.count==4}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #65e5e7;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
 	
 		
-	<c:if test="${status.count==4}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #a6b2e8;">
+	<c:if test="${status.count==5}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
 			
 
-	<c:if test="${status.count==5}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #a6b2e8;">
+	<c:if test="${status.count==6}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #a6f59c;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
 	
-	<c:if test="${status.count==6}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
-	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
-	</div>
-	</c:if>
-			
 	
 	
 	<div class="cu-floor-bd">
@@ -370,8 +364,27 @@ margin: 0 auto;
 			<div class="cu-grid-l clothing">
 				<div class="sidebar_na">
 					<div class="sidebar_na_bg">
-						<img src="http://www.wtoip.com/res/wtoip/img/sidebar_na_bg01.jpg" class="lazy" data-url="/res/wtoip/img/sidebar_na_bg01.jpg" width="330" height="516" alt="">
-								</div>
+					
+					<c:if test="${status.count==1}">
+						<img src="<s:url value='/images/sidebar_na_bg01.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==2}">
+						<img src="<s:url value='/images/sidebar_na_bg02.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==3}">
+						<img src="<s:url value='/images/sidebar_na_bg03.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==4}">
+						<img src="<s:url value='/images/sidebar_na_bg04.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==5}">
+						<img src="<s:url value='/images/sidebar_na_bg05.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==6}">
+						<img src="<s:url value='/images/sidebar_na_bg06.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+																																					
+					</div>
 					<div class="sidebar_na_link">
 					<div class="price_range">
 						<ul class="clear">
