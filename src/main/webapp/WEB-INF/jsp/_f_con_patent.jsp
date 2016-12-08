@@ -316,8 +316,6 @@ margin: 0 auto;
 }
 </style>  
 
-
-
 <c:forEach items="${AllColumns}" var="FirstColumn" varStatus="status">
 <div class="floor_1F">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
@@ -350,26 +348,26 @@ margin: 0 auto;
 				</div>
 				<div class="brand-list patent-list">
 					<ul>
-					<c:forEach items="${FirstColumn.patents}" begin="0" end= "7" var="patent">
+						 <c:forEach items="${recommendPatents['2']}"  var="patent">
+					<%-- <c:forEach items="${recommendPatents['${FirstColumn.id}']}" var="patent"> --%>
 					<li>	
-					<c:if test="${not empty patent.price && not empty patent.patent_name && not empty patent.app_no}">
-							<a href="" target="_blank" title="${patent.patent_name}" class="img">
+							<a href="" target="_blank" title="${patent.patentName}" class="img">
 								<c:choose>
-									<c:when test="${not empty patent.patent_image_url }">
-										<img onerror="<s:url value='${patent.patent_image_url }'/>" src="<s:url value='${patent.patent_image_url }'/>" class="lazy">
+									<c:when test="${not empty patent.patentImageUrl }">
+										<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" class="lazy">
 									</c:when>
 									<c:otherwise>
-										<img onerror="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" src="<s:url value='/images/goods/${patent.patent_second_column_id}.jpg'/>" class="lazy">
+										<img onerror="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" class="lazy">
 									</c:otherwise>
 								</c:choose>
 			                	</a>
 							<div class="brand-info">
 								<div class="line1">
-									<a href="" title="${patent.patent_name}" target="_blank">
-										${patent.patent_name}</a></div>
+									<a href="" title="${patent.patentName}" target="_blank">
+										${patent.patentName}</a></div>
 								<div class="line2">
 									<div class="content_type"><em class="content_type_left"><span>
-									  ${patent.patent_second_column_name}</span></em></div>
+									  ${patent.secondColumn}</span></em></div>
 									
 								</div>
 								<div class="line3">
@@ -378,7 +376,6 @@ margin: 0 auto;
 										<span>${patent.price}</span>
 									</div>
 							</div>
-					</c:if>
 					</li>
 					
 						</c:forEach>
@@ -391,7 +388,7 @@ margin: 0 auto;
 <!--  -->	
 
 </div>
-</c:forEach>
+</c:forEach> 
 
 
 <script type="text/javascript">

@@ -74,4 +74,6 @@ public interface PatentDao {
 	int getSearchAlreadySalePatentCount(PatentSearchCondition patentSearchCondition);
 	
 	SaleGood getAlreadSalePatentDetail(long patentId);
+	
+	List<GoodsDetail> selectRecommendPatents();
 }

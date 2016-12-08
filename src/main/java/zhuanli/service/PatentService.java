@@ -2,8 +2,10 @@ package zhuanli.service;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import net.lingala.zip4j.core.ZipFile;
+import zhuanli.domain.Brand;
 import zhuanli.domain.ColumnCount;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.GoodsDetail;
@@ -74,5 +76,7 @@ public interface PatentService {
 	
 	int getSearchAlreadySalePatentCount(PatentSearchCondition patentSearchCondition);
 	
-	SaleGood getAlreadSalePatentDetail(long patentId);;
+	SaleGood getAlreadSalePatentDetail(long patentId);
+	
+	Map<String, List<GoodsDetail>> getIndexRecommendPatents();
 }

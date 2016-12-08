@@ -8,9 +8,9 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 public class GoodsDetail {
 	private int userId;
 	private int id;
-	private int FirstColumn;
+	private int firstColumn;
 	private int owner;
-	private int SecondColumn;
+	private int secondColumn;
 	private int price;
 	private int transactionType;
 	private int status;
@@ -91,17 +91,18 @@ public class GoodsDetail {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
 	public int getFirstColumn() {
-		return FirstColumn;
+		return firstColumn;
 	}
 	public void setFirstColumn(int firstColumn) {
-		FirstColumn = firstColumn;
+		this.firstColumn = firstColumn;
 	}
 	public int getSecondColumn() {
-		return SecondColumn;
+		return secondColumn;
 	}
 	public void setSecondColumn(int secondColumn) {
-		SecondColumn = secondColumn;
+		this.secondColumn = secondColumn;
 	}
 	public int getPrice() {
 		return price;

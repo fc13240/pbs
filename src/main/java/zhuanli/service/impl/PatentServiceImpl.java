@@ -3,8 +3,10 @@ package zhuanli.service.impl;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
+import java.util.Map;
 
 import zhuanli.service.utils.PatentFeeExcelGenerator;
 
@@ -13,6 +15,7 @@ import zhuanli.service.utils.ZipUtils;
 
 import net.lingala.zip4j.core.ZipFile;
 import zhuanli.dao.PatentDao;
+import zhuanli.domain.Brand;
 import zhuanli.domain.ColumnCount;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.GoodsDetail;
@@ -178,6 +181,24 @@ public class PatentServiceImpl implements PatentService {
 	@Override
 	public SaleGood getAlreadSalePatentDetail(long patentId) {
 		return patentDao.getAlreadSalePatentDetail(patentId);
+	}
+
+	@Override
+	public Map<String, List<GoodsDetail>> getIndexRecommendPatents() {
+		List<GoodsDetail> patents = patentDao.selectRecommendPatents();
+		Map<String, List<GoodsDetail>> recommendPatents = new HashMap<String, List<GoodsDetail>>(); 
+
+		for(GoodsDetail patent: patents) {
+			String patentFirstColumn = String.valueOf(patent.getFirstColumn());
+			if (recommendPatents.containsKey(patentFirstColumn)) {
+				recommendPatents.get(patentFirstColumn).add(patent);
+			} else {
+				List<GoodsDetail> patentList = new ArrayList<>();
+				patentList.add(patent);
+				recommendPatents.put(patentFirstColumn, patentList);
+			}
+		}
+		return recommendPatents;
 	}
 	
 }

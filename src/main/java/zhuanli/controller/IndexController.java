@@ -53,11 +53,14 @@ public class IndexController {
 	public String getPatents(HttpServletRequest req, HttpServletResponse resp,Model model) {
 
 		List<FirstColumn>  AllColumns=patentService.selectAllColumns();
+		Map<String, List<GoodsDetail>> recommendPatents=patentService.getIndexRecommendPatents();
+//		System.out.println(recommendPatents.get(1).size());
 		List<Patent> patent_list=patentService.getPatents();
 		Map<String, List<Brand>> recommendBrands = brandService.getIndexRecommendBrands();
 		model.addAttribute("patent_list", patent_list);
 		model.addAttribute("AllColumns", AllColumns);
 		model.addAttribute("recommendBrands", recommendBrands);
+		model.addAttribute("recommendPatents", recommendPatents);
 		return "index";
 	}
 	
