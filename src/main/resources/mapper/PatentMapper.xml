@@ -30,8 +30,18 @@
 			<id property="id" column="patent_second_column"/>
 			<result property="name" column="patent_second_column_name"/>
 		</association>
+		<association property="patentStatus" resultMap="PatentStatusResultMap"/>
 	</resultMap>
 	
+	<resultMap type="PatentType" id="PatentTypeResultMap">
+		<id property="patentTypeId" column="patent_type_id"/>
+		<result property="typeDescription" column="patent_type_desc"/>
+	</resultMap>	
+	
+	<resultMap type="PatentStatus" id="PatentStatusResultMap">
+		<id property="patentStatusId" column="patent_status_id"/>
+		<result property="statusDescription" column="patent_status_desc"/>
+	</resultMap>		
 	
 	<select id="getSecoundColumnPage"  resultType="Patent" parameterType="Page" >
 		select s.price ,s.transaction_type,p.patent_name,s.patent_id,ss.patent_first_column_id,pt.patent_type_desc as patent_type_name
@@ -157,16 +167,19 @@
 		<result property="patentImageUrl" column="patent_image_url"/>
 	</resultMap>
 	
-	<!-- <select id="getPatentDetailByPatentId" parameterType="int" resultMap="SaleGoodResultMap">
+	<select id="getPatentDetailByPatentId" parameterType="int" resultMap="SaleGoodResultMap">
 		select spg.patent_id,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,
 		sfc.patent_first_column_name,spg.status,spg.patent_image_url,
-		 sp.app_no, sp.patent_owner, sp.patent_name, sp.app_person, sp.app_date, sp.patent_status_text,sp.transaction_status,sp.create_time,pt.patent_type_id, 
-		pt.patent_type_desc, sp.patent_status_id, sp.patent_status_desc, sp.internal_code
-		       from sell_patent_goods spg left join patents sp on spg.patent_id=p.patent_id 
+		p.patent_id, p.app_no, p.patent_owner, p.patent_name, p.app_person, p.app_date,  p.internal_code,
+		 pt.patent_type_id,pt.patent_type_desc,p.transaction_status,p.create_time,
+				ps.patent_status_id, ps.patent_status_desc, p.patent_status_text
+		       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+		       left join patent_types pt on p.patent_type = pt.patent_type_id 
+		       left join patent_status ps on p.patent_status = ps.patent_status_id 
 		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
 		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id
 		where spg.patent_id =#{patentId}
-	</select> -->
+	</select>
 	
 	<select id="selectRecommendPatents" resultMap="TransactionPatent">
 		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column,sg.patent_image_url
