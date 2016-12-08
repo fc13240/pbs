@@ -18,8 +18,6 @@ import zhuanli.domain.SaleGood;
 
 public interface PatentService {
 	
-
-	
 	List<Patent> getPatentsByColumn(List<Patent> patent_second_columns);
 	
 	List<Patent> getSecoundColumn(int  patent_column_id);
@@ -33,8 +31,6 @@ public interface PatentService {
 	int getSonListCount(int j);
 	
 	List<FirstColumn> selectAllColumns();
-
-
 
 	List<Patent> getSecoundPatent(int  patent_second_column);
 	
@@ -79,4 +75,12 @@ public interface PatentService {
 	SaleGood getAlreadSalePatentDetail(long patentId);
 	
 	Map<String, List<GoodsDetail>> getIndexRecommendPatents();
+
+	List<SaleGood> getPatentListBySecondColumnId(int secondColumnId,Page page);
+	
+	int getPatentListBySecondColumnIdCount(int secondColumnId);
+	
+	List<SaleGood> getSearchPatentListBySecondColumnId(PatentSearchCondition patentSearchCondition);
+	
+	int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition);
 }

@@ -339,7 +339,7 @@ margin: 0 auto;
 					<div class="price_range">
 						<ul class="clear">
 						<c:forEach items="${FirstColumn.secondColumns}"  var="secondColumn" varStatus="status">
-					  		<li><a href="<s:url value='/getGoodListBySecond.html?id=${secondColumn.id}'/>" target="_blank">${secondColumn.name}</a></li>
+					  		<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=${secondColumn.id}&secondColumnName=${secondColumn.name}'/>" target="_blank">${secondColumn.name}</a></li>
 					  	</c:forEach>
 							
 						</ul>
