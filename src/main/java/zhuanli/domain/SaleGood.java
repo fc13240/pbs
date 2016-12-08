@@ -19,8 +19,6 @@ public class SaleGood {
 	private int recommendStatus;
 	private String transferor;
 	private String patentImageUrl;
-	
-	
 	private String appNo;
 	private String appPerson;
 	@DateTimeFormat(iso=ISO.DATE_TIME,pattern="yyyy-MM-dd")

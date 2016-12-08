@@ -221,5 +221,10 @@ public class PatentServiceImpl implements PatentService {
 	public int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition) {
 		return patentDao.getSearchPatentListBySecondColumnIdCount(patentSearchCondition);
 	}
+
+	@Override
+	public SaleGood getPatentDetailByPatentId(int patentId) {
+		return patentDao.getPatentDetailByPatentId(patentId);
+	}
 	
 }

@@ -79,4 +79,6 @@ public interface PatentMapper {
 	
 	int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition);
 	
+	SaleGood getPatentDetailByPatentId(int patentId);
+	
 }

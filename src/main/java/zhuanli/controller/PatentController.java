@@ -99,6 +99,12 @@ public class PatentController {
 	
 
 
+	@RequestMapping(path="/getPatentDetailByPatentId",method=RequestMethod.GET)
+	public String getPatentDetailByPatentId(@RequestParam("patentId") int patentId , Model model) {
+		SaleGood good =patentService.getPatentDetailByPatentId(patentId);
+		model.addAttribute("patent", good);
+		return "patent_detail";
+	}
 	
 	@RequestMapping(path="/detail",method=RequestMethod.GET)
 	public String getPatentsDetail(@RequestParam("patentno") long patent_id , Model model) {

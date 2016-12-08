@@ -179,6 +179,11 @@ public class PatentMybatisDao extends SqlSessionDaoSupport implements PatentDao 
 	public int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition) {
 		return patentMapper.getSearchPatentListBySecondColumnIdCount(patentSearchCondition);
 	}
+
+	@Override
+	public SaleGood getPatentDetailByPatentId(int patentId) {
+		return patentMapper.getPatentDetailByPatentId(patentId);
+	}
 	
 	
 }

@@ -58,7 +58,7 @@ color:#c9033b !important;
                     <dt class="f-s16">${FirstColumn.name}</dt>
                     <dd>
                     <c:forEach items="${FirstColumn.secondColumns}" begin="0" end="1"  var="secondColumn" varStatus="status">
-                    	<a href="" target="_blank">${secondColumn.name}</a>
+                    	<a href=""<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=${secondColumn.id}&secondColumnName=${secondColumn.name}'/>"" target="_blank">${secondColumn.name}</a>
                     </c:forEach>
                		</dd>
                 </dl>

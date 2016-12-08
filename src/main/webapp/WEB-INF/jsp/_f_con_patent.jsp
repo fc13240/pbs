@@ -366,7 +366,7 @@ margin: 0 auto;
 			                	</a>
 							<div class="brand-info">
 								<div class="line1">
-									<a href="" title="${patent.patentName}" target="_blank">
+									<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" title="${patent.patentName}" target="_blank">
 										${patent.patentName}</a></div>
 								<div class="line2">
 									<div class="content_type"><em class="content_type_left"><span>

@@ -58,24 +58,24 @@
     <table class="goods-tb pos-rlt" width="580" border="0" cellspacing="0" cellpadding="0">
        <tr>
        <td colspan="2">
-       <span style="line-height: 44px;font-size:20px;collor:#000000;">[${patent.patent_type_desc}]${patent.patent_name}</span> 
+       <span style="line-height: 44px;font-size:20px;collor:#000000;">[${patent.secondColumn.name}]${patent.patentName}</span> 
       <caption id="J_detail_title">
             <div id="J_activity_title"></div>
       </caption>
       </td>
       </tr>
       <tr>
-        <td width="250px;">专利号：${patent.app_no}</td>
-        <td>第一申请人：<span>${patent.app_person}</span>
+        <td width="250px;">专利号：${patent.appNo}</td>
+        <td>第一申请人：<span>${patent.appPerson}</span>
       </tr>
       <tr>
-      	<td>申请日期：<fmt:formatDate value="${patent.app_date}" pattern="yyyy-MM-dd"/></td>
-        <td>发布日期：<span><fmt:formatDate value="${patent.add_date}" pattern="yyyy-MM-dd"/></span>
+      	<td>申请日期：<fmt:formatDate value="${patent.appDate}" pattern="yyyy-MM-dd"/></td>
+        <td>发布日期：<span><fmt:formatDate value="${patent.addDate}" pattern="yyyy-MM-dd"/></span>
         
       </tr>
       <tr>
         <td>案件状态：<span>${patent.patent_status_desc}</span>
-        <td>行业：${patent.patent_second_column_name}</td>
+        <td>行业：${patent.secondColumn.name}</td>
       </tr>
 
       <tr style="border-bottom:1px dashed #ececec">
