@@ -21,6 +21,7 @@ public class SaleGood {
 	private String patentImageUrl;
 	private String appNo;
 	private String appPerson;
+	private PatentStatus patentStatus;
 	@DateTimeFormat(iso=ISO.DATE_TIME,pattern="yyyy-MM-dd")
 	private Date appDate;
 	private PatentType patentType;
@@ -134,6 +135,12 @@ public class SaleGood {
 	}
 	public void setPatentImageUrl(String patentImageUrl) {
 		this.patentImageUrl = patentImageUrl;
+	}
+	public PatentStatus getPatentStatus() {
+		return patentStatus;
+	}
+	public void setPatentStatus(PatentStatus patentStatus) {
+		this.patentStatus = patentStatus;
 	}
 	
 }
