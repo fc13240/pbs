@@ -8,6 +8,7 @@ import java.io.OutputStream;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import net.lingala.zip4j.core.ZipFile;
 import zhuanli.domain.FirstColumn;
+import zhuanli.domain.GoodsDetail;
 import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
@@ -50,11 +52,12 @@ public class PatentController {
 		int patent_column_id= page.getId();
 		List<FirstColumn>  AllColumns=patentService.selectAllColumns();
 		List<Patent> patent_list=patentService.getSecoundColumnPage(page);
-		
+		Map<String, List<GoodsDetail>> recommendPatents=patentService.getIndexRecommendPatents();
 		model.addAttribute("AllColumns", AllColumns);
 		model.addAttribute("first_column_id", patent_column_id);
 		model.addAttribute("patents", patent_list);
 		model.addAttribute("page",page);
+		model.addAttribute("recommendPatents", recommendPatents);
 		return "patent_index";
 	}	
 	
