@@ -169,7 +169,7 @@
 	
 	<select id="getPatentDetailByPatentId" parameterType="int" resultMap="SaleGoodResultMap">
 		select spg.patent_id,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,
-		sfc.patent_first_column_name,spg.status,spg.patent_image_url,
+		sfc.patent_first_column_name,spg.status,spg.patent_image_url,spg.transaction_type,
 		p.patent_id, p.app_no, p.patent_owner, p.patent_name, p.app_person, p.app_date,  p.internal_code,
 		 pt.patent_type_id,pt.patent_type_desc,p.transaction_status,p.create_time,
 				ps.patent_status_id, ps.patent_status_desc, p.patent_status_text
