@@ -2,7 +2,7 @@ package zhuanli.dao;
 
 import java.util.List;
 
-
+import org.apache.ibatis.annotations.Param;
 
 import zhuanli.domain.ColumnCount;
 import zhuanli.domain.FirstColumn;
@@ -17,12 +17,6 @@ import zhuanli.domain.SaleGood;
 
 public interface PatentDao {
 
-
-//	List<Patent> getPatents();
-
-//	List<Patent> getPatentsByColumn(List<Patent> patent_second_columns);
-//	
-	//��ѯ������Ŀid
 	List<Patent> getSecoundColumn(int  patent_column_id);
 	
 	List<Patent> getSecoundColumnPage(Page  page);
@@ -76,4 +70,12 @@ public interface PatentDao {
 	SaleGood getAlreadSalePatentDetail(long patentId);
 	
 	List<GoodsDetail> selectRecommendPatents();
+	
+	List<SaleGood> getPatentListBySecondColumnId(int secondColumnId,Page page);
+	
+	int getPatentListBySecondColumnIdCount(int secondColumnId);
+	
+	List<SaleGood> getSearchPatentListBySecondColumnId(PatentSearchCondition patentSearchCondition);
+	
+	int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition);
 }

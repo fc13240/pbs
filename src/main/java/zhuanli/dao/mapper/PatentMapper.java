@@ -16,12 +16,7 @@ import zhuanli.domain.SaleGood;
 
 
 public interface PatentMapper {
-	
-//	List<Patent> getPatents();
-	
-//	List<Patent> getPatentsByColumn(List<Patent> patent_second_columns);
-//	
-	
+
 	List<Patent> getSecoundColumn(int  patent_column_id);
 	
 	List<Patent> getSecoundColumnPage(Page  page);
@@ -75,5 +70,13 @@ public interface PatentMapper {
 	SaleGood getAlreadSalePatentDetail(long patentId);
 	
 	List<GoodsDetail> selectRecommendPatents();
+	
+	List<SaleGood> getPatentListBySecondColumnId(@Param("secondColumnId")int secondColumnId,@Param("page") Page page);
+	
+	int getPatentListBySecondColumnIdCount(int secondColumnId);
+	
+	List<SaleGood> getSearchPatentListBySecondColumnId(PatentSearchCondition patentSearchCondition);
+	
+	int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition);
 	
 }

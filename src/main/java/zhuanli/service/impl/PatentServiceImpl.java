@@ -201,5 +201,25 @@ public class PatentServiceImpl implements PatentService {
 		
 		return recommendPatents;
 	}
+
+	@Override
+	public List<SaleGood> getPatentListBySecondColumnId(int secondColumnId, Page page) {
+		return patentDao.getPatentListBySecondColumnId(secondColumnId, page);
+	}
+
+	@Override
+	public int getPatentListBySecondColumnIdCount(int secondColumnId) {
+		return patentDao.getPatentListBySecondColumnIdCount(secondColumnId);
+	}
+
+	@Override
+	public List<SaleGood> getSearchPatentListBySecondColumnId(PatentSearchCondition patentSearchCondition) {
+		return patentDao.getSearchPatentListBySecondColumnId(patentSearchCondition);
+	}
+
+	@Override
+	public int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition) {
+		return patentDao.getSearchPatentListBySecondColumnIdCount(patentSearchCondition);
+	}
 	
 }

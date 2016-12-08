@@ -159,6 +159,26 @@ public class PatentMybatisDao extends SqlSessionDaoSupport implements PatentDao 
 	public List<GoodsDetail> selectRecommendPatents() {
 		return patentMapper.selectRecommendPatents();
 	}
+
+	@Override
+	public List<SaleGood> getPatentListBySecondColumnId(int secondColumnId, Page page) {
+		return patentMapper.getPatentListBySecondColumnId(secondColumnId, page);
+	}
+
+	@Override
+	public int getPatentListBySecondColumnIdCount(int secondColumnId) {
+		return patentMapper.getPatentListBySecondColumnIdCount(secondColumnId);
+	}
+
+	@Override
+	public List<SaleGood> getSearchPatentListBySecondColumnId(PatentSearchCondition patentSearchCondition) {
+		return patentMapper.getSearchPatentListBySecondColumnId(patentSearchCondition);
+	}
+
+	@Override
+	public int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition) {
+		return patentMapper.getSearchPatentListBySecondColumnIdCount(patentSearchCondition);
+	}
 	
 	
 }
