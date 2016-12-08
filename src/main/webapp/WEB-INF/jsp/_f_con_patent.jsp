@@ -317,6 +317,7 @@ margin: 0 auto;
 </style>  
 
 <c:forEach items="${AllColumns}" var="FirstColumn" varStatus="status">
+
 <div class="floor_1F">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
 	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">${status.count+1}F</div>
@@ -348,9 +349,9 @@ margin: 0 auto;
 				</div>
 				<div class="brand-list patent-list">
 					<ul>
-						 <%-- <c:forEach items="${recommendPatents['5']}"  var="patent"> --%>
+						<%--  <c:forEach items="${recommendPatents['2']}"  var="patent"> --%>
 					<%-- <c:forEach items="${recommendPatents['${status.count}+1']}" var="patent"> --%>
-					<c:forEach items="${recommendPatents}" begin="${FirstColumn.id}" end="${FirstColumn.id+1}" var="patents">
+					<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
 						<c:forEach items="${patents.value}" var="patent">
 					<li>	
 							<a href="" target="_blank" title="${patent.patentName}" class="img">
@@ -380,7 +381,6 @@ margin: 0 auto;
 							</div>
 					</li>
 						</c:forEach>
-					 	<br>
 					</c:forEach>
 						</ul>
 				</div>

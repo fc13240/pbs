@@ -198,6 +198,7 @@ public class PatentServiceImpl implements PatentService {
 				recommendPatents.put(patentFirstColumn, patentList);
 			}
 		}
+		
 		return recommendPatents;
 	}
 	
