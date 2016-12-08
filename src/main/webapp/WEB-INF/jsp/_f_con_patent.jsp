@@ -53,9 +53,9 @@ $(function(){
 
 <!-- 1Fend -->
 <div class="floor_1F">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">1F</div>
-	        <h2>专利推荐</h2>                            
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #333;;">
+	        
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">精品专利</h2>                            
 	</div>
 	<div class="news-info-con" style="height: 340px;">
 		<div class="news-info-bd clear">
@@ -315,17 +315,19 @@ margin: 0 auto;
     margin: 12px auto 10px;
 }
 </style>  
-
-<c:forEach items="${AllColumns}" var="FirstColumn" varStatus="status">
-
+<!--2f -->
+<c:forEach items="${AllColumns}"  var="FirstColumn" varStatus="status">
 <div class="floor_1F">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">${status.count+1}F</div>
-	        <h2>${FirstColumn.name}</h2>                            
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	
-<!--  -->
-<!--  -->
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid red;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
+	</div>
+
+			
+	
 	
 	<div class="cu-floor-bd">
 		<!-- 通信电子数码内容 -->
@@ -392,6 +394,7 @@ margin: 0 auto;
 
 </div>
 </c:forEach> 
+
 
 
 <script type="text/javascript">
