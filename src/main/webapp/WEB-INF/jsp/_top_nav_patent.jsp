@@ -58,7 +58,7 @@ color:#c9033b !important;
                     <dt class="f-s16">${FirstColumn.name}</dt>
                     <dd>
                     <c:forEach items="${FirstColumn.secondColumns}" begin="0" end="1"  var="secondColumn" varStatus="status">
-                    	<a href=""<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=${secondColumn.id}&secondColumnName=${secondColumn.name}'/>"" target="_blank">${secondColumn.name}</a>
+                    	<a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=${secondColumn.id}&secondColumnName=${secondColumn.name}'/>" target="_blank">${secondColumn.name}</a>
                     </c:forEach>
                		</dd>
                 </dl>
@@ -68,7 +68,7 @@ color:#c9033b !important;
 					</div>
 					<div class="list clearfix">
 					<c:forEach items="${FirstColumn.secondColumns}" var="secondColumn" varStatus="status">
-						 <a href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>" class="sub-item" target="_blank">${secondColumn.name}</a> 
+						 <a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=${secondColumn.id}&secondColumnName=${secondColumn.name}'/>" class="sub-item" target="_blank">${secondColumn.name}</a> 
 					</c:forEach>
 					</div>
 

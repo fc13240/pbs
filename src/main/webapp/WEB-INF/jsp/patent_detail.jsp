@@ -38,7 +38,7 @@
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">                                                       
-  <div class="current-location" style="margin-top:0px;"> <a href="<s:url value='/'/>">首页</a> > <a href="<s:url value='/business/patent_article.html?shopType=${patent.patent_first_column_id}'/>" >${patent.patent_first_column_name}</a></div>
+  <div class="current-location" style="margin-top:0px;"> <a href="<s:url value='/'/>">首页</a> > <a href="<s:url value='/business/patent_article.html?shopType=${patent.firstColumn.id}'/>" >${patent.firstColumn.name}</a></div>
 </div>
 <!--当前位置 end--> 
 
@@ -49,7 +49,7 @@
       <div class="picBtnLeft">
         <div class="bd">
           <ul>
-            <li><a href="#"><img src="<s:url value='/images/patent_type_0${patent.patent_first_column_id}.jpg'/>" alt="" title=""></a></li>
+            <li><a href="#"><img src="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>"  alt="" title=""></a></li>
           </ul>
         </div>
 
@@ -74,7 +74,7 @@
         
       </tr>
       <tr>
-        <td>案件状态：<span>${patent.patent_status_desc}</span>
+        <td>案件状态：<span>${patent.patentStatus.statusDescription}</span>
         <td>行业：${patent.secondColumn.name}</td>
       </tr>
 
@@ -87,10 +87,10 @@
         <td>交易方式：
 
 			
-			<c:if test="${patent.transaction_type==1}">
+			<c:if test="${patent.transactionType==1}">
 			转让
 			</c:if>
-			<c:if test="${patent.transaction_type==2}">
+			<c:if test="${patent.transactionType==2}">
 			许可
 			</c:if>
 			
@@ -148,7 +148,7 @@
             class="arrow arrowT"></i></li>
      <!--  <li><a href="javascript:void(0);">通知书</a><i
             class="arrow arrowT"></i></li> -->  
-        <li class="title"><a href="#">&uarr;&nbsp;${patent.patent_name}</a><i
+        <li class="title"><a href="#">&uarr;&nbsp;${patent.patentName}</a><i
             class="arrow arrowT"></i></li>
       </ul>
     </div>
