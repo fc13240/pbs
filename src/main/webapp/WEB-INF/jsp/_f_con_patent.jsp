@@ -302,7 +302,7 @@ margin: 0 auto;
 .price_range ul li a {
     display: inline-block;
     color: #666;
-    width: 80px;
+    width: 100px;
     height: 20px;
     line-height: 20px;
     border: 1px solid #666;
