@@ -348,8 +348,10 @@ margin: 0 auto;
 				</div>
 				<div class="brand-list patent-list">
 					<ul>
-						 <c:forEach items="${recommendPatents['2']}"  var="patent">
-					<%-- <c:forEach items="${recommendPatents['${FirstColumn.id}']}" var="patent"> --%>
+						 <%-- <c:forEach items="${recommendPatents['5']}"  var="patent"> --%>
+					<%-- <c:forEach items="${recommendPatents['${status.count}+1']}" var="patent"> --%>
+					<c:forEach items="${recommendPatents}" begin="${FirstColumn.id}" end="${FirstColumn.id+1}" var="patents">
+						<c:forEach items="${patents.value}" var="patent">
 					<li>	
 							<a href="" target="_blank" title="${patent.patentName}" class="img">
 								<c:choose>
@@ -377,8 +379,9 @@ margin: 0 auto;
 									</div>
 							</div>
 					</li>
-					
 						</c:forEach>
+					 	<br>
+					</c:forEach>
 						</ul>
 				</div>
 			</div>
