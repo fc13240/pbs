@@ -416,12 +416,12 @@ margin: 0 auto;
 				<span class="sign Right"></span>
 			</a>
 			<div style="width: 50px;font-size:16px;position: absolute;left: 250px;top: 15px;">
-			<a href="http://r.lotut.com" target="_blank" style="color:red  !important;">更多</a>
+			<a href="<s:url value='/'/>" target="_blank" style="color:red  !important;">更多</a>
 			</div>
 		</div>
 
 		<div  style="width:1188px;height:905px;margin-left:10px; overflow:hidden;position:relative;">
-		<iframe width="1180" height="1600" frameborder="0" style="position:relative; top:-740px; float:left; left:-10px;" scrolling="no" src="http://r.lotut.com">
+		<iframe width="1180" height="1600" frameborder="0" style="position:relative; top:-740px; float:left; left:-10px;" scrolling="no" src="<s:url value='/'/>">
 		
 		</iframe>
 		</div>

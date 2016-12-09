@@ -14,7 +14,7 @@
 <meta name="description" content="龙图腾网（www.lotut.com）是全球领先的知识产权交易平台。为企业提供专业的商标转让、专利交易等服务。拥有国内知识产权资源，全面覆盖了商标、专利、版权等领域的交易平台，让知识产权在流通中创造财富，引领知识产权的创新。" />
 <meta itemprop="name" content="" />
 <meta http-equiv="cache-control" content="no-transform">
-<link rel="shortcut icon" href="http://www.lotut.com/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<s:url value='/favicon.ico'/>" type="image/x-icon" />
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
 <link rel="stylesheet" href="<s:url value='/css/index.css'/>" />
 
