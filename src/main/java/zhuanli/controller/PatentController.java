@@ -53,11 +53,13 @@ public class PatentController {
 		List<FirstColumn>  AllColumns=patentService.selectAllColumns();
 		List<Patent> patent_list=patentService.getSecoundColumnPage(page);
 		Map<String, List<GoodsDetail>> recommendPatents=patentService.getIndexRecommendPatents();
+		List<GoodsDetail> qualityGoods=patentService.getQualityGoods();
 		model.addAttribute("AllColumns", AllColumns);
 		model.addAttribute("first_column_id", patent_column_id);
 		model.addAttribute("patents", patent_list);
 		model.addAttribute("page",page);
 		model.addAttribute("recommendPatents", recommendPatents);
+		model.addAttribute("qualityGoods",qualityGoods);
 		return "patent_index";
 	}	
 	

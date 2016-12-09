@@ -80,4 +80,6 @@ public interface PatentDao {
 	int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition);
 	
 	SaleGood getPatentDetailByPatentId(int patentId);
+	
+	List<GoodsDetail> getQualityGoods();
 }

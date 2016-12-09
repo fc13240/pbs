@@ -184,6 +184,11 @@ public class PatentMybatisDao extends SqlSessionDaoSupport implements PatentDao 
 	public SaleGood getPatentDetailByPatentId(int patentId) {
 		return patentMapper.getPatentDetailByPatentId(patentId);
 	}
+
+	@Override
+	public List<GoodsDetail> getQualityGoods() {
+		return patentMapper.getQualityGoods();
+	}
 	
 	
 }

@@ -226,5 +226,10 @@ public class PatentServiceImpl implements PatentService {
 	public SaleGood getPatentDetailByPatentId(int patentId) {
 		return patentDao.getPatentDetailByPatentId(patentId);
 	}
+
+	@Override
+	public List<GoodsDetail> getQualityGoods() {
+		return patentDao.getQualityGoods();
+	}
 	
 }

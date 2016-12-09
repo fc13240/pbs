@@ -81,4 +81,6 @@ public interface PatentMapper {
 	
 	SaleGood getPatentDetailByPatentId(int patentId);
 	
+	List<GoodsDetail> getQualityGoods();
+	
 }

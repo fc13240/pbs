@@ -57,32 +57,40 @@ $(function(){
 	        
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">精品专利</h2>                            
 	</div>
+	
 	<div class="news-info-con" style="height: 340px;">
 		<div class="news-info-bd clear">
 		
-		
+		<c:forEach items="${qualityGoods}" var="patent">
 			<div class="left-item">
 		      <div class="g-item">
 		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_01.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank" title="农业/食品/医疗" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">农业/食品/医疗</span>
+		          <a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="img">
+									<c:choose>
+										<c:when test="${not empty patent.patentImageUrl }">
+											<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" class="lazy">
+										</c:when>
+										<c:otherwise>
+											<img onerror="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>" class="lazy">
+										</c:otherwise>
+									</c:choose>
+				  </a>
+		          <a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.secondColumn.name}" class="d-name">
+		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">${patent.secondColumn.name}</span>
 		          </a>
 	        
 				  <div>
 					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
+					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">${patent.price}</span></strong>
 					  </div>
 					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=1'/>" class="btn_buy">立即抢购</a>
+					  <a target="_blank" title="立即抢购" href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" class="btn_buy">立即抢购</a>
 					  </div>
 				  </div>     
 		        </div>
 		      </div> 	
 			</div>	  
-
+		</c:forEach>
 		</div>
 	</div>
 	
@@ -404,7 +412,7 @@ margin: 0 auto;
 						<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
 							<c:forEach items="${patents.value}" var="patent">
 						<li>	
-								<a href="" target="_blank" title="${patent.patentName}" class="img">
+								<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="img">
 									<c:choose>
 										<c:when test="${not empty patent.patentImageUrl }">
 											<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" class="lazy">

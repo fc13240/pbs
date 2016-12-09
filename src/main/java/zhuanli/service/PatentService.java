@@ -85,4 +85,6 @@ public interface PatentService {
 	int getSearchPatentListBySecondColumnIdCount(PatentSearchCondition patentSearchCondition);
 	
 	SaleGood getPatentDetailByPatentId(int patentId);
+	
+	List<GoodsDetail> getQualityGoods();
 }

@@ -181,6 +181,20 @@
 		where spg.patent_id =#{patentId}
 	</select>
 	
+	<select id="getQualityGoods" resultMap="SaleGoodResultMap">
+		select spg.patent_id,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,
+		sfc.patent_first_column_name,spg.status,spg.patent_image_url,spg.transaction_type,spg.add_date,
+		p.patent_id, p.app_no, p.patent_owner, p.patent_name, p.app_person, p.app_date,  p.internal_code,
+		 pt.patent_type_id,pt.patent_type_desc,p.transaction_status,p.create_time,
+				ps.patent_status_id, ps.patent_status_desc, p.patent_status_text
+		       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+		       left join patent_types pt on p.patent_type = pt.patent_type_id 
+		       left join patent_status ps on p.patent_status = ps.patent_status_id 
+		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
+		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id
+		WHERE  spg.status=1  and spg.recommend_status=1 order by spg.add_date DESC limit 5
+	</select>
+	
 	<select id="selectRecommendPatents" resultMap="TransactionPatent">
 		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column,sg.patent_image_url
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
