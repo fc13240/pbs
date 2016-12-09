@@ -52,7 +52,7 @@
 		<c:if test="${brandCategory.categoryId < 10}">0${brandCategory.categoryId}</c:if>
 		<c:if test="${brandCategory.categoryId > 9}">${brandCategory.categoryId}</c:if>
 		类 - ${brandCategory.categoryName}
-  <div style="float:right; margin-left:850px;margin-right:65px;">
+  <div style="float:right; margin-left:800px;margin-right:65px;">
       <input value="导出清单" style="display:inline;background:#FF0000;color:white;border:2px solid #FF0000;height:35px;line-height:35px;font-weight:700;font-size:14px;width:80px;cursor:pointer;" 
       		type="button" onclick="exportList(${brandCategory.categoryId})">
        
