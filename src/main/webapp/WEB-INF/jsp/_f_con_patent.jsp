@@ -412,7 +412,7 @@ margin: 0 auto;
 						<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
 							<c:forEach items="${patents.value}" var="patent">
 						<li>	
-								<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="img">
+								<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="img">
 									<c:choose>
 										<c:when test="${not empty patent.patentImageUrl }">
 											<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" class="lazy">
@@ -424,7 +424,7 @@ margin: 0 auto;
 				                	</a>
 								<div class="brand-info">
 									<div class="line1">
-										<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" title="${patent.patentName}" target="_blank">
+										<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" title="${patent.patentName}" target="_blank">
 											${patent.patentName}</a></div>
 									<div class="line2">
 										<div class="content_type"><em class="content_type_left"><span>
