@@ -75,7 +75,11 @@ $(function(){
 										</c:otherwise>
 									</c:choose>
 				  </a>
+<<<<<<< HEAD
 		          <a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="d-name">
+=======
+		          <a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.secondColumn.name}" class="d-name">
+>>>>>>> 205546feb3440ae606889e70b9bf8e9f7807c101
 		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">${patent.patentName}</span>
 		          </a>
 	        
