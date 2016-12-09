@@ -53,13 +53,14 @@ $(function(){
 
 <!-- 1Fend -->
 <div class="floor_1F">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">1F</div>
-	        <h2>专利推荐</h2>
-	        <h2 style="float:left;margin-left:300px;"><a href="<s:url value='/patent/getAlreadySalePatent.html?page.currentPage=1'/>" target="_blank">已售出专利</a></h2>                            
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #333;;">
+	        
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">精品专利</h2>                            
 	</div>
 	<div class="news-info-con" style="height: 340px;">
 		<div class="news-info-bd clear">
+		
+		
 			<div class="left-item">
 		      <div class="g-item">
 		        <div class="g-dtl"> 
@@ -81,73 +82,7 @@ $(function(){
 		        </div>
 		      </div> 	
 			</div>	  
-	
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=2'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_02.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=2'/>" target="_blank" title="化工/冶金/生物" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">化工/冶金/生物</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=2'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	 
-	
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=3'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_03.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=3'/>" target="_blank" title="交通/包装/建筑" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">交通/包装/建筑</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=3'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	 
-	
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=4'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_04.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=4'/>" target="_blank" title="电力/环保/通讯" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">电力/环保/通讯</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=4'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	 			
-		
+
 		</div>
 	</div>
 	
@@ -267,136 +202,256 @@ margin: 0 auto;
     margin-right: 27px;
     color: #666;
 }
+
+.clothing .sidebar_na {
+    width: 330px;
+    height: 516px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.clothing .brand-list {
+    width: 860px;
+}
+.sidebar_na_link {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.brand-list {
+    width: 1190px;
+    margin: 1px auto 15px;
+    float: left;
+}
+.clothing .brand-list ul {
+    width: 856px;
+}
+.brand-list li {
+    position: relative;
+    width: 236.5px;
+    height: 274px;
+    float: left;
+    border: 1px solid #ebebeb;
+    overflow: hidden;
+    margin: -1px 0 0 -1px;
+}
+.clothing .brand-list li {
+    width: 213px;
+    height: 257px;
+}
+.clothing .brand-list li a.img, .clothing .brand-list li a.img img {
+    width: 186px;
+    height: 148px;
+}
+.clothing .brand-info {
+    width: 188px;
+}
+.brand-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 210px;
+    padding: 10px 13px 5px;
+}
+.brand-list li .line1 a {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+}
+.patent-list .content_type {
+    padding: 5px 0;
+}
+.patent-list li .line2 .patent_type {
+    height: 30px;
+}
+.brand-list li .line2 .patent_type {
+    color: #999;
+}
+.brand-list li .line3 a {
+    display: inline-block;
+    width: 22px;
+    height: 27px;
+    position: relative;
+    top: 6px;
+    lfet: 0;
+}
+.brand-list li .line3 span, .brand-list li .line3 i {
+    font-size: 16px;
+}
+
+.brand-list li .line3 i {
+    font-style: normal;
+}
+
+.brand-list li .line3 span, .brand-list li .line3 i {
+    color: #f64914;
+}
+.price_range ul li {
+    float: left;
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+.price_range ul li a {
+    display: inline-block;
+    color: #666;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #666;
+    border-radius: 10px;
+}
+.brand-list li a.img, .brand-list li a.img img {
+    display: block;
+    width: 209px;
+    height: 165px;
+    margin: 12px auto 10px;
+}
 </style>  
-
-
-
-
+<!--2f -->
+<c:forEach items="${AllColumns}"  var="FirstColumn" varStatus="status">
 <div class="floor_1F">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-	        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">1F</div>
-	        <h2>日常生活领域</h2>                            
+	<c:if test="${status.count==1}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
-	<div class="news-info-con" style="height: 340px;">
-		<div class="news-info-bd clear">
+	</c:if>
+	
+	<c:if test="${status.count==2}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
+	</div>
+	</c:if>
+	
+	<c:if test="${status.count==3}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #eab35b;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
+	</div>
+	</c:if>
+	
+	<c:if test="${status.count==4}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #65e5e7;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
+	</div>
+	</c:if>
+	
+		
+	<c:if test="${status.count==5}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
+	</div>
+	</c:if>
 			
-			<div class="sec">
-                <div class="sec_l">
-                	<img src="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160326/2016_03_26_12_00_024NBQmG.jpg" width="332" height="342" alt="仪器设备" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-								<div class="white_mask"></div>
-					<div class="cgr_lists">
-					<a class="f-db" href="" target="_blank">服装/鞋帽</a>
-							<a class="f-db" href="" target="_blank">家具/家装</a>
-							<a class="f-db" href="" target="_blank">家电/照明</a>
-							<a class="f-db" href="" target="_blank">教学/学习</a>
-							<a class="f-db" href="" target="_blank">市政/环卫</a>
-							<a class="f-db" href="" target="_blank">体育/健身</a>
-							<a class="f-db" href="" target="_blank">行政/办公</a>
-							<a class="f-db" href="" target="_blank">娱乐/玩具</a>							<a class="f-db" href="" target="_blank">地质/矿产</a>
-							<a class="f-db" href="" target="_blank">艺术/乐器</a>							
-							<a class="f-db" href="" target="_blank">日常生活领域</a>	
-							</div>
+
+	<c:if test="${status.count==6}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #a6f59c;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
+	</div>
+	</c:if>
+	
+	
+	
+	<div class="cu-floor-bd">
+		<!-- 通信电子数码内容 -->
+		<div class="cu-grid-2">
+			<div class="cu-grid-l clothing">
+				<div class="sidebar_na">
+					<div class="sidebar_na_bg">
 					
-                    <div class="tag_box">
-						<div class="tag_lists">
-							<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=274&amp;search_featureName=%E7%94%B5%E5%AD%90%E6%B5%8B%E9%87%8F%E4%BB%AA%E5%99%A8&amp;" target="_blank">电子测量仪器</a>
-									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=275&amp;search_featureName=%E8%AE%A1%E9%87%8F%E4%BB%AA%E5%99%A8&amp;" target="_blank">计量仪器</a>
-									<a class="f-db" href="http://reslib.wtoip.com/equip/findByPage?search_featureId=276&amp;search_featureName=%E5%B7%A5%E7%A8%8B%E8%AF%95%E9%AA%8C%E8%AE%BE%E5%A4%87&amp;" target="_blank">工程试验设备</a>
-									</div>
-						
-						<div class="tag_lists">
-							</div>
-						
-						<div class="tag_lists">
-							</div>
-                    </div>
-                </div>
-				
-				<div class="sec_r">
-                    <ul>
-						<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/84" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_45_42rus0HY.jpg" width="213" height="259" alt="差示扫描量热仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/85" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_03dt6IIn.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_03dt6IIn.jpg" width="213" height="259" alt="电感耦合等离子体质谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/86" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_51I15jWz.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_47_51I15jWz.jpg" width="213" height="259" alt="原子吸收光谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/87" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_49_02EJGcCI.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_49_02EJGcCI.jpg" width="213" height="259" alt="600MHz 超导傅立叶变换核磁共振谱仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/88" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_53_20zZ5D25.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_53_20zZ5D25.jpg" width="213" height="259" alt="火焰/石墨炉原子吸收分光光度计" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/89" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_54_296XtlLD.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_54_296XtlLD.jpg" width="213" height="259" alt="蛋白质分离纯化系统" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/90" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_55_32pHu1AU.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_17_55_32pHu1AU.jpg" width="213" height="259" alt="全自动比表面积分析仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									<li>
-										<a class="f-db" href="http://reslib.wtoip.com/equip/detail/94" target="_blank">
-											<img src="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_18_20_37RybWxL.jpg" class="lazy f-db" data-url="http://img3.wtoip.com/publish/ad/20160129/2016_01_29_18_20_37RybWxL.jpg" width="213" height="259" alt="激光粒度分析仪" onerror="javascript:this.src='/home/img/bg/no_photo_error.jpg'">
-										</a> 
-									</li>
-									</ul>
-                </div>
-            </div>
+					<c:if test="${status.count==1}">
+						<img src="<s:url value='/images/sidebar_na_bg01.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==2}">
+						<img src="<s:url value='/images/sidebar_na_bg02.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==3}">
+						<img src="<s:url value='/images/sidebar_na_bg03.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==4}">
+						<img src="<s:url value='/images/sidebar_na_bg04.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==5}">
+						<img src="<s:url value='/images/sidebar_na_bg05.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+					<c:if test="${status.count==6}">
+						<img src="<s:url value='/images/sidebar_na_bg06.png'/>" class="lazy" width="330" height="516" alt="">
+					</c:if>	
+																																					
+					</div>
+					<div class="sidebar_na_link">
+					<div class="price_range">
+						<ul class="clear">
+						<c:forEach items="${FirstColumn.secondColumns}"  var="secondColumn" varStatus="status">
+					  		<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=${secondColumn.id}&secondColumnName=${secondColumn.name}'/>" target="_blank">${secondColumn.name}</a></li>
+					  	</c:forEach>
+							
+						</ul>
+					</div>
 			
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank"> 
-		          	<img class="d-img" src="<s:url value='/images/patent_type_01.jpg'/>"> 
-		          </a>
-		          <a href="<s:url value='/business/patent_article.html?shopType=1'/>" target="_blank" title="农业/食品/医疗" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">农业/食品/医疗</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">1200</span></strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/business/patent_article.html?shopType=1'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	  
-	
-	
-		
-		
+					</div>
+				</div>
+				<div class="brand-list patent-list">
+					<ul>
+						<%--  <c:forEach items="${recommendPatents['2']}"  var="patent"> --%>
+					<%-- <c:forEach items="${recommendPatents['${status.count}+1']}" var="patent"> --%>
+						<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
+							<c:forEach items="${patents.value}" var="patent">
+						<li>	
+								<a href="" target="_blank" title="${patent.patentName}" class="img">
+									<c:choose>
+										<c:when test="${not empty patent.patentImageUrl }">
+											<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" class="lazy">
+										</c:when>
+										<c:otherwise>
+											<img onerror="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" class="lazy">
+										</c:otherwise>
+									</c:choose>
+				                	</a>
+								<div class="brand-info">
+									<div class="line1">
+										<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" title="${patent.patentName}" target="_blank">
+											${patent.patentName}</a></div>
+									<div class="line2">
+										<div class="content_type"><em class="content_type_left"><span>
+										  ${patent.secondColumn}</span></em></div>
+										
+									</div>
+									<div class="line3">
+										<a href="javascript:;" class="icon_feng"></a>
+										<i>¥</i>
+											<span>${patent.price}</span>
+										</div>
+								</div>
+						</li>
+							</c:forEach>
+						</c:forEach>
+					</ul>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
 		</div>
 	</div>
 	
-</div>
 
+
+</div>
+</c:forEach> 
+
+<!-- brand -->
 
 <div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">2F</div>
-		        <h2>第03类-日化用品</h2> <h2 style="float:left;margin-left:300px;"><a href="<s:url value='/brand/alreadySalebrands.html?page.currentPage=1'/>" target="_blank">已售出商标</a></h2> 
-		        <div style="clear:both;"></div>
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #333;;">
+		        
+		        <h2 style="font-size: 24px;color: #333;line-height: 25px;">第03类-日化用品</h2>                            
 		</div>
-
 		<div  style="width:1188px;height:290px;overflow:hidden;position:relative;">
 		
 	    <ul class="sy_buy_list_box">
@@ -437,12 +492,10 @@ margin: 0 auto;
 
 <div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">3F</div>
-		        <h2>第05类-医用药品</h2>
-		        <div style="clear:both;"></div>
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #333;;">
+		        
+		        <h2 style="font-size: 24px;color: #333;line-height: 25px;">第05类-医用药品</h2>                            
 		</div>
-
 		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
 		
 		<ul class="sy_buy_list_box">
@@ -484,12 +537,11 @@ margin: 0 auto;
 
 <div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">4F</div>
-		        <h2>第09类-科学仪器</h2>
-		        <div style="clear:both;"></div>
-		</div>
 
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #333;;">
+		        
+		        <h2 style="font-size: 24px;color: #333;line-height: 25px;">第09类-科学仪器</h2>                            
+		</div>
 		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
 		<ul class="sy_buy_list_box">
 	    	<c:forEach items="${recommendBrands['9']}" var="brand">
@@ -530,12 +582,11 @@ margin: 0 auto;
 
 <div class="floor_1F" style="height:340px;">
 	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">5F</div>
-		        <h2>第12类-运输工具</h2>
-		        <div style="clear:both;"></div>
-		</div>
 
+		<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #333;;">
+		        
+		        <h2 style="font-size: 24px;color: #333;line-height: 25px;">第12类-运输工具</h2>                            
+		</div>
 		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
 		<ul class="sy_buy_list_box">
 	    	<c:forEach items="${recommendBrands['12']}" var="brand">
@@ -574,230 +625,9 @@ margin: 0 auto;
 	</div>	
 </div>
 
-<div class="floor_1F" style="height:340px;">
-	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">6F</div>
-		        <h2>第20类-家具用品</h2>
-		        <div style="clear:both;"></div>
-		</div>
 
-		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
-		<ul class="sy_buy_list_box">
-	    	<c:forEach items="${recommendBrands['20']}" var="brand">
-				
-				<li class="col-md-3 col-sm-6">
-		          <div class="syPub_list">
-		              
-		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<div style="position: relative;width:200px;height:200px;">   
-							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
-							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
-	            		</div>
-		 			  </a>
-		 			 
-		 			  <div>
-			          <h3>
-			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
-			          </h3>
-			        
-			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
-			          <div class="btn_box">
-				          <div class="left price">&yen;${brand.price}</div>
-				          <div class="right">
-				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
-				          </div>
-			          </div>
-		          </div>
-		      	</li>
-				
-			</c:forEach>
-	    
-	    </ul>  
-		
-		</div>
-	</div>	
-</div>
+<!-- brand end -->
 
-<div class="floor_1F" style="height:340px;">
-	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">7F</div>
-		        <h2>第21类-厨房洁具</h2>
-		        <div style="clear:both;"></div>
-		</div>
-
-		<div  style="width:1188px;height:290px; overflow:hidden;position:relative;">
-		<ul class="sy_buy_list_box">
-	    	<c:forEach items="${recommendBrands['21']}" var="brand">
-				
-				<li class="col-md-3 col-sm-6">
-		          <div class="syPub_list">
-		              
-		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<div style="position: relative;width:200px;height:200px;">   
-							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
-							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
-	            		</div>
-		 			  </a>
-		 			  
-		 			  <div>
-			          <h3>
-			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
-			          </h3>
-			        
-			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
-			          <div class="btn_box">
-				          <div class="left price">&yen;${brand.price}</div>
-				          <div class="right">
-				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
-				          </div>
-			          </div>
-		          </div>
-		      	</li>
-				
-			</c:forEach>
-	    
-	    </ul>  
-		
-		</div>
-	</div>	
-</div>
-
-<div class="floor_1F" style="height:340px;">
-	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">8F</div>
-		        <h2>第25类-服装鞋帽</h2>
-		        <div style="clear:both;"></div>
-		</div>
-
-		<div  style="width:1188px;height:290px;overflow:hidden;position:relative;">
-		<ul class="sy_buy_list_box">
-	    	<c:forEach items="${recommendBrands['25']}" var="brand">
-				
-				<li class="col-md-3 col-sm-6">
-		          <div class="syPub_list">
-		              
-		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<div style="position: relative;width:200px;height:200px;">   
-							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
-							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
-	            		</div>
-		 			  </a>
-		 			  
-		 			  <div>
-			          <h3>
-			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
-			          </h3>
-			        
-			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
-			          <div class="btn_box">
-				          <div class="left price">&yen;${brand.price}</div>
-				          <div class="right">
-				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
-				          </div>
-			          </div>
-		          </div>
-		      	</li>
-				
-			</c:forEach>
-	    
-	    </ul>  
-		
-		</div>
-	</div>	
-</div>
-
-<div class="floor_1F" style="height:340px;">
-	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #f99885;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_02.png'/>) no-repeat 0 -25px;">9F</div>
-		        <h2>第33类-酒精饮料</h2>
-		        <div style="clear:both;"></div>
-		</div>
-
-		<div  style="width:1188px;height:290px;overflow:hidden;position:relative;">
-		<ul class="sy_buy_list_box">
-	    	<c:forEach items="${recommendBrands['33']}" var="brand">
-				
-				<li class="col-md-3 col-sm-6">
-		          <div class="syPub_list" >
-		              
-		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<div style="position: relative;width:200px;height:200px;">   
-							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
-							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
-	            		</div>
-		 			  </a>
-		 			  
-		 			  <div>
-			          <h3>
-			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
-			          </h3>
-			        
-			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
-			          <div class="btn_box">
-				          <div class="left price">&yen;${brand.price}</div>
-				          <div class="right">
-				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
-				          </div>
-			          </div>
-		          </div>
-		      	</li>
-				
-			</c:forEach>
-	    
-	    </ul>  
-		
-		</div>
-	</div>	
-</div>
-
-<div class="floor_1F" style="height:340px;">
-	<div class="floor_top clearfix">
-		<div class="news-info-hd" style="width:100%;clear:both;height: 50px;border-bottom: 2px solid #488bad;">
-		        <div class="floor_num" style="background: url(<s:url value='/images/icon_floorNav_03.png'/>) no-repeat 0 -25px;">10F</div>
-		        <h2>第43类-餐饮住宿</h2>
-		        <div style="clear:both;"></div>
-		</div>
-
-		<div  style="width:1188px;height:290px;overflow:hidden;position:relative;">
-		<ul class="sy_buy_list_box">
-	    	<c:forEach items="${recommendBrands['43']}" var="brand">
-				
-				<li class="col-md-3 col-sm-6">
-		          <div class="syPub_list">
-		              
-		              <a style=":active{color:black;text-decoration:none;}" target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
-						<div style="position: relative;width:200px;height:200px;">   
-							<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
-							<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
-	            		</div>
-		 			  </a>
-		 			  
-		 			  <div>
-			          <h3>
-			          	<a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>" class="overflow_clear">${brand.name}</a>
-			          </h3>
-			        
-			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
-			          <div class="btn_box">
-				          <div class="left price">&yen;${brand.price}</div>
-				          <div class="right">
-				          	<button title="${brand.name}" onclick="getbrandDetail(${brand.id})"  class="btn">立即抢购</button>
-				          </div>
-			          </div>
-		          </div>
-		      	</li>
-				
-			</c:forEach>
-	    
-	    </ul>  
-		
-		</div>
-	</div>	
-</div>
 
 <script type="text/javascript">
 function getbrandDetail(brandId) {
