@@ -109,16 +109,11 @@ public class PatentController {
 	}
 	
 	@RequestMapping(path="/detail",method=RequestMethod.GET)
-	public String getPatentsDetail(@RequestParam("patentno") long patent_id , Model model) {
-
-		Patent patent=patentService.getPatentById(patent_id);
-		
-
-		List<Notice> notices=patentService.getNoticeByPatentno(patent_id);
-		
+	public String getPatentsDetail(@RequestParam("patentno") long patentId , Model model) {
+		SaleGood patent =patentService.getPatentDetailByPatentId((int)patentId);
+		List<Notice> notices=patentService.getNoticeByPatentno(patentId);
 		model.addAttribute("notices", notices);
 		model.addAttribute("patent", patent);
-		
 		return "patent_detail";
 	}
 
