@@ -68,10 +68,10 @@ $(function(){
 		          <a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" >
 									<c:choose>
 										<c:when test="${not empty patent.patentImageUrl }">
-											<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" >
+											<img class="d-img" onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" >
 										</c:when>
 										<c:otherwise>
-											<img onerror="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>">
+											<img class="d-img" onerror="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>">
 										</c:otherwise>
 									</c:choose>
 				  </a>
@@ -112,7 +112,7 @@ $(function(){
 	.box_buy a:hover{color:#fff;}
     .btn_buy:hover{background: rgba(255, 102, 0, 0.9);color:#fff!important;}
 .g-item {
-width: 235px;
+width: 234px;
 height: 337px;
 margin-bottom: 15px;
 
