@@ -47,8 +47,8 @@
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">
-  <div class="current-location" style="margin-top:0;"> <a href="<s:url value='/brand/index.html'/>">商标</a>
-  	> 商标市场
+  <div class="current-location" style="margin-top:0;"> <a href="<s:url value='/brand/index.html'/>">商标市场</a>
+  	> 商标
 		<c:if test="${startIndex < 10}">0${startIndex}</c:if>
 		<c:if test="${startIndex > 9}">${startIndex}</c:if>
 		 - 
