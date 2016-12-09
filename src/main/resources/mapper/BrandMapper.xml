@@ -82,16 +82,14 @@
 	</select>
 
 	<select id="getRecommendBrands" parameterType="int" resultMap="brandMap">
-		SELECT id, NAME, price ,b.category_id,bc.category_name,b.image_url FROM brands b
-		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
-		WHERE check_status=1 AND sell_status=1 AND is_recommend=2 AND id != #{brandId}
-		order by rand() limit 3
+		SELECT id, NAME, price ,category_id,image_url FROM brands 
+		WHERE check_status=1 AND sell_status=1 AND id != #{brandId}
+		order by is_recommend desc, rand() limit 3
 		
 	</select>
 
 	<select id="getAllBrandsCount"  resultType="int">
-		SELECT count(*) FROM brands b
-		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
+		SELECT count(*) FROM brands 
 		WHERE check_status=1 AND sell_status=1
 	</select>
 	
@@ -148,10 +146,9 @@
 	</select>
 	
 	<select id="getIndexSlideBrands"  resultMap="brandMap">
-		SELECT id, NAME, price ,b.category_id,bc.category_name,b.image_url FROM brands b
-		LEFT JOIN brand_category bc ON b.category_id = bc.category_id
-		WHERE check_status=1 AND sell_status=1 AND is_recommend=2
-		order by rand() limit 5
+		SELECT id, NAME, price ,category_id,image_url FROM brands 		
+		WHERE check_status=1 AND sell_status=1
+		order by is_recommend desc limit 5
 		
 	</select>
 	
