@@ -48,7 +48,7 @@
 <!--当前位置-->
 <div class="container">
   <div class="current-location" style="margin-top:0;"> <a href="<s:url value='/brand/index.html'/>">商标</a>
-  	> 商标
+  	> 商标市场
 		<c:if test="${startIndex < 10}">0${startIndex}</c:if>
 		<c:if test="${startIndex > 9}">${startIndex}</c:if>
 		 - 
@@ -71,7 +71,14 @@
 	              <div id="beforea">
 	              <a target="_blank" title="${brand.name}" href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${brand.id}'/>">
 					<div style="position: relative;width:200px;height:200px;">   
-						<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+						<c:choose>
+							<c:when test="${not empty brand.imageUrl }">
+								<img onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='${brand.imageUrl }'/>"/>
+							</c:when>
+							<c:otherwise>
+								<img onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>"/>
+							</c:otherwise>
+						</c:choose> 
 						<span style="position: absolute;font-family:Microsoft YaHei;font-size:25px;top: 80px;width:100%;left:0;z-index:1;text-align: center;">${brand.name}</span>
 	            	</div>
 	 			  </a>
