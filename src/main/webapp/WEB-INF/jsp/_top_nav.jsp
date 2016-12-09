@@ -2,7 +2,7 @@
 <div class="w clearfix">
 	<div id="JS_mll_header_menu_panel" class="menu-panel forbid">
 		<h2 style="margin-top: 0px;"><span>全部商品分类</span></h2>
-		<ul id="JS_mll_menu_map" class="top" >
+		<ul id="JS_mll_menu_map" class="top" style="padding-bottom:0;">
 			
 			<li class="top-item recommend" style="height: 40px;">
 				<em class="flag flag0" style="margin-top: 11px;"></em>
