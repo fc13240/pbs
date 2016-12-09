@@ -58,8 +58,15 @@
           <ul>
             <li>
 	            <div style="position: relative;width:283px;height:283px;">   
-					<img src="<s:url value='${brand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
-					<span style="position: absolute;font-family:Microsoft YaHei;font-size:33px;top: 80px;width:100%;text-align: center;">${brand.name}</span>
+					<c:choose>
+						<c:when test="${not empty brand.imageUrl }">
+							<img onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='${brand.imageUrl }'/>"/>
+						</c:when>
+						<c:otherwise>
+							<img onerror="javascript:this.src='<s:url value="/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='/images/brands_img/${brand.brandCategory.categoryId}_imagemagick_small.jpg'/>"/>
+						</c:otherwise>
+					</c:choose>
+					<span style="position: absolute;font-family:Microsoft YaHei;font-size:33px;top: 80px;width:100%;left:50px;">${brand.name}</span>
 	            </div>
             </li>
           </ul>
@@ -282,7 +289,19 @@
           <dd class="pic"> 
           	<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendBrand.id}'/>" target="_blank">
 	   			<div style="position: relative;width:192px;height:154px;">   
-					<img src="<s:url value='${recommendBrand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendBrand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/>
+					<%-- <img src="<s:url value='${recommendBrand.imageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendBrand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/> --%>
+					<c:choose>
+						<c:when test="${not empty recommendBrand.imageUrl }">
+							<img onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendBrand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='${recommendBrand.imageUrl }'/>"/>
+						</c:when>
+						<c:otherwise>
+							<img onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendBrand.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='/images/brands_img/${recommendBrand.brandCategory.categoryId}_imagemagick_small.jpg'/>"/>
+						</c:otherwise>
+					</c:choose>
+					
+					
+					
+					
 					<span style="position: absolute;font-family:Microsoft YaHei;font-size:20px;top: 40px;width:100%;text-align: center;">${recommendBrand.name}</span>
 	            </div>
           	</a> 
