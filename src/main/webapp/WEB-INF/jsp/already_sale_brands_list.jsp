@@ -36,10 +36,10 @@
 			<img src="<s:url value='/images/logo.png'/>" alt="logo">
 		</a>
 		<div class="phc-search Left" style="margin-left:200px;">
-			<form id="JS_search_form" class="search-form" action="<s:url value='/brand/searchAlreadySalebrands.html'/>" method="get">	
+			<form id="JS_search_form" class="search-form" action="<s:url value='/brand/searchAlreadySalebrands.html'/>" method="post">	
 				 <input type="hidden" name="page.currentPage" value="1" > 
 				<input type="submit" class="submit-btn Right" value="搜索">
-				<input id="JS_MLL_search_header_input" name="keyword"  autocomplete="off" type="text" maxlength="255" class="search-input" >
+				<input id="JS_MLL_search_header_input" name="keyword" placeholder="商标名称" autocomplete="off" type="text" maxlength="255" class="search-input" <c:if test="${searchCondition!=null }">value="${searchCondition.keyword }"</c:if>/>
 			</form>
 			<div id="JS_search_suggest" class="suggest">
 			</div>
@@ -69,7 +69,7 @@
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
 <div class="container">
-  <div class="current-location" style="font-family: Microsoft YaHei"> 搜索 <span style="color:red;">${searchCondition.keyword }</span> 结果</div>
+  <div class="current-location" style="font-family: Microsoft YaHei">已出售商标</div>
 </div>
 <!--当前位置 end-->
 

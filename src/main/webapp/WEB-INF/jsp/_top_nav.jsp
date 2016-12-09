@@ -4,58 +4,47 @@
 		<h2 style="margin-top: 0px;"><span>全部商品分类</span></h2>
 		<ul id="JS_mll_menu_map" class="top" >
 			
-			<li class="top-item recommend">
-				<em class="flag flag0"></em>
-				<span class="txt">精选推荐</span>
+			<li class="top-item recommend" style="height: 40px;">
+				<em class="flag flag0" style="margin-top: 11px;"></em>
+				<span class="txt" style="height:40px;line-height:40px;font-size:13px;">精选推荐</span>
 				<ul id="JS_sub_recommend" data-show="show" style="width: 120px;">
-										<li><a title="发明专利" target="_blank" href="<s:url value='/business/patent_registration.html?type=1'/>">发明专利</a></li>
-										<li><a title="实用新型" target="_blank" href="<s:url value='/business/patent_registration.html?type=2'/>">实用新型</a></li>
-										<li><a title="外观设计" target="_blank" href="<s:url value='/business/patent_registration.html?type=3'/>">外观设计<i class="hot" title="外观设计"></i></a></li>
-										<li><a title="普通版权" target="_blank" href="<s:url value='/business/copyright_registration.html?type=1'/>">普通版权</a></li>
-										<li><a title="计算机版权" target="_blank" href="<s:url value='/business/copyright_registration.html?type=2'/>">计算机版权</a></li>
-										<li><a title="办公文具" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>">办公文具</a></li>
-										<li><a title="日化用品" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=3&currentPage=1'/>">日化用品<i class="hot" title="化工设备"></i></a></li>
-										<li><a title="医用药品" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=5&currentPage=1'/>">医用药品</a></li>
-										<li><a title="厨房洁具" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>">厨房洁具</a></li>
-										<li><a title="餐饮住宿" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=43&currentPage=1'/>">餐饮住宿</a></li>
-										<li><a title="健身娱乐" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=28&currentPage=1'/>">健身娱乐</a></li>
-										<li><a title="珠宝钟表" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=14&currentPage=1'/>">珠宝钟表</a></li>
-				</ul>
-				<i class="arrow"></i>
-			</li>
-
-	
+					<c:forEach items="${AllColumns}" var="FirstColumn">
+						<li><a title="${FirstColumn.name}" target="_blank" href="<s:url value='/'/>">${FirstColumn.name}</a></li>
 										
-			<li class="top-item">
-				<em class="flag flag1"></em>
-				<a title="农业/食品/医疗" target="_blank" class="txt" href="<s:url value='/business/patent_article.html?shopType=1&currentPage=1'/>">农业/食品/医疗</a>				
-	
-				<i class="arrow"></i>
+					</c:forEach>
+					<li><a title="办公文具" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>">办公文具</a></li>
+					<li><a title="日化用品" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=3&currentPage=1'/>">日化用品<i class="hot" title="化工设备"></i></a></li>
+					<li><a title="医用药品" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=5&currentPage=1'/>">医用药品</a></li>
+					<li><a title="厨房洁具" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>">厨房洁具</a></li>
+					<li><a title="餐饮住宿" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=43&currentPage=1'/>">餐饮住宿</a></li>
+					<li><a title="健身娱乐" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=28&currentPage=1'/>">健身娱乐</a></li>
+				</ul>
+				<i class="arrow" style="margin-top: 17px;"></i>
 			</li>
-						
-			<li class="top-item">
-				<em class="flag flag1"></em>
-				<a title="化工/冶金/生物" target="_blank" class="txt" href="<s:url value='/business/patent_article.html?shopType=2&currentPage=1'/>">化工/冶金/生物</a>				
-	
-				<i class="arrow"></i>
+										
+			<c:forEach items="${AllColumns}" var="FirstColumn" varStatus="status">							
+			<li class="top-item" style="height: 40px;">
+			<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="${FirstColumn.name}" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">${FirstColumn.name}</a>				
+				<div class="sub" style="width:450px">
+					<div class="title clearfix">
+						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">${FirstColumn.name}<span class="darrow">&gt;&gt;</span></a></h4>
+					</div>
+					<div class="list clearfix">
+					<c:forEach items="${FirstColumn.secondColumns}" var="secondColumn" varStatus="status">
+						 <a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=${secondColumn.id}&secondColumnName=${secondColumn.name}'/>" class="sub-item" target="_blank">${secondColumn.name}</a> 
+					</c:forEach>
+					</div>
+
+				</div>
+				<i class="arrow" style="margin-top: 17px;"></i>                
 			</li>
-						
-			<li class="top-item">
-				<em class="flag flag1"></em>
-				<a title="交通/包装/建筑" target="_blank" class="txt" href="<s:url value='/business/patent_article.html?shopType=3&currentPage=1'/>">交通/包装/建筑</a>				
-	
-				<i class="arrow"></i>
-			</li>
-						
-			<li class="top-item">
-				<em class="flag flag1"></em>
-				<a title="电力/环保/通讯" target="_blank" class="txt" href="<s:url value='/business/patent_article.html?shopType=4&currentPage=1'/>">电力/环保/通讯</a>				
-	
-				<i class="arrow"></i>
-			</li>
-			<li class="top-item">
-				<em class="flag flag1"></em>
-				<a title="商标01-15类" target="_blank" class="txt" href="<s:url value='/'/>">商标01-15类</a>				
+			</c:forEach>	
+			
+			
+			<li class="top-item" style="height: 40px;">
+				<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="商标01-15类" target="_blank" class="txt" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">商标01-15类</a>				
 				<div class="sub" style="width:450px">
 					<div class="title clearfix">
 						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">商标01-15类<span class="darrow">&gt;&gt;</span></a></h4>
@@ -82,12 +71,12 @@
 					</div>
 
 				</div>
-				<i class="arrow"></i>
+				<i class="arrow" style="margin-top: 17px;"></i>
 			</li>
 			
-			<li class="top-item">
-				<em class="flag flag1"></em>
-				<a title="商标16-30类" target="_blank" class="txt" href="<s:url value='/'/>">商标16-30类</a>				
+			<li class="top-item" style="height: 40px;">
+				<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="商标16-30类" target="_blank" class="txt" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">商标16-30类</a>				
 				<div class="sub" style="width:450px">
 					<div class="title clearfix">
 						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">商标16-30类<span class="darrow">&gt;&gt;</span></a></h4>
@@ -113,11 +102,11 @@
 					</div>
 
 				</div>
-				<i class="arrow"></i>
+				<i class="arrow" style="margin-top: 17px;"></i>
 			</li>
-			<li class="top-item">
-				<em class="flag flag1"></em>
-				<a title="商标31-45类" target="_blank" class="txt" href="<s:url value='/'/>">商标31-45类</a>				
+			<li class="top-item" style="height: 40px;">
+				<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="商标31-45类" target="_blank" class="txt" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">商标31-45类</a>				
 				<div class="sub" style="width:450px">
 					<div class="title clearfix">
 						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">商标31-45类<span class="darrow">&gt;&gt;</span></a></h4>
@@ -146,7 +135,7 @@
 					</div>
 
 				</div>
-				<i class="arrow"></i>
+				<i class="arrow" style="margin-top: 17px;"></i>
 			</li>														
 		</ul>
 	</div>
