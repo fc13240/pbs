@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>专利交易-<c:if test="${shopType==1}">农业/食品/医疗</c:if><c:if test="${shopType==2}">化工/冶金/生物</c:if><c:if test="${shopType==3}">交通/包装/建筑</c:if><c:if test="${shopType==4}">电力/环保/通讯</c:if> </title>
+<title>专利交易-${good.firstColumn.name }</title>
 <meta name="keywords" content="专利交易" />
 <meta name="description" content="专利交易" />
 <meta itemprop="name" content="" />
@@ -315,9 +315,8 @@ font-family: "微软雅黑", Microsoft YaHei, arial, verdana, sans-serif;
     </div>     
   </div>
 
-</div>
 <div class="right-sidebar"> </div>
-</div>
+
 
 <script type="text/javascript" src="http://r.lotut.com/public/javascript/jquery.lazyload.js"></script> 
 

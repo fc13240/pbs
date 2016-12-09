@@ -71,7 +71,6 @@
       <tr>
       	<td>申请日期：<fmt:formatDate value="${patent.appDate}" pattern="yyyy-MM-dd"/></td>
         <td>发布日期：<span><fmt:formatDate value="${patent.addDate}" pattern="yyyy-MM-dd"/></span>
-        
       </tr>
       <tr>
         <td>案件状态：<span>${patent.patentStatus.statusDescription}</span>
@@ -85,15 +84,12 @@
       <tr style="border-top:1px dashed #ececec">
         <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">&yen;${patent.price}</span>
         <td>交易方式：
-
-			
 			<c:if test="${patent.transactionType==1}">
 			转让
 			</c:if>
 			<c:if test="${patent.transactionType==2}">
 			许可
 			</c:if>
-			
         </td>
       </tr>
       <tr >
