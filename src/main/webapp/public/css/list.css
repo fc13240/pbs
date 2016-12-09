@@ -1,0 +1,6 @@
+.container{color:#595757;width:1190px;margin-bottom: 0 auto;}
+.current-location{height:48px;line-height:48px;margin-top:20;font-size:16px;}
+
+.container.box-red-line{border-top: 1px solid #f91f38;margin-bottom: 20px;}
+
+.sy_buy_list_box li{width:202px;margin-left: 23px;height:265px;margin-bottom:20px;float:left;display:block;}

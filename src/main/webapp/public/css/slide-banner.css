@@ -1,0 +1,17 @@
+img{border:0;}
+ul,li{list-style:none;margin:0;padding:0}
+
+/*DB_tab25*/
+.DB_tab25 {width:714px;height:300px;position:relative;overflow:hidden;}
+.DB_tab25 .DB_bgSet{position:relative;}
+.DB_tab25 .DB_bgSet li{position:absolute;width:100%;height:300px; background-position:50% 0; background-repeat:no-repeat;display:inline;}
+.DB_tab25 .DB_bgSet li a,.DB_tab25 .DB_imgSet a{ display:block;width:100%;height:100%;overflow: hidden;margin:0 auto;}
+.DB_tab25 .DB_imgSet{position:absolute;width:100%;left:50%;margin-left:-50%;}
+.DB_tab25 .DB_imgSet img{ display:block;position:absolute;}
+.DB_tab25 .DB_menuWrap{position:absolute; left:0;bottom:10px;width:100%;text-align:center;font-size:0;}
+.DB_tab25 .DB_menuWrap .DB_menuSet li{display: inline-block;*display: inline;*zoom:1;height:12px;width:12px;overflow: hidden; cursor:pointer;margin:0 4px;background: url("../image/dot.png") no-repeat 0 -42px;float:none; position:inherit;}
+.DB_tab25 .DB_menuWrap .DB_menuSet li.select{background-position: 0 -30px}
+.DB_tab25 .DB_prev,.DB_tab25 .DB_next{width:50px;height:50px;position:absolute;top:-150px;z-index: 10;cursor:pointer;background: url(../image/bg-focusBox.png) no-repeat 0 0;display:none;}
+.DB_tab25 .DB_next{right:0;background-position: 0 -50px;}
+.DB_tab25 .DB_prev:hover{background-position: 0 -100px}
+.DB_tab25 .DB_next:hover{background-position: 0 -150px}

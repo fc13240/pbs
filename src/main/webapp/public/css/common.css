@@ -1,0 +1,39 @@
+﻿/* reset.css */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,table,th,td,textarea{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 'Microsoft YaHei','SimSun',Tahoma,Geneva,sans-serif;color:#333}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+a{color:#333;text-decoration:none}
+a:hover{color:#f70;text-decoration:underline}
+a,a:active,a:focus,input{outline:none}
+.clear:after,.cf:after{content:'.';display:block;height:0;visibility:hidden;clear:both}
+.clear,.cf{*zoom:1}
+.clr_l{clear:left}
+.clearit{height:0;clear:both;font-size:0;overflow:hidden}
+.f-ib{display:inline-block;*display:inline;*zoom:1}
+.f-dn{display:none}
+.f-db{display:block}
+.f-fl{float:left}
+.f-fr{float:right}
+.f-fwn{font-weight:normal}
+.f-fwb{font-weight:bold}
+.f-tal{text-align:left}
+.f-tac{text-align:center}
+.f-tar{text-align:right}
+.f-csp{cursor:pointer}
+.f-csd{cursor:default}
+.f-usn{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.f-yh{font-family:'Microsoft Yahei' !important}
+.f-st{font-family:'SimSun' !important}
+.f-s14{font-size:14px !important}
+.f-s16{font-size:16px !important}
+.f-s18{font-size:18px !important}
+.f-s20{font-size:20px !important}
+.f-s24{font-size:24px !important}
+.c-6{color:#666 !important}
+.c-9{color:#999 !important}

@@ -1,0 +1,27 @@
+/* sidebar */
+.sidebar{position: fixed;top:0;right:0;z-index:1001;width:40px;height:100%;}
+.sidebar_main{width:40px;height:100%;background:url(../image/right_cgr.png) 0 -20px no-repeat #282828;}
+.sidebar .top_link{height:172px;}
+.sidebar_box{margin-top:20px;}
+.sidebar_box li{float:left;width:40px;min-height:38px;cursor: pointer;margin-bottom:5px}
+.sidebar_box a{position:relative;display:block;min-height:38px;text-align:center;font:12px/14px Microsoft Yahei;color:#282828;}
+.sidebar_box a:hover{text-decoration:none;color:#fff;background:#f74914;}
+.sidebar_box a i{position:relative;z-index:4;display:block;float:left;margin:3px;width:34px;height:32px;background:url(../image/right_cgr.png) no-repeat #282828;}
+.sidebar_box a i.i-service-icon1{ background-position:-40px -192px;background-color:#fd0964;}
+.sidebar_box a i.i-service-icon2{ background-position:-40px 0px;}
+.sidebar_box a i.i-service-icon3{ background-position:-40px -32px;}
+.sidebar_box a i.i-service-icon4{ background-position:-40px -64px;}
+.sidebar_box a i.i-service-icon5{ background-position:-40px -96px;}
+.sidebar_box a i.i-service-icon6{ background-position:-40px -128px;}
+.sidebar_box a i.i-service-icon7{ background-position:-40px -160px;}
+.sidebar_box a:hover i.i-service-icon1{background-color:#f74914;}
+.sidebar_box a:hover i.i-service-icon2{background-color:#f74914;}
+.sidebar_box a:hover i.i-service-icon3{background-color:#f74914;}
+.sidebar_box a:hover i.i-service-icon4{background-color:#f74914;}
+.sidebar_box a:hover i.i-service-icon5{background-color:#f74914;}
+.sidebar_box a:hover i.i-service-icon6{background-color:#f74914;}
+.sidebar_box a:hover i.i-service-icon7{background-color:#f74914;}
+.sidebar_box a .info{display:none;position:absolute;top:0;right:-15px;z-index:0;float:left;height:38px;line-height:38px;background:#f74914;width:48px;padding:0 3px 0 16px;filter:alpha(Opacity=0);-moz-opacity:0;opacity: 0;border-radius:2px 0 0 2px; text-align:left}
+.sidebar_box a em{padding-bottom:8px;padding-left:2px;*padding-left:0;width:15px;word-wrap: break-word;font-family:SimSun;letter-spacing:14px;*letter-spacing:0;line-height:14px}
+.s_toTop{display:none;position:absolute;bottom:0px;right:0;z-index:4;padding:9px 3px;width:34px;height:22px;background:url(../image/right_cgr.png) -37px -224px no-repeat #383838;}
+.s_toTop:hover{background-color:#f74914;}
