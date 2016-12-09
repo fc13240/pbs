@@ -23,8 +23,15 @@ public class GoodsDetail {
 	private int recommendStatus;
 	private String transferor;
 	private String patentImageUrl;
+	private String patentSecondColumnName;
 
-	
+
+	public String getPatentSecondColumnName() {
+		return patentSecondColumnName;
+	}
+	public void setPatentSecondColumnName(String patentSecondColumnName) {
+		this.patentSecondColumnName = patentSecondColumnName;
+	}
 	public String getTransferor() {
 		return transferor;
 	}

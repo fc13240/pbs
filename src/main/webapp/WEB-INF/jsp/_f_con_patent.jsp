@@ -65,7 +65,7 @@ $(function(){
 			<div class="left-item">
 		      <div class="g-item">
 		        <div class="g-dtl"> 
-		          <a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" >
+		          <a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" >
 									<c:choose>
 										<c:when test="${not empty patent.patentImageUrl }">
 											<img class="d-img" onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" >
@@ -75,8 +75,8 @@ $(function(){
 										</c:otherwise>
 									</c:choose>
 				  </a>
-		          <a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.secondColumn.name}" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">${patent.secondColumn.name}</span>
+		          <a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="d-name">
+		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">${patent.patentName}</span>
 		          </a>
 	        
 				  <div>
@@ -84,7 +84,7 @@ $(function(){
 					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">${patent.price}</span></strong>
 					  </div>
 					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" class="btn_buy">立即抢购</a>
+					  <a target="_blank" title="立即抢购" href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" class="btn_buy">立即抢购</a>
 					  </div>
 				  </div>     
 		        </div>
@@ -412,7 +412,7 @@ margin: 0 auto;
 						<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
 							<c:forEach items="${patents.value}" var="patent">
 						<li>	
-								<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="img">
+								<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="img">
 									<c:choose>
 										<c:when test="${not empty patent.patentImageUrl }">
 											<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" class="lazy">
@@ -424,11 +424,13 @@ margin: 0 auto;
 				                	</a>
 								<div class="brand-info">
 									<div class="line1">
-										<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" title="${patent.patentName}" target="_blank">
+										<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" title="${patent.patentName}" target="_blank">
 											${patent.patentName}</a></div>
 									<div class="line2">
 										<div class="content_type"><em class="content_type_left"><span>
-										  ${patent.secondColumn}</span></em></div>
+										  ${patent.patentSecondColumnName}</span></em></div>
+										<%-- <div class="content_type"><em class="content_type_left"><span>
+										  ${patent.patentSecondColumnName}</span></em></div> --%>
 										
 									</div>
 									<div class="line3">

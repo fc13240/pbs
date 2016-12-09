@@ -165,6 +165,7 @@
 		<result property="recommendStatus" column="recommend_status"/>
 		<result property="transferor" column="transferor"/>	
 		<result property="patentImageUrl" column="patent_image_url"/>
+		<result property="patentSecondColumnName" column="patent_second_column_name"/>	
 	</resultMap>
 	
 	<select id="getPatentDetailByPatentId" parameterType="int" resultMap="SaleGoodResultMap">
@@ -196,27 +197,27 @@
 	</select>
 	
 	<select id="selectRecommendPatents" resultMap="TransactionPatent">
-		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column,sg.patent_image_url
+		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
 		WHERE  sg.status=1  and ss.patent_first_column_id=1 ORDER BY recommend_status DESC LIMIT 8) AS c1
 		UNION 
-		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column,sg.patent_image_url
+		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
 		WHERE  sg.status=1  and ss.patent_first_column_id=2 ORDER BY recommend_status DESC LIMIT 8) AS c2
 		UNION 
-		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column,sg.patent_image_url
+		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
 		WHERE  sg.status=1  and ss.patent_first_column_id=3 ORDER BY recommend_status DESC LIMIT 8) AS c3
 		UNION 
-		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column,sg.patent_image_url
+		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
 		WHERE  sg.status=1  and ss.patent_first_column_id=4 ORDER BY recommend_status DESC LIMIT 8) AS c4
 		UNION 
-		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column,sg.patent_image_url
+		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
 		WHERE  sg.status=1  and ss.patent_first_column_id=5 ORDER BY recommend_status DESC LIMIT 8) AS c5
 		UNION 
-		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,sg.patent_second_column,sg.patent_image_url
+		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
 		WHERE  sg.status=1  and ss.patent_first_column_id=6 ORDER BY recommend_status DESC LIMIT 8) AS c6
 	</select>
