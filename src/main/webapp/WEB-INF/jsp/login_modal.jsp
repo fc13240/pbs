@@ -254,12 +254,12 @@
 			</fieldset>
 	         
 	         </div>
-	         <div class="vlogboxMore" id="">
+	        <%--  <div class="vlogboxMore" id="">
                 <p>一键登录</p>
                 <a class="linkqzone" href="<s:url value='/user/QQLogin.html'/>" title="使用QQ号登录" data-fid="f296fc4cfce"></a>
                 <a class="linksina" href="javascript:void(0);" title="使用微信登录"  onclick="weChat()" data-fid="f5798def9af"></a>
                 
-            </div>
+            </div> --%>
 	         
 	        </div>
       </div>
