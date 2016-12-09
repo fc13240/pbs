@@ -87,13 +87,15 @@ color:#c9033b !important;
       <li><a href="<s:url value='/'/>" title="龙图腾专利商标交易">首页</a></li>
       <li><a href="<s:url value='/patent/index.html'/>" title="专利">专利市场</a></li>
       <li><a href="<s:url value='/brand/index.html'/>" title="商标">商标市场</a></li>
+      <li><a href="<s:url value='/patent/getAlreadySalePatent.html'/>" title="专利案例">专利案例</a></li>
+      <li><a href="<s:url value='/brand/alreadySalebrands.html'/>" title="商标案例">商标案例</a></li>
       <li><a target="_blank" href="http://g.lotut.com" title="专利管家">专利管家</a></li>  	   
 	</ul>
 </div>
 <iframe id="feeExcelFileFrame" style="display:none"></iframe>	  
 <script>
 function exportFees() {
-	alert(123);
+	
 	var iframe = document.getElementById('feeExcelFileFrame');
 	iframe.src = "/patent/exportPatents.html";		
 }
