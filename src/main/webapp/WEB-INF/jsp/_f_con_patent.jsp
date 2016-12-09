@@ -76,7 +76,7 @@ $(function(){
 									</c:choose>
 				  </a>
 		          <a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.secondColumn.name}" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">${patent.secondColumn.name}</span>
+		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;">${patent.patentName}</span>
 		          </a>
 	        
 				  <div>
