@@ -56,10 +56,12 @@ public class IndexController {
 		Map<String, List<GoodsDetail>> recommendPatents=patentService.getIndexRecommendPatents();
 		List<Patent> patent_list=patentService.getPatents();
 		Map<String, List<Brand>> recommendBrands = brandService.getIndexRecommendBrands();
+		List<GoodsDetail> qualityGoods=patentService.getQualityGoods();
 		model.addAttribute("patent_list", patent_list);
 		model.addAttribute("AllColumns", AllColumns);
 		model.addAttribute("recommendBrands", recommendBrands);
 		model.addAttribute("recommendPatents", recommendPatents);
+		model.addAttribute("qualityGoods", qualityGoods);
 		return "index";
 	}
 	
