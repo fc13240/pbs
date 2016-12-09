@@ -362,7 +362,7 @@
 		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
 		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id where spg.status=2
 		       <if test="keyword_pattern!=null">
-		       	and p.patent_name like #{keyword_pattern}
+		       	and (p.patent_name like #{keyword_pattern} or p.app_no like #{keyword_pattern})
 		       </if>
 		       limit #{page.startIndex},#{page.pageSize}
 
@@ -372,7 +372,7 @@
 		<bind name="keyword_pattern" value="'%' +keyword + '%'"/>
 		select count(*) from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id where spg.status=2
 		   <if test="keyword_pattern!=null">
-	       	and p.patent_name like #{keyword_pattern}
+	       	and (p.patent_name like #{keyword_pattern} or p.app_no like #{keyword_pattern})
 	       </if>
 	</select>
 	

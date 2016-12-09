@@ -239,6 +239,7 @@
              </tbody></table>
 
     </div>
+    <!-- 
     <div class="list-item">
       <h3>支付方式</h3>
       <ul class="list-item-pay clear">
@@ -268,6 +269,7 @@
         </li>
       </ul>
     </div>
+     -->
   </div>
   <div class="right-sec">
 

@@ -1,9 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<style type="text/css">
-	a.txt a:link, a.txt a:visited,a.txt a:hover {
-		text-decoration:none;
-	}
-</style>
 
 <div class="w clearfix">
 	<div id="JS_mll_header_menu_panel" class="menu-panel forbid">
@@ -226,6 +221,8 @@
       <li><a href="<s:url value='/'/>" title="龙图腾专利商标交易">首页</a></li>
       <li><a href="<s:url value='/patent/index.html'/>" title="专利">专利市场</a></li>
       <li><a href="<s:url value='/brand/index.html'/>" title="商标">商标市场</a></li>
+      <li><a href="<s:url value='/patent/getAlreadySalePatent.html'/>" title="专利案例">专利案例</a></li>
+      <li><a href="<s:url value='/brand/alreadySalebrands.html'/>" title="商标案例">商标案例</a></li>
       <li><a target="_blank" href="http://g.lotut.com" title="专利管家">专利管家</a></li> 	   
 	</ul>
 </div>  

@@ -255,7 +255,7 @@ public class PatentController {
 	}
 	
 	@RequestMapping(path="/getSearchGoodListBySecondColumn")
-	public String getGoodListBySecondType(PatentSearchCondition searchCondition, Model model){
+	public String getGoodListBySecondType(PatentSearchCondition searchCondition,String secondColumnName, Model model){
 		Page page = searchCondition.getPage();
 		Integer secondColumnId =searchCondition.getSecondColumnId();
 		if(page.getCurrentPage()<=1){
@@ -268,6 +268,7 @@ public class PatentController {
 		model.addAttribute("goods",goods);
 		model.addAttribute("page",page);
 		model.addAttribute("searchCondition",searchCondition);
+		model.addAttribute("secondColumnName",secondColumnName);
 		model.addAttribute("secondColumnId",secondColumnId);
 		return "patents_list_by_second_column";
 	}
