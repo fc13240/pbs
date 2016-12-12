@@ -182,7 +182,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
       </tr>
     </table>
   </div>
-  <div class="right-sec">
+ <!--  <div class="right-sec">
     <h2>商家信息</h2>
     <ul class="good-list-item1" style="padding:10px 40px;">
       <li>
@@ -199,7 +199,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
         </dl>
       </li>
     </ul>
-  </div>
+  </div> -->
 </div>
 <!--专利、卖家信息 end--> 
 <!--专利详情、精品专利-->
