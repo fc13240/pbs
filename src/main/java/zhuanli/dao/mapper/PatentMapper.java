@@ -83,4 +83,6 @@ public interface PatentMapper {
 	
 	List<GoodsDetail> getQualityGoods();
 	
+	List<SaleGood> getRecommedPatents(long patentId);
+	
 }

@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
 <link href="<s:url value='/css/category.min.css?2016322'/>" rel="stylesheet" type="text/css"/> 
 <link rel="stylesheet" href="<s:url value='/Themes/Home/default/Public/css/top_footer.css'/>">
+<link rel="stylesheet" href="<s:url value='/css/details.css'/>" />
 </head>
 <body>
 
@@ -199,6 +200,8 @@
              </table>
 
     </div>
+    
+    
     <!-- 
     <div class="list-item">
       <h3>通知书 </h3>
@@ -212,6 +215,55 @@
       </ul>
     </div>
      -->
+     </div>
+      <div class="right-sec">
+
+    <h2>精品推荐</h2>
+    <ul class="good-list-item">
+    
+      <li>
+      <c:forEach items="${recommendPatents}" var="recommendPatent">
+        <dl>
+          <dd class="pic"> 
+          	<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${recommendPatent.patentId}'/>" target="_blank">
+	   			<div style="position: relative;width:192px;height:154px;">   
+					<%-- <img src="<s:url value='${recommendPatent.patentImageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendPatent.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/> --%>
+					<%-- <c:choose>
+						<c:when test="${not empty recommendPatent.patentpatentImageUrl }">
+							<img onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendPatent.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='${recommendPatent.patentImageUrl }'/>"/>
+						</c:when>
+						<c:otherwise>
+							<img onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendPatent.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='/images/brands_img/${recommendPatent.brandCategory.categoryId}_imagemagick_small.jpg'/>"/>
+						</c:otherwise>
+					</c:choose> --%>
+					
+					<c:choose>
+										<c:when test="${not empty patent.patentImageUrl }">
+											<img class="d-img" onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" >
+										</c:when>
+										<c:otherwise>
+											<img class="d-img" onerror="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>">
+										</c:otherwise>
+									</c:choose>
+					
+					
+					
+					<span style="position: absolute;font-family:Microsoft YaHei;font-size:20px;top: 60px;width:100%;left:0;z-index:1;text-align: center;">${recommendPatent.name}</span>
+	            </div>
+          	</a> 
+          </dd>
+          <dt class="name"> 
+          	<div style="width:110px;float:left;">
+          		<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendPatent.patentId}'/>" target="_blank" title="${recommendPatent.name}">${recommendPatent.name}</a>
+          	</div> 
+          	<div class="num" style="float:left;">&yen;${recommendPatent.price}</div>
+          </dt>
+        </dl>
+        </c:forEach>
+      </li>
+    
+    </ul> 
+  </div>
   </div>
 
 </div>

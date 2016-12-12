@@ -182,6 +182,20 @@
 		where spg.patent_id =#{patentId}
 	</select>
 	
+	<select id="getRecommedPatents" parameterType="long" resultMap="SaleGoodResultMap">
+		select spg.patent_id,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,
+		sfc.patent_first_column_name,spg.status,spg.patent_image_url,spg.transaction_type,
+		p.patent_id, p.app_no, p.patent_owner, p.patent_name, p.app_person, p.app_date,  p.internal_code,
+		 pt.patent_type_id,pt.patent_type_desc,p.transaction_status,p.create_time,
+				ps.patent_status_id, ps.patent_status_desc, p.patent_status_text
+		       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+		       left join patent_types pt on p.patent_type = pt.patent_type_id 
+		       left join patent_status ps on p.patent_status = ps.patent_status_id 
+		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
+		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id
+		where spg.patent_id !=#{patentId} and spg.status=1  and spg.recommend_status=1 order by spg.add_date LIMIT 4
+	</select>
+	
 	<select id="getQualityGoods" resultMap="SaleGoodResultMap">
 		select spg.patent_id,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,
 		sfc.patent_first_column_name,spg.status,spg.patent_image_url,spg.transaction_type,spg.add_date,

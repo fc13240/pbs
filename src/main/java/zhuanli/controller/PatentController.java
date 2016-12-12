@@ -104,7 +104,9 @@ public class PatentController {
 	@RequestMapping(path="/getPatentDetailByPatentId",method=RequestMethod.GET)
 	public String getPatentDetailByPatentId(@RequestParam("patentId") int patentId , Model model) {
 		SaleGood good =patentService.getPatentDetailByPatentId(patentId);
+		List<SaleGood> recommedPatents=patentService.getRecommedPatents(patentId);
 		model.addAttribute("patent", good);
+		model.addAttribute("recommedPatents", recommedPatents);
 		return "patent_detail";
 	}
 	
@@ -225,7 +227,8 @@ public class PatentController {
 		int totalCount=(int)patentService.getPatentsByShopTypeCount(shopType);
 		page.setTotalRecords(totalCount);
 		List<Patent> patents = patentService.getPatentsByShopType(shopType,page); 
-		
+		List<SaleGood> recommedPatents=patentService.getRecommedPatents(patentId);
+		model.addAttribute("recommedPatents", recommedPatents);
 		model.addAttribute("good",good);
 		model.addAttribute("patents", patents);
 		model.addAttribute("page", page);

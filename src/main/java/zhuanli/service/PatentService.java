@@ -87,4 +87,6 @@ public interface PatentService {
 	SaleGood getPatentDetailByPatentId(int patentId);
 	
 	List<GoodsDetail> getQualityGoods();
+	
+	List<SaleGood> getRecommedPatents(long patentId);
 }

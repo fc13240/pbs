@@ -82,4 +82,6 @@ public interface PatentDao {
 	SaleGood getPatentDetailByPatentId(int patentId);
 	
 	List<GoodsDetail> getQualityGoods();
+	
+	List<SaleGood> getRecommedPatents(long patentId);
 }
