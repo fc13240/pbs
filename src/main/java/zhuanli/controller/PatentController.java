@@ -233,7 +233,7 @@ public class PatentController {
 		model.addAttribute("patents", patents);
 		model.addAttribute("page", page);
 		model.addAttribute("shopType", shopType);
-		return "service_aready_sale_patent_detail";
+		return "patent_detail";
 	}
 	
 	@RequestMapping(path="/getGoodListBySecondColumn")

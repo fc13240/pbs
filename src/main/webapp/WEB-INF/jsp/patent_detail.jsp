@@ -5,17 +5,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
+<title>专利交易-${good.firstColumn.name }</title>
+<meta name="keywords" content="专利交易" />
+<meta name="description" content="专利交易" />
 <meta itemprop="name" content="" />
 <meta http-equiv="cache-control" content="no-transform">
 <link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
 <link href="<s:url value='/css/category.min.css?2016322'/>" rel="stylesheet" type="text/css"/> 
 <link rel="stylesheet" href="<s:url value='/Themes/Home/default/Public/css/top_footer.css'/>">
+<script type="text/javascript" src="<s:url value='/public/javascript/jquery-1.8.3.min.js'/>"></script> 
 <link rel="stylesheet" href="<s:url value='/css/details.css'/>" />
 </head>
 <body>
+<style type="text/css">
 
+.s-class {
+border: 1px solid #bababa;
+float: left;
+height: 34px;
+line-height: 34px;
+text-align: center;
+cursor: pointer;
+margin-top: 10px;
+margin-right: 5px;
+background: #f5f5f5;
+font-size: 12px;
+padding: 0 13px;
+}
+.s-hover {
+background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
+}
+</style>
 <script type="text/javascript">(function(){var screenWidth=window.screen.width;if(screenWidth>=1280){document.body.className=document.body.className+" root_body";;window.LOAD=true;}else{window.LOAD=false;}})()</script>
 
 
@@ -38,238 +58,268 @@
 <link rel="stylesheet" href="<s:url value='/public/css/details.css'/>" />
 <input type="hidden" id="J_val_title">
 <!--当前位置-->
-<div class="container">                                                       
-  <div class="current-location" style="margin-top:0px;"> <a href="<s:url value='/'/>">首页</a> > <a href="<s:url value='/business/patent_article.html?shopType=${patent.firstColumn.id}'/>" >${patent.firstColumn.name}</a></div>
+<div class="container">
+  <div class="current-location" style="margin-top:0px;"> <a href="<s:url value='/index.html'/>">首页</a> > 专利交易</div>
 </div>
 <!--当前位置 end--> 
 
 <!--专利、卖家信息-->
-<div class="container box-red-line">
-  <div class="left-sec">
-    <div class="flexslider">
-      <div class="picBtnLeft">
-        <div class="bd">
-          <ul>
-            <li><a href="#"><img src="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>"  alt="" title=""></a></li>
-          </ul>
-        </div>
 
-      </div>
-    </div>
-    <table class="goods-tb pos-rlt" width="580" border="0" cellspacing="0" cellpadding="0">
-       <tr>
-       <td colspan="2">
-       <span style="line-height: 44px;font-size:20px;collor:#000000;">[${patent.secondColumn.name}]${patent.patentName}</span> 
-      <caption id="J_detail_title">
-            <div id="J_activity_title"></div>
-      </caption>
-      </td>
-      </tr>
-      <tr>
-        <td width="250px;">专利号：${patent.appNo}</td>
-        <td>第一申请人：<span>${patent.appPerson}</span>
-      </tr>
-      <tr>
-      	<td>申请日期：<fmt:formatDate value="${patent.appDate}" pattern="yyyy-MM-dd"/></td>
-        <td>发布日期：<span><fmt:formatDate value="${patent.addDate}" pattern="yyyy-MM-dd"/></span>
-      </tr>
-      <tr>
-        <td>案件状态：<span>${patent.patentStatus.statusDescription}</span>
-        <td>行业：${patent.secondColumn.name}</td>
-      </tr>
+<div class="container box-red-line" >
+	<div class="left-sec">
+		<div class="flexslider">
+      		<div class="picBtnLeft">
+        		<div class="bd">
+					<ul>
+					  <li>
+					  	<a href="#">
+					  	<c:choose>
+						<c:when test="${not empty good.patentImageUrl }">
+						<img src="<s:url value='${good.patentImageUrl }'/>" >
+						</c:when>
+						<c:otherwise>
+						<img src="<s:url value='/images/goods/${good.secondColumn.id }.jpg'/>" >
+						</c:otherwise>
+						</c:choose>                    
+					  	</a>
+					  </li>
+					</ul>
+        		</div>
 
-      <tr style="border-bottom:1px dashed #ececec">
-        <td height="15"></span>
-        <td></td>
-      </tr>
-      <tr style="border-top:1px dashed #ececec">
-        <td>价&nbsp;&nbsp;格：<span style="color:red;font-size:20px;">&yen;${patent.price}</span>
-        <td>交易方式：
-			<c:if test="${patent.transactionType==1}">
-			转让
-			</c:if>
-			<c:if test="${patent.transactionType==2}">
-			许可
-			</c:if>
-        </td>
-      </tr>
-      <tr >
-        <td height="15"></span>
-        <td></td>
-      </tr>
-      <tr style="">
-		<td colspan="2">
-			<div style="float:left;">客&nbsp;&nbsp;服：</div>
-			        <div style="float:left;margin-left:15px;">  马环静：</div>
-			<div style="float:left;">
-			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238686&amp;site=qq&amp;menu=yes"><img src="<s:url value='/Themes/Home/default/Public/image/zx_qq.gif'/>" border="0" style="" href="http://wpa.qq.com/pa?p=2:2851238686:51" alt="与客服小马进行交谈" title="与客服小马进行交谈"></a>
-			</div> 
-			         <div style="float:left;margin-left:15px;">肖莹莹：</div>
-			<div style="float:left;">
-			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851238688&amp;site=qq&amp;menu=yes"><img src="<s:url value='/Themes/Home/default/Public/image/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2851238688:51" alt="与客服莹莹进行交谈" title="与客服莹莹进行交谈"></a>
+      		</div>
+    	</div>
+	    <table class="goods-tb pos-rlt" width="580" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td  colspan="2">
+			<span style="line-height: 44px;font-size:20px;collor:#000000;">
+			[${good.patentType.typeDescription }]${good.patentName }
+			
+			</span> 
+			</td>
+			</tr>
+			<tr>
+			  <td  colspan="2">
+			  	<div class="box_1" style="line-height:40px;" >简介：专利交易，各种专利任你选。
+			
 			</div>
-		</td>
-      </tr>
-    </table>
-  </div>
-  <div class="right-sec">
-    <h2>商家信息</h2>
-    <ul class="good-list-item1" style="padding:10px 40px;">
-      <li>
-        <dl>
-          <dd> <img title="龙图腾" class="lazy" alt="龙图腾" src="<s:url value='/public/htmlimg/shangjia.jpg'/>" width="160"> </dd>
-          <dd style='height:8px;'></dd>
-          <dd class="ifo">
-         
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2850130083&site=qq&menu=yes"><img src="<s:url value='/Themes/Home/default/Public/image/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2850130083:51" alt="与客服小林进行交谈" title="与客服小林进行交谈"/></a>
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2853237834&site=qq&menu=yes"><img src="<s:url value='/Themes/Home/default/Public/image/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2853237834:51" alt="与客服代丽曼进行交谈" title="与客服代丽曼进行交谈"/></a>
-
-          </dd>
-          <dd class="ifo" style="height:35px;line-height:40px;font-size:12px;">联系电话：0551-65771310</dd>
-        </dl>
-      </li>
-    </ul>
-  </div>
+			
+			        	        	        	        	
+			     </td>
+			   </tr>
+			   <tr style="border-bottom:1px dashed #ececec">
+			  <td height="15">
+			</tr>
+			<tr>
+			  <td width="250px;">专利号：${good.appNo }</td>
+			<td>第一申请人：<span>${good.appPerson }</span></td>
+			
+			</tr>
+			<tr>
+			  <td width="250px;">申请日：<fmt:formatDate value="${good.appDate }" pattern="yyyy-MM-dd"/> </td>
+			<td>发布日期：<fmt:formatDate value="${good.publishDate }" pattern="yyyy-MM-dd"/></td>
+			
+			</tr>
+			<tr>
+			  <td width="250px;">
+					<a href="javascript:;"  data="1" class="s-class s-hover">
+						<span val="tr_reg_1" >
+			${good.firstColumn.name }
+			</span>
+					</a>
+			
+			</td>
+			  <td>转让方：
+					<span style="color:red;font-size:20px;">
+			${good.transferor }
+			</span>
+				</td>
+			
+			</tr>
+	
+	         
+			<tr style="border-top:1px dashed #ececec">
+				<td>价&nbsp;&nbsp;格：
+				<span style="color:red;font-size:20px;">
+				${good.price }
+				</span>
+				</td>
+				<td>
+				      	<a href="#patent_list">
+				      	<img alt="" style="width:150px;margin-left:80px;" src="<s:url value='/images/lijixuangou.png'/>">
+				</a>        
+				</td>
+			</tr>
+			  
+			<tr >
+				<td height="15" colspan="2"></td>
+			</tr>
+			<tr style="">
+				<td colspan="2">
+					<div style="float:left;">客&nbsp;&nbsp;服：</div>
+					<div style="float:left;margin-left:15px;">  马环静：</div>
+					<div style="float:left;">
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851238686&site=qq&menu=yes"><img src="<s:url value='/Themes/Home/default/Public/image/zx_qq.gif'/>" border="0" style="" href="http://wpa.qq.com/pa?p=2:2851238686:51" alt="与客服小马进行交谈" title="与客服小马进行交谈"/></a>
+					</div> 
+					<div style="float:left;margin-left:15px;">肖莹莹：</div>
+					<div style="float:left;">
+						<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851238688&site=qq&menu=yes"><img src="<s:url value='/Themes/Home/default/Public/image/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2851238688:51" alt="与客服莹莹进行交谈" title="与客服莹莹进行交谈"/></a>
+					</div>
+				</td>
+			</tr>
+	    </table>
+	    
+	    <div class="content-top1">
+	      <ul>
+	        <!--<li><a href="">竞价记录</a><i class="arrow arrowT"></i></li>-->
+	        <li class="on"><a href="javascript:void(0);">办理流程</a><i
+	            class="arrow arrowT"></i></li>
+	        <li><a href="javascript:void(0);">所需材料</a><i
+	            class="arrow arrowT"></i></li>
+	        <li><a href="javascript:void(0);">专利列表</a><i
+	            class="arrow arrowT"></i></li>            
+	            
+	        <li class="title"><a href="#">&uarr;&nbsp;专利交易</a><i
+	            class="arrow arrowT"></i></li>
+	      </ul>
+	    </div>
+	    <div class="list-item dashed-line J_minTop">
+	      <h3>办理流程</h3>
+	      <div class="list-item-main">
+	        <p>检索专利能否申请→签订保密协议→-整理技术交底书→签订代理委托协议→撰写申请材料并确认→提交受理→专利审查→专利授权缴费→领取证书</p>
+	      </div>      
+	 	</div>
+	    <div class="list-item" id="patent_list">
+	      <h3>所需材料</h3>
+	      <div class="list-item-main">
+	        <p>1、全权代理----客户仅需提供资料，其它由龙图腾代理公司全权负责处理</p>
+	    	<p>2、线上自助服务---客户提供撰写初稿，由龙图腾代理公司提供技术辅导与修改</p>
+	      </div> 
+	
+	    </div>
+	
+	    <div class="list-item" >
+	      <h3 style="font-size:16px;">专利列表</h3>
+			<ul class="h_second_list">
+			<c:forEach items="${patents}" var="patent">
+				<li>
+				<span class="h_list_tit" style="font-size:14px;">
+					<a href="<s:url value='/patent/detail.html?patentno=${patent.patent_id}'/>" target="_blank">[${patent.patent_type_name}]${patent.patent_name} - ${patent.app_no}</a>
+				</span> 
+				</li>			
+			</c:forEach>
+			</ul>
+			<div class="i_m qs_clear"> 
+			<c:if test="${page.totalPages > 0}">
+	            <li>
+		            <div class="col-lg-12"> 共 ${page.totalPages}页${page.totalRecords}条记录    第${page.currentPage} 页 <a href="?patentId=${good.patentId}&currentPage=1">首页</a>
+		              <c:choose>
+		                <c:when test="${page.currentPage - 1 > 0}"> <a href="?patentId=${good.patentId}&currentPage=${page.currentPage - 1}">上一页</a> </c:when>
+		                <c:when test="${page.currentPage - 1 <= 0}"> <a href="?patentId=${good.patentId}&currentPage=1">上一页</a> </c:when>
+		              </c:choose>
+		              <c:choose>
+		                <c:when test="${page.totalPages==0}"> <a href="?patentId=${good.patentId}&currentPage=${page.currentPage}">下一页</a> </c:when>
+		                <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?patentId=${good.patentId}&currentPage=${page.currentPage+1}">下一页</a> </c:when>
+		                <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?patentId=${good.patentId}&currentPage=${page.totalPages}">下一页</a> </c:when>
+		              </c:choose>
+		              <c:choose>
+		                <c:when test="${page.totalPages==0}"> <a href="?patentId=${good.patentId}&currentPage=${page.currentPage}">尾页</a> </c:when>
+		                <c:otherwise> <a href="?patentId=${good.patentId}&currentPage=${page.totalPages}">尾页</a> </c:otherwise>
+		              </c:choose>
+		              <!-- 分页功能 End -->
+		              <input type="text" id="page.pageNo" style="width:50px;height:18px" name="currentPage" onKeyDown="gotoPageForEnter(event)"/>
+		              <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
+		            </div>
+				</li>
+				<!-- 分页用原来的 -->
+			</c:if>	
+			</div> 
+	    </div>
+	    
+	</div>
+ 	<div class="right-sec">
+	    <h2>精品推荐</h2>
+	    <ul class="good-list-item">
+	    
+	      <li>
+	      <c:forEach items="${recommedPatents}" var="patent">
+	        <dl>
+	          <dd class="pic"> 
+	          	<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank">
+		   			<div style="position: relative;width:192px;height:154px;">   
+						
+						<c:choose>
+											<c:when test="${not empty patent.patentImageUrl }">
+												<img class="d-img" onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" >
+											</c:when>
+											<c:otherwise>
+												<img class="d-img" onerror="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>">
+											</c:otherwise>
+										</c:choose>
+		            </div>
+	          	</a> 
+	          </dd>
+	          <dt class="name"> 
+	          	<div style="width:110px;float:left;">
+	          		<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}">${patent.patentName}</a>
+	          	</div> 
+	          	<!-- <div class="num" style="float:left;">&yen;${patent.price}</div> -->
+	          </dt>
+	        </dl>
+	        </c:forEach>
+	      </li>
+	    
+	    </ul> 
+  	</div> 
 </div>
 <!--专利、卖家信息 end--> 
 <!--专利详情、精品专利-->
-<div class="container">
-  <div class="left-sec">
-    <div class="content-top1">
-      <ul>
-        <li class="on"><a href="javascript:void(0);">专利详情</a><i
-            class="arrow arrowT"></i></li>
-        <li><a href="javascript:void(0);">交易流程</a><i
-            class="arrow arrowT"></i></li>
-        <li><a href="javascript:void(0);">过户材料</a><i
-            class="arrow arrowT"></i></li>
-     <!--  <li><a href="javascript:void(0);">通知书</a><i
-            class="arrow arrowT"></i></li> -->  
-        <li class="title"><a href="#">&uarr;&nbsp;${patent.patentName}</a><i
-            class="arrow arrowT"></i></li>
-      </ul>
-    </div>
-    <div class="list-item dashed-line J_minTop">
-      <h3>专利详情</h3>
-      <div class="list-item-main">
-        <p></p>
-      </div>
-    </div>
-    <div class="list-item">
-      <h3>交易流程</h3>
-      <div class="list-item-step">
-        <ul class="clear step4">
-          <li>买家选<br>
-            产品</li>
-          <li class="row1">联系我们</li>
-          <li>平台办理官<br>
-            方过户手续</li>
-          <li>支付卖方<br>
-            交易款</li>
-        </ul>
-      </div>
-    </div>
-    <div class="list-item">
-      <h3>过户材料</h3>
-     <table class="list-item-material" cellpadding="0" cellspacing="0">
-              <tr><th width="60%" colspan="3">买卖双方需提供材料</th><th width="20%">平台提供</th><th width="20%">过户后您将会获得</th></tr>
-              <tr>
-               <td></td>
-               <td>公司</td>
-               <td>个人</td>
-               <td rowspan="3">专利代理委托书<br>
-                   转让申请书<br>
-                   转让协议</td>
-               <td rowspan="3">专利注册证<br>
-                   专利转让公证书<br>
-                   专利转让证明</td>
-              </tr>
-              <tr>
-               <td>买家</td>
-               <td>企业营业执照</td>
-               <td>身份证<br>
-                   个体户营业执照</td>
-              </tr>
-              <tr>
-               <td>卖家</td>
-               <td>企业营业执照<br>
-                   专利注册证原件</td>
-               <td>身份证<br>
-                   专利注册证原件</td>
-              </tr>
-             </table>
 
-    </div>
-    
-    
-    <!-- 
-    <div class="list-item">
-      <h3>通知书 </h3>
+ <style type="text/css">
+.r_detail_about {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    position: relative;
+}
 
-      <ul class="list-item-pay clear">
-      <c:forEach items="${notices}" var="notice" varStatus="status">
-      ${notice.name}
-      点击下载：<a href="<s:url value='/patent/download.html'/>?notice=${notice.noticeId}">${notice.name} </a>
-	  </c:forEach>
-   
-      </ul>
-    </div>
-     -->
-     </div>
-      <div class="right-sec">
+.r_detail_about span{
+font-family: "微软雅黑", Microsoft YaHei, arial, verdana, sans-serif;
+    color: #333;font-size:16px;
+}
+.r_detail_about a{
+font-family: "微软雅黑", Microsoft YaHei, arial, verdana, sans-serif;
+    color: #333;font-size:16px;
+}
+.article-con {
+    border: 1px solid #ececec;
+    padding: 15px;
+}
+.h_second_list {
+    padding: 20px 10px 80px 25px;
+}
+.h_second_list li {
+    height: 46px;
+    font-size:16px;
+    font-family: "微软雅黑", Microsoft YaHei, arial, verdana, sans-serif;
+    color: #333;
+    line-height: 46px;
+    border-bottom: 1px solid #cdd5d8;
+    background: url(../images/second_hui.png) no-repeat left;
+    padding-left: 15px;
+    overflow: hidden;
+}
+.h_second_list li .h_list_deta {
+    font-size:16px;
+    font-family: "微软雅黑", Microsoft YaHei, arial, verdana, sans-serif;
+    color: #333;
+    float: right;
+    padding-right: 10px;
+}
+</style>   
 
-    <h2>精品推荐</h2>
-    <ul class="good-list-item">
-    
-      <li>
-      <c:forEach items="${recommendPatents}" var="recommendPatent">
-        <dl>
-          <dd class="pic"> 
-          	<a href="<s:url value='/patent/getPatentDetailByPatentId.html'/>?patentId=<c:out value='${recommendPatent.patentId}'/>" target="_blank">
-	   			<div style="position: relative;width:192px;height:154px;">   
-					<%-- <img src="<s:url value='${recommendPatent.patentImageUrl }'/>" onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendPatent.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%";height="100%"; no-repeat;/> --%>
-					<%-- <c:choose>
-						<c:when test="${not empty recommendPatent.patentpatentImageUrl }">
-							<img onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendPatent.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='${recommendPatent.patentImageUrl }'/>"/>
-						</c:when>
-						<c:otherwise>
-							<img onerror="javascript:this.src='<s:url value="/images/brands_img/${recommendPatent.brandCategory.categoryId}_imagemagick_small.jpg"/>'" width="100%" height="100%" no-repeat src="<s:url value='/images/brands_img/${recommendPatent.brandCategory.categoryId}_imagemagick_small.jpg'/>"/>
-						</c:otherwise>
-					</c:choose> --%>
-					
-					<c:choose>
-										<c:when test="${not empty patent.patentImageUrl }">
-											<img class="d-img" onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" >
-										</c:when>
-										<c:otherwise>
-											<img class="d-img" onerror="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>">
-										</c:otherwise>
-									</c:choose>
-					
-					
-					
-					<span style="position: absolute;font-family:Microsoft YaHei;font-size:20px;top: 60px;width:100%;left:0;z-index:1;text-align: center;">${recommendPatent.name}</span>
-	            </div>
-          	</a> 
-          </dd>
-          <dt class="name"> 
-          	<div style="width:110px;float:left;">
-          		<a href="<s:url value='/brand/getbrandDetail.html'/>?brandId=<c:out value='${recommendPatent.patentId}'/>" target="_blank" title="${recommendPatent.name}">${recommendPatent.name}</a>
-          	</div> 
-          	<div class="num" style="float:left;">&yen;${recommendPatent.price}</div>
-          </dt>
-        </dl>
-        </c:forEach>
-      </li>
-    
-    </ul> 
-  </div>
-  </div>
 
-</div>
-<div class="right-sidebar"> </div>
-</div>
-<script type="text/javascript" src="<s:url value='/public/javascript/jquery-1.8.3.min.js'/>"></script> 
+
+
 <script type="text/javascript" src="<s:url value='/public/javascript/jquery.lazyload.js'/>"></script> 
 
 <!-- End Piwik Code --> 
@@ -312,8 +362,46 @@
   </script>
   
 
-<!--footer-->
+<script type="text/javascript">
 
+function gotoPage() {
+	var pageNo = document.getElementById("page.pageNo").value;
+	
+	if (isNaN(pageNo)) {
+		alert("请输入数值");
+		return;
+	}
+	
+	if(pageNo==""){
+		alert("请输入数值")
+		return;
+	}
+	
+	pageNo = parseInt(pageNo);
+	
+	if (pageNo < 1 || pageNo > parseInt("${page.totalPages}")) {
+		alert("只能输入1-${page.totalPages}之间的数值");
+		return;
+	}
+	
+	var url = "<s:url value='/patent/getPatentDetail.html'/>?currentPage=" + pageNo + "&patentId=" + ${good.patentId};
+	
+	
+	location.href = url
+	
+}
+
+function gotoPageForEnter(event) {
+	var e = event ? event : window.event;
+			
+	if(event.keyCode == 13) {
+		gotoPage();
+	}
+}
+</script>
+  
+
+<!--footer-->
 <%@ include file="_footer.jsp"%>
 <!--/footer-->
 
