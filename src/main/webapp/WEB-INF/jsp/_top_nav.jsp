@@ -8,16 +8,19 @@
 				<em class="flag flag0" style="margin-top: 11px;"></em>
 				<span class="txt" style="height:40px;line-height:40px;font-size:13px;">精选推荐</span>
 				<ul id="JS_sub_recommend" data-show="show" style="width: 120px;">
-					<c:forEach items="${AllColumns}" var="FirstColumn">
-						<li><a title="${FirstColumn.name}" target="_blank" href="<s:url value='/'/>">${FirstColumn.name}</a></li>
-										
-					</c:forEach>
-					<li><a title="办公文具" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=16&currentPage=1'/>">办公文具</a></li>
-					<li><a title="日化用品" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=3&currentPage=1'/>">日化用品<i class="hot" title="化工设备"></i></a></li>
-					<li><a title="医用药品" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=5&currentPage=1'/>">医用药品</a></li>
-					<li><a title="厨房洁具" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>">厨房洁具</a></li>
-					<li><a title="餐饮住宿" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=43&currentPage=1'/>">餐饮住宿</a></li>
-					<li><a title="健身娱乐" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=28&currentPage=1'/>">健身娱乐</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=3&secondColumnName=家具/家装'/>" class="sub-item" target="_blank">家具/家装</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=2&secondColumnName=服装/鞋帽'/>" class="sub-item" target="_blank">服装/鞋帽</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=8&secondColumnName=体育/健身'/>" class="sub-item" target="_blank">体育/健身</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=36&amp;secondColumnName=五金配件'/>" class="sub-item" target="_blank">五金配件</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=20&amp;secondColumnName=食品/酒饮'/>" class="sub-item" target="_blank">食品/酒饮</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=10&secondColumnName=娱乐/玩具'/>" class="sub-item" target="_blank">娱乐/玩具</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=29&amp;secondColumnName=美容护肤'/>" class="sub-item" target="_blank">美容护肤</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=22&amp;secondColumnName=医药/中西药'/>" class="sub-item" target="_blank">医药/中西药</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=58&amp;secondColumnName=互联网物联网'/>" class="sub-item" target="_blank">互联网物联网</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=52&amp;secondColumnName=建筑领域'/>" class="sub-item" target="_blank">建筑领域</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=48&amp;secondColumnName=纺织领域'/>" class="sub-item" target="_blank">纺织领域</a></li>
+					<li><a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=40&amp;secondColumnName=环保领域'/>" class="sub-item" target="_blank">环保领域</a></li>
+
 				</ul>
 				<i class="arrow" style="margin-top: 17px;"></i>
 			</li>

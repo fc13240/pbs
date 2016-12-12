@@ -20,7 +20,7 @@
 					<li><a title="运输工具" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=12&currentPage=1'/>">运输工具</a></li>
 					<li><a title="家具用品" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=20&currentPage=1'/>">家具用品</a></li>
 					<li><a title="服装鞋帽" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=21&currentPage=1'/>">服装鞋帽</a></li>
-
+					<li><a title="肉食蜜饯" target="_blank" href="<s:url value='/brand/showBrandsList.html?categoryId=29&currentPage=1'/>">肉食蜜饯</a></li>
 				</ul>
 				<i class="arrow" style="margin-top: 17px;"></i>
 			</li>
