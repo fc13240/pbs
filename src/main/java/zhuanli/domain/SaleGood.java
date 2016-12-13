@@ -27,7 +27,15 @@ public class SaleGood {
 	private PatentType patentType;
 	@DateTimeFormat(iso=ISO.DATE_TIME,pattern="yyyy-MM-dd")
 	private Date publishDate;
+	private String description;
 	
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public String getAppNo() {
 		return appNo;
 	}

@@ -25,18 +25,11 @@ public class Patent {
 	private int patent_first_column_id;
 	private int transaction_type;
 	private String patent_image_url;
-	private salePatentGood salePatentGood;
-	
-	
-	
-	
-	
+
 	
 	public String getPatent_image_url() {
 		return patent_image_url;
 	}
-
-
 
 	public void setPatent_image_url(String patent_image_url) {
 		this.patent_image_url = patent_image_url;
@@ -84,11 +77,9 @@ public class Patent {
 	}
 
 
-
 	public void setPatent_second_column(int patent_second_column) {
 		this.patent_second_column = patent_second_column;
 	}
-
 
 
 	public String getPatent_first_column_name() {
@@ -126,11 +117,9 @@ public class Patent {
 	}
 
 
-
 	public String getPatent_status_desc() {
 		return patent_status_desc;
 	}
-
 
 
 	public void setPatent_status_desc(String patent_status_desc) {
@@ -138,11 +127,9 @@ public class Patent {
 	}
 
 
-
 	public String getApp_no() {
 		return app_no;
 	}
-
 
 
 	public void setApp_no(String app_no) {
@@ -150,11 +137,9 @@ public class Patent {
 	}
 
 
-
 	public String getApp_person() {
 		return app_person;
 	}
-
 
 
 	public void setApp_person(String app_person) {
@@ -162,11 +147,9 @@ public class Patent {
 	}
 
 
-
 	public Date getApp_date() {
 		return app_date;
 	}
-
 
 
 	public int getPatent_second_column_id() {
@@ -174,11 +157,9 @@ public class Patent {
 	}
 
 
-
 	public void setPatent_second_column_id(int patent_second_column_id) {
 		this.patent_second_column_id = patent_second_column_id;
 	}
-
 
 
 	public int getPatent_first_column_id() {
@@ -186,11 +167,9 @@ public class Patent {
 	}
 
 
-
 	public void setPatent_first_column_id(int patent_first_column_id) {
 		this.patent_first_column_id = patent_first_column_id;
 	}
-
 
 
 	public Date getAdd_date() {
@@ -198,11 +177,9 @@ public class Patent {
 	}
 
 
-
 	public void setAdd_date(Date add_date) {
 		this.add_date = add_date;
 	}
-
 
 
 	public Date getPublish_date() {
@@ -210,11 +187,9 @@ public class Patent {
 	}
 
 
-
 	public void setPublish_date(Date publish_date) {
 		this.publish_date = publish_date;
 	}
-
 
 
 	public void setApp_date(Date app_date) {
@@ -222,11 +197,9 @@ public class Patent {
 	}
 
 
-
 	public int getPatent_type() {
 		return patent_type;
 	}
-
 
 
 	public void setPatent_type(int patent_type) {
@@ -234,11 +207,9 @@ public class Patent {
 	}
 
 
-
 	public String getPatent_type_name() {
 		return patent_type_name;
 	}
-
 
 
 	public void setPatent_type_name(String patent_type_name) {
@@ -246,11 +217,9 @@ public class Patent {
 	}
 
 
-
 	public String getPatent_type_desc() {
 		return patent_type_desc;
 	}
-
 
 
 	public void setPatent_type_desc(String patent_type_desc) {
@@ -263,11 +232,9 @@ public class Patent {
 	}
 
 
-
 	public void setPatent_name(String patent_name) {
 		this.patent_name = patent_name;
 	}
-
 
 
 	public int getPrice() {
@@ -275,17 +242,14 @@ public class Patent {
 	}
 
 
-
 	public void setPrice(int price) {
 		this.price = price;
 	}
 
 
-
 	public int getTransaction_type() {
 		return transaction_type;
 	}
-
 
 
 	public void setTransaction_type(int transaction_type) {

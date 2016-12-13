@@ -73,7 +73,7 @@ public class MobileBrandController {
 	@RequestMapping(path="/exportList",method=RequestMethod.GET)
 	public void exportList(int categoryId, HttpServletResponse response, Model model) throws IOException {
 		BrandCategory brandCategory = brandService.getBrandCategoryById(categoryId);
-		String exportExcelName = "ç¬?" + categoryId + "ç±?-" + brandCategory.getCategoryName() + "-" + System.currentTimeMillis() + ".xls";
+		String exportExcelName = "ç¬¬" + categoryId + "ç±»-" + brandCategory.getCategoryName() + "-" + System.currentTimeMillis() + ".xls";
 		exportExcelName=URLEncoder.encode(exportExcelName,"GB2312");
 		exportExcelName=URLDecoder.decode(exportExcelName, "ISO8859_1"); 
 		exportBrandsExcelFile(categoryId, response, exportExcelName);
