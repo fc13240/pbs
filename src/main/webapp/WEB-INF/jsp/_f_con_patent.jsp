@@ -327,7 +327,7 @@ margin: 0 auto;
 <c:forEach items="${AllColumns}"  var="FirstColumn" varStatus="status">
 <div class="floor_1F">
 	<c:if test="${status.count==1}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
@@ -352,7 +352,7 @@ margin: 0 auto;
 	
 		
 	<c:if test="${status.count==5}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #a6f59c;">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #eab35b;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
