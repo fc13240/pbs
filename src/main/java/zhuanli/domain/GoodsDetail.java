@@ -24,8 +24,15 @@ public class GoodsDetail {
 	private String transferor;
 	private String patentImageUrl;
 	private String patentSecondColumnName;
+	private String description;
 
 
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public String getPatentSecondColumnName() {
 		return patentSecondColumnName;
 	}
