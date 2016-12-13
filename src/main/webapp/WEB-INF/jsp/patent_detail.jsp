@@ -149,9 +149,11 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 				</a>        
 				</td>
 			</tr>
+			<c:if test="${not empty good.description }">
 			  <tr>
 			  	<td colspan="2">说明：${good.description }</td>
 			  </tr>
+			</c:if>
 			<tr >
 				<td height="15" colspan="2"></td>
 			</tr>
