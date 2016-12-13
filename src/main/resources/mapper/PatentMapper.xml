@@ -408,8 +408,8 @@
 	
 	<select id="getPatentListBySecondColumnId" resultMap="SaleGoodResultMap">
 		select spg.patent_id,p.patent_name,p.app_no,p.app_date,p.app_person,p.publish_date,pt.patent_type_id,pt.patent_type_desc,spg.price,
-				spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.transferor,spg.status,spg.patent_image_url 
-		        from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id,spg.description
+				spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.transferor,spg.status,spg.patent_image_url,spg.description
+		        from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id
 		       left join patent_types pt on p.patent_type=pt.patent_type_id 
 		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
 		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id 
