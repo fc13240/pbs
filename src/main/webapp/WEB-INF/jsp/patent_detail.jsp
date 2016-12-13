@@ -205,7 +205,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			<c:forEach items="${patents}" var="patent">
 				<li>
 				<span class="h_list_tit" style="font-size:14px;">
-					<a href="<s:url value='/patent/detail.html?patentno=${patent.patent_id}'/>" target="_blank">[${patent.patent_type_name}]${patent.patent_name} - ${patent.app_no}</a>
+					<a href="<s:url value='/patent/getPatentDetail.html?patentId=${patent.patent_id}'/>" target="_blank">[${patent.patent_type_name}]${patent.patent_name} - ${patent.app_no}</a>
 				</span> 
 				</li>			
 			</c:forEach>
