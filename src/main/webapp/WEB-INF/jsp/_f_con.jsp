@@ -327,32 +327,32 @@ margin: 0 auto;
 <c:forEach items="${AllColumns}"  var="FirstColumn" varStatus="status">
 <div class="floor_1F">
 	<c:if test="${status.count==1}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #FF0000;">
-	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
-	</div>
-	</c:if>
-	
-	<c:if test="${status.count==2}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
 	
-	<c:if test="${status.count==3}">
+	<c:if test="${status.count==2}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #eab35b;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
 	
-	<c:if test="${status.count==4}">
+	<c:if test="${status.count==3}">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #65e5e7;">
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
+	</div>
+	</c:if>
+	
+	<c:if test="${status.count==4}">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
 	
 		
 	<c:if test="${status.count==5}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #eab35b;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
 	</c:if>
