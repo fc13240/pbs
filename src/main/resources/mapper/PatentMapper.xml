@@ -195,7 +195,7 @@
 		       left join patent_status ps on p.patent_status = ps.patent_status_id 
 		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
 		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id
-		where spg.patent_id !=#{patentId} and spg.status=1  and spg.recommend_status=1 order by spg.add_date LIMIT 5
+		where spg.patent_id !=#{patentId} and spg.status=1  and spg.recommend_status=1 order by spg.add_date LIMIT 6
 	</select>
 	
 	<select id="getQualityGoods" resultMap="SaleGoodResultMap">
