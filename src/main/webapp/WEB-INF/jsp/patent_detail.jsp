@@ -144,9 +144,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 				</span>
 				</td>
 				<td>
-				      	<a href="#patent_list">
-				      	<img alt="" style="width:150px;margin-left:80px;" src="<s:url value='/images/lijixuangou.png'/>">
-				</a>        
+       
 				</td>
 			</tr>
 			<c:if test="${not empty good.description }">
