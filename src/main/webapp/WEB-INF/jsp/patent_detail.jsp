@@ -136,14 +136,9 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			
 			</td>
 			  <td>转让方：
-			  <c:if test="${not empty transferorUser }">
 			  	<a style="color:red;font-size:20px;" data-toggle = "modal" data-target = "#transferorModal">
 					${good.transferor }
 				</a>
-			  </c:if>
-			  <c:if test="${empty transferorUser }">
-			  	<span style="color:red;font-size:20px;">${good.transferor }</span>	
-			  </c:if>
 				
 				</td>
 			
@@ -305,28 +300,33 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
             	转让方${good.transferor }详细信息
             </h4>
          </div>
-	         <div class = "modal-body" id="modal-body">
-					<h5>真实姓名:</h5>
-					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.name }"/>
-					<br>
-					<h5>电子邮箱:</h5>
-					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.email }"/>
-					<br>		  
-					<h5>手机或电话号码:</h5>
-					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.phone }"/>
-					<br>
-					<h5>QQ号:</h5>
-					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.qq }"/>
-					<br>
-					<h5>微信号:</h5>
-					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.weChat }"/>
-					<br>
-					<h5>默认联系地址:</h5>
-					<textarea class="selectPointOfInterest form-control" style="width:460px;resize: none;" rows="2" cols="60" >联系人:${contactAddress.receiver}   联系电话：${contactAddress.phone}  地址:${contactAddress.provinceName} ${contactAddress.cityName} ${contactAddress.districtName}${contactAddress.detailAddress}</textarea>
-					
-					<br/>
-					
-	         </div>
+         <div class = "modal-body" id="modal-body">
+         	<c:if test="${empty transferorUser }">
+         		<h5>暂无详细信息。</h5>
+         	</c:if>
+         	<c:if test="${not empty transferorUser }">
+				<h5>真实姓名:</h5>
+				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.name }"/>
+				<br>
+				<h5>电子邮箱:</h5>
+				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.email }"/>
+				<br>		  
+				<h5>手机或电话号码:</h5>
+				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.phone }"/>
+				<br>
+				<h5>QQ号:</h5>
+				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.qq }"/>
+				<br>
+				<h5>微信号:</h5>
+				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.weChat }"/>
+				<br>
+				<h5>默认联系地址:</h5>
+				<textarea class="selectPointOfInterest form-control" style="width:460px;resize: none;" rows="2" cols="60" >联系人:${contactAddress.receiver}   联系电话：${contactAddress.phone}  地址:${contactAddress.provinceName} ${contactAddress.cityName} ${contactAddress.districtName}${contactAddress.detailAddress}</textarea>
+				
+				<br/>
+			</c:if>
+				
+         </div>
       </div>
    </div>
 </div>
