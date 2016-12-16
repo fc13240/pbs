@@ -148,7 +148,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			<tr style="border-top:1px dashed #ececec">
 				<td>价&nbsp;&nbsp;格：
 				<span style="color:red;font-size:20px;">
-				${good.price }
+				&yen;${good.price }
 				</span>
 				</td>
 				<td>
@@ -165,7 +165,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			</tr>
 			<tr style="">
 				<td colspan="2">
-					<div style="float:left;">客&nbsp;&nbsp;服：</div>
+					<div style="float:left;">官方客服：</div>
 					<div style="float:left;margin-left:15px;">  马环静：</div>
 					<div style="float:left;">
 					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851238686&site=qq&menu=yes"><img src="<s:url value='/Themes/Home/default/Public/image/zx_qq.gif'/>" border="0" style="" href="http://wpa.qq.com/pa?p=2:2851238686:51" alt="与客服小马进行交谈" title="与客服小马进行交谈"/></a>
@@ -175,6 +175,16 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 						<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851238688&site=qq&menu=yes"><img src="<s:url value='/Themes/Home/default/Public/image/zx_qq.gif'/>" border="0" href="http://wpa.qq.com/pa?p=2:2851238688:51" alt="与客服莹莹进行交谈" title="与客服莹莹进行交谈"/></a>
 					</div>
 				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<span class="tip1">
+					温馨提示：龙图腾提供安全交易服务，您可以委托龙图腾官方客服作为您的交易经理人。
+					<img src="<s:url value='/images/todown.png'/>" width="15px" height="15px" no-repeat>
+				</span>
+				<span class="tip2" style="display:none;">
+					如您选择自行与转让方对接，由此产生的所有风险以及纠纷或损失等任何问题，由您自行<br/>承担，龙图腾概不承担任何责任。
+				</span></td>
 			</tr>
 	    </table>
 	    
@@ -297,7 +307,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
             </button>
             
             <h4 class = "modal-title" id = "myModalLabel" style="font-size:18px;">
-            	转让方${good.transferor }详细信息
+            	转让方 ${good.transferor } 详细信息
             </h4>
          </div>
          <div class = "modal-body" id="modal-body">
@@ -306,22 +316,22 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
          	</c:if>
          	<c:if test="${not empty transferorUser }">
 				<h5>真实姓名:</h5>
-				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.name }"/>
+				<input class="form-control" style="width:460px;" type="text" value="${transferorUser.name }" readonly="readonly"/>
 				<br>
 				<h5>电子邮箱:</h5>
-				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.email }"/>
+				<input class="form-control" style="width:460px;" type="text" value="${transferorUser.email }" readonly="readonly"/>
 				<br>		  
 				<h5>手机或电话号码:</h5>
-				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.phone }"/>
+				<input class="form-control" style="width:460px;" type="text" value="${transferorUser.phone }" readonly="readonly"/>
 				<br>
 				<h5>QQ号:</h5>
-				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.qq }"/>
+				<input class="form-control" style="width:460px;" type="text" value="${transferorUser.qq }" readonly="readonly"/>
 				<br>
 				<h5>微信号:</h5>
-				<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.weChat }"/>
+				<input class="form-control" style="width:460px;" type="text" value="${transferorUser.weChat }" readonly="readonly"/>
 				<br>
-				<h5>默认联系地址:</h5>
-				<textarea class="selectPointOfInterest form-control" style="width:460px;resize: none;" rows="2" cols="60" >联系人:${contactAddress.receiver}   联系电话：${contactAddress.phone}  地址:${contactAddress.provinceName} ${contactAddress.cityName} ${contactAddress.districtName}${contactAddress.detailAddress}</textarea>
+				<h5 style="font-weight:700;font-size:15px;">默认联系地址</h5>
+				<textarea class="form-control" style="width:460px;resize: none;" rows="2" cols="60" readonly="readonly">联系人：${contactAddress.receiver}&nbsp;&nbsp;&nbsp;&nbsp;联系电话：${contactAddress.phone}&#13;&#10;地址：${contactAddress.provinceName} ${contactAddress.cityName} ${contactAddress.districtName} ${contactAddress.detailAddress}</textarea>
 				
 				<br/>
 			</c:if>
@@ -477,6 +487,13 @@ function gotoPageForEnter(event) {
 		gotoPage();
 	}
 }
+
+	
+	$('.tip1').hover(function() {
+        $(".tip2").css('display', 'block');
+    }, function() {
+       $(".tip2").css('display', 'none');
+    });
 </script>
   
 
