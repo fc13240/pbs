@@ -7,6 +7,7 @@ import org.mybatis.spring.support.SqlSessionDaoSupport;
 import zhuanli.dao.PatentDao;
 import zhuanli.dao.mapper.PatentMapper;
 import zhuanli.domain.ColumnCount;
+import zhuanli.domain.ContactAddress;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.GoodsDetail;
 import zhuanli.domain.Notice;
@@ -14,6 +15,7 @@ import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
 import zhuanli.domain.PatentSearchCondition;
 import zhuanli.domain.SaleGood;
+import zhuanli.domain.User;
 
 
 
@@ -193,6 +195,16 @@ public class PatentMybatisDao extends SqlSessionDaoSupport implements PatentDao 
 	@Override
 	public List<SaleGood> getRecommedPatents(long patentId) {
 		return patentMapper.getRecommedPatents(patentId);
+	}
+
+	@Override
+	public User getGoodTransferorUser(String transferor) {
+		return patentMapper.getGoodTransferorUser(transferor);
+	}
+
+	@Override
+	public ContactAddress getUserDefaultContactAddress(int userId) {
+		return patentMapper.getUserDefaultContactAddress(userId);
 	}
 	
 	

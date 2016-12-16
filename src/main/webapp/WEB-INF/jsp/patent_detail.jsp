@@ -15,6 +15,13 @@
 <link rel="stylesheet" href="<s:url value='/Themes/Home/default/Public/css/top_footer.css'/>">
 <script type="text/javascript" src="<s:url value='/public/javascript/jquery-1.8.3.min.js'/>"></script> 
 <link rel="stylesheet" href="<s:url value='/css/details.css'/>" />
+
+
+
+<link rel="stylesheet" href="<s:url value='/temp/css/bootstrap.min.css'/>" />
+<script src="<s:url value='/static/js/bootstrap.min.js'/>" type="text/javascript"></script>
+
+
 </head>
 <body>
 <style type="text/css">
@@ -129,9 +136,15 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			
 			</td>
 			  <td>转让方：
-					<span style="color:red;font-size:20px;">
-			${good.transferor }
-			</span>
+			  <c:if test="${not empty transferorUser }">
+			  	<a style="color:red;font-size:20px;" data-toggle = "modal" data-target = "#transferorModal">
+					${good.transferor }
+				</a>
+			  </c:if>
+			  <c:if test="${empty transferorUser }">
+			  	<span style="color:red;font-size:20px;">${good.transferor }</span>	
+			  </c:if>
+				
 				</td>
 			
 			</tr>
@@ -276,7 +289,71 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 <!--专利、卖家信息 end--> 
 <!--专利详情、精品专利-->
 
+<!--转让方start-->
+<div class = "modal fade" id = "transferorModal" tabindex = "-1" role = "dialog" 
+   aria-labelledby = "myModalLabel" aria-hidden = "true" >
+   
+   <div class = "modal-dialog" >
+      <div class = "modal-content">
+         
+         <div class = "modal-header">
+            <button type = "button" class = "close" data-dismiss = "modal" aria-hidden = "true" id="transferorModalCloseBtn">
+               ×
+            </button>
+            
+            <h4 class = "modal-title" id = "myModalLabel" style="font-size:18px;">
+            	转让方${good.transferor }详细信息
+            </h4>
+         </div>
+	         <div class = "modal-body" id="modal-body">
+					<h5>真实姓名:</h5>
+					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.name }"/>
+					<br>
+					<h5>电子邮箱:</h5>
+					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.email }"/>
+					<br>		  
+					<h5>手机或电话号码:</h5>
+					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.phone }"/>
+					<br>
+					<h5>QQ号:</h5>
+					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.qq }"/>
+					<br>
+					<h5>微信号:</h5>
+					<input class="selectPointOfInterest form-control" style="width:460px;" type="text" value="${transferorUser.weChat }"/>
+					<br>
+					<h5>默认联系地址:</h5>
+					<textarea class="selectPointOfInterest form-control" style="width:460px;resize: none;" rows="2" cols="60" >联系人:${contactAddress.receiver}   联系电话：${contactAddress.phone}  地址:${contactAddress.provinceName} ${contactAddress.cityName} ${contactAddress.districtName}${contactAddress.detailAddress}</textarea>
+					
+					<br/>
+					
+	         </div>
+      </div>
+   </div>
+</div>
+<!--转让方end-->
+
  <style type="text/css">
+h5 {
+    font-size: 14px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
 .r_detail_about {
     padding: 15px 0;
     border-bottom: 1px solid #ccc;

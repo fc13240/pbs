@@ -17,6 +17,7 @@ import net.lingala.zip4j.core.ZipFile;
 import zhuanli.dao.PatentDao;
 import zhuanli.domain.Brand;
 import zhuanli.domain.ColumnCount;
+import zhuanli.domain.ContactAddress;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.GoodsDetail;
 import zhuanli.domain.Notice;
@@ -24,6 +25,7 @@ import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
 import zhuanli.domain.PatentSearchCondition;
 import zhuanli.domain.SaleGood;
+import zhuanli.domain.User;
 import zhuanli.service.PatentService;
 
 
@@ -235,6 +237,16 @@ public class PatentServiceImpl implements PatentService {
 	@Override
 	public List<SaleGood> getRecommedPatents(long patentId) {
 		return patentDao.getRecommedPatents(patentId);
+	}
+
+	@Override
+	public User getGoodTransferorUser(String transferor) {
+		return patentDao.getGoodTransferorUser(transferor);
+	}
+
+	@Override
+	public ContactAddress getUserDefaultContactAddress(int userId) {
+		return patentDao.getUserDefaultContactAddress(userId);
 	}
 	
 }

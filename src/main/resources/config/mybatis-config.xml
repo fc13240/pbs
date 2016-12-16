@@ -26,5 +26,6 @@
 			<typeAlias alias="SaleGood" type="zhuanli.domain.SaleGood"/>
 			<typeAlias alias="PatentType" type="zhuanli.domain.PatentType"/>
 			<typeAlias alias="PatentStatus" type="zhuanli.domain.PatentStatus"/>
+			<typeAlias alias="ContactAddress" type="zhuanli.domain.ContactAddress"/>
 		</typeAliases>
 </configuration>

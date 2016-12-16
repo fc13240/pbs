@@ -29,6 +29,8 @@ import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
 import zhuanli.domain.PatentSearchCondition;
 import zhuanli.domain.SaleGood;
+import zhuanli.domain.User;
+import zhuanli.domain.ContactAddress;
 import zhuanli.service.PatentService;
 import zhuanli.util.WebUtils;
 
@@ -228,11 +230,18 @@ public class PatentController {
 		page.setTotalRecords(totalCount);
 		List<Patent> patents = patentService.getPatentsByShopType(shopType,page); 
 		List<SaleGood> recommedPatents=patentService.getRecommedPatents(patentId);
+		User transferorUser = patentService.getGoodTransferorUser(good.getTransferor());
+		ContactAddress contactAddress = null;
+		if(transferorUser != null) {
+			contactAddress = patentService.getUserDefaultContactAddress(transferorUser.getUserId());
+		}
 		model.addAttribute("recommedPatents", recommedPatents);
 		model.addAttribute("good",good);
 		model.addAttribute("patents", patents);
 		model.addAttribute("page", page);
 		model.addAttribute("shopType", shopType);
+		model.addAttribute("transferorUser", transferorUser);
+		model.addAttribute("contactAddress", contactAddress);
 		return "patent_detail";
 	}
 	

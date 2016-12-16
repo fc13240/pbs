@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 import zhuanli.domain.ColumnCount;
+import zhuanli.domain.ContactAddress;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.GoodsDetail;
 import zhuanli.domain.Notice;
@@ -12,6 +13,7 @@ import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
 import zhuanli.domain.PatentSearchCondition;
 import zhuanli.domain.SaleGood;
+import zhuanli.domain.User;
 
 
 
@@ -84,5 +86,9 @@ public interface PatentMapper {
 	List<GoodsDetail> getQualityGoods();
 	
 	List<SaleGood> getRecommedPatents(long patentId);
+
+	User getGoodTransferorUser(String transferor);
+
+	ContactAddress getUserDefaultContactAddress(int userId);
 	
 }

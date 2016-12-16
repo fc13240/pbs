@@ -7,6 +7,7 @@ import java.util.Map;
 import net.lingala.zip4j.core.ZipFile;
 import zhuanli.domain.Brand;
 import zhuanli.domain.ColumnCount;
+import zhuanli.domain.ContactAddress;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.GoodsDetail;
 import zhuanli.domain.Notice;
@@ -14,6 +15,7 @@ import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
 import zhuanli.domain.PatentSearchCondition;
 import zhuanli.domain.SaleGood;
+import zhuanli.domain.User;
 
 
 public interface PatentService {
@@ -89,4 +91,8 @@ public interface PatentService {
 	List<GoodsDetail> getQualityGoods();
 	
 	List<SaleGood> getRecommedPatents(long patentId);
+
+	User getGoodTransferorUser(String transferor);
+
+	ContactAddress getUserDefaultContactAddress(int userId);
 }
