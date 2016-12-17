@@ -282,7 +282,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 	   
 	
 	    <div class="list-item" >
-	      <h3 style="font-size:16px;" id="anchor5">专利列表</h3>
+	      <h3 style="font-size:16px;" id="anchor6">专利列表</h3>
 			<ul class="h_second_list">
 			<c:forEach items="${patents}" var="patent">
 				<li>
@@ -441,6 +441,7 @@ h5 {
     background: #f5f5f5;
     position: relative;
     border: 1px solid #d9d9d9;
+    width:900px;
 }
 
 .content-top li.active {
@@ -459,7 +460,15 @@ h5 {
     width: 120px;
 	text-align: center;
 	font-size: 14px;
+	
 }
+.content-top li a {
+    font: 14px/14px "\5B8B\4F53";
+    color: #535353;
+    padding: 0 30px;
+    background: url(<s:url value='/images/icon_details.png'/>) 0 -47px no-repeat;
+}
+
 .content-top li.active a, .content-top li:hover a {
     color: #ff510c;
     text-decoration: none;
@@ -467,7 +476,14 @@ h5 {
 .content-top li.active a, .content-top li.active + li a {
     background: none;
 }
-
+.content-top li:first-child a {
+    background: none;
+}
+.content-top.pos-fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
 
 .r_detail_about {
     padding: 15px 0;
@@ -592,7 +608,38 @@ function gotoPageForEnter(event) {
 		gotoPage();
 	}
 }
+  
 
+$(window).scroll(function() {
+	var top = $(window).scrollTop();
+	var minTop = $(".J_minTop").offset().top - 50;
+	if (top < minTop) {
+		$(".content-top").removeClass('pos-fixed');
+	} else {
+		$(".content-top").addClass('pos-fixed');
+	}
+});
+$('.content-top').find('li').each(function(i) {
+	$(this).click(function() {
+		bScroll = true
+		if (bScroll) {
+			$('.content-top').find('li').removeClass('active');
+			$('.content-top').find('li').eq(i).addClass('active');
+			if (i == $('.content-top').find('li').size() - 1) {
+				$('html, body').animate({
+					scrollTop : $('caption').eq(0).offset().top - 50
+				})
+				$(this).find('li').removeClass('active');
+				$(this).find('li').eq(0).addClass('active');
+			} else {
+				$('html, body').animate({
+					scrollTop : $('.list-item').eq(i).offset().top - 50
+				});
+			}
+		}
+		;
+	});
+});
 	
 	$('.tip1').hover(function() {
         $(".tip2").css('display', 'block');
