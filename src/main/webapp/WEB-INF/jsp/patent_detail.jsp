@@ -188,37 +188,101 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			</tr>
 	    </table>
 	    
-	    <div class="content-top1">
-	      <ul>
-	        <!--<li><a href="">竞价记录</a><i class="arrow arrowT"></i></li>-->
-	        <li class="on"><a href="javascript:void(0);">办理流程</a><i
-	            class="arrow arrowT"></i></li>
-	        <li><a href="javascript:void(0);">所需材料</a><i
-	            class="arrow arrowT"></i></li>
-	        <li><a href="javascript:void(0);">专利列表</a><i
-	            class="arrow arrowT"></i></li>            
-	            
-	        <li class="title"><a href="#">&uarr;&nbsp;专利交易</a><i
-	            class="arrow arrowT"></i></li>
-	      </ul>
-	    </div>
-	    <div class="list-item dashed-line J_minTop">
-	      <h3>办理流程</h3>
-	      <div class="list-item-main">
-	        <p>检索专利能否申请→签订保密协议→-整理技术交底书→签订代理委托协议→撰写申请材料并确认→提交受理→专利审查→专利授权缴费→领取证书</p>
-	      </div>      
-	 	</div>
-	    <div class="list-item" id="patent_list">
-	      <h3>所需材料</h3>
-	      <div class="list-item-main">
-	        <p>1、全权代理----客户仅需提供资料，其它由龙图腾代理公司全权负责处理</p>
-	    	<p>2、线上自助服务---客户提供撰写初稿，由龙图腾代理公司提供技术辅导与修改</p>
-	      </div> 
-	
-	    </div>
+	    <div class="details_goods_wrap">
+		<div class="content-top">
+			<ul>
+				<li class="active"><a href="#anchor1">专利详情</a></li>
+				<li class=""><a href="#anchor3">交易流程</a></li>
+				<li class=""><a href="#anchor4">过户材料</a></li>
+               	<li class=""><a href="#anchor5">支付方式</a></li>
+               	<li class=""><a href="#anchor6">专列列表</a></li>
+			</ul>
+		</div>
+		<div class="list-item J_minTop">
+			<h3 id="anchor1">专利详情</h3>
+			<div class="list-item-main">
+				暂无
+			</div>
+		</div>
+		
+		<div class="list-item">
+			 <h3 id="anchor3">交易流程</h3>
+           <div class="list-item-step">
+               <ul class="clear step4">
+                   <li>买家选<br>
+                       专利</li>
+                   <li class="row1">下单付款</li>
+                   <li>平台办理官<br>
+                       方过户手续</li>
+                   <li>支付卖方<br>
+                       交易款</li>
+               </ul>
+           </div>
+		</div>
+		<div class="list-item">
+			<h3 id="anchor4">过户材料</h3>
+           <table class="list-item-material" cellspacing="0" cellpadding="0">
+               <tbody><tr><th colspan="3" width="60%">买卖双方需提供材料</th><th width="20%">平台提供</th><th width="20%">过户后您将会获得</th></tr>
+               <tr>
+                   <td></td>
+                   <td>公司</td>
+                   <td>个人</td>
+                   <td rowspan="3">专利代理委托书<br>
+                       专利权转让协议<br>
+                       办理文件副本请求书<br>
+                       发明人变更声明</td>
+                   <td rowspan="3">专利证书<br>
+                       手续合格通知书<br>
+                       专利登记簿副本</td>
+               </tr>
+               <tr>
+                   <td>买家</td>
+                   <td>企业营业执照<br>
+                       企业组织机构代码证</td>
+                   <td>身份证</td>
+               </tr>
+               <tr>
+                   <td>卖家</td>
+                   <td>企业营业执照<br>
+                       专利证书原件</td>
+                   <td>身份证<br>
+                       专利证书原件</td>
+               </tr>
+           	</tbody></table>
+		</div>
+		<div class="list-item">
+			<h3 id="anchor5">支付方式</h3>
+           <ul class="list-item-pay clear">
+               <li class="sml-width">
+                   <div class="pay-ico"><i class="i-pay-ico i-pay-ye"></i>支付方式一</div>
+                   <div class="pay-cont">
+                       <p>支付方式一</p>
+                   </div>
+               </li>
+               <li>
+                   <div class="pay-ico"><i class="i-pay-ico i-pay-hk"></i>支付方式二</div>
+                   <div class="pay-cont">
+                       <p>支付方式二</p>
+                   </div>
+               </li>
+               <li class="sml-width">
+                   <div class="pay-ico"><i class="i-pay-ico i-pay-wy"></i>支付方式三</div>
+                   <div class="pay-cont">
+                       <p>支付方式三</p>
+                   </div>
+               </li>
+               <li>
+                   <div class="pay-ico"><i class="i-pay-ico i-pay-sm"></i>支付方式四</div>
+                   <div class="pay-cont">
+                       <p>支付方式四</p>
+                   </div>
+               </li>
+           </ul>
+		</div>
+	   
 	
 	    <div class="list-item" >
-	      <h3 style="font-size:16px;">专利列表</h3>
+	      <h3 style="font-size:16px;" id="anchor5">专利列表</h3>
 			<ul class="h_second_list">
 			<c:forEach items="${patents}" var="patent">
 				<li>
@@ -254,7 +318,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			</c:if>	
 			</div> 
 	    </div>
-	    
+	    </div>
 	</div>
  	<div class="right-sec">
 	    <h2>精品推荐</h2>
@@ -363,6 +427,47 @@ h5 {
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+.details_goods_wrap {
+    width: 100%;
+    float: right;
+    padding: 0 0 30px;
+    font: 12px/28px '\5B8B\4F53';
+    color: #666;
+    margin-top: 28px;
+}
+
+.content-top {
+    height: 50px;
+    background: #f5f5f5;
+    position: relative;
+    border: 1px solid #d9d9d9;
+}
+
+.content-top li.active {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 2px solid #ff510c;
+    border-bottom: 1px solid #fff;
+    top: -1px;
+    left: -1px;
+}
+
+.content-top li {
+    float: left;
+    position: relative;
+    line-height: 50px;
+    width: 120px;
+	text-align: center;
+	font-size: 14px;
+}
+.content-top li.active a, .content-top li:hover a {
+    color: #ff510c;
+    text-decoration: none;
+}
+.content-top li.active a, .content-top li.active + li a {
+    background: none;
+}
+
 
 .r_detail_about {
     padding: 15px 0;
