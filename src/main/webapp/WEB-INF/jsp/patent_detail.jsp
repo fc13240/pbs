@@ -177,15 +177,14 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
-				<span class="tip1">
-					温馨提示：龙图腾提供安全交易服务，您可以委托龙图腾官方客服作为您的交易经理人。
-					<img src="<s:url value='/images/todown.png'/>" width="15px" height="15px" no-repeat>
-				</span>
-				<span class="tip2" style="display:none;">
-					如您选择自行与转让方对接，由此产生的所有风险以及纠纷或损失等任何问题，由您自行<br/>承担，龙图腾概不承担任何责任。
-				</span></td>
+				<td class="po-re" colspan="2">
+					<div class="yellowbg_tips">
+						<strong>温馨提示：</strong>龙图腾提供安全交易服务，您可以委托龙图腾官方客服作为您的交易经理人。如您选择自行与转让方对接，由此产生的所有风险以及纠纷或损失等任何问题，由您自行承担，龙图腾概不承担任何责任。
+						<div class="triangle-down"></div>
+					</div>
+				</td>
 			</tr>
+			<tr><td style="height:65px;"></td></tr>
 	    </table>
 	    
 	    <div class="details_goods_wrap">
@@ -407,6 +406,32 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 <!--转让方end-->
 
  <style type="text/css">
+.po-re {
+    position: relative;
+}
+.yellowbg_tips {
+    background: #f5f5f5;
+    padding: 4px 17px 6px 10px;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    height: 15px;
+    overflow: hidden;
+    width: 496px;
+    position: absolute;
+    z-index: 1;
+    border:1px solid #f5f5f5;
+}
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #555;
+    position: relative;
+    top: -47px;
+    left: 496px;
+}
 h5 {
     font-size: 14px;
 }
@@ -641,10 +666,10 @@ $('.content-top').find('li').each(function(i) {
 	});
 });
 	
-	$('.tip1').hover(function() {
-        $(".tip2").css('display', 'block');
+	$('.yellowbg_tips').hover(function() {
+        $(".yellowbg_tips").css('height', '50px');
     }, function() {
-       $(".tip2").css('display', 'none');
+       $(".yellowbg_tips").css('height', '15px');
     });
 </script>
   
