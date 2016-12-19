@@ -127,7 +127,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			
 			</td>
 			  <td>转让方：
-			  	<a style="color:red;font-size:20px;" data-toggle = "modal" data-target = "#transferorModal">
+			  	<a style="color:red;font-size:20px;cursor:pointer;" data-toggle = "modal" data-target = "#transferorModal">
 					${good.transferor }
 				</a>
 				
