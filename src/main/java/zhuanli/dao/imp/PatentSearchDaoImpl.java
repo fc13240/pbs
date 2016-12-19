@@ -1,13 +1,10 @@
 package zhuanli.dao.imp;
-import static com.mongodb.client.model.Filters.in;
 import static com.mongodb.client.model.Filters.eq;
+
 import java.util.ArrayList;
 
 import org.bson.Document;
 
-import com.mongodb.Block;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
@@ -26,13 +23,11 @@ public class PatentSearchDaoImpl implements PatentSearchDao{
 	}
 	
 	@Override
-	public MongoPatent findMongoPatentByAppNo(String appNo){	
+	public  MongoPatent findMongoPatentByAppNo(String appNo){	
 		MongoDatabase db = mongoClient.getDatabase("sopatent");
 		MongoCollection<Document> collection = db.getCollection("patent");
-//		DBCollection collection=(DBCollection) db.getCollection("patent");
-//		 Document doc= collection.find(in("appNo", appNo)).first();
-		FindIterable<Document> iter= collection.find(eq("appNo",appNo));
-		Document doc=iter.first();
+//		Document doc= collection.find(in("appNo", appNo)).first();
+		Document doc= collection.find(eq("appNo",appNo)).first();
 		if(doc != null){
 		return convertDocToMongoPatent(doc);
 		}else{
@@ -59,6 +54,7 @@ public class PatentSearchDaoImpl implements PatentSearchDao{
 		MongoPatent.setPriority(doc.getString("priority"));
 		MongoPatent.setAppType(doc.getString("appType"));
 		MongoPatent.setStatus(doc.getString("status"));
+		System.out.println(MongoPatent.getPatentAbstract());
 		if(doc.getInteger("appScoreCount")==null){
 			MongoPatent.setAppScoreCount(1);
 		}else {
@@ -88,4 +84,8 @@ public class PatentSearchDaoImpl implements PatentSearchDao{
 		}
 		return subDoc.getString(subField);
 	}
+
+	
 }	
+
+  

@@ -244,7 +244,7 @@ public class PatentController {
 		model.addAttribute("shopType", shopType);
 		model.addAttribute("transferorUser", transferorUser);
 		model.addAttribute("contactAddress", contactAddress);
-		model.addAttribute("MongoPatent",mongoPatent);
+		model.addAttribute("mongoPatent",mongoPatent);
 		return "patent_detail";
 	}
 	

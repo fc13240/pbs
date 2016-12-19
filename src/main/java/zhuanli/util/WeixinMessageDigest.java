@@ -1,7 +1,9 @@
 package zhuanli.util;
 
 import java.security.*;  
-import java.util.Arrays;  
+import java.util.Arrays;
+
+import zhuanli.domain.MongoPatent;  
   
 /*** 
  * 微信消息接口认证token摘要类 
