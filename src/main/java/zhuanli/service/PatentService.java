@@ -4,12 +4,16 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import org.bson.Document;
+import org.bson.types.ObjectId;
+
 import net.lingala.zip4j.core.ZipFile;
 import zhuanli.domain.Brand;
 import zhuanli.domain.ColumnCount;
 import zhuanli.domain.ContactAddress;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.GoodsDetail;
+import zhuanli.domain.MongoPatent;
 import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
@@ -95,4 +99,7 @@ public interface PatentService {
 	User getGoodTransferorUser(String transferor);
 
 	ContactAddress getUserDefaultContactAddress(int userId);
+	
+	MongoPatent findMongoPatentByAppNo(String appNo);
+	
 }

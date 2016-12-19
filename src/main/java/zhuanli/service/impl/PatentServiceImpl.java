@@ -8,6 +8,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.bson.Document;
+import org.bson.types.ObjectId;
+
 import zhuanli.service.utils.PatentFeeExcelGenerator;
 
 import zhuanli.service.constants.Settings;
@@ -15,11 +18,13 @@ import zhuanli.service.utils.ZipUtils;
 
 import net.lingala.zip4j.core.ZipFile;
 import zhuanli.dao.PatentDao;
+import zhuanli.dao.PatentSearchDao;
 import zhuanli.domain.Brand;
 import zhuanli.domain.ColumnCount;
 import zhuanli.domain.ContactAddress;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.GoodsDetail;
+import zhuanli.domain.MongoPatent;
 import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
@@ -32,10 +37,12 @@ import zhuanli.service.PatentService;
 
 public class PatentServiceImpl implements PatentService {
 	private PatentDao patentDao;
+	private PatentSearchDao patentSearchDao;
 
 	
-	public PatentServiceImpl(PatentDao patentDao) {
+	public PatentServiceImpl(PatentDao patentDao,PatentSearchDao patentSearchDao) {
 		this.patentDao = patentDao;
+		this.patentSearchDao=patentSearchDao;
 	}
 
 	@Override
@@ -248,5 +255,10 @@ public class PatentServiceImpl implements PatentService {
 	public ContactAddress getUserDefaultContactAddress(int userId) {
 		return patentDao.getUserDefaultContactAddress(userId);
 	}
-	
+
+	@Override
+	public MongoPatent findMongoPatentByAppNo(String appNo) {
+		return patentSearchDao.findMongoPatentByAppNo(appNo);
+	}
+
 }

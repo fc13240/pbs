@@ -200,7 +200,10 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 		<div class="list-item J_minTop">
 			<h3 id="anchor1">专利详情</h3>
 			<div class="list-item-main">
-				暂无
+			<c:if test="${empty mongoPatent.patentAbstract}">
+				此专利未公开
+			</c:if>
+			${mongoPatent.patentAbstract}
 			</div>
 		</div>
 		

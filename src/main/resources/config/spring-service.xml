@@ -10,6 +10,7 @@
 
 	<bean name="patentService" class="zhuanli.service.impl.PatentServiceImpl">
 		<constructor-arg ref="patentDao"/>
+		<constructor-arg ref="patentSearchDao"/>
 	</bean>
 	
 	<bean id="userService" class="zhuanli.service.impl.UserServiceImpl">

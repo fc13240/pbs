@@ -8,6 +8,7 @@ public class PatentSearchCondition {
 	private Page page;
 	private int userId;
 	private Integer secondColumnId;
+	private String appNo;
 	
 	
 	public Integer getSecondColumnId() {
@@ -35,11 +36,20 @@ public class PatentSearchCondition {
 		this.page = page;
 	}
 	
+	
+	public String getAppNo() {
+		return appNo;
+	}
+	public void setAppNo(String appNo) {
+		this.appNo = appNo;
+	}
+	
 	@Override
 	public String toString() {
 		String keywordStr = keyword == null ? "" : keyword;
 		Integer secondColumnIdStr =secondColumnId== null ? 1:secondColumnId;
+		String appNoStr=appNo == null? "":appNo;
 		
-		return "&keyword=" + keywordStr +"&secondColumnId="+secondColumnIdStr;
+		return "&keyword=" + keywordStr +"&secondColumnId="+secondColumnIdStr+"&appNo="+appNoStr;
 	}
 }

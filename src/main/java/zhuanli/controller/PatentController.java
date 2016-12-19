@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import net.lingala.zip4j.core.ZipFile;
 import zhuanli.domain.FirstColumn;
 import zhuanli.domain.GoodsDetail;
+import zhuanli.domain.MongoPatent;
 import zhuanli.domain.Notice;
 import zhuanli.domain.Page;
 import zhuanli.domain.Patent;
@@ -221,6 +222,7 @@ public class PatentController {
 	@RequestMapping(path="getPatentDetail")
 	public String getPatentDetail(long patentId,HttpSession session,Page page, Model model){
 		SaleGood good = patentService.getAlreadSalePatentDetail(patentId);
+		MongoPatent mongoPatent=patentService.findMongoPatentByAppNo(good.getAppNo());
 		int shopType =good.getFirstColumn().getId();
 		page.setPageSize(WebUtils.getPageSize(session));
 		if(page.getCurrentPage()<1){
@@ -242,6 +244,7 @@ public class PatentController {
 		model.addAttribute("shopType", shopType);
 		model.addAttribute("transferorUser", transferorUser);
 		model.addAttribute("contactAddress", contactAddress);
+		model.addAttribute("MongoPatent",mongoPatent);
 		return "patent_detail";
 	}
 	
