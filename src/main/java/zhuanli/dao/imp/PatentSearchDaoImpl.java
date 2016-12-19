@@ -26,7 +26,6 @@ public class PatentSearchDaoImpl implements PatentSearchDao{
 	public  MongoPatent findMongoPatentByAppNo(String appNo){	
 		MongoDatabase db = mongoClient.getDatabase("sopatent");
 		MongoCollection<Document> collection = db.getCollection("patent");
-//		Document doc= collection.find(in("appNo", appNo)).first();
 		Document doc= collection.find(eq("appNo",appNo)).first();
 		if(doc != null){
 		return convertDocToMongoPatent(doc);
