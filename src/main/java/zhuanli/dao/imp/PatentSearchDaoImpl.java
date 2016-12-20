@@ -37,33 +37,7 @@ public class PatentSearchDaoImpl implements PatentSearchDao{
 	private MongoPatent convertDocToMongoPatent(Document doc) {
 		MongoPatent MongoPatent = new MongoPatent();
 		MongoPatent.setId(doc.getObjectId("_id"));
-		MongoPatent.setAppNo(doc.getString("appNo"));
-		MongoPatent.setPublishNo(doc.getString("publishNo"));
-		MongoPatent.setPatentName(doc.getString("patentName"));
-		MongoPatent.setPatentType(doc.getString("patentType"));
-		MongoPatent.setPublishDate(doc.getDate("publishDate"));
-		MongoPatent.setAppDate(doc.getDate("appDate"));
-		MongoPatent.setAppPerson(array2Str(doc, "appPerson"));
-		MongoPatent.setInventPerson(array2Str(doc, "inventPerson"));
-		MongoPatent.setAddress(getSubField(doc, "address", "fullAddress"));
 		MongoPatent.setPatentAbstract(doc.getString("abstract"));
-		MongoPatent.setProxyOrg(doc.getString("proxyOrg"));
-		MongoPatent.setProxyPerson(array2Str(doc, "proxyPerson"));
-		MongoPatent.setIpc(getSubField(doc, "ipc", "fullIpc"));
-		MongoPatent.setPriority(doc.getString("priority"));
-		MongoPatent.setAppType(doc.getString("appType"));
-		MongoPatent.setStatus(doc.getString("status"));
-		System.out.println(MongoPatent.getPatentAbstract());
-		if(doc.getInteger("appScoreCount")==null){
-			MongoPatent.setAppScoreCount(1);
-		}else {
-			MongoPatent.setAppScoreCount(doc.getInteger("appScoreCount"));
-		}
-		if(doc.getDouble("appScore")==null){
-			MongoPatent.setAppScore(5);
-		}else {
-			MongoPatent.setAppScore(doc.getDouble("appScore"));
-		}
 		return MongoPatent;
 	}
 	
