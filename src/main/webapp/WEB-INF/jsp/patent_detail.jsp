@@ -104,15 +104,6 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			</span> 
 			</td>
 			</tr>
-			<tr>
-			  <td  colspan="2">
-			  	<div class="box_1" style="line-height:40px;" >简介：专利交易，各种专利任你选。
-			
-			</div>
-			
-			        	        	        	        	
-			     </td>
-			   </tr>
 			   <tr style="border-bottom:1px dashed #ececec">
 			  <td height="15">
 			</tr>
@@ -136,7 +127,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			
 			</td>
 			  <td>转让方：
-			  	<a style="color:red;font-size:20px;" data-toggle = "modal" data-target = "#transferorModal">
+			  	<a style="color:red;font-size:20px;cursor:pointer;" data-toggle = "modal" data-target = "#transferorModal">
 					${good.transferor }
 				</a>
 				
