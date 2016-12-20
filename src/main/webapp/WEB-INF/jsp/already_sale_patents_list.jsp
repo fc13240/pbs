@@ -104,7 +104,10 @@
 		        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>
 			          <div class="btn_box">
-				          <div class="left price" style="">&yen;${good.price}</div>
+				          <div class="left price" style="">
+				          <c:if test="${good.price > 0 }">&yen;${good.price}</c:if>
+				          <c:if test="${good.price == 0 }">面议</c:if>
+				          </div>
 				          <div class="right">
 				          	<button title="${good.patentName}" onclick="getPatentDetail(${good.patentId})"  class="btn">立即抢购</button>
 				          </div>

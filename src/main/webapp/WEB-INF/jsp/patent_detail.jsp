@@ -139,7 +139,8 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			<tr style="border-top:1px dashed #ececec">
 				<td>价&nbsp;&nbsp;格：
 				<span style="color:red;font-size:20px;">
-				&yen;${good.price }
+				<c:if test="${good.price > 0}">&yen;${good.price }</c:if>
+				<c:if test="${good.price == 0}">面议</c:if>
 				</span>
 				</td>
 				<td>

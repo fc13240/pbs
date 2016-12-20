@@ -81,7 +81,10 @@ $(function(){
 	        
 				  <div>
 					  <div style="float:left;width:100px;">
-					  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">${patent.price}</span></strong>
+					  	<strong class="p-money">
+					  	<c:if test="${patent.price > 0}"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">${patent.price}</span></c:if>
+					  	<c:if test="${patent.price == 0 }"><span class="m-count JS_async_price">面议</span></c:if>
+					  	</strong>
 					  </div>
 					  <div style="float:right;width:100px;" class="box_buy">
 					  <a target="_blank" title="立即抢购" href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" class="btn_buy">立即抢购</a>
@@ -435,8 +438,8 @@ margin: 0 auto;
 									</div>
 									<div class="line3">
 										<a href="javascript:;" class="icon_feng"></a>
-										<i>¥</i>
-											<span>${patent.price}</span>
+										<c:if test="${patent.price > 0}"><i>¥</i><span>${patent.price}</span></c:if>
+										<c:if test="${patent.price == 0 }"><span>面议</span></c:if>		
 										</div>
 								</div>
 						</li>

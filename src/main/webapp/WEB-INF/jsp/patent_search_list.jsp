@@ -124,7 +124,10 @@ $(function(){
           </div>         
 		  <div>
 			  <div style="float:left;width:100px;">
-			  	<strong class="p-money"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">${patent.price}</span></strong>
+			  	<strong class="p-money">
+			  	<c:if test="${patent.price > 0}"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">${patent.price}</span></c:if>
+			  	<c:if test="${patent.price == 0 }"><span class="m-count JS_async_price">面议</span></c:if>
+			  	</strong>
 			  </div>
 			  <div style="float:right;width:100px;" class="box_buy">
 			  <a target="_blank" title="立即抢购" href="<s:url value='/patent/detail.html'/>?patentno=${patent.patent_id}" class="btn_buy">立即抢购</a>
