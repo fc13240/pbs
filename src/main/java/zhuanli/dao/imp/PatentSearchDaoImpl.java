@@ -41,7 +41,7 @@ public class PatentSearchDaoImpl implements PatentSearchDao{
 		return MongoPatent;
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "unused" })
 	private String array2Str(Document doc, String fieldName) {
 		ArrayList<String> values = doc.get(fieldName, ArrayList.class);
 		if (values != null && !values.isEmpty()) {
@@ -50,6 +50,7 @@ public class PatentSearchDaoImpl implements PatentSearchDao{
 		return null;
 	}
 	
+	@SuppressWarnings("unused")
 	private String getSubField(Document doc, String parentField, String subField) {
 		Document subDoc = doc.get(parentField, Document.class);
 		if (subDoc == null) {
