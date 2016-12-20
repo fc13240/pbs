@@ -213,7 +213,7 @@
 	</select>
 	
 	<select id="selectRecommendPatents" resultMap="TransactionPatent">
-		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url
+		<!-- SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
 		WHERE  sg.status=1  and ss.patent_first_column_id=1 ORDER BY recommend_status DESC LIMIT 8) AS c1
 		UNION 
@@ -235,7 +235,38 @@
 		UNION 
 		SELECT * FROM (SELECT  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url
 		FROM  sell_patent_goods sg LEFT JOIN patents p ON sg.patent_id = p.patent_id left JOIN sell_second_column  ss ON ss.patent_second_column_id=sg.patent_second_column
-		WHERE  sg.status=1  and ss.patent_first_column_id=6 ORDER BY recommend_status DESC LIMIT 8) AS c6
+		WHERE  sg.status=1  and ss.patent_first_column_id=6 ORDER BY recommend_status DESC LIMIT 8) AS c6 -->
+		
+		 select * from (select * from (select  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url 
+		 from  sell_patent_goods sg left join patents p on sg.patent_id = p.patent_id left join sell_second_column  ss on ss.patent_second_column_id=sg.patent_second_column 
+		 group by ss.patent_second_column_id) up 
+		 where  up.status=1 and up.patent_first_column_id=1 order by up.recommend_status desc limit 8) as c1 
+		 union 
+		 select * from (select * from (select  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url 
+		 from  sell_patent_goods sg left join patents p on sg.patent_id = p.patent_id left join sell_second_column  ss on ss.patent_second_column_id=sg.patent_second_column 
+		 group by ss.patent_second_column_id) up 
+		 where  up.status=1 and up.patent_first_column_id=2 order by up.recommend_status desc limit 8) as c2 
+		 union 
+		 select * from (select * from (select  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url 
+		 from  sell_patent_goods sg left join patents p on sg.patent_id = p.patent_id left join sell_second_column  ss on ss.patent_second_column_id=sg.patent_second_column 
+		 group by ss.patent_second_column_id) up 
+		 where  up.status=1 and up.patent_first_column_id=3 order by up.recommend_status desc limit 8) as c3 
+		 union 
+		 select * from (select * from (select  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url 
+		 from  sell_patent_goods sg left join patents p on sg.patent_id = p.patent_id left join sell_second_column  ss on ss.patent_second_column_id=sg.patent_second_column 
+		 group by ss.patent_second_column_id) up 
+		 where  up.status=1 and up.patent_first_column_id=4 order by up.recommend_status desc limit 8) as c4 
+		 union 
+		 select * from (select * from (select  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url 
+		 from  sell_patent_goods sg left join patents p on sg.patent_id = p.patent_id left join sell_second_column  ss on ss.patent_second_column_id=sg.patent_second_column 
+		 group by ss.patent_second_column_id) up 
+		 where  up.status=1 and up.patent_first_column_id=5 order by up.recommend_status desc limit 8) as c5 
+		 union 
+		 select * from (select * from (select  sg.patent_id,sg.price,sg.status,sg.transaction_type,sg.add_date,sg.transaction_date,sg.transferor,p.patent_name,p.app_no,sg.recommend_status,ss.patent_first_column_id,ss.patent_second_column_name,sg.patent_second_column,sg.patent_image_url 
+		 from  sell_patent_goods sg left join patents p on sg.patent_id = p.patent_id left join sell_second_column  ss on ss.patent_second_column_id=sg.patent_second_column 
+		 group by ss.patent_second_column_id) up 
+		 where  up.status=1 and up.patent_first_column_id=6 order by up.recommend_status desc limit 8) as c6 
+
 	</select>
 	
 	<select id="selectAllColumns" resultMap="AllColumnMap">
