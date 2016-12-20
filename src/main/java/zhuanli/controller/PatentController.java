@@ -222,7 +222,6 @@ public class PatentController {
 	@RequestMapping(path="getPatentDetail")
 	public String getPatentDetail(long patentId,HttpSession session,Page page, Model model){
 		SaleGood good = patentService.getAlreadSalePatentDetail(patentId);
-		MongoPatent mongoPatent=patentService.findMongoPatentByAppNo(good.getAppNo());
 		int shopType =good.getFirstColumn().getId();
 		page.setPageSize(WebUtils.getPageSize(session));
 		if(page.getCurrentPage()<1){
@@ -237,6 +236,7 @@ public class PatentController {
 		if(transferorUser != null) {
 			contactAddress = patentService.getUserDefaultContactAddress(transferorUser.getUserId());
 		}
+		MongoPatent mongoPatent=patentService.findMongoPatentByAppNo(good.getAppNo());
 		model.addAttribute("recommedPatents", recommedPatents);
 		model.addAttribute("good",good);
 		model.addAttribute("patents", patents);
