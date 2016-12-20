@@ -70,8 +70,12 @@ public class PatentSearchDaoImpl implements PatentSearchDao {
 	}
 	
 	public static void main(String[] args) {
-		String appNo=convertMysqlAppNoToMongo("2016210938963");
-		System.out.println(appNo);
+		String c="哈喽";
+		String appNo="2102016938963";
+		int a=appNo.lastIndexOf(".");
+		int b=appNo.length();
+		int d=c.lastIndexOf("喽");
+		System.out.println(a+"-----"+b+"-----"+d);
 	}
 
 }
