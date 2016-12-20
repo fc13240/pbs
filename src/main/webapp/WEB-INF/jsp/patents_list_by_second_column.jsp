@@ -77,7 +77,7 @@
 <!--当前位置 end-->
 
 <!--商标列表-->
-<div class="container box-red-line">
+<div class="container box-red-line" style="min-height:450px;">
   
     <ul class="sy_buy_list_box">
     	<c:forEach items="${goods}" var="good">
