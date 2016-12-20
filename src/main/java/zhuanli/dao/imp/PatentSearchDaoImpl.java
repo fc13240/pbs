@@ -27,6 +27,7 @@ public class PatentSearchDaoImpl implements PatentSearchDao {
 	public MongoPatent findMongoPatentByAppNo(String appNo) {
 		MongoDatabase db = mongoClient.getDatabase("sopatent");
 		MongoCollection<Document> collection = db.getCollection("patent");
+		appNo=convertMysqlAppNoToMongo(appNo);
 		Document doc = collection.find(eq("appNo", appNo)).first();
 		if (doc != null) {
 			return convertDocToMongoPatent(doc);
@@ -58,6 +59,17 @@ public class PatentSearchDaoImpl implements PatentSearchDao {
 			return null;
 		}
 		return subDoc.getString(subField);
+	}
+	
+	public static String convertMysqlAppNoToMongo(String appNo){
+		String resultAppNo=appNo.substring(0,appNo.length()-1)+"."+appNo.substring(appNo.length()-1, appNo.length());
+		return resultAppNo;
+		
+	}
+	
+	public static void main(String[] args) {
+		String appNo=convertMysqlAppNoToMongo("2016210938963");
+		System.out.println(appNo);
 	}
 
 }
