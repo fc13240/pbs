@@ -172,7 +172,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 				<td class="po-re" colspan="2">
 					<div class="yellowbg_tips">
 						<strong>温馨提示：</strong>龙图腾提供安全交易服务，您可以委托龙图腾官方客服作为您的交易经理人。如您选择自行与转让方对接，由此产生的所有风险以及纠纷或损失等任何问题，由您自行承担，龙图腾概不承担任何责任。
-						<div class="triangle-down"></div>
+						
 					</div>
 				</td>
 			</tr>
@@ -406,13 +406,13 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 }
 .yellowbg_tips {
     background: #f5f5f5;
-    padding: 4px 17px 6px 10px;
+    padding: 4px 10px 6px 10px;
     font-size: 12px;
     color: #666;
     line-height: 18px;
-    height: 15px;
+    height: 50px;
     overflow: hidden;
-    width: 496px;
+    width: 510px;
     position: absolute;
     z-index: 1;
     border:1px solid #f5f5f5;
@@ -661,11 +661,6 @@ $('.content-top').find('li').each(function(i) {
 	});
 });
 	
-	$('.yellowbg_tips').hover(function() {
-        $(".yellowbg_tips").css('height', '50px');
-    }, function() {
-       $(".yellowbg_tips").css('height', '15px');
-    });
 </script>
   
 
