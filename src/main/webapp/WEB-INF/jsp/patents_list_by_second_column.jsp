@@ -101,7 +101,9 @@
 	 			  </div>
 	 			  <div>
 			          <h3>
-			          	<a target="_blank" title="${good.patentName}" href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${good.patentId}'/>" class="overflow_clear">${good.patentName}</a>
+			          	<a target="_blank" title="${good.patentName}" href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${good.patentId}'/>" class="overflow_clear" style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">
+			          		${good.patentName}
+			          	</a>
 			          </h3>
 		        
 			          <hr style="border:none 0px; border-bottom: 1px solid #e0e0e0; margin-top:6px;"/>

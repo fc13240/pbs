@@ -451,9 +451,10 @@ h5 {
     width: 100%;
     float: right;
     padding: 0 0 30px;
-    font: 12px/28px '\5B8B\4F53';
+    font: 13px/28px '\5B8B\4F53';
     color: #666;
     margin-top: 28px;
+    font-family: Arial;
 }
 
 .content-top {
@@ -483,10 +484,11 @@ h5 {
 	
 }
 .content-top li a {
-    font: 14px/14px "\5B8B\4F53";
+    font: 15px/15px "\5B8B\4F53";
     color: #535353;
     padding: 0 30px;
     background: url(<s:url value='/images/icon_details.png'/>) 0 -47px no-repeat;
+    font-family: Arial;
 }
 
 .content-top li.active a, .content-top li:hover a {
