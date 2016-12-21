@@ -171,7 +171,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			<tr>
 				<td class="po-re" colspan="2">
 					<div class="yellowbg_tips">
-						<strong>温馨提示：</strong>龙图腾提供安全交易服务，您可以委托龙图腾官方客服作为您的交易经理人。如您选择自行与转让方对接，由此产生的所有风险以及纠纷或损失等任何问题，由您自行承担，龙图腾概不承担任何责任。
+						<strong>温馨提示：</strong>任何用户均可直接在专利管家免费发布交易信息。如您选择自行与转让方对接，请自行鉴别真伪，否则由此产生的所有风险均由您独自承担。建议您委托龙图腾官方客服作为您的交易经理人，以防被骗。
 						
 					</div>
 				</td>
