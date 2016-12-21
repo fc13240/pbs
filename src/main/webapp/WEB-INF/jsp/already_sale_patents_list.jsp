@@ -243,10 +243,10 @@ function getbrandDetail(brandId) {
 	window.location.href="<s:url value='/brand/getbrandDetail.html'/>?brandId=" + brandId;
 }
 
-/* function exportList(categoryId) {
-	var iframe = document.getElementById('brandExcelFileFrame');
-	iframe.src = "<s:url value='/brand/exportList.html'/>?categoryId=" + categoryId;
-} */
+function getPatentDetail(patentId) {
+	var url = "<s:url value='/patent/getPatentDetail.html'/>?patentId=" + patentId;
+	window.open(url);
+}
 </script>
   
 

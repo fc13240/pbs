@@ -441,7 +441,7 @@ margin: 0 auto;
 											<c:if test="${patent.price > 0}">&yen;${patent.price}</c:if>
 											<c:if test="${patent.price == 0 }">面议</c:if>		
 										</span>
-										<span style="font-size: 12px;color:#fff;background-color:#ff6600;padding:3px 5px;cursor:pointer;float: right;margin-right:5px;" onclick="buyPatent(4866341)">
+										<span style="font-size: 12px;color:#fff;background-color:#ff6600;padding:3px 5px;cursor:pointer;float: right;margin-right:5px;" onclick="buyPatent(${patent.patentId})">
 											立即抢购
 										</span>
 										</div>
@@ -466,5 +466,10 @@ margin: 0 auto;
 <script type="text/javascript">
 function getbrandDetail(brandId) {
 	window.location.href="<s:url value='/brand/getbrandDetail.html'/>?brandId=" + brandId;
+}
+
+function buyPatent(patentId) {
+	var url = "<s:url value='/patent/getPatentDetail.html'/>?patentId=" + patentId;
+	window.open(url);
 }
 </script>
