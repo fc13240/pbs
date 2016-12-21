@@ -28,8 +28,15 @@ public class SaleGood {
 	@DateTimeFormat(iso=ISO.DATE_TIME,pattern="yyyy-MM-dd")
 	private Date publishDate;
 	private String description;
+	private String patentStatusText;
 	
 	
+	public String getPatentStatusText() {
+		return patentStatusText;
+	}
+	public void setPatentStatusText(String patentStatusText) {
+		this.patentStatusText = patentStatusText;
+	}
 	public String getDescription() {
 		return description;
 	}
@@ -151,4 +158,11 @@ public class SaleGood {
 		this.patentStatus = patentStatus;
 	}
 	
+	public String getTransactionTypeText(){
+		if(transactionType==1){
+			return "许可";
+		}else{
+			return "转让";
+		}
+	}
 }
