@@ -99,7 +99,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			<tr>
 			<td  colspan="2">
 			<span style="line-height: 44px;font-size:20px;collor:#000000;">
-			[${good.patentType.typeDescription }]${good.patentName }
+			<font style="font-weight: 700;">[${good.patentType.typeDescription }]${good.patentName }</font>&nbsp;<font color="#f08200" style="font-weight: bold;">${good.patentStatusText }</font>
 			
 			</span> 
 			</td>
@@ -114,18 +114,12 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			</tr>
 			<tr>
 			  <td width="250px;">申请日：<fmt:formatDate value="${good.appDate }" pattern="yyyy-MM-dd"/> </td>
-			<td>发布日期：<fmt:formatDate value="${good.publishDate }" pattern="yyyy-MM-dd"/></td>
+			<%-- <td>发布日期：<fmt:formatDate value="${good.publishDate }" pattern="yyyy-MM-dd"/></td> --%>
+			<td>发布日期：<fmt:formatDate value="${good.addDate }" pattern="yyyy-MM-dd"/></td>
 			
 			</tr>
 			<tr>
-			  <td width="250px;">
-					<a href="javascript:;"  data="1" class="s-class s-hover">
-						<span val="tr_reg_1" >
-			${good.firstColumn.name }
-			</span>
-					</a>
-			
-			</td>
+			  <td width="250px;">所属领域：${good.firstColumn.name }</td>
 			  <td>转让方：
 			  	<a style="color:red;font-size:20px;cursor:pointer;" data-toggle = "modal" data-target = "#transferorModal">
 					${good.transferor }
@@ -137,7 +131,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 	
 	         
 			<tr style="border-top:1px dashed #ececec">
-				<td>价&nbsp;&nbsp;格：
+				<td>${good.transactionTypeText }价格：
 				<span style="color:red;font-size:20px;">
 				<c:if test="${good.price > 0}">&yen;${good.price }</c:if>
 				<c:if test="${good.price == 0}">面议</c:if>
@@ -171,7 +165,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 			<tr>
 				<td class="po-re" colspan="2">
 					<div class="yellowbg_tips">
-						<strong>温馨提示：</strong>龙图腾提供安全交易服务，您可以委托龙图腾官方客服作为您的交易经理人。如您选择自行与转让方对接，由此产生的所有风险以及纠纷或损失等任何问题，由您自行承担，龙图腾概不承担任何责任。
+						<strong>温馨提示：</strong>任何用户均可直接在专利管家免费发布交易信息。如您选择自行与转让方对接，请自行鉴别真伪，否则由此产生的所有风险均由您独自承担。建议您委托龙图腾官方客服作为您的交易经理人，以防被骗。
 						
 					</div>
 				</td>
@@ -186,7 +180,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 				<li class=""><a href="#anchor3">交易流程</a></li>
 				<li class=""><a href="#anchor4">过户材料</a></li>
                	<li class=""><a href="#anchor5">支付方式</a></li>
-               	<li class=""><a href="#anchor6">专列列表</a></li>
+               	<li class=""><a href="#anchor6">同类专利</a></li>
 			</ul>
 		</div>
 		<div class="list-item J_minTop">

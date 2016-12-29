@@ -19,6 +19,7 @@
 		<result property="appDate" column="app_date"/>
 		<result property="publishDate" column="publish_date"/>
 		<result property="description" column="description"/>
+		<result property="patentStatusText" column="patent_status_text"/>
 		<association property="patentType" javaType="PatentType">
 			<id property="patentTypeId" column="patent_type_id"/>
 			<result property="typeDescription" column="patent_type_desc"/>
@@ -427,7 +428,7 @@
 	
 	<select id="getAlreadSalePatentDetail" parameterType="long" resultMap="SaleGoodResultMap">
 		 select spg.patent_id,p.patent_name,p.app_no,p.app_date,p.app_person,p.publish_date,pt.patent_type_id,pt.patent_type_desc,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,
-		 		sfc.patent_first_column_name,spg.transferor,spg.status,spg.patent_image_url,spg.description
+		 		sfc.patent_first_column_name,spg.transferor,spg.status,spg.patent_image_url,spg.description,spg.add_date,p.patent_status_text
 		    from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
 		       left join patent_types pt on p.patent_type=pt.patent_type_id
 		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
@@ -435,7 +436,6 @@
 		       where spg.patent_id=#{patentId}     
 
 	</select>
-	
 	
 	<select id="getPatentListBySecondColumnId" resultMap="SaleGoodResultMap">
 		select spg.patent_id,p.patent_name,p.app_no,p.app_date,p.app_person,p.publish_date,pt.patent_type_id,pt.patent_type_desc,spg.price,
@@ -447,6 +447,7 @@
 		       where spg.patent_second_column=#{secondColumnId} and spg.status=1
 		       limit #{page.startIndex},#{page.pageSize}
 	</select>
+	
 	<select id="getPatentListBySecondColumnIdCount" parameterType="int" resultType="int">
 		select count(*) from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
 		       left join patent_types pt on p.patent_type=pt.patent_type_id 
@@ -454,6 +455,7 @@
 		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id 
 		       where spg.patent_second_column=#{secondColumnId} and spg.status=1;
 	</select>
+	
 	<select id="getSearchPatentListBySecondColumnId" parameterType="PatentSearchCondition" resultMap="SaleGoodResultMap">
 		<bind name="keyword_pattern" value="'%' +keyword + '%'"/>
 		select spg.patent_id,p.patent_name,p.app_no,p.app_date,p.app_person,p.publish_date,pt.patent_type_id,pt.patent_type_desc,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.transferor,spg.status,spg.patent_image_url,spg.description 
