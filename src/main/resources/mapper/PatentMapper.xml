@@ -494,4 +494,48 @@
 		 left JOIN districts d ON ca.district = d.id
 		 WHERE ca.is_default=1 AND ca.user = #{userId}
 	</select>
+	
+
+	<select id="getSearchLotutSelfSupportPatents" parameterType="PatentSearchCondition" resultMap="SaleGoodResultMap">
+		<bind name="keyword_pattern" value="'%' +keyword + '%'"/>
+		select spg.patent_id,p.patent_name,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.status,spg.patent_image_url,spg.description
+		       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
+		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id 
+		       where spg.status=1 and spg.owner=454
+		       
+			<if test="keyword_pattern!=null">
+	       	 and (p.patent_name like #{keyword_pattern} or p.app_no like #{keyword_pattern})
+	       </if>
+	       limit #{page.startIndex},#{page.pageSize}
+	</select>
+	
+	<select id="getSearchLotutSelfSupportPatentsCount"  resultType="int">
+		<bind name="keyword_pattern" value="'%' +keyword + '%'"/>
+		select count(*)
+	       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+	       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
+	       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id 
+	       where spg.status=1 and spg.owner=454
+		   <if test="keyword_pattern!=null">
+	       	 and (p.patent_name like #{keyword_pattern} or p.app_no like #{keyword_pattern})
+	       </if>
+	</select>
+	
+	<select id="getLotutSelfSupportPatents" parameterType="Page" resultMap="SaleGoodResultMap">
+		select spg.patent_id,p.patent_name,spg.price,spg.patent_second_column,ssc.patent_second_column_name,ssc.patent_first_column_id,sfc.patent_first_column_name,spg.status,spg.patent_image_url,spg.description
+		       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+		       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
+		       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id 
+		       where spg.status=1 and spg.owner=454
+		       limit #{startIndex},#{pageSize}
+	</select>
+	
+	<select id="getLotutSelfSupportPatentsCount"  resultType="int">
+		select count(*)
+	       from sell_patent_goods spg left join patents p on spg.patent_id=p.patent_id 
+	       left join sell_second_column ssc on ssc.patent_second_column_id=spg.patent_second_column 
+	       left join sell_first_column sfc on ssc.patent_first_column_id=sfc.patent_first_column_id 
+	       where spg.status=1 and spg.owner=454
+	</select>
 </mapper>

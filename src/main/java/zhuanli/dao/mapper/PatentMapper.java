@@ -90,5 +90,13 @@ public interface PatentMapper {
 	User getGoodTransferorUser(String transferor);
 
 	ContactAddress getUserDefaultContactAddress(int userId);
+
+	int getSearchLotutSelfSupportPatentsCount(PatentSearchCondition patentSearchCondition);
+	
+	int getLotutSelfSupportPatentsCount();
+
+	List<SaleGood> getSearchLotutSelfSupportPatents(PatentSearchCondition patentSearchCondition);
+
+	List<SaleGood> getLotutSelfSupportPatents(Page page);
 	
 }

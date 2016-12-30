@@ -283,4 +283,33 @@ public class PatentController {
 		return "patents_list_by_second_column";
 	}
 	
+	@RequestMapping(path="/getLotutSelfSupportPatents")
+	public String getLotutSelfSupportPatents(HttpSession session,Page page, Model model){
+		if (page.getCurrentPage() <= 0) {
+			page.setCurrentPage(1);
+		}
+		page.setPageSize(20);
+		int totalRecords = patentService.getLotutSelfSupportPatentsCount();
+		List<SaleGood> goods = patentService.getLotutSelfSupportPatents(page);
+		page.setTotalRecords(totalRecords);
+		model.addAttribute("goods",goods);
+		model.addAttribute("page",page);
+		return "patents_list_by_lotut_self_support";
+	}
+	
+	@RequestMapping(path="/getSearchLotutSelfSupportPatents")
+	public String getSearchLotutSelfSupportPatents(PatentSearchCondition searchCondition, Model model){
+		Page page = searchCondition.getPage();
+		if(page.getCurrentPage()<=1){
+			page.setCurrentPage(1);
+		}
+		page.setPageSize(20);
+		int totalRecords = patentService.getSearchLotutSelfSupportPatentsCount(searchCondition);
+		List<SaleGood> goods = patentService.getSearchLotutSelfSupportPatents(searchCondition);
+		page.setTotalRecords(totalRecords);
+		model.addAttribute("goods",goods);
+		model.addAttribute("page",page);
+		model.addAttribute("searchCondition",searchCondition);
+		return "patents_list_by_lotut_self_support";
+	}
 }

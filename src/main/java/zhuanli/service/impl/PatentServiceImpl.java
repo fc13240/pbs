@@ -261,4 +261,24 @@ public class PatentServiceImpl implements PatentService {
 		return patentSearchDao.findMongoPatentByAppNo(appNo);
 	}
 
+	@Override
+	public int getSearchLotutSelfSupportPatentsCount(PatentSearchCondition patentSearchCondition) {
+		return patentDao.getSearchLotutSelfSupportPatentsCount(patentSearchCondition);
+	}
+	
+	@Override
+	public int getLotutSelfSupportPatentsCount() {
+		return patentDao.getLotutSelfSupportPatentsCount();
+	}
+
+	@Override
+	public List<SaleGood> getSearchLotutSelfSupportPatents(PatentSearchCondition patentSearchCondition) {
+		return patentDao.getSearchLotutSelfSupportPatents(patentSearchCondition);
+	}
+
+	@Override
+	public List<SaleGood> getLotutSelfSupportPatents(Page page) {
+		return patentDao.getLotutSelfSupportPatents(page);
+	}
+
 }
