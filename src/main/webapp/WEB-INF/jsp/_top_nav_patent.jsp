@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="<s:url value='/css/mll.common.min.css?20160311'/>" />
+<link href="<s:url value='/css/category.min.css?2016322'/>" rel="stylesheet" type="text/css"/> 
+<link rel="stylesheet" href="http://r.lotut.com/Themes/Home/default/Public/css/top_footer.css">
 <style>
 .top-item dl a{
 color:#ffffff !important;
@@ -25,6 +28,19 @@ margin-right:5px;
 .top-item:hover .top_tuijian{
 color:#c9033b !important;
 }
+.navigator li .hot {
+    width: 12px;
+    height: 12px;
+    margin-top: 3px;
+    position: absolute;
+    background-position: -167px -65px;
+    _margin-top: -3px;
+}
+
+.navigator li  i {
+    background: url(<s:url value='/images/common/menu-icon.gif?1516'/>) no-repeat;
+    _background: url(<s:url value='/images/common/menu-icon.gif?1516'/>) no-repeat;
+    float: left;}
 </style>
 <div class="w clearfix">
 	<div id="JS_mll_header_menu_panel" class="menu-panel forbid">
