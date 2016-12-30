@@ -91,7 +91,9 @@ color:#c9033b !important;
       <li><a href="<s:url value='/patent/getAlreadySalePatent.html'/>" title="专利案例">专利案例</a></li>
       <li><a href="<s:url value='/brand/alreadySalebrands.html'/>" title="商标案例">商标案例</a></li>
       <li><a target="_blank" href="http://g.lotut.com" title="专利管家">专利管家</a></li>
-      <li><a href="<s:url value='/patent/getLotutSelfSupportPatents.html'/>" title="龙图腾自营">龙图腾自营</a></li>  	   
+      <li><a href="<s:url value='/patent/getLotutSelfSupportPatents.html'/>" title="龙图腾自营">龙图腾自营
+       <i class="hot" title="龙图腾自营"></i>
+      </a></li>  	   
 	</ul>
 </div>
 <iframe id="feeExcelFileFrame" style="display:none"></iframe>	  
