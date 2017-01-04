@@ -101,5 +101,15 @@ public interface PatentService {
 	ContactAddress getUserDefaultContactAddress(int userId);
 	
 	MongoPatent findMongoPatentByAppNo(String appNo);
+
+	int getLotutSelfSupportPatentsCount();
+	
+	int getSearchLotutSelfSupportPatentsCount(PatentSearchCondition patentSearchCondition);
+
+	List<SaleGood> getSearchLotutSelfSupportPatents(PatentSearchCondition patentSearchCondition);
+
+	List<SaleGood> getLotutSelfSupportPatents(Page page);
+	
+	
 	
 }
