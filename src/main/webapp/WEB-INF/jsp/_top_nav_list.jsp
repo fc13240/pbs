@@ -13,7 +13,7 @@
 }
 
 .navigator li  i {
-    background: url(<s:url value='/images/common/menu-icon.gif?1516'/>) no-repeat;
+    background: url(<s:url value='/images/common/menu-icon.png?1516'/>) no-repeat;
     _background: url(<s:url value='/images/common/menu-icon.gif?1516'/>) no-repeat;
     float: left;}
 </style>
