@@ -206,6 +206,27 @@ public class PatentMybatisDao extends SqlSessionDaoSupport implements PatentDao 
 	public ContactAddress getUserDefaultContactAddress(int userId) {
 		return patentMapper.getUserDefaultContactAddress(userId);
 	}
+
+	@Override
+	public int getSearchLotutSelfSupportPatentsCount(PatentSearchCondition patentSearchCondition) {
+		return patentMapper.getSearchLotutSelfSupportPatentsCount(patentSearchCondition);
+	}
+	
+	@Override
+	public int getLotutSelfSupportPatentsCount() {
+		return patentMapper.getLotutSelfSupportPatentsCount();
+	}
+
+
+	@Override
+	public List<SaleGood> getSearchLotutSelfSupportPatents(PatentSearchCondition patentSearchCondition) {
+		return patentMapper.getSearchLotutSelfSupportPatents(patentSearchCondition);
+	}
+
+	@Override
+	public List<SaleGood> getLotutSelfSupportPatents(Page page) {
+		return patentMapper.getLotutSelfSupportPatents(page);
+	}
 	
 	
 }

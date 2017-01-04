@@ -415,6 +415,7 @@ margin: 0 auto;
 						<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
 							<c:forEach items="${patents.value}" var="patent">
 						<li>	
+						<div class="syPub_list" style="width: 211px;height: 255px;background-color: white;margin: 0px;">
 								<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="img">
 									<c:choose>
 										<c:when test="${not empty patent.patentImageUrl }">
@@ -443,6 +444,7 @@ margin: 0 auto;
 											立即抢购
 										</span>
 										</div>
+								</div>
 								</div>
 						</li>
 							</c:forEach>
