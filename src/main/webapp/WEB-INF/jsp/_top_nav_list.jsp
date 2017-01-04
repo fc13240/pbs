@@ -7,7 +7,6 @@
     width: 12px;
     height: 12px;
     margin-top: 3px;
-    position: absolute;
     background-position: -167px -65px;
     _margin-top: -3px;
 }
@@ -350,8 +349,9 @@
       <li><a href="<s:url value='/patent/getAlreadySalePatent.html'/>" title="专利案例">专利案例</a></li>
       <li><a href="<s:url value='/brand/alreadySalebrands.html'/>" title="商标案例">商标案例</a></li>
       <li><a target="_blank" href="http://g.lotut.com" title="专利管家">专利管家</a></li>
-      <li><a href="<s:url value='/patent/getLotutSelfSupportPatents.html'/>" title="龙图腾自营">龙图腾自营
-      <i class="hot" title="龙图腾自营"></i>
+      <li><a href="<s:url value='/patent/getLotutSelfSupportPatents.html'/>" title="龙图腾自营">
+      <i class="hot" title="龙图腾自营"></i>龙图腾自营
+      
       </a></li>    
     </ul>
   </div>
