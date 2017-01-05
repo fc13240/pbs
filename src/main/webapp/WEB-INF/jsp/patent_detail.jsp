@@ -271,7 +271,7 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 	
 	    <div class="list-item" >
 	      <h3 style="font-size:16px;" id="anchor6">专利列表</h3>
-			<ul class="h_second_list">
+			<ul class="h_second_list" >
 			<c:forEach items="${patents}" var="patent">
 				<li>
 				<span class="h_list_tit" style="font-size:14px;">
@@ -280,26 +280,29 @@ background: url("<s:url value='/images/111.png'/>") no-repeat right 12px;
 				</li>			
 			</c:forEach>
 			</ul>
-			<div class="i_m qs_clear"> 
+			<div class="i_m qs_clear" style="margin-left: 38px;"> 
 			<c:if test="${page.totalPages > 0}">
 	            <li>
-		            <div class="col-lg-12"> 共 ${page.totalPages}页${page.totalRecords}条记录    第${page.currentPage} 页 <a href="?patentId=${good.patentId}&currentPage=1">首页</a>
+		            <div class="col-lg-12" style="color:#333;"> 共 ${page.totalPages}页${page.totalRecords}条记录   
+		          	 <span id="now-page"> 第 ${page.currentPage}页</span>
+		             <span><a id="first-page" href="javascript:flashPage(${good.patentId},1)">首页</a>
 		              <c:choose>
-		                <c:when test="${page.currentPage - 1 > 0}"> <a href="?patentId=${good.patentId}&currentPage=${page.currentPage - 1}">上一页</a> </c:when>
-		                <c:when test="${page.currentPage - 1 <= 0}"> <a href="?patentId=${good.patentId}&currentPage=1">上一页</a> </c:when>
+		                <c:when test="${page.currentPage - 1 > 0}"> <a id="before-page" href="javascript:flashPage(${good.patentId},${page.currentPage-1})">上一页</a> </c:when>
+		                <c:when test="${page.currentPage - 1 <= 0}"> <a id="before-page"  href="javascript:flashPage(${good.patentId},${page.currentPage})">上一页</a> </c:when>
 		              </c:choose>
 		              <c:choose>
-		                <c:when test="${page.totalPages==0}"> <a href="?patentId=${good.patentId}&currentPage=${page.currentPage}">下一页</a> </c:when>
-		                <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?patentId=${good.patentId}&currentPage=${page.currentPage+1}">下一页</a> </c:when>
-		                <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?patentId=${good.patentId}&currentPage=${page.totalPages}">下一页</a> </c:when>
+		                <c:when test="${page.totalPages==0}"> <a id="after-page" href="javascript:flashPage(${good.patentId},${page.currentPage})">下一页</a> </c:when>
+		                <c:when test="${page.currentPage + 1 < page.totalPages}"> <a id="after-page" href="javascript:flashPage(${good.patentId},${page.currentPage+1})">下一页</a> </c:when>
+		                <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a id="after-page" href="javascript:flashPage(${good.patentId},${page.currentPage})">下一页</a> </c:when>
 		              </c:choose>
 		              <c:choose>
-		                <c:when test="${page.totalPages==0}"> <a href="?patentId=${good.patentId}&currentPage=${page.currentPage}">尾页</a> </c:when>
-		                <c:otherwise> <a href="?patentId=${good.patentId}&currentPage=${page.totalPages}">尾页</a> </c:otherwise>
+		                <c:when test="${page.totalPages==0}"> <a id="last-page" href="javascript:flashPage(${good.patentId},${page.currentPage})">尾页</a> </c:when>
+		                <c:otherwise> <a id="last-page" href="javascript:flashPage(${good.patentId},${page.totalPages})">尾页</a> </c:otherwise>
 		              </c:choose>
 		              <!-- 分页功能 End -->
 		              <input type="text" id="page.pageNo" style="width:50px;height:18px" name="currentPage" onKeyDown="gotoPageForEnter(event)"/>
 		              <a href="javascript:void;" onClick="javascript:gotoPage()">跳转</a> 
+		              </span>
 		            </div>
 				</li>
 				<!-- 分页用原来的 -->
@@ -521,7 +524,7 @@ font-family: "微软雅黑", Microsoft YaHei, arial, verdana, sans-serif;
     padding: 15px;
 }
 .h_second_list {
-    padding: 20px 10px 80px 25px;
+    padding: 20px 10px 40px 25px;
 }
 .h_second_list li {
     height: 46px;
@@ -541,6 +544,7 @@ font-family: "微软雅黑", Microsoft YaHei, arial, verdana, sans-serif;
     float: right;
     padding-right: 10px;
 }
+	
 </style>   
 
 
@@ -610,10 +614,7 @@ function gotoPage() {
 		return;
 	}
 	
-	var url = "<s:url value='/patent/getPatentDetail.html'/>?currentPage=" + pageNo + "&patentId=" + ${good.patentId};
-	
-	
-	location.href = url
+	flashPage(${good.patentId},pageNo);
 	
 }
 
@@ -624,7 +625,45 @@ function gotoPageForEnter(event) {
 		gotoPage();
 	}
 }
-  
+
+function flashPage(patentId,pageNo) {
+	var totalPage = ${page.totalPages};
+	$.ajax({
+		url:"<s:url value='/patent/getSimilarPatentList.html'/>?currentPage=" + pageNo + "&patentId=" +patentId,
+		type: 'get',
+		dataType: 'json',
+		success:function(data){
+			$('.h_second_list').empty();
+			$.each(data,function(i,item){
+				var url = "<s:url value='/patent/getPatentDetail.html'/>?patentId=" + item.patent_id;
+				$('.h_second_list').append(
+				"<li><span class='h_list_tit' style='font-size:14px;'>" +
+					"<a href='" + url + "' target='_blank'>[" +item.patent_type_name + "]" + item.patent_name + " - " +  item.app_no +
+				"</a></span> </li>"
+				);
+			})
+			$("#page.pageNo").val("");
+			$("#now-page").text("第" + pageNo + "页");
+			if(pageNo-1 > 0){
+				var n = parseInt(pageNo)-1;
+				$("#before-page").attr("href","javascript:flashPage(" + patentId + "," + n +")");
+			}else {
+				$("#before-page").attr("href","javascript:flashPage(" + patentId + "," + pageNo +")");
+			}
+			
+			if(totalPage == 0) {
+				$("#after-page").attr("href","javascript:flashPage(" + patentId + "," + pageNo +")");
+			} else if(pageNo+1 < totalPage) {
+				var n = parseInt(pageNo)+1;
+				$("#after-page").attr("href","javascript:flashPage(" + patentId + "," + n +")");
+			}else {
+				$("#after-page").attr("href","javascript:flashPage(" + patentId + "," + totalPage +")");
+			}
+		},
+		
+		 
+	 })
+}
 
 $(window).scroll(function() {
 	var top = $(window).scrollTop();

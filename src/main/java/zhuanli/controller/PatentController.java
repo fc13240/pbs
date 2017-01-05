@@ -248,6 +248,24 @@ public class PatentController {
 		return "patent_detail";
 	}
 	
+	@RequestMapping(path="getSimilarPatentList")
+	public void getSimilarPatentList(long patentId,HttpSession session,Page page,HttpServletResponse response){
+		SaleGood good = patentService.getAlreadSalePatentDetail(patentId);
+		int shopType =good.getFirstColumn().getId();
+		page.setPageSize(WebUtils.getPageSize(session));
+		if(page.getCurrentPage()<1){
+			page.setCurrentPage(1);
+		}
+		int totalCount=(int)patentService.getPatentsByShopTypeCount(shopType);
+		page.setTotalRecords(totalCount);
+		List<Patent> patents = patentService.getPatentsByShopType(shopType,page); 
+		try {
+			WebUtils.writeJsonStrToResponse(response, patents);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	@RequestMapping(path="/getGoodListBySecondColumn")
 	public String getGoodListBySecondType(int secondColumnId,String secondColumnName, Page page, Model model){
 		if(page.getCurrentPage()<=1){
