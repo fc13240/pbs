@@ -129,8 +129,8 @@
 	<c:if test="${page.totalPages > 1}"> 
 		<c:if test="${searchCondition==null }">
 			<div class="col-lg-12"> 
-				<span>共 ${page.totalPages} 页 </span>
-				<span>第 ${page.currentPage} 页 </span>
+				<a>共 ${page.totalPages} 页 </a>
+				<a>第 ${page.currentPage} 页 </a>
 				<a href="?currentPage=1">首页</a>
 			  <c:choose>
 		        <c:when test="${page.currentPage - 1 > 0}"> <a href="?currentPage=${page.currentPage - 1}">上一页</a> </c:when>
@@ -157,17 +157,17 @@
 				<a>第 ${page.currentPage} 页 </a>
 				<a href="?page.currentPage=1&${searchCondition}">首页</a>
 			  <c:choose>
-		        <c:when test="${page.currentPage - 1 > 0}"> <a href="?page.currentPage=${page.currentPage - 1}${searchCondition}">上一页</a> </c:when>
+		        <c:when test="${page.currentPage - 1 > 0}"> <a href="?page.currentPage=${page.currentPage - 1}&${searchCondition}">上一页</a> </c:when>
 		        <c:when test="${page.currentPage - 1 <= 0}"> <a href="?page.currentPage=1&${searchCondition}">上一页</a> </c:when>
 		      </c:choose>
 		      <c:choose>
-		        <c:when test="${page.totalPages==0}"> <a href="?page.currentPage=${page.currentPage}${searchCondition}">下一页</a> </c:when>
-		        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?page.currentPage=${page.currentPage+1}${searchCondition}">下一页</a> </c:when>
-		        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?page.currentPage=${page.totalPages}${searchCondition}">下一页</a> </c:when>
+		        <c:when test="${page.totalPages==0}"> <a href="?page.currentPage=${page.currentPage}&${searchCondition}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 < page.totalPages}"> <a href="?page.currentPage=${page.currentPage+1}&${searchCondition}">下一页</a> </c:when>
+		        <c:when test="${page.currentPage + 1 >= page.totalPages}"> <a href="?page.currentPage=${page.totalPages}&${searchCondition}">下一页</a> </c:when>
 		      </c:choose>
 		      <c:choose>
-		        <c:when test="${page.totalPages==0}"> <a href="?page.currentPage=${page.currentPage}${searchCondition}">尾页</a> </c:when>
-		        <c:otherwise> <a href="?page.currentPage=${page.totalPages}${searchCondition}">尾页</a> </c:otherwise>
+		        <c:when test="${page.totalPages==0}"> <a href="?page.currentPage=${page.currentPage}&${searchCondition}">尾页</a> </c:when>
+		        <c:otherwise> <a href="?page.currentPage=${page.totalPages}&${searchCondition}">尾页</a> </c:otherwise>
 		      </c:choose>
 		     
 		      <a><input type="text" id="page.pageNo" style="width:30px;height:14px" name="page.currentPage" onKeyDown="gotoPageForEnter(event)"/></a>
@@ -219,11 +219,11 @@ function gotoPage() {
 		return;
 	}
 	
-	var url = "<s:url value='/patent/getGoodListBySecondColumn.html'/>?currentPage=" + pageNo;
+	var url = "<s:url value='/patent/getLotutSelfSupportPatents.html'/>?currentPage=" + pageNo;
 	
 	<c:if test="${searchCondition!=null}">
 	
-		url="<s:url value='/patent/getSearchGoodListBySecondColumn.html'/>?page.currentPage=" + pageNo+"&${searchCondition}";
+		url="<s:url value='/patent/getSearchLotutSelfSupportPatents.html'/>?page.currentPage=" + pageNo+"&${searchCondition}";
 	</c:if>
 	
 		
