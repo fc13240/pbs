@@ -55,46 +55,8 @@ $(function(){
 <div class="floor_1F">
 	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #333;;">
 	        
-	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">精品专利</h2>                            
-	</div>
-	
-	<div class="news-info-con" style="height: 340px;">
-		<div class="news-info-bd clear">
-		
-		<c:forEach items="${qualityGoods}" var="patent">
-			<div class="left-item">
-		      <div class="g-item">
-		        <div class="g-dtl"> 
-		          <a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" >
-									<c:choose>
-										<c:when test="${not empty patent.patentImageUrl }">
-											<img class="d-img" onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" >
-										</c:when>
-										<c:otherwise>
-											<img class="d-img" onerror="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn.id}.jpg'/>">
-										</c:otherwise>
-									</c:choose>
-				  </a>
-		          <a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="d-name">
-		          	<span style="margin-left:20px;font-size:14px;font-weight:700;line-height:45px;height: 40px;display: block;overflow: hidden;">${patent.patentName}</span>
-		          </a>
-	        
-				  <div>
-					  <div style="float:left;width:100px;">
-					  	<strong class="p-money">
-					  	<c:if test="${patent.price > 0}"><sub class="m-mark">¥</sub><span class="m-count JS_async_price">${patent.price}</span></c:if>
-					  	<c:if test="${patent.price == 0 }"><span class="m-count JS_async_price">面议</span></c:if>
-					  	</strong>
-					  </div>
-					  <div style="float:right;width:100px;" class="box_buy">
-					  <a target="_blank" title="立即抢购" href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" class="btn_buy">立即抢购</a>
-					  </div>
-				  </div>     
-		        </div>
-		      </div> 	
-			</div>	  
-		</c:forEach>
-		</div>
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">专利申请</h2>
+	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">商标注册</h2>                             
 	</div>
 	
 </div>
@@ -327,74 +289,20 @@ margin: 0 auto;
 }
 </style>  
 <!--2f -->
-<c:forEach items="${AllColumns}"  var="FirstColumn" varStatus="status">
-<div class="floor_1F">
-	<c:if test="${status.count==1}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
-	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
-	</div>
-	</c:if>
-	
-	<c:if test="${status.count==2}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #eab35b;">
-	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
-	</div>
-	</c:if>
-	
-	<c:if test="${status.count==3}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #65e5e7;">
-	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
-	</div>
-	</c:if>
-	
-	<c:if test="${status.count==4}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
-	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
-	</div>
-	</c:if>
-	
-		
-	<c:if test="${status.count==5}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #eab35b;">
-	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
-	</div>
-	</c:if>
-			
 
-	<c:if test="${status.count==6}">
-	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #a6f59c;">
+<div class="floor_1F">
+<c:forEach items="${AllColumns}"  var="FirstColumn" varStatus="status">
+
+	<div class="news-info-hd" style="clear:both;height: 50px;border-bottom: 2px solid #68b4ef;">
 	        <h2 style="font-size: 24px;color: #333;line-height: 25px;">${FirstColumn.name}</h2>                           
 	</div>
-	</c:if>
-	
-	
-	
 	<div class="cu-floor-bd">
 		<!-- 通信电子数码内容 -->
 		<div class="cu-grid-2">
 			<div class="cu-grid-l clothing">
 				<div class="sidebar_na">
 					<div class="sidebar_na_bg">
-					
-					<c:if test="${status.count==1}">
-						<img src="<s:url value='/images/sidebar_na_bg01.png'/>" class="lazy" width="330" height="516" alt="">
-					</c:if>	
-					<c:if test="${status.count==2}">
-						<img src="<s:url value='/images/sidebar_na_bg02.png'/>" class="lazy" width="330" height="516" alt="">
-					</c:if>	
-					<c:if test="${status.count==3}">
-						<img src="<s:url value='/images/sidebar_na_bg03.png'/>" class="lazy" width="330" height="516" alt="">
-					</c:if>	
-					<c:if test="${status.count==4}">
-						<img src="<s:url value='/images/sidebar_na_bg04.png'/>" class="lazy" width="330" height="516" alt="">
-					</c:if>	
-					<c:if test="${status.count==5}">
-						<img src="<s:url value='/images/sidebar_na_bg05.png'/>" class="lazy" width="330" height="516" alt="">
-					</c:if>	
-					<c:if test="${status.count==6}">
-						<img src="<s:url value='/images/sidebar_na_bg06.png'/>" class="lazy" width="330" height="516" alt="">
-					</c:if>	
-																																					
+						<img src="<s:url value='/images/sidebar_na_bg0${status.count}.png'/>" class="lazy" width="330" height="516" alt="">																															
 					</div>
 					<div class="sidebar_na_link">
 					<div class="price_range">
@@ -408,56 +316,15 @@ margin: 0 auto;
 			
 					</div>
 				</div>
-				<div class="brand-list patent-list">
-					<ul>
-						<%--  <c:forEach items="${recommendPatents['2']}"  var="patent"> --%>
-					<%-- <c:forEach items="${recommendPatents['${status.count}+1']}" var="patent"> --%>
-						<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
-							<c:forEach items="${patents.value}" var="patent">
-						<li>	
-								<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="img">
-									<c:choose>
-										<c:when test="${not empty patent.patentImageUrl }">
-											<img onerror="<s:url value='${patent.patentImageUrl }'/>" src="<s:url value='${patent.patentImageUrl }'/>" class="lazy">
-										</c:when>
-										<c:otherwise>
-											<img onerror="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" src="<s:url value='/images/goods/${patent.secondColumn}.jpg'/>" class="lazy">
-										</c:otherwise>
-									</c:choose>
-				                	</a>
-								<div class="brand-info">
-									<div class="line1">
-										<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" title="${patent.patentName}" target="_blank">
-											${patent.patentName}</a></div>
-									<div class="line2">
-										<div class="content_type"><em class="content_type_left"><span>
-										  ${patent.patentSecondColumnName}</span></em></div>
-										
-									</div>
-									<div class="line3">
-										<span style="margin-left:22px;">
-											<c:if test="${patent.price > 0}">&yen;${patent.price}</c:if>
-											<c:if test="${patent.price == 0 }">面议</c:if>		
-										</span>
-										<span style="font-size: 12px;color:#fff;background-color:#ff6600;padding:3px 5px;cursor:pointer;float: right;margin-right:5px;" onclick="buyPatent(${patent.patentId})">
-											立即抢购
-										</span>
-										</div>
-								</div>
-						</li>
-							</c:forEach>
-						</c:forEach>
-					</ul>
-				</div>
 				<div style="clear:both;"></div>
 			</div>
 		</div>
 	</div>
 	
 
-
-</div>
 </c:forEach> 
+</div>
+
 
 <!-- brand -->
 
