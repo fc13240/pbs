@@ -247,10 +247,12 @@ margin: 0 auto;
     overflow: hidden;
     margin: -1px 0 0 -1px;
 }
+
 .clothing .brand-list li {
     width: 213px;
     height: 257px;
 }
+
 .clothing .brand-list li a.img, .clothing .brand-list li a.img img {
     width: 186px;
     height: 148px;
@@ -414,7 +416,8 @@ margin: 0 auto;
 					<%-- <c:forEach items="${recommendPatents['${status.count}+1']}" var="patent"> --%>
 						<c:forEach items="${recommendPatents}" begin="${FirstColumn.id-1}" end="${FirstColumn.id-1}" var="patents">
 							<c:forEach items="${patents.value}" var="patent">
-						<li>	
+						<li>
+						<div class="syPub_list" style="width: 211px;height: 255px;background-color: white;margin: 0px;">	
 								<a href="<s:url value='/patent/getPatentDetail.html'/>?patentId=<c:out value='${patent.patentId}'/>" target="_blank" title="${patent.patentName}" class="img">
 									<c:choose>
 										<c:when test="${not empty patent.patentImageUrl }">
@@ -445,6 +448,7 @@ margin: 0 auto;
 											立即抢购
 										</span>
 										</div>
+								</div>
 								</div>
 						</li>
 							</c:forEach>

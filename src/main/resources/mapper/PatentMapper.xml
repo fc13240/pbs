@@ -20,6 +20,7 @@
 		<result property="publishDate" column="publish_date"/>
 		<result property="description" column="description"/>
 		<result property="patentStatusText" column="patent_status_text"/>
+		<result property="patentRemark" column="patent_remark"/>
 		<association property="patentType" javaType="PatentType">
 			<id property="patentTypeId" column="patent_type_id"/>
 			<result property="typeDescription" column="patent_type_desc"/>
