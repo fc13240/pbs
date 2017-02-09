@@ -45,10 +45,10 @@
 			<c:forEach items="${AllColumns}" var="FirstColumn" varStatus="status">							
 			<li class="top-item" style="height: 40px;">
 			<em class="flag flag1" style="margin-top: 11px;"></em>
-				<a title="${FirstColumn.name}" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">${FirstColumn.name}</a>				
+				<a title="${FirstColumn.name}" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="http://ip.lotut.com/patent/getSalePatentByKind.html?firstColumn=${FirstColumn.id}">${FirstColumn.name}</a>				
 				<div class="sub" style="width:450px">
 					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">${FirstColumn.name}<span class="darrow">&gt;&gt;</span></a></h4>
+						<h4 class="Left"><a  href="http://ip.lotut.com/patent/getSalePatentByKind.html?firstColumn=${FirstColumn.id}" class="red">${FirstColumn.name}<span class="darrow">&gt;&gt;</span></a></h4>
 					</div>
 					<div class="list clearfix">
 					<c:forEach items="${FirstColumn.secondColumns}" var="secondColumn" varStatus="status">
