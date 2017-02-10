@@ -291,7 +291,7 @@ _background:url(../images/common/menu-icon.png?1224) no-repeat}
 }
 .default_floor_show .floor_nav ul li a.selected{color:#fff;font-weight:bold}
 .default_floor_show .floor_nav ul li a.selected:hover{color:#fff!important}
-.default_floor_1F{border-top:2px solid #c96a10}.default_floor_1F .floor_nav{background:#eceebd}
+.default_floor_1F .floor_nav{background:#eceebd}
 .default_floor_1F .floor_nav .title{cursor:pointer;color:#fff}
 .default_floor_1F .floor_nav a:hover{color:#fff!important}
 .default_floor_1F .floor_nav ul li a.selected{background:#c96a0f}

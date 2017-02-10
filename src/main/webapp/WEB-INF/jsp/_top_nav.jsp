@@ -41,27 +41,36 @@
 				</ul>
 				<i class="arrow" style="margin-top: 17px;"></i>
 			</li>
-										
-			<c:forEach items="${AllColumns}" var="FirstColumn" varStatus="status">							
 			<li class="top-item" style="height: 40px;">
-			<em class="flag flag1" style="margin-top: 11px;"></em>
-				<a title="${FirstColumn.name}" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">${FirstColumn.name}</a>				
-				<div class="sub" style="width:450px">
-					<div class="title clearfix">
-						<h4 class="Left"><a target="_blank" href="<s:url value='/'/>" class="red">${FirstColumn.name}<span class="darrow">&gt;&gt;</span></a></h4>
-					</div>
-					<div class="list clearfix">
-					<c:forEach items="${FirstColumn.secondColumns}" var="secondColumn" varStatus="status">
-						 <a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=${secondColumn.id}&secondColumnName=${secondColumn.name}'/>" class="sub-item" target="_blank">${secondColumn.name}</a> 
-					</c:forEach>
-					</div>
-
-				</div>
+				<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="商标注册" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">商标注册</a>				
 				<i class="arrow" style="margin-top: 17px;"></i>                
 			</li>
-			</c:forEach>	
-			
-			
+			<li class="top-item" style="height: 40px;">
+				<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="专利申请" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">专利申请</a>				
+				<i class="arrow" style="margin-top: 17px;"></i>                
+			</li>										
+			<li class="top-item" style="height: 40px;">
+				<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="高企认定" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">高企认定</a>				
+				<i class="arrow" style="margin-top: 17px;"></i>                
+			</li>		
+			<li class="top-item" style="height: 40px;">
+				<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="版权登记" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">版权登记</a>				
+				<i class="arrow" style="margin-top: 17px;"></i>                
+			</li>			
+			<li class="top-item" style="height: 40px;">
+				<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="工商注册" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">工商注册</a>				
+				<i class="arrow" style="margin-top: 17px;"></i>                
+			</li>
+			<li class="top-item" style="height: 40px;">
+				<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="专利市场" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">专利市场</a>				
+				<i class="arrow" style="margin-top: 17px;"></i>                
+			</li>							
 			<li class="top-item" style="height: 40px;">
 				<em class="flag flag1" style="margin-top: 11px;"></em>
 				<a title="商标01-15类" target="_blank" class="txt" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">商标01-15类</a>				
@@ -163,21 +172,20 @@
 
 	<ul class="navigator">
       <li><a href="<s:url value='/'/>" title="龙图腾专利商标交易">首页</a></li>
-      <li><a href="<s:url value='http://www.lotut.com'/>" title="专利">创意门户</a></li>
+      
       <li><a href="<s:url value='http://ip.lotut.com'/>" title="专利">专利市场</a></li>
       <li><a href="<s:url value='/brand/index.html'/>" title="商标">商标市场</a></li>
      <%--  <li><a href="<s:url value='/patent/getAlreadySalePatent.html'/>" title="专利案例">专利案例</a></li>
       <li><a href="<s:url value='/brand/alreadySalebrands.html'/>" title="商标案例">商标案例</a></li> --%>
       <li><a target="_blank" href="http://g.lotut.com" title="专利管家">专利管家</a></li>
-      <li><a href="<s:url value='/patent/getLotutSelfSupportPatents.html'/>" title="龙图腾自营">
-      <i class="hot" title="龙图腾自营"></i>龙图腾自营       
-      </a></li>   	   
+		<li><a href="<s:url value='http://www.lotut.com'/>" title="专利">龙图腾门户</a></li>
+	   <li><a href="<s:url value='/index/introduction.html'/>" title="公司介绍">公司介绍</a></li>
+	   <li><a href="<s:url value='/index/contact.html'/>" title="联系我们">联系我们</a></li>
 	</ul>
 </div>
 <iframe id="feeExcelFileFrame" style="display:none"></iframe>	  
 <script>
 function exportFees() {
-	alert(123);
 	var iframe = document.getElementById('feeExcelFileFrame');
 	iframe.src = "/patent/exportPatents.html";		
 }

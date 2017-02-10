@@ -342,18 +342,16 @@
 			</li>			          
       </ul>
     </div>
-    <ul class="navigator">
+	<ul class="navigator">
       <li><a href="<s:url value='/'/>" title="龙图腾专利商标交易">首页</a></li>
-      <li><a href="<s:url value='/patent/index.html'/>" title="专利">专利市场</a></li>
-      <li><a href="<s:url value='/brand/index.html'/>" title="商标">商标市场</a></li>
-      <li><a href="<s:url value='/patent/getAlreadySalePatent.html'/>" title="专利案例">专利案例</a></li>
-      <li><a href="<s:url value='/brand/alreadySalebrands.html'/>" title="商标案例">商标案例</a></li>
-      <li><a target="_blank" href="http://g.lotut.com" title="专利管家">专利管家</a></li>
-      <li><a href="<s:url value='/patent/getLotutSelfSupportPatents.html'/>" title="龙图腾自营">
-      <i class="hot" title="龙图腾自营"></i>龙图腾自营
       
-      </a></li>    
-    </ul>
+      <li><a href="<s:url value='http://ip.lotut.com'/>" title="专利">专利市场</a></li>
+      <li><a href="<s:url value='/brand/index.html'/>" title="商标">商标市场</a></li>
+      <li><a target="_blank" href="http://g.lotut.com" title="专利管家">专利管家</a></li>
+		<li><a href="<s:url value='http://www.lotut.com'/>" title="专利">龙图腾门户</a></li>
+	   <li><a href="<s:url value='/index/introduction.html'/>" title="公司介绍">公司介绍</a></li>
+	   <li><a href="<s:url value='/index/contact.html'/>" title="联系我们">联系我们</a></li>
+	</ul>
   </div>
   
 <iframe id="feeExcelFileFrame" style="display:none"></iframe>	  

@@ -64,7 +64,49 @@ public class IndexController {
 		model.addAttribute("qualityGoods", qualityGoods);
 		return "index";
 	}
-	
+
+	@RequestMapping(path="/index/introduction")
+	public String companyIntroduction(HttpServletRequest req, HttpServletResponse resp,Model model) {
+
+		List<FirstColumn>  AllColumns=patentService.selectAllColumns();
+		Map<String, List<GoodsDetail>> recommendPatents=patentService.getIndexRecommendPatents();
+		List<Patent> patent_list=patentService.getPatents();
+	//	Map<String, List<Brand>> recommendBrands = brandService.getIndexRecommendBrands();
+		List<GoodsDetail> qualityGoods=patentService.getQualityGoods();
+		
+ 
+		List<Brand> recommendBrands = brandService.getRecommendBrands(18);
+
+		model.addAttribute("recommendBrands", recommendBrands);		
+		
+		model.addAttribute("patent_list", patent_list);
+		model.addAttribute("AllColumns", AllColumns);
+	//	model.addAttribute("recommendBrands", recommendBrands);
+		model.addAttribute("recommendPatents", recommendPatents);
+		model.addAttribute("qualityGoods", qualityGoods);
+		return "index_introduction";
+	}	
+
+	@RequestMapping(path="/index/contact")
+	public String companyContact(HttpServletRequest req, HttpServletResponse resp,Model model) {
+
+		List<FirstColumn>  AllColumns=patentService.selectAllColumns();
+		Map<String, List<GoodsDetail>> recommendPatents=patentService.getIndexRecommendPatents();
+		List<Patent> patent_list=patentService.getPatents();
+	//	Map<String, List<Brand>> recommendBrands = brandService.getIndexRecommendBrands();
+		List<GoodsDetail> qualityGoods=patentService.getQualityGoods();
+		
+		List<Brand> recommendBrands = brandService.getRecommendBrands(18);
+
+		model.addAttribute("recommendBrands", recommendBrands);		
+		
+		model.addAttribute("patent_list", patent_list);
+		model.addAttribute("AllColumns", AllColumns);
+	//	model.addAttribute("recommendBrands", recommendBrands);
+		model.addAttribute("recommendPatents", recommendPatents);
+		model.addAttribute("qualityGoods", qualityGoods);
+		return "index_contact";
+	}		
 	@RequestMapping(path="/getGoodListBySecond")
 	public String getGoodListBySecond(int id,Model model) {
 		List<GoodsDetail> patents=patentService.getPatentByFirstColumn(id);
