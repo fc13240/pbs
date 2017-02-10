@@ -42,8 +42,24 @@
 				<i class="arrow" style="margin-top: 17px;"></i>
 			</li>
 			<li class="top-item" style="height: 40px;">
+<<<<<<< HEAD
 				<em class="flag flag1" style="margin-top: 11px;"></em>
 				<a title="商标注册" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="<s:url value='/'/>">商标注册</a>				
+=======
+			<em class="flag flag1" style="margin-top: 11px;"></em>
+				<a title="${FirstColumn.name}" class="txt" target="_blank" style="height:40px;line-height:40px;font-size:13px;" href="http://ip.lotut.com/patent/getSalePatentByKind.html?firstColumn=${FirstColumn.id}">${FirstColumn.name}</a>				
+				<div class="sub" style="width:450px">
+					<div class="title clearfix">
+						<h4 class="Left"><a  href="http://ip.lotut.com/patent/getSalePatentByKind.html?firstColumn=${FirstColumn.id}" class="red">${FirstColumn.name}<span class="darrow">&gt;&gt;</span></a></h4>
+					</div>
+					<div class="list clearfix">
+					<c:forEach items="${FirstColumn.secondColumns}" var="secondColumn" varStatus="status">
+						 <a href="<s:url value='/patent/getGoodListBySecondColumn.html?secondColumnId=${secondColumn.id}&secondColumnName=${secondColumn.name}'/>" class="sub-item" target="_blank">${secondColumn.name}</a> 
+					</c:forEach>
+					</div>
+
+				</div>
+>>>>>>> 71192f4bc4cc1f40040228f3ab1f48b0d431fd9f
 				<i class="arrow" style="margin-top: 17px;"></i>                
 			</li>
 			<li class="top-item" style="height: 40px;">
